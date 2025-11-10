@@ -1,0 +1,159 @@
+/* Layout Header styles (migrated from components/Header.css) */
+.site-header {
+  position: relative;
+  background: #0b0b0b; /* full-width dark bar */
+  color: #fff;
+  z-index: 50;
+  padding: 12px 0; /* vertical space for the bar */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.header-inner {
+  max-width: 1200px; /* inner content centered */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 36px; /* horizontal padding inside bar */
+  gap: 28px;
+  background: transparent; /* no extra box, keep bar full-width */
+  border-radius: 0;
+  min-height: 80px; /* maintain taller header */
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-name {
+  margin-left: 14px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.main-nav {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #ddd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  padding: 10px 6px;
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+.nav-link:hover {
+  color: #b8ff00; /* bright lime for hover */
+  transform: translateY(-1px);
+}
+
+.header-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.cta {
+  background: #b8ff00;
+  color: #0b0b0b;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(184,255,0,0.18);
+  font-size: 15px;
+}
+
+.cta:active,
+.cta:focus {
+  outline: none;
+  transform: translateY(0);
+}
+
+.menu-toggle {
+  display: none; /* show on mobile */
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 40;
+}
+
+/* Responsive: collapse nav into panel */
+@media (max-width: 880px) {
+  .main-nav {
+    position: fixed;
+    top: 64px;
+    right: 12px;
+    left: 12px;
+    background: #0b0b0b;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    display: none;
+    z-index: 45;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta {
+    display: none; /* hide CTA on small to keep compact; nav includes CONTACT link */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name { font-size: 16px; }
+  .nav-link { font-size: 14px; }
+  .header-inner { padding: 12px 16px; }
+}
