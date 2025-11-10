@@ -1,367 +1,239 @@
-/* SnapArt brand name above hero */
-.hero-snapart-name {
-  font-size: 2.1rem;
-  font-weight: 900;
-  color: #ff7e6b;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-  margin-left: 2px;
-  font-family: 'Quicksand', 'Nunito', 'Baloo 2', 'Comic Neue', Arial, sans-serif;
-  line-height: 1.1;
-}
-/* Hero section main container */
-.hero-artworkshop {
-  width: 100%;
-  max-width: 100vw;
-  min-width: 0;
-  position: relative;
+/* ===== Import Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;900&display=swap');
+
+/* ===== Banner Fullscreen ===== */
+.hero-artworkshop.fullscreen {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 520px;
+  justify-content: space-between;
   background: linear-gradient(120deg, #ffe0e6 0%, #fffbe6 100%);
-  color: #3d2c29;
-  padding: 60px 0 40px 0;
-  gap: 40px;
-  overflow: hidden;
+  padding: 5vh 0 0 0; /* xích toàn bộ xuống 5vh */
+  margin: 0;
   box-sizing: border-box;
-  z-index: 1;
-}
-.hero-artworkshop-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  font-family: 'Quicksand', 'Nunito', 'Baloo 2', 'Comic Neue', Arial, sans-serif;
-  margin-bottom: 18px;
-  color: #e26a6a;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: flex-end;
-  text-align: left;
-  line-height: 1.1;
-  position: relative;
-  gap: 12px;
-}
-.hero-title-group {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  font-family: 'Quicksand', 'Nunito', 'Baloo 2', 'Comic Neue', Arial, sans-serif;
+  overflow: hidden;
+  font-family: 'Baloo 2', cursive;
 }
 
-.hero-loop-word-art {
-  display: inline-block;
-  min-width: 110px;
-  color: #ff7e6b;
-  font-weight: 900;
-  font-family: 'Quicksand', 'Nunito', 'Baloo 2', 'Comic Neue', Arial, sans-serif;
-  transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-  font-size: 1em;
-  margin: 0 0 0 8px;
-  text-align: left;
-}
-
+/* Left content */
 .hero-artworkshop-left {
-  flex: 1 1 0;
-  max-width: 540px;
-  z-index: 2;
+  flex: 1;
+  padding-left: 5vw;
+  max-width: none;
 }
 
+/* Brand name */
+.hero-snapart-name {
+  font-size: 4vw;
+  font-weight: 900;
+  color: #ff7e6b;
+  margin-bottom: 1vh;
+  line-height: 1.2;
+}
+
+/* Hero title */
 .hero-artworkshop-title {
-  font-size: 2.8rem;
+  font-size: 6vw;
   font-weight: 900;
-  font-family: inherit;
-  margin-bottom: 28px;
   color: #e26a6a;
-  letter-spacing: 1px;
-  display: block;
-  text-align: left;
-  line-height: 1.1;
-  position: relative;
-}
-.hero-artworkshop-title .art-emoji {
-  vertical-align: middle;
-}
-.hero-loop-word-art {
-  display: inline-block;
-  min-width: 60px;
-  color: #ff7e6b;
-  font-weight: 900;
-  transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-  font-size: 1em;
-  margin: 0 6px;
-}
-.hero-loop-word-art.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-/* Loop chữ động cho workshop */
-.hero-loop-word-art {
-  display: inline-block;
-  min-width: 60px;
-  color: #ff7e6b;
-  font-weight: 900;
-  transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-}
-.hero-loop-word-art.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.art-emoji {
-  font-size: 2.2rem;
+  margin-bottom: 2vh;
+  line-height: 1.2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
+.hero-loop-word-art {
+  color: #ff7e6b;
+  font-weight: 900;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+  margin-left: 0.5vw;
+  white-space: nowrap;
+}
+
+.hero-loop-word-art.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Description */
 .hero-artworkshop-desc {
-  font-size: 1.18rem;
-  margin-bottom: 32px;
+  font-size: 1.6vw;
+  margin-bottom: 3vh;
   color: #6d4c41;
-  font-family: 'Quicksand', 'Nunito', 'Baloo 2', 'Comic Neue', Arial, sans-serif;
-  line-height: 1.7;
-}
-
-.hero-artworkshop-btn {
-  display: inline-block;
-  background: linear-gradient(90deg, #ffb347 0%, #ff6a88 100%);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 16px 36px;
-  border-radius: 32px;
-  text-decoration: none;
-  box-shadow: 0 4px 24px rgba(255, 186, 186, 0.18);
-  transition: background 0.2s, transform 0.2s;
-  letter-spacing: 1px;
-  border: none;
-}
-.hero-artworkshop-btn:hover {
-  background: linear-gradient(90deg, #ff6a88 0%, #ffb347 100%);
-  transform: translateY(-2px) scale(1.04);
-}
-
-.hero-artworkshop-right {
-  flex: 1 1 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-/* Hình minh họa bảng màu, cọ vẽ, vết màu */
-.art-illustration {
-  position: relative;
-  width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.art-palette {
-  position: absolute;
-  left: 40px;
-  top: 60px;
-  width: 180px;
-  height: 120px;
-  background: #fffbe6;
-  border-radius: 60% 60% 60% 60% / 80% 80% 60% 60%;
-  box-shadow: 0 4px 24px rgba(255, 186, 186, 0.12);
-  border: 4px solid #ffe0e6;
-}
-.art-brush {
-  position: absolute;
-  right: 30px;
-  bottom: 60px;
-  width: 18px;
-  height: 110px;
-  background: linear-gradient(120deg, #bdbdbd 60%, #ffe082 100%);
-  border-radius: 12px;
-  transform: rotate(-18deg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.art-brush::after {
-  content: '';
-  position: absolute;
-  left: 2px;
-  bottom: -18px;
-  width: 14px;
-  height: 24px;
-  background: linear-gradient(120deg, #ffb347 60%, #ff6a88 100%);
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 2px 8px rgba(255,186,186,0.18);
-}
-.art-splatter {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.7;
-}
-.art-splatter1 {
-  width: 32px;
-  height: 32px;
-  left: 120px;
-  top: 40px;
-  background: #ffb347;
-}
-.art-splatter2 {
-  width: 22px;
-  height: 22px;
-  left: 80px;
-  top: 120px;
-  background: #ff6a88;
-}
-.art-splatter3 {
-  width: 18px;
-  height: 18px;
-  left: 180px;
-  top: 100px;
-  background: #b2f7ef;
-}
-
-@media (max-width: 900px) {
-  .hero-artworkshop {
-    flex-direction: column;
-    padding: 40px 0 20px 0;
-    min-height: 400px;
-    gap: 24px;
-  }
-  .art-illustration {
-    width: 200px;
-    height: 200px;
-  }
-  .hero-artworkshop-title {
-    font-size: 2rem;
-  }
-}
-.hero-loop-word {
-  display: inline-block;
-  min-width: 180px;
-  transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-}
-.hero-loop-word.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* Glint-style hero section */
-.hero-section-glint {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 600px;
-  background: #111;
-  color: #fff;
-  padding: 60px 0 40px 0;
-  gap: 40px;
-}
-
-.hero-content-glint {
-  flex: 1 1 0;
+  line-height: 1.6;
   max-width: 600px;
 }
 
-.hero-content-glint h1 {
-  font-size: 3.2rem;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 32px;
-  text-transform: uppercase;
-}
-
-.green-glint {
-  color: #1ed760;
-  letter-spacing: 2px;
-}
-
-.hero-desc-glint {
-  font-size: 1.15rem;
-  margin-bottom: 36px;
-  color: #e0e0e0;
-  max-width: 420px;
-}
-
-.hero-btn-glint {
-  display: inline-flex;
-  align-items: center;
-  background: #1ed760;
-  color: #111;
+/* Button */
+.hero-artworkshop-btn {
+  font-size: 1.3vw;
+  padding: 1vh 3vw;
+  border-radius: 2vw;
   font-weight: 700;
-  font-size: 1.1rem;
-  padding: 16px 32px;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 4px 24px rgba(30,215,96,0.18);
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  letter-spacing: 1px;
-}
-.hero-btn-glint:hover {
-  background: #13b94a;
+  background: linear-gradient(90deg, #ffb347 0%, #ff6a88 100%);
   color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0.5vh 2vh rgba(255,186,186,0.25);
+  transition: all 0.2s;
 }
 
-.hero-btn-glint span {
-  margin-left: 12px;
-  font-size: 1.3em;
+.hero-artworkshop-btn:hover {
+  transform: translateY(-0.5vh) scale(1.05);
 }
 
-.hero-image-glint {
-  flex: 1 1 0;
+/* Right logo + icons */
+.hero-artworkshop-right {
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  position: relative; /* để icon bay xung quanh logo */
 }
 
-.hero-avatar-glint {
-  width: 340px;
-  height: 420px;
-  background: #222 url('https://randomuser.me/api/portraits/men/32.jpg') center/cover no-repeat;
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+/* Logo lớn */
+.hero-logo {
+  width: 40vw;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transform: scale(0.8) translateY(30px); /* xích xuống 30px */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-@media (max-width: 900px) {
-  .hero-section-glint {
-    flex-direction: column;
-    padding: 40px 0 20px 0;
-    min-height: 400px;
-    gap: 24px;
-  }
-  .hero-avatar-glint {
-    width: 220px;
-    height: 260px;
-  }
-  .hero-content-glint h1 {
-    font-size: 2.1rem;
-  }
+.hero-logo.show-logo {
+  opacity: 1;
+  transform: scale(1.05) translateY(30px); /* xích xuống tương ứng */
+  animation: bounceLogo 0.8s ease forwards;
 }
 
-.contact-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+/* Bounce nhẹ */
+@keyframes bounceLogo {
+  0% { transform: scale(0.8) translateY(30px); }
+  50% { transform: scale(1.15) translateY(25px); }
+  70% { transform: scale(0.95) translateY(35px); }
+  100% { transform: scale(1.05) translateY(30px); }
 }
 
-.contact-form input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: #6c63ff;
-  color: white;
+/* Hover effect logo */
+.hero-logo:hover {
+  transform: scale(1.15) translateY(30px);
+  transition: transform 0.5s ease;
   cursor: pointer;
 }
-.contact-form button:hover {
-  background-color: #5753d6;
+
+/* ===== Icon nhỏ bay ===== */
+.icon-small {
+  position: absolute;
+  width: 4vw;
+  max-width: 40px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Xích icon xuống tương ứng với logo */
+.icon1 {
+  top: 10%; /* xích xuống */
+  left: 10%;
+  animation: float1 8s infinite ease-in-out;
+}
+
+.icon2 {
+  top: 5%;
+  left: 40%;
+  animation: float2 10s infinite ease-in-out;
+}
+
+.icon3 {
+  top: 8%;
+  left: 70%;
+  animation: float3 12s infinite ease-in-out;
+}
+
+/* Animation float */
+@keyframes float1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(15deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(15px) rotate(-15deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-25px) rotate(-20deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(20px) rotate(20deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes float3 {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(10deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(10px) rotate(-10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero-artworkshop.fullscreen {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 10vw 0 0 0;
+  }
+
+  .hero-artworkshop-left,
+  .hero-artworkshop-right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-artworkshop-title {
+    font-size: 8vw;
+    justify-content: center;
+  }
+
+  .hero-artworkshop-desc {
+    font-size: 4vw;
+  }
+
+  .hero-artworkshop-btn {
+    font-size: 4vw;
+    padding: 2vw 5vw;
+  }
+
+  .hero-logo {
+    width: 70vw;
+    max-width: none;
+    transform: scale(1) translateY(20px);
+  }
+
+  .hero-logo.show-logo {
+    transform: scale(1) translateY(20px);
+  }
+
+  .hero-logo:hover {
+    transform: scale(1.05) translateY(20px);
+  }
+
+  .icon-small {
+    width: 8vw;
+    max-width: 50px;
+  }
+
+  .icon1 { top: 15%; }
+  .icon2 { top: 12%; }
+  .icon3 { top: 18%; }
 }

@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "works": "WORKS",
+    "services": "SERVICES",
+    "testimonial": "TESTIMONIAL",
+    "blog": "BLOG",
+    "contact": "CONTACT"
+  },
+  "cta": "Let's Talk",
+  "notfound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you're looking for doesn't exist.",
+    "button": "Back to Home"
+  }
+}

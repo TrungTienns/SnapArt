@@ -1,0 +1,73 @@
+// File: NotFound.scss
+
+.notfound-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+// Wrapper để căn giữa text
+.notfound-text-wrapper {
+  text-align: center;
+}
+
+.notfound-title {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  color: #dcbb87;
+  margin-top: 0px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.notfound-title:hover {
+  color: #a08355;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+}
+
+.notfound-subtitle {
+  font-family: 'Quicksand', 'Nunito', 'Baloo 2', Arial, sans-serif;
+  font-size: 24px;
+  color: #555555;
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+// Class cho wrapper của Lottie (lấy từ style inline cũ)
+.notfound-animation-wrapper {
+  width: 1024px;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 100%; // Thêm để responsive
+}
+
+// Class cho wrapper của nút (lấy từ style inline cũ)
+.notfound-button-wrapper {
+  text-align: center;
+  margin-top: 150px; // <-- Đẩy nút xuống để không bị đè
+}
+
+// Gộp tất cả style của nút vào đây
+.notfound-btn {
+  background: #ff6a88;
+  color: #fff;
+  border: none;
+  padding: 12px 24px; // <-- Thêm từ style inline
+  border-radius: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  // Xóa margin-top: 0px ở đây vì đã chuyển ra wrapper
+}

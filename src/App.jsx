@@ -1,9 +1,15 @@
 import React from 'react';
-import AppRoutes from './routes/AppRoutes';
+import Banner from './components/Banner/Banner';
+import Footer from './layout/Footer/Footer';
 import './App.scss';
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <div className="app">
+      <Banner />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

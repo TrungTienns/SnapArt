@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "TRANG CHỦ",
+  "about": "Chúng Tôi",
+    "works": "CÔNG TRÌNH",
+    "services": "DỊCH VỤ",
+    "testimonial": "ĐÁNH GIÁ",
+    "blog": "BLOG",
+    "contact": "LIÊN HỆ"
+  },
+  "cta": "Liên hệ",
+  "notfound": {
+    "title": "Không tìm thấy trang",
+    "subtitle": "Trang bạn đang tìm không tồn tại.",
+    "button": "Về trang chủ"
+  }
+}

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../layout/Header/Header.scss';
 import logo from '../../assets/logo.png';
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const links = [
     { to: '/', label: 'HOME' },
@@ -16,8 +17,17 @@ function Header() {
     { to: '/contact', label: 'CONTACT' },
   ];
 
+  // Scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
         <div className="header-left">
           <Link to="/" className="brand">
@@ -36,7 +46,7 @@ function Header() {
 
         <div className="header-right">
           <Link to="/contact" className="cta" onClick={() => setOpen(false)}>
-            Let's Talk
+            Let's Go!
           </Link>
 
           <button
@@ -52,7 +62,6 @@ function Header() {
         </div>
       </div>
 
-      {/* backdrop for mobile when menu is open */}
       {open && <div className="mobile-backdrop" onClick={() => setOpen(false)} />}
     </header>
   );
