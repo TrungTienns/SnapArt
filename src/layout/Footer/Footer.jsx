@@ -8,10 +8,10 @@ import logo from '../../assets/logo.png';
 import facebookIcon from '../../assets/icons/facebook.svg';
 import instagramIcon from '../../assets/icons/instagram.svg';
 import tiktokIcon from '../../assets/icons/tiktok.svg';
-import xIcon from '../../assets/icons/x.svg';
+import xIcon from '../../assets/icons/zalo.svg';
 
 // Cat animation
-import sleepyCat from '../../assets/animation/CatPlaying.json';
+import sleepyCat from '../../assets/animation/CatPlayingPink.json';
 
 function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -29,10 +29,10 @@ function Footer() {
           </Link>
           <p className="slogan">Sáng tạo không giới hạn – Mỗi tác phẩm là một hành trình.</p>
           <div className="social-links">
-            <a href="#"><img src={xIcon} alt="X" className="social-icon" /></a>
+            <a href="#"><img src={xIcon} alt="Zalo" className="social-icon" /></a>
             <a href="https://www.tiktok.com/@0.0merida?lang=vi-VN"><img src={tiktokIcon} alt="TikTok" className="social-icon" /></a>
             <a href="https://www.instagram.com/mer1998_/"><img src={instagramIcon} alt="Instagram" className="social-icon" /></a>
-            <a href="https://www.facebook.com/my.quyen.689452"><img src={facebookIcon} alt="Facebook" className="social-icon" /></a>
+            <a href="https://www.facebook.com/people/SnapArt/61583373132344/?mibextid=wwXIfr&rdid=ywUyNylpVDX6oPW1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AWC81w2Zd%2F%3Fmibextid%3DwwXIfr"><img src={facebookIcon} alt="Facebook" className="social-icon" /></a>
           </div>
         </div>
 

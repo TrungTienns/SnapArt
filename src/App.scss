@@ -17,3 +17,22 @@
   opacity: 0;
   pointer-events: none;
 }
+
+.banner {
+  height: 80vh;
+  background: url('./assets/images/banner.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.banner[data-aos="fade"].aos-animate {
+  opacity: 0.3; /* mờ dần */
+  filter: blur(2px);
+}

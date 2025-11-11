@@ -17,8 +17,10 @@ function Banner() {
   const [loopIdx, setLoopIdx] = useState(0);
   const [show, setShow] = useState(true);
   const [logoVisible, setLogoVisible] = useState(false);
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
+    // Loop words animation
     const interval = setInterval(() => {
       setShow(false);
       setTimeout(() => {
@@ -27,18 +29,38 @@ function Banner() {
       }, 350);
     }, 2150);
 
+    // Show logo animation
     const logoTimer = setTimeout(() => {
       setLogoVisible(true);
     }, 500);
 
+    // Scroll to fade
+    const handleScroll = () => {
+      const aboutSection = document.querySelector('#about-us-section');
+      if (!aboutSection) return;
+
+      const scrollY = window.scrollY;
+      const aboutOffsetTop = aboutSection.offsetTop;
+      const fadeStart = aboutOffsetTop - window.innerHeight / 1.5;
+      let newOpacity = 1 - (scrollY - fadeStart) / 200;
+      newOpacity = Math.max(Math.min(newOpacity, 1), 0);
+      setOpacity(newOpacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       clearInterval(interval);
       clearTimeout(logoTimer);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <section className="hero-artworkshop fullscreen">
+    <section
+      className="hero-artworkshop fullscreen"
+      style={{ opacity: opacity }}
+    >
       <div className="hero-artworkshop-left">
         <div className="hero-snapart-name">SnapArt</div>
         <h1 className="hero-artworkshop-title">
@@ -61,14 +83,11 @@ function Banner() {
       </div>
 
       <div className="hero-artworkshop-right">
-        {/* Logo lớn */}
         <img
           src={logo}
           alt="Logo SnapArt"
           className={`hero-logo${logoVisible ? ' show-logo' : ''}`}
         />
-
-        {/* Icon nhỏ bay trên đầu */}
         <img src={flower} alt="flower" className="icon-small icon1" />
         <img src={sun} alt="sun" className="icon-small icon2" />
         <img src={brush} alt="brush" className="icon-small icon3" />
