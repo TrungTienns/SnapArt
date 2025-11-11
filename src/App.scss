@@ -1,4 +1,4 @@
-/* Đảm bảo root flex column, footer luôn cuối */
+
 .app {
   display: flex;
   flex-direction: column;
@@ -6,5 +6,5 @@
 }
 
 .main-content {
-  flex: 1; /* chiếm phần còn lại để đẩy footer xuống */
+  flex: 1; 
 }

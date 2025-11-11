@@ -1,15 +1,10 @@
 /* Style cho HomePage */
-
-
 .homepage {
   padding: 0;
   margin: 0;
 }
-.page-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+
+/* Nếu bạn muốn Banner chiếm full width, không cần giới hạn */
 .homepage .welcome-section {
   text-align: center;
   padding: 100px 20px;

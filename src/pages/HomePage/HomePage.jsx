@@ -8,9 +8,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <Header />
-      <div className="page-container">
-        <Banner />
-      </div>
+      <Banner />
       <Footer />
     </div>
   );
