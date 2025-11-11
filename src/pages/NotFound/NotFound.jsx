@@ -11,7 +11,7 @@ const NotFound = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    import("../../assets/animation/NotFound404.json")
+    import("../../assets/animation/404CatPink.json")
       .then((data) => setAnimationData(data.default || data))
       .catch(() => {
         setAnimationData({

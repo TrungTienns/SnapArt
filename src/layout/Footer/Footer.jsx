@@ -1,14 +1,17 @@
-// src/layout/Footer/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
 import './Footer.scss';
 import logo from '../../assets/logo.png';
 
-// Import SVG dưới dạng img
+// Icons
 import facebookIcon from '../../assets/icons/facebook.svg';
 import instagramIcon from '../../assets/icons/instagram.svg';
 import tiktokIcon from '../../assets/icons/tiktok.svg';
 import xIcon from '../../assets/icons/x.svg';
+
+// Cat animation
+import sleepyCat from '../../assets/animation/CatPlaying.json';
 
 function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -61,8 +64,12 @@ function Footer() {
           </a>
         </div>
 
-        {/* Back to Top */}
         <button onClick={scrollToTop} className="back-to-top"><span>BACK TO TOP</span></button>
+      </div>
+
+      {/* 🐱 Cat Animation */}
+      <div className="footer-cat">
+        <Lottie animationData={sleepyCat} loop autoplay style={{ width: 120, height: 120 }} />
       </div>
 
       <div className="footer-bottom">
