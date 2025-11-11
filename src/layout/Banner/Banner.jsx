@@ -6,7 +6,12 @@ import flower from '../../assets/icons/flower.png';
 import sun from '../../assets/icons/sun.png';
 import brush from '../../assets/icons/paint-brush.png';
 
-const loopWords = ['Vẽ Tranh', 'Đan Len', 'Thêu Thùa', 'Đính Đá'];
+const loopWords = [
+  'Vẽ acrylic',
+  'Vẽ trên ly',
+  'Vẽ túi tote',
+  'Làm tranh resin'
+];
 
 function Banner() {
   const [loopIdx, setLoopIdx] = useState(0);
