@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/logo.png';
 import Lottie from 'lottie-react';
-import cuteCatWork from '../../assets/animation/CuteCatWorks.json'; // Thêm animation
+import cuteCatWork from '../../assets/animation/CuteCatWorks.json'; // Animation
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -40,9 +40,7 @@ function Header() {
   const scrollToFooter = (e) => {
     e.preventDefault();
     const footer = document.getElementById('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (footer) footer.scrollIntoView({ behavior: 'smooth' });
     setOpen(false);
   };
 
@@ -52,7 +50,7 @@ function Header() {
       role="banner"
     >
       <div className="header-inner">
-        {/* Logo only */}
+        {/* Logo */}
         <div className="header-left">
           <Link to="/" className="brand" aria-label="SnapArt Homepage">
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
@@ -83,11 +81,6 @@ function Header() {
             Đi với tôi nào!
           </button>
 
-          {/* Cute Cat Animation */}
-          <div className="header-animation">
-            <Lottie animationData={cuteCatWork} loop={true} />
-          </div>
-
           <button
             className={`menu-toggle ${open ? 'open' : ''}`}
             onClick={() => setOpen((prev) => !prev)}
@@ -98,6 +91,11 @@ function Header() {
             <span></span>
             <span></span>
           </button>
+        </div>
+
+        {/* Cute Cat Animation */}
+        <div className="header-animation">
+          <Lottie animationData={cuteCatWork} loop={true} />
         </div>
       </div>
 
