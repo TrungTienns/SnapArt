@@ -1,14 +1,21 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './BannerAboutUs.scss';
 
-import bannerImage from '../../assets/images/bannerabout_us1.jpg'; // đặt ảnh tại đây
+import bannerImage from '../../assets/images/bannerabout_us1.jpg';
 
 function BannerAboutUs() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
   }, []);
+
+  const handleClick = () => {
+    navigate('/contact'); // chuyển đến trang ContactPage
+  };
 
   return (
     <section
@@ -22,9 +29,9 @@ function BannerAboutUs() {
         <p>
           Mỗi buổi học tại SnapArt là hành trình khám phá cảm xúc, sắc màu và sự sáng tạo vô tận.
         </p>
-        <a href="/workshops" className="banner-button">
+        <button className="banner-button" onClick={handleClick}>
           Bắt Đầu Ngay
-        </a>
+        </button>
       </div>
     </section>
   );

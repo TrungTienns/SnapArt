@@ -77,7 +77,7 @@ function Banner() {
         <p className="hero-artworkshop-desc">
           Khơi nguồn sáng tạo, cùng nhau <b>{loopWords[loopIdx]}</b> tạo ra tác phẩm dễ thương!
         </p>
-        <a href="#dang-ky" className="hero-artworkshop-btn">
+        <a href="/contact" className="hero-artworkshop-btn">
           Tham gia Workshop
         </a>
       </div>
