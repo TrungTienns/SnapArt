@@ -5,7 +5,8 @@ import Banner from '../../layout/Banner/Banner';
 import './HomePage.scss';
 import AboutUs from '../../layout/AboutUs/AboutUs';
 import Benefit from '../../layout/Benefit/Benefit';
-
+import Contact from '../../layout/Contact/Contact.jsx';
+import Blog from '../../layout/Blog/Blog.jsx';
 function HomePage() {
   return (
     <div className="homepage">
@@ -13,6 +14,8 @@ function HomePage() {
       <Banner />
       <AboutUs />
       <Benefit />
+      <Contact />
+      <Blog />
       <Footer />
     </div>
   );

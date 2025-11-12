@@ -22,7 +22,7 @@ const ContactPage = () => {
               Dù bạn đang tìm cách chữa lành tâm hồn, khơi dậy sáng tạo, hay chỉ muốn vẽ cùng những người bạn mới — hãy gửi lời nhắn, chúng tôi bắt đầu hành trình cùng bạn.
             </h2>
             <div className="contact-email">
-              <a href="mailto:hello@terradactyl.xyz">hello@terradactyl.xyz</a>
+              <a href="mailto:snapart@workshop.com">snapart@workshop.com</a>
             </div>
           </div>
 
