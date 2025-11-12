@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../layout/Header/Header.jsx";
-
+import Footer from "../../../layout/Footer/Footer.jsx";
 import blogImage from "../../../assets/images/blog_image4.jpg"; // ảnh minh họa cho blog4
 
 import "./Blog4.scss";
