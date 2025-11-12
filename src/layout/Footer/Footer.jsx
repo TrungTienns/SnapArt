@@ -27,7 +27,7 @@ function Footer() {
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
             <span className="brand-name">SnapArt</span>
           </Link>
-          <p className="slogan">Sáng tạo không giới hạn – Mỗi tác phẩm là một hành trình.</p>
+          <p className="slogan">Mỗi nét vẽ là một câu chuyện - Mỗi tác phẩm là một hành trình - Hãy tận hưởng và sáng tạo - Vì bạn</p>
           <div className="social-links">
             <a href="#"><img src={xIcon} alt="Zalo" className="social-icon" /></a>
             <a href="https://www.tiktok.com/@0.0merida?lang=vi-VN"><img src={tiktokIcon} alt="TikTok" className="social-icon" /></a>

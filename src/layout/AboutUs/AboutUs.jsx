@@ -28,8 +28,8 @@ const AboutUs = () => {
           <div className="header__text">
             <h2>Về Chúng Tôi</h2>
             <p>
-              Chào mừng đến workshop, nơi chúng tôi trân trọng từng khoảnh khắc. Chúng tôi ở đây vì<br/>
-              <span className="values-highlight">— sự thư giãn, thể hiện bản thân, và năng lượng tích cực.</span>
+              Chào mừng đến SnapArt - Nơi chúng tôi trân trọng từng khoảnh khắc. Chúng tôi ở đây vì<br/>
+              <span className="values-highlight"> Sự thư giãn - Thể hiện bản thân - Năng lượng tích cực.</span>
             </p>
           </div>
           <a href="about" className="learn-more-btn">Tìm hiểu thêm</a>

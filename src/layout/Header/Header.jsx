@@ -1,7 +1,6 @@
-// src/layout/Header/Header.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.scss'; // Đã sửa đường dẫn
+import './Header.scss';
 import logo from '../../assets/logo.png';
 
 function Header() {
@@ -11,21 +10,19 @@ function Header() {
   const [lastScroll, setLastScroll] = useState(0);
 
   const links = [
-    { to: '/', label: 'HOME' },
-    { to: '/about', label: 'ABOUT US' },
-    { to: '/works', label: 'WORKS' },
-    { to: '/services', label: 'SERVICES' },
+    { to: '/', label: 'TRANG CHỦ' },
+    { to: '/about', label: 'VỀ CHÚNG TÔI' },
+    { to: '/works', label: 'TÁC PHẨM' },
+    { to: '/services', label: 'DỊCH VỤ' },
     { to: '/blog', label: 'BLOG' },
-    { to: '/contact', label: 'CONTACT' },
+    { to: '/contact', label: 'LIÊN HỆ' },
   ];
 
-  // Scroll effects: Ẩn header khi cuộn xuống, hiện khi cuộn lên
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
       setScrolled(currentScroll > 50);
 
-      // Ẩn header khi cuộn xuống quá 100px
       if (currentScroll > lastScroll && currentScroll > 100) {
         setHideHeader(true);
       } else {
@@ -38,14 +35,13 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScroll]);
 
-  // Hàm scroll mượt xuống Footer
   const scrollToFooter = (e) => {
     e.preventDefault();
     const footer = document.getElementById('footer');
     if (footer) {
       footer.scrollIntoView({ behavior: 'smooth' });
     }
-    setOpen(false); // Đóng menu mobile nếu đang mở
+    setOpen(false);
   };
 
   return (
@@ -54,19 +50,15 @@ function Header() {
       role="banner"
     >
       <div className="header-inner">
-        {/* Logo */}
+        {/* Logo only */}
         <div className="header-left">
           <Link to="/" className="brand" aria-label="SnapArt Homepage">
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
-            <span className="brand-name">SnapArt</span>
           </Link>
         </div>
 
         {/* Navigation */}
-        <nav
-          className={`main-nav ${open ? 'open' : ''}`}
-          aria-label="Main navigation"
-        >
+        <nav className={`main-nav ${open ? 'open' : ''}`} aria-label="Main navigation">
           {links.map((link) => (
             <Link
               key={link.label}
@@ -86,7 +78,7 @@ function Header() {
             className="cta"
             aria-label="Scroll to contact section"
           >
-            Let's Go!
+            Đi với tôi nào!
           </button>
 
           <button
@@ -102,13 +94,8 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu Backdrop */}
       {open && (
-        <div
-          className="mobile-backdrop"
-          onClick={() => setOpen(false)}
-          aria-hidden="true"
-        />
+        <div className="mobile-backdrop" onClick={() => setOpen(false)} aria-hidden="true" />
       )}
     </header>
   );

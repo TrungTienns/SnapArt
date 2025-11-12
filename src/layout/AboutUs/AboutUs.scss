@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 $primary: #FF9994;
 $primary-hover: #ff7a75;
 $text-dark: #1a1a1a;
@@ -9,6 +11,7 @@ $shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.12);
 $border-light: rgba(0, 0, 0, 0.08);
 
 .about-us-section {
+  font-family: 'Poppins', sans-serif;
   padding: 4rem 2rem;
   background-color: $bg-section;
 
@@ -44,6 +47,9 @@ $border-light: rgba(0, 0, 0, 0.08);
         .values-highlight {
           color: $primary;
           font-weight: 500;
+          text-transform: capitalize;
+          display: inline-block;
+          text-align: center;
         }
       }
     }

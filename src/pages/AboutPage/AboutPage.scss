@@ -1,88 +1,255 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+$primary: #ff9994;
+$text-dark: #1a1a1a;
+$text-light: #555;
+$bg-section: #fff;
+$shadow-sm: 0 6px 12px rgba(0, 0, 0, 0.08);
+
 .about-page {
-  padding: 50px 20px;
-  background-color: transparent;
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: $text-dark;
+  background-color: #f9f9f9;
+
+  // =====================
+  // Hero Section
+  // =====================
+  .about-hero {
+    background: linear-gradient(to bottom, #fff8f8, #f9f9f9);
+    text-align: center;
+    padding: 6rem 2rem 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 1.5rem;
+      animation: fadeDown 1s ease-out;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: $text-light;
+      animation: fadeUp 1.2s ease-out;
+    }
+  }
+
+  // =====================
+  // Article Section
+  // =====================
+  .about-article {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+
+    .article-block {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 5rem;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeSlideUp 0.9s ease-out forwards;
+
+      &:nth-child(even) {
+        animation-delay: 0.3s;
+      }
+
+      &.right-image {
+        flex-direction: row-reverse;
+      }
+
+     .article-image {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: $shadow-sm;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.8s ease, box-shadow 0.3s ease, opacity 0.8s ease;
+    opacity: 1;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      opacity: 0.85; // làm mờ nhẹ khi hover
+    }
+
+    &.fade-out {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
 }
 
-/* Shared page container to align with header width */
-.page-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+      .article-text {
+        flex: 1.1;
+        animation: slideFade 1s ease forwards;
+        animation-delay: 0.3s;
 
-.about-hero {
-  text-align: center;
-  margin-bottom: 50px;
-}
+        .article-number {
+          font-size: 2.2rem;
+          font-weight: 600;
+          color: $primary;
+          display: block;
+          margin-bottom: 0.5rem;
+          animation: numberPop 0.8s ease-out;
+        }
 
-.about-hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+        h2 {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
 
-.about-hero p {
-  font-size: 18px;
-  line-height: 1.5;
-}
+        p {
+          font-size: 1.05rem;
+          color: $text-light;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
 
-.about-info {
-  max-width: 600px;
-  margin: 0 auto 50px auto;
-}
+  // =====================
+  // Ending Section
+  // =====================
+  .about-ending {
+    text-align: center;
+    background: #fff;
+    padding: 4rem 2rem 6rem 2rem;
 
-.about-info h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-align: center;
-}
+    h2 {
+      font-size: 2.2rem;
+      color: $primary;
+      margin-bottom: 1rem;
+      animation: fadeDown 1s ease-out;
+    }
 
-.about-info ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
+    p {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      font-size: 1.1rem;
+      color: $text-light;
+      line-height: 1.8;
+      animation: fadeUp 1s ease-out;
+    }
 
-.about-info li {
-  margin-bottom: 10px;
-}
+    .cta-button {
+      padding: 0.8rem 1.8rem;
+      background-color: $primary;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      animation: pulse 2.5s infinite;
+      transition: background 0.3s ease, transform 0.2s ease;
 
-.contact-section {
-  text-align: center;
-  margin-bottom: 50px;
-}
+      &:hover {
+        background-color: color.adjust($primary, $lightness: -10%);
+        transform: translateY(-2px);
+      }
+    }
+  }
 
-.contact-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+  // =====================
+  // Keyframes
+  // =====================
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-.contact-section p {
-  margin-bottom: 20px;
-}
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-.contact-form input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
-.contact-form button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: #6c63ff;
-  color: white;
-  cursor: pointer;
-}
-.contact-form button:hover {
-  background-color: #5753d6;
+  @keyframes numberPop {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  // =====================
+  // Responsive
+  // =====================
+  @media (max-width: 900px) {
+    .article-block {
+      flex-direction: column !important;
+      text-align: center;
+
+      .article-text {
+        h2 {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .about-hero {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }
