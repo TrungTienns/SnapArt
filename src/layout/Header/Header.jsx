@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/logo.png';
+import Lottie from 'lottie-react';
+import cuteCatWork from '../../assets/animation/CuteCatWorks.json'; // Thêm animation
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -71,7 +73,7 @@ function Header() {
           ))}
         </nav>
 
-        {/* CTA + Mobile Toggle */}
+        {/* CTA + Animation + Mobile Toggle */}
         <div className="header-right">
           <button
             onClick={scrollToFooter}
@@ -80,6 +82,11 @@ function Header() {
           >
             Đi với tôi nào!
           </button>
+
+          {/* Cute Cat Animation */}
+          <div className="header-animation">
+            <Lottie animationData={cuteCatWork} loop={true} />
+          </div>
 
           <button
             className={`menu-toggle ${open ? 'open' : ''}`}

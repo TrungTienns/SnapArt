@@ -94,7 +94,7 @@ body, main, .about-page {
   width: 100%;
 }
 
-/* ====== CTA ====== */
+/* ====== CTA + Animation ====== */
 .header-right {
   display: inline-flex;
   align-items: center;
@@ -116,6 +116,18 @@ body, main, .about-page {
 .cta:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 22px rgba(255, 105, 135, 0.45);
+}
+
+/* ====== Animation CuteCatWork ====== */
+.header-animation {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.header-animation:hover {
+  transform: scale(1.1);
 }
 
 /* ====== Menu Toggle ====== */
@@ -183,8 +195,19 @@ body, main, .about-page {
     display: none;
   }
 
+  /* Animation ra giữa khi responsive */
+  .header-animation {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    margin-top: 12px;
+  }
+
   body, main, .about-page {
-    padding-top: 88px; /* giữ khoảng cách header */
+    padding-top: 88px;
   }
 }
 
@@ -206,7 +229,13 @@ body, main, .about-page {
     gap: 16px;
   }
 
+  .header-animation {
+    width: 60px;
+    height: 60px;
+    margin-top: 8px;
+  }
+
   body, main, .about-page {
-    padding-top: 72px; /* header nhỏ hơn trên mobile */
+    padding-top: 72px;
   }
 }
