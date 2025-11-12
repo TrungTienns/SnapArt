@@ -2,10 +2,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Layout
-import Header from "../layout/Header/Header";
-import Footer from "../layout/Footer/Footer";
-
 // Pages
 import HomePage from "../pages/HomePage/HomePage";
 import AboutPage from "../pages/AboutPage/AboutPage";
@@ -18,6 +14,9 @@ import Blog1 from "../pages/BlogsPage/Blog1/Blog1";
 import Blog2 from "../pages/BlogsPage/Blog2/Blog2";
 import Blog3 from "../pages/BlogsPage/Blog3/Blog3";
 import Blog4 from "../pages/BlogsPage/Blog4/Blog4";
+
+// Layout
+import Header from "../layout/Header/Header";
 
 // Path constants
 import { path } from "../common/path";
@@ -44,9 +43,6 @@ const AppRoutes = () => {
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-      {/* Footer luôn hiển thị */}
-      <Footer />
     </>
   );
 };

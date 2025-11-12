@@ -44,6 +44,8 @@ function Blog1() {
           <img src={blogImage} alt="Minh họa cọ vẽ" />
         </div>
       </div>
+        {/* Footer */}
+        <Footer />
     </div>
   );
 }

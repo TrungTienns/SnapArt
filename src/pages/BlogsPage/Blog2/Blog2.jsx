@@ -44,6 +44,8 @@ function Blog2() {
           <img src={blogImage} alt="Minh họa màu acrylic" />
         </div>
       </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

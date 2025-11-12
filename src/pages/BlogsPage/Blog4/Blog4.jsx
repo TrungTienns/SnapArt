@@ -33,6 +33,8 @@ function Blog4() {
           <img src={blogImage} alt="Minh họa vẽ chữa lành" />
         </div>
       </div>
+        {/* Footer */}
+        <Footer />
     </div>
   );
 }
