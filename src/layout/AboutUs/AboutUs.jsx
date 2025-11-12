@@ -32,7 +32,7 @@ const AboutUs = () => {
               <span className="values-highlight"> Sự thư giãn - Thể hiện bản thân - Năng lượng tích cực.</span>
             </p>
           </div>
-          <a href="about" className="learn-more-btn">Tìm hiểu thêm</a>
+          <a href="/about" className="learn-more-btn">Tìm hiểu thêm</a>
         </div>
 
         {/* Main Content */}
