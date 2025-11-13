@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../layout/Header/Header.jsx";
-import Banner from "../../../layout/Banner/Banner.jsx";
+import Footer from "../../../layout/Footer/Footer.jsx"
 import blogImage from "../../../assets/images/blog_image1.jpg"; // đặt ảnh ở src/assets
 
 import "./Blog1.scss"; // tạo file scss kèm theo
