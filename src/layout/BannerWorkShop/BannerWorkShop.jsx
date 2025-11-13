@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './BannerWorkshop.scss';
+import './BannerWorkShop.scss';
 
 // Dữ liệu ảnh banner
 import banner1 from '../../assets/images/bannerworkshop.jpg';
