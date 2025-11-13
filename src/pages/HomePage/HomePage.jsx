@@ -7,6 +7,7 @@ import AboutUs from '../../layout/AboutUs/AboutUs';
 import Benefit from '../../layout/Benefit/Benefit';
 import Contact from '../../layout/Contact/Contact.jsx';
 import Blog from '../../layout/Blog/Blog.jsx';
+import WorkShopProduct from '../../layout/WorkShopProduct/WorkShopProduct.jsx';
 function HomePage() {
   return (
     <div className="homepage">
@@ -16,6 +17,7 @@ function HomePage() {
       <Benefit />
       <Contact />
       <Blog />
+      <WorkShopProduct />
       <Footer />
     </div>
   );

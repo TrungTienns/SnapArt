@@ -23,7 +23,7 @@ function Blog() {
 
   return (
     <section className="blog-workshop">
-      <h2 className="blog-heading">Cùng ngồi lại để nói chuyện nhé!</h2>
+      <h2 className="blog-heading">Cùng ngồi lại để trò chuyện nhé!</h2>
       <div className="blog-container">
         {blogPosts.map(post => (
           <div key={post.id} className="blog-card">

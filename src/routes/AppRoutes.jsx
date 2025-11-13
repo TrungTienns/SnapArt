@@ -8,6 +8,7 @@ import AboutPage from "../pages/AboutPage/AboutPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import LanguageSelector from "../pages/LanguageSelector/LanguageSelector";
 import NotFound from "../pages/NotFound/NotFound";
+import WorkPage from "../pages/WorkPage/WorkPage";
 
 import Blog1 from "../pages/BlogsPage/Blog1/Blog1";
 import Blog2 from "../pages/BlogsPage/Blog2/Blog2";
@@ -38,6 +39,7 @@ const AppRoutes = () => {
         <Route path="/language" element={<LanguageSelector />} />
         <Route path={path.about} element={<AboutPage />} />
         <Route path={path.contact} element={<ContactPage />} />
+        <Route path={path.works} element={<WorkPage />} />
 
         {/* Blog pages */}
         <Route path={path.blog1} element={<Blog1 />} />
