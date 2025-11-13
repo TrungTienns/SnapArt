@@ -1,0 +1,71 @@
+// src/pages/WorkShop/WorkPage5/WorkPage5.scss
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.workpage {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .workshop-article {
+    width: 90%;
+    max-width: 900px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 100px 0;
+
+    h1 {
+      font-size: 2rem;
+      color: #ff9994;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .article-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+    }
+
+    .article-content {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.8;
+      text-align: justify;
+
+      p {
+        margin-bottom: 18px;
+      }
+
+      strong {
+        color: #ff9994;
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workpage {
+    .workshop-article {
+      padding: 25px;
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .article-content {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

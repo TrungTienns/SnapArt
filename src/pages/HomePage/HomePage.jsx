@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from '../../layout/Header/Header';
 import Footer from '../../layout/Footer/Footer';
 import Banner from '../../layout/Banner/Banner';
 import './HomePage.scss';
 import AboutUs from '../../layout/AboutUs/AboutUs';
 import Benefit from '../../layout/Benefit/Benefit';
-import Contact from '../../layout/Contact/Contact.jsx';
+import Contact from '../../layout/Rating/Rating.jsx';
 import Blog from '../../layout/Blog/Blog.jsx';
 import WorkShopProduct from '../../layout/WorkShopProduct/WorkShopProduct.jsx';
+import AllRating from '../../layout/AllRating/AllRating.jsx';
+
 function HomePage() {
+  const footerRef = useRef(null); // tạo ref cho Footer
+
   return (
     <div className="homepage">
-      <Header />
+      {/* Header nhận footerRef */}
+      <Header footerRef={footerRef} />
+
       <Banner />
       <AboutUs />
       <Benefit />
-      <Contact />
       <Blog />
       <WorkShopProduct />
-      <Footer />
+      <Contact />
+      <AllRating />
+
+      {/* Footer nhận ref */}
+      <Footer ref={footerRef} />
     </div>
   );
 }

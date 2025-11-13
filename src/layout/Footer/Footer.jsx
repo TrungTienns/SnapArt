@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import './Footer.scss';
@@ -13,13 +13,12 @@ import xIcon from '../../assets/icons/zalo.svg';
 // Cat animation
 import sleepyCat from '../../assets/animation/CatPlayingPink.json';
 
-function Footer() {
+const Footer = forwardRef((props, ref) => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
   const googleMapsLink = "https://www.google.com/maps?q=371/8+Hai+Bà+Trưng,+Q.3,+HCM";
 
   return (
-    <footer className="site-footer">
+    <footer ref={ref} className="site-footer">
       <div className="footer-container">
         {/* Logo & Slogan */}
         <div className="footer-brand">
@@ -77,6 +76,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;

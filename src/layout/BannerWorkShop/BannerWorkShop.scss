@@ -1,0 +1,131 @@
+.banner-workshop {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  .banner-slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    height: 100%;
+  }
+
+  .banner-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .banner-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255, 153, 148, 0.3);
+    }
+
+    .banner-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      max-width: 900px;
+      padding: 0 20px;
+
+      h1 {
+        font-family: 'Baloo 2', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      p {
+        font-family: 'Baloo 2', sans-serif;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .banner-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 153, 148, 0.7);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #ff9994;
+    }
+  }
+
+  .banner-btn.prev { left: 20px; }
+  .banner-btn.next { right: 20px; }
+
+  @media (max-width: 768px) {
+    height: 300px;
+    .banner-content h1 { font-size: 28px; }
+    .banner-content p { font-size: 16px; }
+  }
+
+  @media (max-width: 576px) {
+    height: 220px;
+    .banner-content h1 { font-size: 22px; }
+    .banner-content p { font-size: 14px; }
+  }
+}
+.banner-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 153, 148, 0.7);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #ff9994;
+  }
+}
+
+.banner-btn.prev {
+  left: 15px; // chỉnh từ 20px xuống 15px để sát banner hơn
+}
+
+.banner-btn.next {
+  right: 15px; // chỉnh từ 20px xuống 15px
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}

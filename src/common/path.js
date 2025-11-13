@@ -12,12 +12,12 @@ export const path = {
   blog4: "/blog4",
 
   // Product pages
-  product1: "/product1",
-  product2: "/product2",
-  product3: "/product3",
-  product4: "/product4",
-  product5: "/product5",
-  product6: "/product6",
-  product7: "/product7",
-  product8: "/product8"
+  product1: "/workshop1",
+  product2: "/workshop2",
+  product3: "/workshop3",
+  product4: "/workshop4",
+  product5: "/workshop5",
+  product6: "/workshop6",
+  product7: "/workshop7",
+  product8: "/workshop8"
 };
