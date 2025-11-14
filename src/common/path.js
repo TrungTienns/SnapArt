@@ -2,6 +2,7 @@ export const path = {
   homepage: "/",
   about: "/about",
   contact: "/contact",
+  gallery: "/gallery",
   works: "/works",
 
   // Blog pages
@@ -19,5 +20,17 @@ export const path = {
   product5: "/workshop5",
   product6: "/workshop6",
   product7: "/workshop7",
-  product8: "/workshop8"
+  product8: "/workshop8",
+
+  //
+  workshop1: "/product1",
+  workshop2: "/product2",
+  workshop3: "/product3",
+  workshop4: "/product4",
+  workshop5: "/product5",
+  workshop6: "/product6",
+
+  //collection pages
+  adultCollection: "/adult-collection",
+  kidsCollection: "/kids-collection",
 };

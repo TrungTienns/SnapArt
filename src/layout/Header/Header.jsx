@@ -15,7 +15,7 @@ function Header({ footerRef }) {
   const links = [
     { to: '/', label: 'TRANG CHỦ' },
     { to: '/about', label: 'VỀ CHÚNG TÔI' },
-    { to: '/product', label: 'TÁC PHẨM' },
+    { to: '/gallery', label: 'TÁC PHẨM' },
     { to: '/works', label: 'KHÓA HỌC' },
     { to: '/blog', label: 'BLOG' },
     { to: '/contact', label: 'LIÊN HỆ' },
@@ -83,12 +83,12 @@ function Header({ footerRef }) {
         {/* CTA + Animation + Mobile Toggle */}
         <div className="header-right">
           {/* Nút CTA chuyển sang /workshop */}
-          <button
-            onClick={() => navigate('/works')}
+         <button
+            onClick={() => window.open('https://www.instagram.com/snapart_hcm/?hl=en', '_blank')}
             className="cta"
-            aria-label="Đi tới workshop"
+            aria-label="Đi tới Facebook"
           >
-            Đi với tôi nào!
+          Đi với tôi nào!
           </button>
 
           <button

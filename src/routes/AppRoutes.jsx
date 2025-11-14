@@ -9,6 +9,8 @@ import ContactPage from "../pages/ContactPage/ContactPage";
 import LanguageSelector from "../pages/LanguageSelector/LanguageSelector";
 import NotFound from "../pages/NotFound/NotFound";
 import WorkPage from "../pages/WorkPage/WorkPage";
+import BlogPage from "../pages/BlogPage/BlogPage";
+import GalleryPage from "../pages/GalleryPage/GalleryPage";
 // Blog pages
 import Blog1 from "../pages/BlogsPage/Blog1/Blog1";
 import Blog2 from "../pages/BlogsPage/Blog2/Blog2";
@@ -23,6 +25,18 @@ import Product5 from "../pages/WorkPages/WorkPage5/WorkPage5";
 import Product6 from "../pages/WorkPages/WorkPage6/WorkPage6";
 import Product7 from "../pages/WorkPages/WorkPage7/WorkPage7";
 import Product8 from "../pages/WorkPages/WorkPage8/WorkPage8";
+
+//Work Pages
+import Workshop1 from "../pages/WorkShopPage/WorkPage1/Workshop1";
+import Workshop2 from "../pages/WorkShopPage/WorkPage2/Workshop2";
+import Workshop3 from "../pages/WorkShopPage/WorkPage3/Workshop3";
+import Workshop4 from "../pages/WorkShopPage/WorkPage4/Workshop4";
+import Workshop5 from "../pages/WorkShopPage/WorkPage5/Workshop5";
+import Workshop6 from "../pages/WorkShopPage/WorkPage6/Workshop6";
+//Collection page
+import AdultCollection from "../pages/CollectionPage/AdultCollection/AdultCollection";
+import KidsCollection from "../pages/CollectionPage/KidsCollection/KidsCollection";
+
 // Layout
 import Header from "../layout/Header/Header";
 
@@ -48,6 +62,8 @@ const AppRoutes = () => {
         <Route path={path.about} element={<AboutPage />} />
         <Route path={path.contact} element={<ContactPage />} />
         <Route path={path.works} element={<WorkPage />} />
+        <Route path={path.blog} element={<BlogPage />} />
+        <Route path={path.gallery} element={<GalleryPage />} />
 
         {/* Blog pages */}
         <Route path={path.blog1} element={<Blog1 />} />
@@ -63,6 +79,17 @@ const AppRoutes = () => {
         <Route path={path.product6} element={<Product6 />} />
         <Route path={path.product7} element={<Product7 />} />
         <Route path={path.product8} element={<Product8 />} />
+        {/* Workshop pages */}
+        <Route path={path.workshop1} element={<Workshop1 />} />
+        <Route path={path.workshop2} element={<Workshop2 />} />
+        <Route path={path.workshop3} element={<Workshop3 />} />
+        <Route path={path.workshop4} element={<Workshop4 />} />
+        <Route path={path.workshop5} element={<Workshop5 />} />
+        <Route path={path.workshop6} element={<Workshop6 />} />
+
+        {/* Collection pages */}
+        <Route path={path.adultCollection} element={<AdultCollection />} />
+        <Route path={path.kidsCollection} element={<KidsCollection />} />
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
