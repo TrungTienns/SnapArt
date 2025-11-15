@@ -1,78 +1,92 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './Header.scss';
-import logo from '../../assets/logo.png';
-import Lottie from 'lottie-react';
-import cuteCatWork from '../../assets/animation/CuteCatWorks.json';
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./Header.scss";
+import logo from "../../assets/logo.png";
+import Lottie from "lottie-react";
+import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
+import bgMusic from "../../assets/music/background.mp3";
 
 function Header({ footerRef }) {
-  const navigate = useNavigate(); // <-- dùng navigate
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hideHeader, setHideHeader] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) audioRef.current.pause();
+    else audioRef.current.play();
+    setIsPlaying(!isPlaying);
+  };
+
   const links = [
-    { to: '/', label: 'TRANG CHỦ' },
-    { to: '/about', label: 'VỀ CHÚNG TÔI' },
-    { to: '/gallery', label: 'TÁC PHẨM' },
-    { to: '/works', label: 'KHÓA HỌC' },
-    { to: '/blog', label: 'BLOG' },
-    { to: '/contact', label: 'LIÊN HỆ' },
+    { to: "/", label: "TRANG CHỦ" },
+    { to: "/about", label: "VỀ CHÚNG TÔI" },
+    { to: "/gallery", label: "TÁC PHẨM" },
+    { to: "/works", label: "KHÓA HỌC" },
+    { to: "/blog", label: "BLOG" },
+    { to: "/contact", label: "LIÊN HỆ" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      setScrolled(currentScroll > 50);
+      const current = window.scrollY;
+      setScrolled(current > 50);
 
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        setHideHeader(true);
-      } else {
-        setHideHeader(false);
-      }
-      setLastScroll(currentScroll);
+      if (current > lastScroll && current > 100) setHideHeader(true);
+      else setHideHeader(false);
+
+      setLastScroll(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
-  // Scroll xuống Footer (nếu muốn)
   const scrollToFooter = (e) => {
     e?.preventDefault();
-    if (footerRef && footerRef.current) {
-      footerRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (footerRef?.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
     }
     setOpen(false);
   };
 
   return (
-    <header
-      className={`site-header ${scrolled ? 'scrolled' : ''} ${hideHeader ? 'hide' : ''}`}
-      role="banner"
-    >
+    <header className={`site-header ${scrolled ? "scrolled" : ""} ${hideHeader ? "hide" : ""}`}>
+      <audio ref={audioRef} src={bgMusic} loop />
+
       <div className="header-inner">
-        {/* Logo */}
+
+        {/* LEFT: LOGO + MUSIC TOGGLE */}
         <div className="header-left">
-          <Link to="/" className="brand" aria-label="SnapArt Homepage">
+          <Link to="/" className="brand">
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
           </Link>
+
+          <div
+            className={`music-toggle ${isPlaying ? "playing" : ""}`}
+            onClick={toggleMusic}
+          >
+            <div className={`toggle-btn ${isPlaying ? "on" : ""}`}>
+              <div className="circle"></div>
+            </div>
+          </div>
         </div>
 
-        {/* Navigation */}
-        <nav className={`main-nav ${open ? 'open' : ''}`} aria-label="Main navigation">
+        {/* NAVIGATION */}
+        <nav className={`main-nav ${open ? "open" : ""}`}>
           {links.map((link) => (
             <Link
               key={link.label}
-              to={link.to === '/contact' ? '#' : link.to}
+              to={link.to === "/contact" ? "#" : link.to}
               className="nav-link"
               onClick={(e) => {
-                if (link.to === '/contact') {
-                  scrollToFooter(e); // Scroll xuống Footer khi bấm LIÊN HỆ
-                } else {
-                  setOpen(false);
-                }
+                if (link.to === "/contact") scrollToFooter(e);
+                else setOpen(false);
               }}
             >
               {link.label}
@@ -80,38 +94,31 @@ function Header({ footerRef }) {
           ))}
         </nav>
 
-        {/* CTA + Animation + Mobile Toggle */}
+        {/* CTA + MENU BUTTON */}
         <div className="header-right">
-          {/* Nút CTA chuyển sang /workshop */}
-         <button
-            onClick={() => window.open('https://www.instagram.com/snapart_hcm/?hl=en', '_blank')}
+          <button
+            onClick={() =>
+              window.open("https://www.instagram.com/snapart_hcm/?hl=en", "_blank")
+            }
             className="cta"
-            aria-label="Đi tới Facebook"
           >
-          Đi với tôi nào!
+            Đi với tôi nào!
           </button>
 
           <button
-            className={`menu-toggle ${open ? 'open' : ''}`}
-            onClick={() => setOpen((prev) => !prev)}
-            aria-expanded={open}
-            aria-label="Toggle navigation menu"
+            className={`menu-toggle ${open ? "open" : ""}`}
+            onClick={() => setOpen(!open)}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
           </button>
         </div>
 
-        {/* Cute Cat Animation */}
         <div className="header-animation">
           <Lottie animationData={cuteCatWork} loop={true} />
         </div>
       </div>
 
-      {open && (
-        <div className="mobile-backdrop" onClick={() => setOpen(false)} aria-hidden="true" />
-      )}
+      {open && <div className="mobile-backdrop" onClick={() => setOpen(false)} />}
     </header>
   );
 }

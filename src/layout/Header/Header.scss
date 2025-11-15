@@ -39,6 +39,13 @@ body, main, .about-page {
   position: relative;
 }
 
+/* ⭐⭐⭐ FIX: Logo + nút nhạc nằm cùng 1 hàng */
+.header-left {
+  display: flex !important;
+  align-items: center;
+  gap: 14px;
+}
+
 /* ====== Logo ====== */
 .brand {
   display: inline-flex;
@@ -76,7 +83,7 @@ body, main, .about-page {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -101,7 +108,7 @@ body, main, .about-page {
   align-items: center;
   gap: 28px;
   position: relative;
-  z-index: 10; /* đảm bảo CTA trên animation */
+  z-index: 10;
 }
 
 .cta {
@@ -160,12 +167,12 @@ body, main, .about-page {
 /* ====== Animation Cute Cat ====== */
 .header-animation {
   position: absolute;
-  left: 60%; /* tăng giá trị để xích sang phải */
+  left: 62%;
   top: 50%;
-  transform: translate(250%, -50%); /* căn giữa animation theo vị trí left */
+  transform: translate(250%, -50%);
   width: 80px;
   height: 80px;
-  z-index: 0; /* dưới button */
+  z-index: 0;
 }
 
 @keyframes floatCat {
@@ -206,7 +213,6 @@ body, main, .about-page {
     display: none;
   }
 
-  /* Mèo nằm giữa header trên mobile nhưng vẫn không đè nút */
   .header-animation {
     position: absolute;
     left: 50%;
@@ -214,7 +220,6 @@ body, main, .about-page {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    z-index: 0; /* đảm bảo không đè các button */
   }
 
   .header-right {
@@ -247,5 +252,66 @@ body, main, .about-page {
 
   body, main, .about-page {
     padding-top: 72px;
+  }
+}
+
+/* ====== MUSIC TOGGLE ====== */
+.music-toggle {
+  margin-left: 16px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  display: flex;
+  align-items: center;
+}
+
+.music-toggle:hover {
+  transform: scale(1.07);
+}
+
+.toggle-btn {
+  width: 48px;
+  height: 22px;
+  background: #cfcfcf;
+  border-radius: 20px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.toggle-btn .circle {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.toggle-btn.on {
+  background: #ff9994;
+  box-shadow: 0 0 12px rgba(255, 153, 148, 0.7);
+}
+
+.toggle-btn.on .circle {
+  transform: translateX(26px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+.music-toggle.playing {
+  animation: musicVibration 1.4s infinite ease-in-out;
+}
+
+@keyframes musicVibration {
+  0%, 100% { transform: translateX(0); }
+  30% { transform: translateX(1px); }
+  60% { transform: translateX(-1px); }
+}
+
+@media (max-width: 480px) {
+  .music-toggle {
+    transform: scale(0.85);
+    margin-left: 8px;
   }
 }
