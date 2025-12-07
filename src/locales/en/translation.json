@@ -1,17 +1,143 @@
 {
-  "nav": {
-    "home": "HOME",
-    "about": "ABOUT",
-    "works": "WORKS",
-    "services": "SERVICES",
-    "testimonial": "TESTIMONIAL",
-    "blog": "BLOG",
-    "contact": "CONTACT"
+  "menu.home": "Home",
+  "menu.about": "About Us",
+  "menu.artwork": "Gallery",
+  "menu.course": "Courses",
+  "menu.blog": "Blog",
+  "menu.contact": "Contact",
+  "menu.cta": "Let's Go!",
+
+  "hero.title": "SnapArt Glass Painting Workshop",
+  "hero.desc": "Unleash creativity and paint on glass to create lovely artworks!",
+  "hero.button": "Join the Workshop",
+
+  "popup.title": "Choose Language",
+  "popup.en": "English",
+  "popup.vi": "Vietnamese",
+
+  "banner": {
+    "title": "Workshop",
+    "descBefore": "Unleash creativity and together",
+    "descAfter": "create lovely artworks!",
+    "button": "Join the Workshop",
+    "loop": [
+      "Acrylic Painting",
+      "Glass Painting",
+      "Tote Bag Painting",
+      "Resin Art"
+    ]
   },
-  "cta": "Let's Talk",
-  "notfound": {
-    "title": "Page Not Found",
-    "subtitle": "The page you're looking for doesn't exist.",
-    "button": "Back to Home"
+
+  "about": {
+    "title": "About Us",
+    "desc1": "Welcome to SnapArt – Where we cherish every moment. We are here for",
+    "values": "Relaxation – Self Expression – Positive Energy.",
+    "more": "Learn More",
+
+    "info": [
+      {
+        "number": "1.",
+        "title": "Who We Are",
+        "description": "We are a creative art studio where passion for painting is ignited and every idea is truly valued."
+      },
+      {
+        "number": "2.",
+        "title": "What We Do",
+        "description": "We provide art courses and workshops (from basic to advanced) to help you master techniques from watercolor and oil painting to digital art."
+      },
+      {
+        "number": "3.",
+        "title": "How We Help",
+        "description": "Through a cozy space, healing music, and caring guidance, we help you relieve stress and reconnect with yourself."
+      },
+      {
+        "number": "4.",
+        "title": "Create Success Stories",
+        "description": "We help you discover a new joy, a healthy hobby after work, and bring home a healing artwork created by your own hands."
+      }
+    ]
+  },
+
+  "benefit": {
+    "title": "Benefits of Painting & Art",
+    "desc": "Painting is not just about simple strokes — it is the story of thoughtful souls",
+    "items": [
+      {
+        "title": "Connect, Listen, and Heal Together",
+        "desc": "Painting allows your soul to rest, temporarily forget all the pressures, and feel each gentle breath. Every brushstroke becomes a moment of healing and inner peace."
+      },
+      {
+        "title": "Enhance Creativity",
+        "desc": "Art opens up an endless space for imagination, where you can freely create and express yourself. Every color and every line becomes part of a journey of freedom and emotional healing."
+      },
+      {
+        "title": "Improve Observation and Focus",
+        "desc": "When you paint, you learn to observe details and pay attention to light, colors, and shapes. This brings calmness to the mind, strengthens patience, and trains deep concentration for inner healing."
+      },
+      {
+        "title": "Beautify Your Living Space",
+        "desc": "A painting created by your own hands does not only decorate your room but also spreads warmth and peace. Each artwork leaves a personal mark that makes your living space more lively and healing."
+      }
+    ]
+  },
+
+  "blog.heading": "Let’s sit down and have a little talk!",
+
+  "blog.post1.title": "How to Use and Take Care of Your Paint Brushes Safely",
+  "blog.post1.desc": "Learn how to properly protect and care for your brushes to keep them durable, clean, and effective.",
+
+  "blog.post2.title": "Acrylic Paint: What It Is, How to Use and Store It",
+  "blog.post2.desc": "Acrylic paint is a fast-drying, durable, and flexible water-based paint widely used in modern art.",
+
+  "blog.post3.title": "Painting With New Friends – Why Not?",
+  "blog.post3.desc": "Painting with friends not only helps you relieve stress but also creates fun and inspiring artworks together.",
+
+  "blog.post4.title": "Healing Through Art – From Darkness to Light",
+  "blog.post4.desc": "Healing is not a one-day journey, but every brush stroke and every color slowly brings back energy, confidence, and hope.",
+
+  "blog.readMore": "Read more",
+
+  "workshop": {
+    "title": "We have some interesting workshops for you...",
+    "item1": "Wholesale & Retail Art Supplies",
+    "item2": "Corporate Workshop",
+    "item3": "Texture Art Workshop",
+    "item4": "Therapeutic Painting Workshop",
+    "item5": "Premium Art Supplies & Classes",
+    "item6": "Creative Workshop for Kids",
+    "item7": "Abstract Painting Workshop",
+    "item8": "Advanced Painting Class"
+  },
+
+  "rating": {
+    "heading": "SEND US YOUR FEEDBACK HERE",
+    "thankTitle": "Thank you!",
+    "thankDesc": "Thank you for leaving us a message. Every feedback, big or small, encourages us to improve and grow in the future.",
+    "success": "Your message has been sent successfully!",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "message": "Message",
+    "messagePlaceholder": "Write your message...",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+  "allRating": {
+  "heading": "What Our Customers Are Saying"
+},
+
+  "footer": {
+    "slogan": "Every stroke is a story - Every artwork is a journey - Enjoy and create - For you",
+    "siteMap": "Site Map",
+    "home": "Homepage",
+    "technology": "Technology",
+    "contact": "Contact Us",
+    "terms": "Terms of Services",
+    "privacy": "Privacy Policy",
+    "address": "Address",
+    "nearMarket": "near Tan Dinh Market",
+    "backToTop": "BACK TO TOP",
+    "copyright": "© 2025 Handmade Workshop. All rights reserved."
   }
 }

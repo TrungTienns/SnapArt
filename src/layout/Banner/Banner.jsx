@@ -5,22 +5,20 @@ import logo from '../../assets/images/banner.png';
 import flower from '../../assets/icons/flower.png';
 import sun from '../../assets/icons/sun.png';
 import brush from '../../assets/icons/paint-brush.png';
-
-const loopWords = [
-  'Vẽ acrylic',
-  'Vẽ trên ly',
-  'Vẽ túi tote',
-  'Làm tranh resin'
-];
+import { useTranslation } from 'react-i18next';
 
 function Banner() {
+  const { t } = useTranslation(); // ✅ i18n
+
+  // ✅ Loop words lấy từ file dịch
+  const loopWords = t('banner.loop', { returnObjects: true });
+
   const [loopIdx, setLoopIdx] = useState(0);
   const [show, setShow] = useState(true);
   const [logoVisible, setLogoVisible] = useState(false);
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
-    // Loop words animation
     const interval = setInterval(() => {
       setShow(false);
       setTimeout(() => {
@@ -29,12 +27,10 @@ function Banner() {
       }, 350);
     }, 2150);
 
-    // Show logo animation
     const logoTimer = setTimeout(() => {
       setLogoVisible(true);
     }, 500);
 
-    // Scroll to fade
     const handleScroll = () => {
       const aboutSection = document.querySelector('#about-us-section');
       if (!aboutSection) return;
@@ -54,7 +50,7 @@ function Banner() {
       clearTimeout(logoTimer);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [loopWords]);
 
   return (
     <section
@@ -63,8 +59,9 @@ function Banner() {
     >
       <div className="hero-artworkshop-left">
         <div className="hero-snapart-name">SnapArt</div>
+
         <h1 className="hero-artworkshop-title">
-          Workshop{' '}
+          {t('banner.title')}{' '}
           <span className="hero-loop-wrapper">
             <span
               className={`hero-loop-word-art${show ? ' show' : ''}`}
@@ -74,11 +71,18 @@ function Banner() {
             </span>
           </span>
         </h1>
+
         <p className="hero-artworkshop-desc">
-          Khơi nguồn sáng tạo, cùng nhau <b>{loopWords[loopIdx]}</b> tạo ra tác phẩm dễ thương!
+          {t('banner.descBefore')}{' '}
+          <b>{loopWords[loopIdx]}</b>{' '}
+          {t('banner.descAfter')}
         </p>
-        <a href="/contact" className="hero-artworkshop-btn">
-          Tham gia Workshop
+
+        <a
+          href="https://www.instagram.com/snapart_hcm/"
+          className="hero-artworkshop-btn"
+        >
+          {t('banner.button')}
         </a>
       </div>
 

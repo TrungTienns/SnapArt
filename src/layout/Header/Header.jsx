@@ -5,8 +5,10 @@ import logo from "../../assets/logo.png";
 import Lottie from "lottie-react";
 import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
 import bgMusic from "../../assets/music/background.mp3";
+import { useTranslation } from "react-i18next";
 
 function Header({ footerRef }) {
+  const { t } = useTranslation(); // ✅ i18n
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -23,13 +25,14 @@ function Header({ footerRef }) {
     setIsPlaying(!isPlaying);
   };
 
+  // ✅ MENU TEXT ĐÃ DÙNG t()
   const links = [
-    { to: "/", label: "TRANG CHỦ" },
-    { to: "/about", label: "VỀ CHÚNG TÔI" },
-    { to: "/gallery", label: "TÁC PHẨM" },
-    { to: "/works", label: "KHÓA HỌC" },
-    { to: "/blog", label: "BLOG" },
-    { to: "/contact", label: "LIÊN HỆ" },
+    { to: "/", label: t("menu.home") },
+    { to: "/about", label: t("menu.about") },
+    { to: "/gallery", label: t("menu.artwork") },
+    { to: "/works", label: t("menu.course") },
+    { to: "/blog", label: t("menu.blog") },
+    { to: "/contact", label: t("menu.contact") },
   ];
 
   useEffect(() => {
@@ -77,7 +80,7 @@ function Header({ footerRef }) {
           </div>
         </div>
 
-        {/* NAVIGATION */}
+        {/* ✅ NAVIGATION ĐA NGÔN NGỮ */}
         <nav className={`main-nav ${open ? "open" : ""}`}>
           {links.map((link) => (
             <Link
@@ -94,7 +97,7 @@ function Header({ footerRef }) {
           ))}
         </nav>
 
-        {/* CTA + MENU BUTTON */}
+        {/* ✅ CTA BUTTON ĐA NGÔN NGỮ */}
         <div className="header-right">
           <button
             onClick={() =>
@@ -102,7 +105,7 @@ function Header({ footerRef }) {
             }
             className="cta"
           >
-            Đi với tôi nào!
+            {t("menu.cta")}
           </button>
 
           <button

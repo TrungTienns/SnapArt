@@ -1,9 +1,9 @@
 // src/layout/WorkShopProduct/WorkShopProduct.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./WorkShopProduct.scss";
 
-// Import ảnh từ assets (React sẽ tự xử lý khi dùng Vite/CRA)
 import product1 from "../../assets/images/products/product_image7.jpg";
 import product2 from "../../assets/images/products/product_image2.jpg";
 import product3 from "../../assets/images/products/product_image6.jpg";
@@ -14,66 +14,19 @@ import product7 from "../../assets/images/products/product_image1.jpg";
 import product8 from "../../assets/images/products/product_image8.jpg";
 
 const workshops = [
-  {
-    id: 1,
-    title: "SẢN PHẨM HỌA CỤ SỈ VÀ LẺ",
-    date: "19 thg 12. 2023",
-    image: product1,
-    path: "/workshop1",
-  },
-  {
-    id: 2,
-    title: "Workshop Doanh nghiệp",
-    date: "21 thg 11. 2023",
-    image: product2,
-    path: "/workshop2",
-  },
-  {
-    id: 3,
-    title: "Texture Art Workshop",
-    date: "13 thg 4. 2023",
-    image: product3,
-    path: "/workshop3",
-  },
-  {
-    id: 4,
-    title: "Workshop Vẽ Tranh Tâm Tình",
-    date: "21 thg 12. 2022",
-    image: product4,
-    path: "/workshop4",
-  },
-  {
-    id: 5,
-    title: "Họa Cụ Cao Cấp & Lớp Học",
-    date: "5 thg 10. 2023",
-    image: product5,
-    path: "/workshop5",
-  },
-  {
-    id: 6,
-    title: "Workshop Sáng Tạo Cùng Trẻ",
-    date: "15 thg 9. 2023",
-    image: product6,
-    path: "/workshop6",
-  },
-  {
-    id: 7,
-    title: "Vẽ Tranh Trừu Tượng",
-    date: "28 thg 8. 2023",
-    image: product7,
-    path: "/workshop7",
-  },
-  {
-    id: 8,
-    title: "Lớp Học Vẽ Nâng Cao",
-    date: "10 thg 7. 2023",
-    image: product8,
-    path: "/workshop8",
-  },
+  { id: 1, titleKey: "workshop.item1", date: "19 Dec 2023", image: product1, path: "/workshop1" },
+  { id: 2, titleKey: "workshop.item2", date: "21 Nov 2023", image: product2, path: "/workshop2" },
+  { id: 3, titleKey: "workshop.item3", date: "13 Apr 2023", image: product3, path: "/workshop3" },
+  { id: 4, titleKey: "workshop.item4", date: "21 Dec 2022", image: product4, path: "/workshop4" },
+  { id: 5, titleKey: "workshop.item5", date: "5 Oct 2023", image: product5, path: "/workshop5" },
+  { id: 6, titleKey: "workshop.item6", date: "15 Sep 2023", image: product6, path: "/workshop6" },
+  { id: 7, titleKey: "workshop.item7", date: "28 Aug 2023", image: product7, path: "/workshop7" },
+  { id: 8, titleKey: "workshop.item8", date: "10 Jul 2023", image: product8, path: "/workshop8" }
 ];
 
 const WorkShopProduct = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleClick = (path) => {
     navigate(path);
@@ -81,7 +34,10 @@ const WorkShopProduct = () => {
 
   return (
     <div className="workshop-container">
-      <h2 className="section-title">Tớ có những cái này hay lắm nè...</h2>
+      <h2 className="section-title">
+        {t("workshop.title")}
+      </h2>
+
       <div className="workshop-grid">
         {workshops.map((workshop) => (
           <div
@@ -90,13 +46,13 @@ const WorkShopProduct = () => {
             onClick={() => handleClick(workshop.path)}
           >
             <div className="card-image">
-              <img src={workshop.image} alt={workshop.title} />
+              <img src={workshop.image} alt={t(workshop.titleKey)} />
             </div>
             <div className="card-content">
-              <div className="card-meta">
-                {workshop.date} • {workshop.readTime}
-              </div>
-              <h3 className="card-title">{workshop.title}</h3>
+              <div className="card-meta">{workshop.date}</div>
+              <h3 className="card-title">
+                {t(workshop.titleKey)}
+              </h3>
             </div>
           </div>
         ))}

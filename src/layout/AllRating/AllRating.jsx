@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./AllRating.scss";
 import PeopleImg1 from "../../assets/images/people/people1.jpg";
 import PeopleImg2 from "../../assets/images/people/people2.jpg";
-// Dữ liệu chay
+
+// Dữ liệu đánh giá (GIỮ NGUYÊN KHÔNG ĐA NGÔN NGỮ)
 const ratingsData = [
   {
     id: 1,
@@ -16,7 +18,8 @@ const ratingsData = [
     name: "Nguyễn Thị Ngọc Mai",
     email: "b@gmail.com",
     avatar: PeopleImg2,
-    message: "Khi tới với SnapArt, mình cảm thấy bình yên và được chữa lành sau những ngày làm việc căng thẳng, nhờ có SnapArt mình mới thấy được thế giới này đẹp đến nhường nào."
+    message:
+      "Khi tới với SnapArt, mình cảm thấy bình yên và được chữa lành sau những ngày làm việc căng thẳng, nhờ có SnapArt mình mới thấy được thế giới này đẹp đến nhường nào."
   },
   {
     id: 3,
@@ -28,16 +31,22 @@ const ratingsData = [
 ];
 
 const AllRating = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="all-rating">
-      <h2>Những đánh giá từ khách hàng</h2>
+      {/* TIÊU ĐỀ ĐA NGÔN NGỮ */}
+      <h2>{t("allRating.heading")}</h2>
+
       <div className="rating-list">
         {ratingsData.map((rating) => (
           <div key={rating.id} className="rating-box">
             <div className="avatar">
               <img src={rating.avatar} alt={rating.name} />
             </div>
+
             <div className="rating-content">
+              {/* TÊN & NỘI DUNG GIỮ NGUYÊN */}
               <h3>{rating.name}</h3>
               <span className="email">{rating.email}</span>
               <p>{rating.message}</p>

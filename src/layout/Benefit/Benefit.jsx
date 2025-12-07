@@ -9,43 +9,25 @@ import aboutus2 from '../../assets/images/aboutus_image2.jpg';
 import aboutus3 from '../../assets/images/aboutus_image3.jpg';
 import aboutus4 from '../../assets/images/aboutus_image4.jpg';
 
+import { useTranslation } from 'react-i18next';
+
 const Benefit = () => {
+  const { t } = useTranslation(); // ✅ i18n
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const benefits = [
-    {
-      title: 'Kết nối, lắng nghe và chữa lành cùng nhau.',
-      desc: 'Vẽ tranh giúp tâm hồn bạn được nghỉ ngơi, tạm quên đi mọi áp lực, và cảm nhận từng nhịp thở dịu dàng. Mỗi nét cọ là một khoảng lặng để chữa lành và tìm lại sự bình yên.',
-      img: aboutus1,
-      aos: 'fade-right',
-    },
-    {
-      title: 'Phát triển khả năng sáng tạo',
-      desc: 'Hội họa mở ra không gian vô tận cho trí tưởng tượng, nơi bạn thỏa sức sáng tạo và thể hiện bản thân. Mỗi màu sắc, mỗi đường nét là một phần của hành trình tự do và chữa lành tâm hồn.',
-      img: aboutus2,
-      aos: 'fade-up',
-    },
-    {
-      title: 'Tăng khả năng quan sát và tập trung',
-      desc: 'Khi vẽ, bạn học cách quan sát chi tiết và chú ý đến từng ánh sáng, màu sắc và đường nét. Điều này giúp tâm trí tĩnh lặng, nâng cao sự kiên nhẫn, và rèn luyện khả năng tập trung sâu để chữa lành bên trong.',
-      img: aboutus3,
-      aos: 'fade-left',
-    },
-    {
-      title: 'Làm đẹp cho không gian sống',
-      desc: 'Một bức tranh tự tay bạn tạo ra không chỉ làm đẹp căn phòng, mà còn lan tỏa cảm giác ấm áp và bình yên. Mỗi tác phẩm là dấu ấn riêng, khiến không gian sống trở nên sinh động và chữa lành tâm hồn.',
-      img: aboutus4,
-      aos: 'fade-up',
-    },
-  ];
+  const benefits = t('benefit.items', { returnObjects: true });
+
+  const images = [aboutus1, aboutus2, aboutus3, aboutus4];
+  const aosList = ['fade-right', 'fade-up', 'fade-left', 'fade-up'];
 
   return (
     <section className="benefit-section">
       <div className="benefit-header" data-aos="zoom-in">
-        <h2>Lợi Ích Của Việc Vẽ Tranh & Nghệ Thuật</h2>
-        <p>Vẽ không đơn giản là những những nét màu đơn giản, mà nó là câu chuyện của những người nhiều suy tư</p>
+        <h2>{t('benefit.title')}</h2>
+        <p>{t('benefit.desc')}</p>
       </div>
 
       <div className="benefit-grid">
@@ -53,9 +35,9 @@ const Benefit = () => {
           <div
             className={`benefit-card card-${index + 1}`}
             key={index}
-            data-aos={b.aos}
+            data-aos={aosList[index]}
           >
-            <img src={b.img} alt={b.title} />
+            <img src={images[index]} alt={b.title} />
             <div className="benefit-content">
               <h3>{b.title}</h3>
               <p>{b.desc}</p>

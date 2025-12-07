@@ -8,17 +8,18 @@ import img2 from '../../assets/images/aboutus_image2.jpg';
 import img3 from '../../assets/images/aboutus_image3.jpg';
 import img4 from '../../assets/images/aboutus_image4.jpg';
 
-const infoItems = [
-  { number: '1.', title: 'Who We Are', description: 'Chúng tôi là một xưởng nghệ thuật sáng tạo, nơi đam mê hội họa được thắp lửa và mọi ý tưởng đều được trân trọng..' },
-  { number: '2.', title: 'What Do We Do', description: 'Chúng tôi cung cấp các khóa học và workshop (từ cơ bản đến nâng cao), giúp bạn nắm vững các kỹ thuật từ màu nước, sơn dầu đến vẽ kỹ thuật số.' },
-  { number: '3.', title: 'How Do We Help', description: 'Thông qua không gian ấm cúng, âm nhạc chữa lành và sự hướng dẫn tận tình, chúng tôi giúp bạn giải tỏa căng thẳng và kết nối lại với bản thân.' },
-  { number: '4.', title: 'Create Success Story', description: 'Chúng tôi giúp bạn tìm thấy một niềm vui mới, một sở thích lành mạnh sau giờ làm việc, và tự tay mang về một tác phẩm "chữa lành" do chính bạn tạo ra.' },
-];
+import { useTranslation } from 'react-i18next';
 
 const images = [img1, img2, img3, img4];
 
 const AboutUs = () => {
-  useEffect(() => { AOS.init({ duration: 800, easing: 'ease-in-out', once: true }); }, []);
+  const { t } = useTranslation(); // ✅ i18n
+
+  const infoItems = t('about.info', { returnObjects: true });
+
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  }, []);
 
   return (
     <section className="about-us-section">
@@ -26,13 +27,18 @@ const AboutUs = () => {
         {/* Header */}
         <div className="about-us__header" data-aos="fade-down">
           <div className="header__text">
-            <h2>Về Chúng Tôi</h2>
+            <h2>{t('about.title')}</h2>
             <p>
-              Chào mừng đến SnapArt - Nơi chúng tôi trân trọng từng khoảnh khắc. Chúng tôi ở đây vì<br/>
-              <span className="values-highlight"> Sự thư giãn - Thể hiện bản thân - Năng lượng tích cực.</span>
+              {t('about.desc1')}<br />
+              <span className="values-highlight">
+                {t('about.values')}
+              </span>
             </p>
           </div>
-          <a href="/about" className="learn-more-btn">Tìm hiểu thêm</a>
+
+          <a href="/about" className="learn-more-btn">
+            {t('about.more')}
+          </a>
         </div>
 
         {/* Main Content */}
@@ -54,7 +60,11 @@ const AboutUs = () => {
           <div className="about-us__image-grid" data-aos="fade-left">
             {images.map((img, index) => (
               <div className={`image-wrapper size-${index + 1}`} key={index}>
-                <img src={img} alt={`About us ${index + 1}`} className="image-grid__item"/>
+                <img
+                  src={img}
+                  alt={`About us ${index + 1}`}
+                  className="image-grid__item"
+                />
               </div>
             ))}
           </div>
