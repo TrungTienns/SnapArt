@@ -54,10 +54,11 @@ body, main, .about-page {
 }
 
 .brand-logo {
-  width: 100px;
-  height: 60px;
+  height: 100px;       /* ✅ Khống chế theo chiều cao */
+  width: 100px;        /* ✅ Tự giữ đúng tỉ lệ ảnh gốc */
   object-fit: contain;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .brand-logo:hover {
@@ -257,7 +258,9 @@ body, main, .about-page {
 
 /* ====== MUSIC TOGGLE ====== */
 .music-toggle {
-  margin-left: 16px;
+  margin-left: 70px;
+  left: 45%;
+  right: 45%;
   cursor: pointer;
   transition: transform 0.25s ease;
   display: flex;

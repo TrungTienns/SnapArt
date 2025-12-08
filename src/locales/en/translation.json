@@ -143,34 +143,31 @@
     "openmaps": ""
   },
 
-  "aboutPage": {
-    "heroTitle": "About Us",
-    "heroDesc": "SnapArt is not just a workshop — it is an artistic journey where you rediscover balance in modern life.",
+ "aboutPage": {
+  "heroTitle": "About Us",
+  "heroDesc": "SnapArt is not just an art workshop — it is an emotional journey where you can slow down in the rhythm of modern life, rediscover balance within yourself, and reconnect with your inner world through every stroke of color.",
 
-    "section1": {
-      "title": "Who We Are",
-      "desc": "We are a creative art studio where every brushstroke tells a story. With passionate artists and instructors, SnapArt was founded to spread the love of art to everyone."
-    },
-
-    "section2": {
-      "title": "What We Do",
-      "desc": "We organize diverse art classes, workshops, and events – from watercolor, acrylic, oil painting to digital art."
-    },
-
-    "section3": {
-      "title": "How We Help",
-      "desc": "SnapArt is not only a place to learn art but also a healing space with calming music, essential oil scents, and warm lighting."
-    },
-
-    "section4": {
-      "title": "Creating Success Stories",
-      "desc": "From first brushstrokes to completed artworks, every student brings home a meaningful story of creativity."
-    },
-
-    "endingTitle": "Your Journey Starts Here",
-    "endingDesc": "Let SnapArt accompany you on your path of artistic discovery and self-expression.",
-    "cta": "Explore Workshops"
+  "section1": {
+    "title": "Who We Are",
+    "desc": "We are a creative art studio born from a deep love for painting and a desire to spread positive values through art. At SnapArt, every artwork is not merely a creation, but a story, an emotion, and a personal imprint of the artist."
   },
+  "section2": {
+    "title": "What We Do",
+    "desc": "SnapArt offers a wide variety of art classes, workshops, and creative events for all ages — from beginners to those with experience. We not only teach drawing techniques, but also inspire creativity and empower students to express their individuality and inner world with confidence."
+  },
+  "section3": {
+    "title": "How We Support You",
+    "desc": "SnapArt is more than a place to learn how to draw; it is a healing space where you can release stress, balance your emotions, and rediscover joy in simple moments. Each workshop is a personal journey of self-discovery and emotional renewal through art."
+  },
+  "section4": {
+    "title": "Creating Meaningful Stories",
+    "desc": "Every student who comes to SnapArt carries a unique story, and when they leave, they take home more than just a painting — they gain confidence, happiness, peace of mind, and unforgettable memories. These small stories are the greatest motivation that drives SnapArt forward."
+  },
+
+  "endingTitle": "Your Journey Begins Here",
+  "endingDesc": "If you are searching for a place to relax your mind, nurture your creativity, and connect with like-minded people, SnapArt is always ready to welcome you.",
+  "cta": "Explore Our Workshops"
+},
   "bannerAbout": {
   "title": "Discover the Artist Within You",
   "desc": "Every class at SnapArt is a journey of emotions, colors, and endless creativity.",

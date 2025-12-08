@@ -142,32 +142,31 @@
     "copyright": "© 2025 Handmade Workshop. Bản quyền được bảo lưu.",
     "openMap": ""
   },
+"aboutPage": {
+  "heroTitle": "Về Chúng Tôi",
+  "heroDesc": "SnapArt không chỉ là một workshop nghệ thuật — mà là một hành trình cảm xúc, nơi mỗi người có thể chậm lại giữa nhịp sống hiện đại, tìm thấy sự cân bằng trong tâm hồn và kết nối lại với chính mình thông qua từng nét vẽ.",
 
-  "aboutPage": {
-    "heroTitle": "Về Chúng Tôi",
-    "heroDesc": "SnapArt không chỉ là một workshop — mà là hành trình nghệ thuật, nơi bạn tìm lại sự cân bằng giữa nhịp sống hiện đại.",
-
-    "section1": {
-      "title": "Chúng Tôi Là Ai",
-      "desc": "Chúng tôi là một xưởng nghệ thuật sáng tạo – nơi mỗi nét vẽ đều mang một câu chuyện riêng."
-    },
-    "section2": {
-      "title": "Chúng Tôi Làm Gì",
-      "desc": "Chúng tôi tổ chức các lớp học, workshop và sự kiện nghệ thuật đa dạng."
-    },
-    "section3": {
-      "title": "Chúng Tôi Giúp Bạn Như Thế Nào",
-      "desc": "Không chỉ là nơi học vẽ, SnapArt là không gian chữa lành."
-    },
-    "section4": {
-      "title": "Tạo Nên Câu Chuyện Thành Công",
-      "desc": "Mỗi học viên đều mang về cho mình một câu chuyện nhỏ."
-    },
-
-    "endingTitle": "Hành Trình Của Bạn Bắt Đầu Từ Đây",
-    "endingDesc": "Hãy để SnapArt đồng hành cùng bạn.",
-    "cta": "Khám Phá Workshop"
+  "section1": {
+    "title": "Chúng Tôi Là Ai",
+    "desc": "Chúng tôi là một xưởng nghệ thuật sáng tạo được hình thành từ tình yêu dành cho hội họa và mong muốn lan tỏa những giá trị tích cực thông qua nghệ thuật. Tại SnapArt, mỗi bức tranh không chỉ là một tác phẩm, mà còn là một câu chuyện, một cảm xúc, một dấu ấn cá nhân của người tạo ra nó."
   },
+  "section2": {
+    "title": "Chúng Tôi Làm Gì",
+    "desc": "SnapArt tổ chức các lớp học, workshop và sự kiện nghệ thuật dành cho mọi độ tuổi, từ người mới bắt đầu đến những người đã có nền tảng. Chúng tôi không chỉ dạy kỹ thuật vẽ, mà còn truyền cảm hứng sáng tạo, giúp học viên tự tin thể hiện cá tính và thế giới nội tâm của mình."
+  },
+  "section3": {
+    "title": "Chúng Tôi Giúp Bạn Như Thế Nào",
+    "desc": "SnapArt không đơn thuần là nơi để học vẽ, mà là không gian chữa lành, nơi bạn có thể giải tỏa căng thẳng, cân bằng cảm xúc và tìm lại niềm vui từ những điều giản dị. Mỗi buổi workshop là một hành trình trải nghiệm, nơi bạn được lắng nghe bản thân và nuôi dưỡng tâm hồn thông qua nghệ thuật."
+  },
+  "section4": {
+    "title": "Tạo Nên Câu Chuyện Thành Công",
+    "desc": "Mỗi học viên đến với SnapArt đều mang theo một câu chuyện riêng, và khi rời đi, họ mang về nhiều hơn một bức tranh — đó là sự tự tin, niềm vui, sự bình yên và một kỷ niệm đáng nhớ. Những câu chuyện nhỏ ấy chính là nguồn động lực lớn nhất để SnapArt không ngừng phát triển."
+  },
+
+  "endingTitle": "Hành Trình Của Bạn Bắt Đầu Từ Đây",
+  "endingDesc": "Nếu bạn đang tìm kiếm một nơi để thả lỏng tâm trí, nuôi dưỡng sáng tạo và kết nối với những con người cùng chung đam mê, SnapArt luôn sẵn sàng chào đón bạn.",
+  "cta": "Khám Phá Workshop"
+},
 
   "bannerAbout": {
     "title": "Khám Phá Nghệ Thuật Trong Chính Bạn",
