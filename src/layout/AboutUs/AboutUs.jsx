@@ -13,9 +13,10 @@ import { useTranslation } from 'react-i18next';
 const images = [img1, img2, img3, img4];
 
 const AboutUs = () => {
-  const { t } = useTranslation(); // ✅ i18n
+  const { t } = useTranslation();
 
-  const infoItems = t('about.info', { returnObjects: true });
+  // ✅ ĐÚNG KEY MỚI: aboutHome.info
+  const infoItems = t('aboutHome.info', { returnObjects: true });
 
   useEffect(() => {
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
@@ -24,36 +25,43 @@ const AboutUs = () => {
   return (
     <section className="about-us-section">
       <div className="about-us__container">
+
         {/* Header */}
         <div className="about-us__header" data-aos="fade-down">
           <div className="header__text">
-            <h2>{t('about.title')}</h2>
+            <h2>{t('aboutHome.title')}</h2>
+
             <p>
-              {t('about.desc1')}<br />
+              {t('aboutHome.desc1')} <br />
               <span className="values-highlight">
-                {t('about.values')}
+                {t('aboutHome.values')}
               </span>
             </p>
           </div>
 
           <a href="/about" className="learn-more-btn">
-            {t('about.more')}
+            {t('aboutHome.more')}
           </a>
         </div>
 
         {/* Main Content */}
         <div className="about-us__main-content">
+
           {/* Info Grid */}
           <div className="about-us__info-grid" data-aos="fade-right">
-            {infoItems.map((item) => (
-              <div className="info-item" key={item.number}>
-                <div className="info-item__number">{item.number}</div>
-                <div className="info-item__content">
-                  <h3 className="info-item__title">{item.title}</h3>
-                  <p className="info-item__description">{item.description}</p>
+            {Array.isArray(infoItems) &&
+              infoItems.map((item, index) => (
+                <div className="info-item" key={index}>
+                  <div className="info-item__number">{item.number}</div>
+
+                  <div className="info-item__content">
+                    <h3 className="info-item__title">{item.title}</h3>
+                    <p className="info-item__description">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
 
           {/* Image Grid */}
@@ -68,6 +76,7 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

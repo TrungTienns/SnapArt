@@ -28,7 +28,7 @@
     ]
   },
 
-  "about": {
+  "aboutHome": {
     "title": "About Us",
     "desc1": "Welcome to SnapArt – Where we cherish every moment. We are here for",
     "values": "Relaxation – Self Expression – Positive Energy.",
@@ -123,9 +123,10 @@
     "send": "Send",
     "sending": "Sending..."
   },
+
   "allRating": {
-  "heading": "What Our Customers Are Saying"
-},
+    "heading": "What Our Customers Are Saying"
+  },
 
   "footer": {
     "slogan": "Every stroke is a story - Every artwork is a journey - Enjoy and create - For you",
@@ -136,8 +137,52 @@
     "terms": "Terms of Services",
     "privacy": "Privacy Policy",
     "address": "Address",
-    "nearMarket": "near Tan Dinh Market",
+    "nearMarket": "",
     "backToTop": "BACK TO TOP",
-    "copyright": "© 2025 Handmade Workshop. All rights reserved."
-  }
+    "copyright": "© 2025 Handmade Workshop. All rights reserved.",
+    "openmaps": ""
+  },
+
+  "aboutPage": {
+    "heroTitle": "About Us",
+    "heroDesc": "SnapArt is not just a workshop — it is an artistic journey where you rediscover balance in modern life.",
+
+    "section1": {
+      "title": "Who We Are",
+      "desc": "We are a creative art studio where every brushstroke tells a story. With passionate artists and instructors, SnapArt was founded to spread the love of art to everyone."
+    },
+
+    "section2": {
+      "title": "What We Do",
+      "desc": "We organize diverse art classes, workshops, and events – from watercolor, acrylic, oil painting to digital art."
+    },
+
+    "section3": {
+      "title": "How We Help",
+      "desc": "SnapArt is not only a place to learn art but also a healing space with calming music, essential oil scents, and warm lighting."
+    },
+
+    "section4": {
+      "title": "Creating Success Stories",
+      "desc": "From first brushstrokes to completed artworks, every student brings home a meaningful story of creativity."
+    },
+
+    "endingTitle": "Your Journey Starts Here",
+    "endingDesc": "Let SnapArt accompany you on your path of artistic discovery and self-expression.",
+    "cta": "Explore Workshops"
+  },
+  "bannerAbout": {
+  "title": "Discover the Artist Within You",
+  "desc": "Every class at SnapArt is a journey of emotions, colors, and endless creativity.",
+  "button": "Get Started"
+  },
+  "gallery": {
+  "title": "Choose Collection",
+  "adult": "Adult Collection",
+  "kids": "Kids Collection"
+},
+  "workshopBanner": {
+    "title": "SnapArt Workshop",
+    "subtitle": "Explore, create, and heal through art"
+}
 }

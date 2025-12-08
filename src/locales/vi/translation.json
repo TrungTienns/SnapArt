@@ -8,7 +8,7 @@
   "menu.cta": "Đi với tôi nào!",
 
   "hero.title": "SnapArt Workshop vẽ trên ly",
-  "hero.desc": "Khơi nguồn sáng tạo, cùng nhau vẽ trên ly tạo ra tác phẩm dễ thương!",
+  "hero.desc": "Khơi nguồn sáng tạo, cùng nhau vẽ trên ly tạo ra những tác phẩm dễ thương!",
   "hero.button": "Tham gia Workshop",
 
   "popup.title": "Chọn ngôn ngữ",
@@ -17,8 +17,8 @@
 
   "banner": {
     "title": "Workshop",
-    "descBefore": "Khơi nguồn sáng tạo, cùng nhau",
-    "descAfter": "tạo ra tác phẩm dễ thương!",
+    "descBefore": "Khơi nguồn sáng tạo và cùng nhau",
+    "descAfter": "tạo ra những tác phẩm dễ thương!",
     "button": "Tham gia Workshop",
     "loop": [
       "Vẽ acrylic",
@@ -27,104 +27,109 @@
       "Làm tranh resin"
     ]
   },
-  "about": {
+
+  "aboutHome": {
     "title": "Về Chúng Tôi",
-    "desc1": "Chào mừng đến SnapArt - Nơi chúng tôi trân trọng từng khoảnh khắc. Chúng tôi ở đây vì",
-    "values": "Sự thư giãn - Thể hiện bản thân - Năng lượng tích cực.",
+    "desc1": "Chào mừng đến với SnapArt – Nơi chúng tôi trân trọng từng khoảnh khắc. Chúng tôi ở đây vì",
+    "values": "Sự thư giãn – Thể hiện bản thân – Năng lượng tích cực.",
     "more": "Tìm hiểu thêm",
+
     "info": [
-        {
-          "number": "1.",
-          "title": "Chúng tôi là ai?",
-          "description": "Chúng tôi là một xưởng nghệ thuật sáng tạo, nơi đam mê hội họa được thắp lửa và mọi ý tưởng đều được trân trọng."
-        },
-        {
-          "number": "2.",
-          "title": "Chúng tôi làm gì?",
-          "description": "Chúng tôi cung cấp các khóa học và workshop (từ cơ bản đến nâng cao), giúp bạn nắm vững các kỹ thuật từ màu nước, sơn dầu đến vẽ kỹ thuật số."
-        },
-        {
-          "number": "3.",
-          "title": "Chúng tôi giúp gì cho bạn?",
-          "description": "Thông qua không gian ấm cúng, âm nhạc chữa lành và sự hướng dẫn tận tình, chúng tôi giúp bạn giải tỏa căng thẳng và kết nối lại với bản thân."
-        },
-        {
-          "number": "4.",
-          "title": "Tạo nên câu chuyện thành công",
-          "description": "Chúng tôi giúp bạn tìm thấy một niềm vui mới, một sở thích lành mạnh sau giờ làm việc, và tự tay mang về một tác phẩm 'chữa lành' do chính bạn tạo ra."
-        }
-      ]
-  },
-  "benefit": {
-    "title": "Lợi Ích Của Việc Vẽ Tranh & Nghệ Thuật",
-    "desc": "Vẽ không đơn giản là những nét màu đơn giản, mà nó là câu chuyện của những người nhiều suy tư",
-    "items": [
       {
-        "title": "Kết nối, lắng nghe và chữa lành cùng nhau",
-        "desc": "Vẽ tranh giúp tâm hồn bạn được nghỉ ngơi, tạm quên đi mọi áp lực, và cảm nhận từng nhịp thở dịu dàng. Mỗi nét cọ là một khoảng lặng để chữa lành và tìm lại sự bình yên."
+        "number": "1.",
+        "title": "Chúng tôi là ai",
+        "description": "Chúng tôi là một xưởng nghệ thuật sáng tạo, nơi đam mê hội họa được thắp lửa và mọi ý tưởng đều được trân trọng."
       },
       {
-        "title": "Phát triển khả năng sáng tạo",
-        "desc": "Hội họa mở ra không gian vô tận cho trí tưởng tượng, nơi bạn thỏa sức sáng tạo và thể hiện bản thân. Mỗi màu sắc, mỗi đường nét là một phần của hành trình tự do và chữa lành tâm hồn."
+        "number": "2.",
+        "title": "Chúng tôi làm gì",
+        "description": "Chúng tôi cung cấp các khóa học và workshop (từ cơ bản đến nâng cao), giúp bạn nắm vững kỹ thuật từ màu nước, sơn dầu đến vẽ kỹ thuật số."
       },
       {
-        "title": "Tăng khả năng quan sát và tập trung",
-        "desc": "Khi vẽ, bạn học cách quan sát chi tiết và chú ý đến từng ánh sáng, màu sắc và đường nét. Điều này giúp tâm trí tĩnh lặng, nâng cao sự kiên nhẫn, và rèn luyện khả năng tập trung sâu để chữa lành bên trong."
+        "number": "3.",
+        "title": "Chúng tôi giúp gì cho bạn",
+        "description": "Thông qua không gian ấm cúng, âm nhạc chữa lành và sự hướng dẫn tận tình, chúng tôi giúp bạn giải tỏa căng thẳng và kết nối lại với bản thân."
       },
       {
-        "title": "Làm đẹp cho không gian sống",
-        "desc": "Một bức tranh tự tay bạn tạo ra không chỉ làm đẹp căn phòng, mà còn lan tỏa cảm giác ấm áp và bình yên. Mỗi tác phẩm là dấu ấn riêng, khiến không gian sống trở nên sinh động và chữa lành tâm hồn."
+        "number": "4.",
+        "title": "Tạo nên câu chuyện thành công",
+        "description": "Chúng tôi giúp bạn khám phá niềm vui mới, một sở thích lành mạnh sau giờ làm việc và tự tay mang về một tác phẩm chữa lành do chính bạn tạo ra."
       }
     ]
   },
-    "blog.heading": "Cùng ngồi lại để trò chuyện nhé!",
-  
-    "blog.post1.title": "Cách Sử Dụng Cọ Vẽ An Toàn và Giữ Gìn Chúng",
-    "blog.post1.desc": "Học cách dùng bảo vệ cọ đúng cách để giữ cho công cụ của bạn luôn bền đẹp và hiệu quả.",
-  
-    "blog.post2.title": "Màu Acrylic: Nó là gì, cách sử dụng và bảo quản",
-    "blog.post2.desc": "Màu acrylic là một loại sơn nước tổng hợp, nhanh khô, bền màu và linh hoạt, được sử dụng rộng rãi trong hội họa hiện đại.",
-  
-    "blog.post3.title": "Vẽ Cùng Những Người Bạn Mới, Tại Sao Không?",
-    "blog.post3.desc": "Vẽ cùng bạn bè không chỉ giúp bạn giải tỏa căng thẳng mà còn tạo ra những tác phẩm thú vị và đầy sáng tạo.",
-  
-    "blog.post4.title": "Vẽ Để Chữa Lành – Hành Trình Từ Bóng Tối Đến Ánh Sáng",
-    "blog.post4.desc": "Hành trình chữa lành không diễn ra trong một ngày, nhưng từng nét vẽ, từng màu sắc đã dần giúp tôi lấy lại năng lượng, sự tự tin và hy vọng.",
-  
-  "blog.readMore": "Đọc tiếp"
-,
-"workshop": {
-  "title": "Tớ có những cái này hay lắm nè...",
-  "item1": "Sản phẩm họa cụ sỉ và lẻ",
-  "item2": "Workshop Doanh nghiệp",
-  "item3": "Texture Art Workshop",
-  "item4": "Workshop Vẽ Tranh Tâm Tình",
-  "item5": "Họa Cụ Cao Cấp & Lớp Học",
-  "item6": "Workshop Sáng Tạo Cùng Trẻ",
-  "item7": "Vẽ Tranh Trừu Tượng",
-  "item8": "Lớp Học Vẽ Nâng Cao"
+
+  "benefit": {
+    "title": "Lợi Ích Của Hội Họa & Nghệ Thuật",
+    "desc": "Hội họa không chỉ là những nét vẽ đơn giản — đó là câu chuyện của những tâm hồn sâu sắc",
+    "items": [
+      {
+        "title": "Kết Nối, Lắng Nghe Và Chữa Lành",
+        "desc": "Hội họa giúp tâm hồn bạn nghỉ ngơi, tạm quên đi mọi áp lực và cảm nhận từng nhịp thở nhẹ nhàng. Mỗi nét vẽ là một khoảnh khắc chữa lành và bình yên."
+      },
+      {
+        "title": "Phát Triển Sáng Tạo",
+        "desc": "Nghệ thuật mở ra không gian vô tận cho trí tưởng tượng, nơi bạn có thể tự do sáng tạo và thể hiện bản thân."
+      },
+      {
+        "title": "Cải Thiện Quan Sát & Tập Trung",
+        "desc": "Khi vẽ, bạn học cách quan sát chi tiết, chú ý đến ánh sáng, màu sắc và hình khối, giúp tâm trí trở nên tĩnh lặng và kiên nhẫn hơn."
+      },
+      {
+        "title": "Làm Đẹp Không Gian Sống",
+        "desc": "Một bức tranh do chính tay bạn tạo nên không chỉ để trang trí mà còn lan tỏa sự ấm áp và bình yên."
+      }
+    ]
+  },
+
+  "blog.heading": "Cùng nhau ngồi xuống và trò chuyện một chút nhé!",
+
+  "blog.post1.title": "Cách Sử Dụng Và Bảo Quản Cọ Vẽ Đúng Cách",
+  "blog.post1.desc": "Học cách bảo vệ và chăm sóc cọ để luôn bền, sạch và hiệu quả.",
+
+  "blog.post2.title": "Sơn Acrylic Là Gì? Cách Sử Dụng Và Bảo Quản",
+  "blog.post2.desc": "Acrylic là loại sơn gốc nước khô nhanh, bền màu và rất phổ biến trong nghệ thuật hiện đại.",
+
+  "blog.post3.title": "Vẽ Cùng Những Người Bạn Mới – Tại Sao Không?",
+  "blog.post3.desc": "Vẽ cùng bạn bè giúp bạn thư giãn, giảm căng thẳng và tạo ra những tác phẩm đầy cảm hứng.",
+
+  "blog.post4.title": "Chữa Lành Qua Nghệ Thuật – Từ Bóng Tối Đến Ánh Sáng",
+  "blog.post4.desc": "Chữa lành là hành trình dài, nơi từng nét vẽ và gam màu dần mang lại năng lượng và hy vọng.",
+
+  "blog.readMore": "Xem thêm",
+
+  "workshop": {
+    "title": "Chúng tôi có nhiều workshop thú vị dành cho bạn...",
+    "item1": "Cung Cấp Dụng Cụ Mỹ Thuật",
+    "item2": "Workshop Doanh Nghiệp",
+    "item3": "Workshop Tranh Texture",
+    "item4": "Workshop Trị Liệu",
+    "item5": "Lớp Học Nghệ Thuật Cao Cấp",
+    "item6": "Workshop Sáng Tạo Cho Trẻ Em",
+    "item7": "Workshop Tranh Trừu Tượng",
+    "item8": "Lớp Học Vẽ Nâng Cao"
   },
 
   "rating": {
-  "heading": "GỬI LỜI ĐÁNH GIÁ CỦA BẠN TẠI ĐÂY",
-  "thankTitle": "Cảm ơn bạn!",
-  "thankDesc": "Cám ơn bạn đã để lại một tin nhắn, dù ít hay nhiều thì nó cũng là lời nhắc nhở, khích lệ chúng mình ngày càng phát triển trong tương lai.",
-  "success": "Lời nhắn đã được gửi thành công!",
-  "name": "Họ và tên",
-  "namePlaceholder": "Nhập họ và tên",
-  "email": "Email",
-  "emailPlaceholder": "Nhập email",
-  "message": "Lời nhắn",
-  "messagePlaceholder": "Viết lời nhắn...",
-  "send": "Gửi",
-  "sending": "Đang gửi..."
-},
+    "heading": "GỬI PHẢN HỒI CHO CHÚNG TÔI",
+    "thankTitle": "Cảm ơn bạn!",
+    "thankDesc": "Cảm ơn bạn đã để lại lời nhắn. Mỗi phản hồi đều giúp chúng tôi hoàn thiện hơn.",
+    "success": "Gửi phản hồi thành công!",
+    "name": "Họ và tên",
+    "namePlaceholder": "Nhập họ và tên",
+    "email": "Email",
+    "emailPlaceholder": "Nhập email",
+    "message": "Lời nhắn",
+    "messagePlaceholder": "Viết lời nhắn...",
+    "send": "Gửi",
+    "sending": "Đang gửi..."
+  },
+
   "allRating": {
-  "heading": "Những đánh giá từ khách hàng"
-},
+    "heading": "Khách Hàng Nói Gì Về Chúng Tôi"
+  },
 
   "footer": {
-    "slogan": "Mỗi nét vẽ là một câu chuyện - Mỗi tác phẩm là một hành trình - Hãy tận hưởng và sáng tạo - Vì bạn",
+    "slogan": "Mỗi nét vẽ là một câu chuyện – Mỗi tác phẩm là một hành trình – Tận hưởng và sáng tạo – Dành cho bạn",
     "siteMap": "Sơ đồ trang",
     "home": "Trang chủ",
     "technology": "Công nghệ",
@@ -132,8 +137,52 @@
     "terms": "Điều khoản dịch vụ",
     "privacy": "Chính sách bảo mật",
     "address": "Địa chỉ",
-    "nearMarket": "gần chợ Tân Định",
+    "nearMarket": "",
     "backToTop": "LÊN ĐẦU TRANG",
-    "copyright": "© 2025 Workshop Thủ Công. Mọi quyền được bảo lưu."
+    "copyright": "© 2025 Handmade Workshop. Bản quyền được bảo lưu.",
+    "openMap": ""
+  },
+
+  "aboutPage": {
+    "heroTitle": "Về Chúng Tôi",
+    "heroDesc": "SnapArt không chỉ là một workshop — mà là hành trình nghệ thuật, nơi bạn tìm lại sự cân bằng giữa nhịp sống hiện đại.",
+
+    "section1": {
+      "title": "Chúng Tôi Là Ai",
+      "desc": "Chúng tôi là một xưởng nghệ thuật sáng tạo – nơi mỗi nét vẽ đều mang một câu chuyện riêng."
+    },
+    "section2": {
+      "title": "Chúng Tôi Làm Gì",
+      "desc": "Chúng tôi tổ chức các lớp học, workshop và sự kiện nghệ thuật đa dạng."
+    },
+    "section3": {
+      "title": "Chúng Tôi Giúp Bạn Như Thế Nào",
+      "desc": "Không chỉ là nơi học vẽ, SnapArt là không gian chữa lành."
+    },
+    "section4": {
+      "title": "Tạo Nên Câu Chuyện Thành Công",
+      "desc": "Mỗi học viên đều mang về cho mình một câu chuyện nhỏ."
+    },
+
+    "endingTitle": "Hành Trình Của Bạn Bắt Đầu Từ Đây",
+    "endingDesc": "Hãy để SnapArt đồng hành cùng bạn.",
+    "cta": "Khám Phá Workshop"
+  },
+
+  "bannerAbout": {
+    "title": "Khám Phá Nghệ Thuật Trong Chính Bạn",
+    "desc": "Mỗi buổi học tại SnapArt là hành trình khám phá cảm xúc, sắc màu và sự sáng tạo vô tận.",
+    "button": "Bắt Đầu Ngay"
+  },
+
+  "gallery": {
+    "title": "Chọn bộ sưu tập",
+    "adult": "Bộ sưu tập dành cho người lớn",
+    "kids": "Bộ sưu tập dành cho trẻ em"
+  },
+
+  "workshopBanner": {
+    "title": "Workshop SnapArt",
+    "subtitle": "Khám phá, sáng tạo và chữa lành cùng nghệ thuật"
   }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
 import "./GalleryPage.scss";
@@ -8,30 +10,32 @@ import "./GalleryPage.scss";
 import adultImg from "../../assets/images/aboutus_image1.jpg";
 import kidsImg from "../../assets/images/aboutus_image2.jpg";
 
-const collections = [
-  {
-    id: 1,
-    title: "Bộ sưu tập dành cho người lớn",
-    img: adultImg,
-    link: "/adult-collection",
-  },
-  {
-    id: 2,
-    title: "Bộ sưu tập dành cho trẻ em",
-    img: kidsImg,
-    link: "/kids-collection",
-  },
-];
-
 const GalleryPage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation(); // ✅ i18n
+
+  const collections = [
+    {
+      id: 1,
+      title: t("gallery.adult"),
+      img: adultImg,
+      link: "/adult-collection",
+    },
+    {
+      id: 2,
+      title: t("gallery.kids"),
+      img: kidsImg,
+      link: "/kids-collection",
+    },
+  ];
 
   return (
     <>
       <Header />
 
       <section className="gallery-page">
-        <h2 className="gallery-title">Chọn bộ sưu tập</h2>
+        <h2 className="gallery-title">{t("gallery.title")}</h2>
+
         <div className="gallery-collections">
           {collections.map((col) => (
             <div

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
 import "./KidsCollection.scss";
@@ -13,14 +15,17 @@ import img5 from "../../../assets/images/kids/kids5.jpg";
 const kidsImages = [img1, img2, img3, img4, img5, img1, img2, img3, img4, img5];
 
 const KidsCollection = () => {
+  const { t } = useTranslation(); // ✅ i18n
+
   useEffect(() => {
     const cards = document.querySelectorAll(".collection-card");
+
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, observerInstance) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
-            observer.unobserve(entry.target);
+            observerInstance.unobserve(entry.target);
           }
         });
       },
@@ -28,21 +33,31 @@ const KidsCollection = () => {
     );
 
     cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
       <Header />
+
       <section className="collection-page">
-        <h2 className="collection-title">Bộ sưu tập dành cho trẻ em</h2>
+        <h2 className="collection-title">
+          {t("gallery.kids")}
+        </h2>
+
         <div className="collection-grid">
           {kidsImages.map((img, idx) => (
             <div className="collection-card" key={idx}>
-              <img src={img} alt={`Kids ${idx}`} />
+              <img
+                src={img}
+                alt={`${t("gallery.kids")} ${idx + 1}`}
+              />
             </div>
           ))}
         </div>
       </section>
+
       <Footer />
     </>
   );

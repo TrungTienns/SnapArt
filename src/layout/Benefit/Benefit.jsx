@@ -12,13 +12,18 @@ import aboutus4 from '../../assets/images/aboutus_image4.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Benefit = () => {
-  const { t } = useTranslation(); // ✅ i18n
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const benefits = t('benefit.items', { returnObjects: true });
+  let benefits = t('benefit.items', { returnObjects: true });
+
+  // ✅ CHỐNG CRASH 100%
+  if (!Array.isArray(benefits)) {
+    benefits = [];
+  }
 
   const images = [aboutus1, aboutus2, aboutus3, aboutus4];
   const aosList = ['fade-right', 'fade-up', 'fade-left', 'fade-up'];

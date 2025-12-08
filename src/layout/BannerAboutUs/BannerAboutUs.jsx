@@ -4,8 +4,11 @@ import 'aos/dist/aos.css';
 import './BannerAboutUs.scss';
 
 import bannerImage from '../../assets/images/bannerabout_us1.jpg';
+import { useTranslation } from 'react-i18next';
 
 function BannerAboutUs() {
+  const { t } = useTranslation(); // ✅ i18n
+
   useEffect(() => {
     AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
   }, []);
@@ -21,13 +24,13 @@ function BannerAboutUs() {
       data-aos="fade-in"
     >
       <div className="banner-overlay"></div>
+
       <div className="banner-content">
-        <h1>Khám Phá Nghệ Thuật Trong Chính Bạn</h1>
-        <p>
-          Mỗi buổi học tại SnapArt là hành trình khám phá cảm xúc, sắc màu và sự sáng tạo vô tận.
-        </p>
+        <h1>{t('bannerAbout.title')}</h1>
+        <p>{t('bannerAbout.desc')}</p>
+
         <button className="banner-button" onClick={handleClick}>
-          Bắt Đầu Ngay
+          {t('bannerAbout.button')}
         </button>
       </div>
     </section>
