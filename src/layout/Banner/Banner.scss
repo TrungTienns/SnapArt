@@ -191,3 +191,35 @@
   .icon-small { width: 8vw; max-width: 50px; }
   .icon1 { top: 15%; } .icon2 { top: 12%; } .icon3 { top: 18%; }
 }
+/* ===== Snowman Animation ===== */
+.hero-artworkshop {
+  position: relative; // bắt buộc để absolute con hoạt động đúng
+}
+
+.snowman-wrapper {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  width: 160px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.95;
+
+  // animation nhẹ cho Snowman
+  animation: snowmanFloat 6s ease-in-out infinite;
+}
+
+@keyframes snowmanFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== Responsive Snowman ===== */
+@media (max-width: 900px) {
+  .snowman-wrapper {
+    width: 110px;
+    bottom: 1.5vh;
+    left: 3vw;
+  }
+}
