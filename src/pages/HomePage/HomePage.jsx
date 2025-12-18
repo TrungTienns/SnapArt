@@ -9,15 +9,25 @@ import Contact from '../../layout/Rating/Rating.jsx';
 import Blog from '../../layout/Blog/Blog.jsx';
 import WorkShopProduct from '../../layout/WorkShopProduct/WorkShopProduct.jsx';
 import AllRating from '../../layout/AllRating/AllRating.jsx';
+import Snowfall from 'react-snowfall';
 
 function HomePage() {
-  const footerRef = useRef(null); // tạo ref cho Footer
+  const footerRef = useRef(null);
 
   return (
     <div className="homepage">
-      {/* Header nhận footerRef */}
-      <Header footerRef={footerRef} />
+      <Snowfall
+        color="#82C3D9"
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh',
+          zIndex: 9999,
+          pointerEvents: 'none',
+        }}
+      />
 
+      <Header footerRef={footerRef} />
       <Banner />
       <AboutUs />
       <Benefit />
@@ -25,8 +35,6 @@ function HomePage() {
       <WorkShopProduct />
       <Contact />
       <AllRating />
-
-      {/* Footer nhận ref */}
       <Footer ref={footerRef} />
     </div>
   );
