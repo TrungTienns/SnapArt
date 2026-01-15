@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <Snowfall
-        color="#82C3D9"
+        color="#282c34"
         style={{
           position: 'fixed',
           width: '100vw',
