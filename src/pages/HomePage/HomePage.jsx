@@ -9,23 +9,12 @@ import Contact from '../../layout/Rating/Rating.jsx';
 import Blog from '../../layout/Blog/Blog.jsx';
 import WorkShopProduct from '../../layout/WorkShopProduct/WorkShopProduct.jsx';
 import AllRating from '../../layout/AllRating/AllRating.jsx';
-import Snowfall from 'react-snowfall';
 
 function HomePage() {
   const footerRef = useRef(null);
 
   return (
     <div className="homepage">
-      <Snowfall
-        color="#282c34"
-        style={{
-          position: 'fixed',
-          width: '100vw',
-          height: '100vh',
-          zIndex: 9999,
-          pointerEvents: 'none',
-        }}
-      />
 
       <Header footerRef={footerRef} />
       <Banner />

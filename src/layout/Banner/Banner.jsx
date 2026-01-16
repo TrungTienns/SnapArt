@@ -6,7 +6,7 @@ import flower from '../../assets/icons/flower.png';
 import sun from '../../assets/icons/sun.png';
 import brush from '../../assets/icons/paint-brush.png';
 import { useTranslation } from 'react-i18next';
-import snowmanAnimation from '../../assets/animation/Snowman.json';
+import flowerAnimation from '../../assets/animation/FlowerBanner.json';
 import Lottie from 'lottie-react';
 
 function Banner() {
@@ -60,9 +60,9 @@ function Banner() {
       style={{ opacity: opacity }}
     >
         {/* ❄️ Snowman animation */}
-        <div className="snowman-wrapper">
+        <div className="flower-wrapper">
        <Lottie
-      animationData={snowmanAnimation}
+      animationData={flowerAnimation}
       loop
       autoplay
         />
