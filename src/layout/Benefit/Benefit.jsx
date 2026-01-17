@@ -5,9 +5,9 @@ import 'aos/dist/aos.css';
 import './Benefit.scss';
 
 import aboutus1 from '../../assets/images/aboutus_image1.jpg';
-import aboutus2 from '../../assets/images/aboutus_image2.jpg';
-import aboutus3 from '../../assets/images/aboutus_image3.jpg';
-import aboutus4 from '../../assets/images/aboutus_image4.jpg';
+import aboutus2 from '../../assets/images/boss.jpg';
+import aboutus3 from '../../assets/images/customer.jpg';
+import aboutus4 from '../../assets/images/color.jpg';
 
 import { useTranslation } from 'react-i18next';
 

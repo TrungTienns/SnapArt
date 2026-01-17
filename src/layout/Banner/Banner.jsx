@@ -59,7 +59,6 @@ function Banner() {
       className="hero-artworkshop fullscreen"
       style={{ opacity: opacity }}
     >
-        {/* ❄️ Snowman animation */}
         <div className="flower-wrapper">
        <Lottie
       animationData={flowerAnimation}

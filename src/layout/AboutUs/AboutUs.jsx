@@ -4,9 +4,9 @@ import 'aos/dist/aos.css';
 import './AboutUs.scss';
 
 import img1 from '../../assets/images/aboutus_image1.jpg';
-import img2 from '../../assets/images/aboutus_image2.jpg';
-import img3 from '../../assets/images/aboutus_image3.jpg';
-import img4 from '../../assets/images/aboutus_image4.jpg';
+import img2 from '../../assets/images/customer.jpg';
+import img3 from '../../assets/images/boss.jpg';
+import img4 from '../../assets/images/product.jpg';
 
 import { useTranslation } from 'react-i18next';
 

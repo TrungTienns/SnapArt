@@ -4,7 +4,7 @@ import "./Header.scss";
 import logo from "../../assets/logo.png";
 import Lottie from "lottie-react";
 import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
-import bgMusic from "../../assets/music/background.mp3";
+import bgMusic from "../../assets/music/lunarnewyear.mp3";
 import { useTranslation } from "react-i18next";
 
 function Header({ footerRef }) {

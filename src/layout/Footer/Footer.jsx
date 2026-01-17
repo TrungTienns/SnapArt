@@ -35,10 +35,10 @@ const Footer = forwardRef((props, ref) => {
 
           <div className="social-links">
             <a href="#"><img src={xIcon} alt="Zalo" className="social-icon" /></a>
-            <a href="https://www.tiktok.com/@0.0merida?lang=vi-VN">
+            <a href="https://www.tiktok.com/@snapart_hcm?lang=vi-VN">
               <img src={tiktokIcon} alt="TikTok" className="social-icon" />
             </a>
-            <a href="https://www.instagram.com/mer1998_/">
+            <a href="https://www.instagram.com/snapart_hcm/">
               <img src={instagramIcon} alt="Instagram" className="social-icon" />
             </a>
             <a href="https://www.facebook.com/people/SnapArt/61583373132344/?mibextid=wwXIfr">
@@ -63,7 +63,7 @@ const Footer = forwardRef((props, ref) => {
         <div className="footer-column">
           <h3>{t("footer.address")}</h3>
           <p>
-            02 Đ. 33, khu phố 3, Thủ Đức, Thành phố Hồ Chí Minh, Vietnam
+            02 Đ. 33, khu đô thị Phú An, phường An Phú, Thành phố Hồ Chí Minh, Vietnam
           </p>
 
           {/* ✅ Google Maps chỉ còn “View larger map” */}

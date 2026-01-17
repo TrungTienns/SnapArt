@@ -5,7 +5,7 @@ import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
 import "./Workshop1.scss";
 
 // hình demo
-import imgResin from "../../../assets/images/aboutus_image1.jpg";
+import imgResin from "../../../assets/images/customer.jpg";
 
 const Workshop1 = () => {
   return (
@@ -15,19 +15,17 @@ const Workshop1 = () => {
 
       <section className="workshop-intro">
         <div className="intro-card">
-          <h2 className="intro-title">Khóa học Resin Epoxy</h2>
-          <img src={imgResin} alt="Khóa học Resin Epoxy" className="intro-image" />
+          <h2 className="intro-title">Vẽ Tranh Cát</h2>
+          <img src={imgResin} alt="Vẽ Tranh Cát" className="intro-image" />
           <p className="intro-text">
-            Khóa học Resin Epoxy được thiết kế dành cho cả những người mới bắt đầu lẫn những ai đã có kinh nghiệm cơ bản trong việc tạo sản phẩm từ nhựa epoxy. 
-            Trong khóa học này, bạn sẽ được học cách lựa chọn vật liệu, pha trộn nhựa và màu sắc, cũng như kỹ thuật đổ khuôn để tạo ra các sản phẩm như khay, móc khóa, trang sức hay đồ trang trí độc đáo. 
+            Khóa học Vẽ Tranh Cát được thiết kế dành cho cả những người mới bắt đầu lẫn những ai đã có nền tảng cơ bản trong lĩnh vực nghệ thuật sáng tạo. Trong khóa học này, bạn sẽ được làm quen với các loại cát màu, dụng cụ vẽ tranh cát, cũng như cách bố cục và sắp xếp màu sắc để tạo nên những bức tranh độc đáo, giàu tính thẩm mỹ. 
           </p>
           <p className="intro-text">
-            Giảng viên sẽ hướng dẫn chi tiết từng bước, từ lý thuyết cơ bản về nhựa epoxy, các nguyên tắc an toàn khi làm việc với vật liệu, đến các kỹ thuật nâng cao để tạo hiệu ứng màu sắc, lớp phủ bóng và các chi tiết tinh xảo. 
-            Bạn sẽ được thực hành trực tiếp trên dự án cá nhân, nhận feedback từ giảng viên và cải thiện kỹ năng từng bước.
+            Giảng viên sẽ hướng dẫn chi tiết từng bước, từ kiến thức cơ bản về chất liệu cát, cách xử lý bề mặt, các nguyên tắc phối màu và tạo hình, cho đến những kỹ thuật nâng cao nhằm tạo chiều sâu, hiệu ứng chuyển màu và điểm nhấn tinh tế cho tác phẩm. Học viên sẽ được thực hành trực tiếp trên sản phẩm cá nhân, nhận góp ý từ giảng viên và từng bước hoàn thiện kỹ năng của mình.
+
           </p>
           <p className="intro-text">
-            Sau khóa học, học viên sẽ tự tin tạo ra những sản phẩm hoàn chỉnh, hiểu rõ về kỹ thuật pha chế màu và cách kết hợp các vật liệu khác nhau để đạt hiệu quả thẩm mỹ tối ưu. 
-            Đồng thời, khóa học cũng cung cấp các mẹo và hướng dẫn bảo quản sản phẩm, giúp bạn có thể tiếp tục sáng tạo tại nhà hoặc phát triển ý tưởng kinh doanh từ các sản phẩm Resin Epoxy của mình.
+            Giảng viên sẽ hướng dẫn chi tiết từng bước, từ kiến thức cơ bản về chất liệu cát, cách xử lý bề mặt, các nguyên tắc phối màu và tạo hình, cho đến những kỹ thuật nâng cao nhằm tạo chiều sâu, hiệu ứng chuyển màu và điểm nhấn tinh tế cho tác phẩm. Học viên sẽ được thực hành trực tiếp trên sản phẩm cá nhân, nhận góp ý từ giảng viên và từng bước hoàn thiện kỹ năng của mình.
           </p>
         </div>
       </section>
