@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './AboutUs.scss';
+import { Link } from 'react-router-dom';
 
 import img1 from '../../assets/images/aboutus_image1.jpg';
 import img2 from '../../assets/images/customer.jpg';
@@ -39,9 +40,9 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <a href="/about" className="learn-more-btn">
-            {t('aboutHome.more')}
-          </a>
+         <Link to="/about" className="learn-more-btn">
+     {t('aboutHome.more')}
+        </Link>
         </div>
 
         {/* Main Content */}
