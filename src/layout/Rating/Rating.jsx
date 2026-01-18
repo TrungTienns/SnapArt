@@ -5,7 +5,7 @@ import "./Rating.scss";
 
 const Rating = () => {
   const { t } = useTranslation();
-  const [state, handleSubmit] = useForm("manaygwz");
+  const [state, handleSubmit] = useForm("mkoojnlo");
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {

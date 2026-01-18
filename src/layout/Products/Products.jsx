@@ -5,7 +5,7 @@ import "./Products.scss";
 
 // hình demo – lấy trong assets của bạn
 import img1 from "../../assets/images/products/product_image9.jpeg";
-import img2 from "../../assets/images/aboutus_image1.jpg";
+import img2 from "../../assets/images/sand_pictures.jpg";
 import img3 from "../../assets/images/aboutus_image1.jpg";
 import img4 from "../../assets/images/aboutus_image1.jpg";
 import img5 from "../../assets/images/aboutus_image1.jpg";
@@ -18,14 +18,14 @@ const data = [
     id: 1,
     title: "Vẽ Tranh Cát ",
     sub: "",
-    img: img1,
+    img: img2,
     workshopLink: "/product1",
   },
   {
     id: 2,
     title: "Vẽ Tranh Acrylic",
     sub: "",
-    img: img2,
+    img: img1,
     workshopLink: "/product2",
   },
   {

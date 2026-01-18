@@ -16,11 +16,8 @@ import product8 from "../../assets/images/products/product_image8.jpg";
 const workshops = [
   { id: 1, titleKey: "workshop.item1", date: "19 Dec 2023", image: product1, path: "/workshop1" },
   { id: 2, titleKey: "workshop.item2", date: "21 Nov 2023", image: product2, path: "/workshop2" },
-  { id: 3, titleKey: "workshop.item3", date: "13 Apr 2023", image: product3, path: "/workshop3" },
-  { id: 4, titleKey: "workshop.item4", date: "21 Dec 2022", image: product4, path: "/workshop4" },
   { id: 5, titleKey: "workshop.item5", date: "5 Oct 2023", image: product5, path: "/workshop5" },
   { id: 6, titleKey: "workshop.item6", date: "15 Sep 2023", image: product6, path: "/workshop6" },
-  { id: 7, titleKey: "workshop.item7", date: "28 Aug 2023", image: product7, path: "/workshop7" },
   { id: 8, titleKey: "workshop.item8", date: "10 Jul 2023", image: product8, path: "/workshop8" }
 ];
 
