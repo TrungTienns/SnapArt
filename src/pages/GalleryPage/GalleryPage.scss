@@ -1,87 +1,71 @@
-@use 'sass:color';
-
-$primary: #ff9994;
-$bg-section: #fff6f6;
-$text-dark: #1a1a1a;
-
 .gallery-page {
-  padding: 80px 20px;
-  background: $bg-section;
-  font-family: "Poppins", sans-serif;
+  padding: 60px 20px;
   text-align: center;
+}
 
-  .gallery-title {
-    font-size: 32px;
-    font-weight: 600;
-    color: $text-dark;
-    margin-bottom: 40px;
+.gallery-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
 
-    @media screen and (max-width: 480px) {
-      font-size: 24px;
-    }
+.gallery-collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-card {
+  position: relative;
+  height: 360px; // ✅ GIỚI HẠN SIZE
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px);
   }
 
-  .gallery-collections {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    justify-items: center;
-
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-  }
-
-  .collection-card {
-    position: relative;
+  img {
     width: 100%;
-    max-width: 500px;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    object-fit: cover; // ✅ KHÔNG MÉO, KHÔNG TRÀN
+    display: block;
+  }
 
-    &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-    }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1),
+      rgba(0,0,0,0.55)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 
-    img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-
-      @media screen and (max-width: 768px) {
-        height: 250px;
-      }
-
-      @media screen and (max-width: 480px) {
-        height: 220px;
-      }
-    }
-
-    .collection-overlay {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      padding: 16px;
-      text-align: center;
-      font-size: 20px;
+    h3 {
+      color: #fff;
+      font-size: 26px;
       font-weight: 600;
-      transition: background 0.3s ease;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.6);
-      }
-
-      @media screen and (max-width: 480px) {
-        font-size: 18px;
-        padding: 12px;
-      }
     }
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .gallery-card {
+    height: 260px;
   }
 }

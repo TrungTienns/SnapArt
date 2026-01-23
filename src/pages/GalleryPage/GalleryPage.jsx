@@ -17,12 +17,12 @@ const GalleryPage = () => {
     {
       title: t("gallery.adult"),
       img: adultImg,
-      path: "/gallery/adult",
+      path: "/adult-collection",
     },
     {
       title: t("gallery.kids"),
       img: kidsImg,
-      path: "/gallery/kids",
+      path: "/kids-collection",
     },
   ];
 
