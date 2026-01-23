@@ -6,26 +6,23 @@ import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
 import "./GalleryPage.scss";
 
-// hình demo
 import adultImg from "../../assets/images/aboutus_image1.jpg";
 import kidsImg from "../../assets/images/aboutus_image2.jpg";
 
 const GalleryPage = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation(); // ✅ i18n
+  const { t } = useTranslation();
 
   const collections = [
     {
-      id: 1,
       title: t("gallery.adult"),
       img: adultImg,
-      link: "/adult-collection",
+      path: "/gallery/adult",
     },
     {
-      id: 2,
       title: t("gallery.kids"),
       img: kidsImg,
-      link: "/kids-collection",
+      path: "/gallery/kids",
     },
   ];
 
@@ -37,15 +34,15 @@ const GalleryPage = () => {
         <h2 className="gallery-title">{t("gallery.title")}</h2>
 
         <div className="gallery-collections">
-          {collections.map((col) => (
+          {collections.map((item, index) => (
             <div
-              className="collection-card"
-              key={col.id}
-              onClick={() => navigate(col.link)}
+              key={index}
+              className="gallery-card"
+              onClick={() => navigate(item.path)}
             >
-              <img src={col.img} alt={col.title} />
-              <div className="collection-overlay">
-                <h3>{col.title}</h3>
+              <img src={item.img} alt={item.title} />
+              <div className="overlay">
+                <h3>{item.title}</h3>
               </div>
             </div>
           ))}
