@@ -7,9 +7,10 @@ import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
 import bgMusic from "../../assets/music/lunarnewyear.mp3";
 import { useTranslation } from "react-i18next";
 
-function Header({ footerRef }) {
-  const { t } = useTranslation(); // ✅ i18n
+function Header() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
+
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hideHeader, setHideHeader] = useState(false);
@@ -25,7 +26,6 @@ function Header({ footerRef }) {
     setIsPlaying(!isPlaying);
   };
 
-  // ✅ MENU TEXT ĐÃ DÙNG t()
   const links = [
     { to: "/", label: t("menu.home") },
     { to: "/about", label: t("menu.about") },
@@ -40,8 +40,11 @@ function Header({ footerRef }) {
       const current = window.scrollY;
       setScrolled(current > 50);
 
-      if (current > lastScroll && current > 100) setHideHeader(true);
-      else setHideHeader(false);
+      if (current > lastScroll && current > 100) {
+        setHideHeader(true);
+      } else {
+        setHideHeader(false);
+      }
 
       setLastScroll(current);
     };
@@ -50,21 +53,16 @@ function Header({ footerRef }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
-  const scrollToFooter = (e) => {
-    e?.preventDefault();
-    if (footerRef?.current) {
-      footerRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    setOpen(false);
-  };
-
   return (
-    <header className={`site-header ${scrolled ? "scrolled" : ""} ${hideHeader ? "hide" : ""}`}>
+    <header
+      className={`site-header ${scrolled ? "scrolled" : ""} ${
+        hideHeader ? "hide" : ""
+      }`}
+    >
       <audio ref={audioRef} src={bgMusic} loop />
 
       <div className="header-inner">
-
-        {/* LEFT: LOGO + MUSIC TOGGLE */}
+        {/* LEFT */}
         <div className="header-left">
           <Link to="/" className="brand">
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
@@ -80,30 +78,30 @@ function Header({ footerRef }) {
           </div>
         </div>
 
-        {/* ✅ NAVIGATION ĐA NGÔN NGỮ */}
+        {/* NAV */}
         <nav className={`main-nav ${open ? "open" : ""}`}>
           {links.map((link) => (
             <Link
               key={link.label}
-              to={link.to === "/contact" ? "#" : link.to}
+              to={link.to}
               className="nav-link"
-              onClick={(e) => {
-                if (link.to === "/contact") scrollToFooter(e);
-                else setOpen(false);
-              }}
+              onClick={() => setOpen(false)}
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* ✅ CTA BUTTON ĐA NGÔN NGỮ */}
+        {/* RIGHT */}
         <div className="header-right">
           <button
-            onClick={() =>
-              window.open("https://www.instagram.com/snapart_hcm/?hl=en", "_blank")
-            }
             className="cta"
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/snapart_hcm/?hl=en",
+                "_blank"
+              )
+            }
           >
             {t("menu.cta")}
           </button>
@@ -112,16 +110,24 @@ function Header({ footerRef }) {
             className={`menu-toggle ${open ? "open" : ""}`}
             onClick={() => setOpen(!open)}
           >
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
 
+        {/* ANIMATION */}
         <div className="header-animation">
-          <Lottie animationData={cuteCatWork} loop={true} />
+          <Lottie animationData={cuteCatWork} loop />
         </div>
       </div>
 
-      {open && <div className="mobile-backdrop" onClick={() => setOpen(false)} />}
+      {open && (
+        <div
+          className="mobile-backdrop"
+          onClick={() => setOpen(false)}
+        />
+      )}
     </header>
   );
 }

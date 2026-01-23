@@ -11,8 +11,13 @@ import img2 from "../../../assets/images/adults/adult2.jpg";
 import img3 from "../../../assets/images/adults/adult3.jpg";
 import img4 from "../../../assets/images/adults/adult4.jpg";
 import img5 from "../../../assets/images/adults/adult5.jpg";
+import img6 from "../../../assets/images/adults/adult6.jpg";
+import img7 from "../../../assets/images/adults/adult7.jpg";
+import img8 from "../../../assets/images/adults/adult8.jpg";
+import img9 from "../../../assets/images/adults/adult9.jpg";
+import img10 from "../../../assets/images/adults/adult10.jpg";
 
-const adultImages = [img1, img2, img3, img4, img5, img1, img2, img3, img4, img5];
+const adultImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 const AdultCollection = () => {
   const { t } = useTranslation(); // ✅ i18n

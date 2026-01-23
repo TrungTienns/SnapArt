@@ -24,7 +24,7 @@ const Footer = forwardRef((props, ref) => {
     <footer ref={ref} className="site-footer">
       <div className="footer-container">
 
-        {/* ✅ Logo & Slogan */}
+        {/* Logo & Slogan */}
         <div className="footer-brand">
           <Link to="/" className="brand">
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
@@ -34,20 +34,34 @@ const Footer = forwardRef((props, ref) => {
           <p className="slogan">{t("footer.slogan")}</p>
 
           <div className="social-links">
-            <a href="#"><img src={xIcon} alt="Zalo" className="social-icon" /></a>
-            <a href="https://www.tiktok.com/@snapart_hcm?lang=vi-VN">
+            <a href="#" aria-label="Zalo">
+              <img src={xIcon} alt="Zalo" className="social-icon" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@snapart_hcm?lang=vi-VN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={tiktokIcon} alt="TikTok" className="social-icon" />
             </a>
-            <a href="https://www.instagram.com/snapart_hcm/">
+            <a
+              href="https://www.instagram.com/snapart_hcm/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={instagramIcon} alt="Instagram" className="social-icon" />
             </a>
-            <a href="https://www.facebook.com/people/SnapArt/61583373132344/?mibextid=wwXIfr">
+            <a
+              href="https://www.facebook.com/people/SnapArt/61583373132344/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={facebookIcon} alt="Facebook" className="social-icon" />
             </a>
           </div>
         </div>
 
-        {/* ✅ Site Map */}
+        {/* Site Map */}
         <div className="footer-column">
           <h3>{t("footer.siteMap")}</h3>
           <ul>
@@ -59,32 +73,32 @@ const Footer = forwardRef((props, ref) => {
           </ul>
         </div>
 
-        {/* ✅ Address & Google Map (THỦ ĐỨC) */}
+        {/* Address & Google Map */}
         <div className="footer-column">
           <h3>{t("footer.address")}</h3>
           <p>
             02 Đ. 33, khu đô thị Phú An, phường An Phú, Thành phố Hồ Chí Minh, Vietnam
           </p>
 
-          {/* ✅ Google Maps chỉ còn “View larger map” */}
           <iframe
-            title="Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.568883541385!2d106.7802998!3d10.7906208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526849b1691a9%3A0xa6cbb70a2dd9810f!2zMDIgxJDGsOG7nW5nIDMzLCBLUC4zLCBUaOG7pyDEkOG7qWMsIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1733649310000"
-            width="220"
-            height="120"
-            style={{ border: 0, borderRadius: "6px" }}
+            title="SnapArt Workshop Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2335309097894!2d106.73578448047473!3d10.793417731457671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527007acd789b%3A0x2569c8440d0a7d83!2sSnapArt%20workshop!5e0!3m2!1sen!2sus!4v1769154250177!5m2!1sen!2sus"
+            width="100%"
+            height="160"
+            style={{ border: 0, borderRadius: "8px" }}
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
 
-        {/* ✅ Back to Top */}
+        {/* Back to Top */}
         <button onClick={scrollToTop} className="back-to-top">
           <span>{t("footer.backToTop")}</span>
         </button>
       </div>
 
-      {/* ✅ Cat Animation */}
+      {/* Cat Animation */}
       <div className="footer-cat">
         <Lottie
           animationData={sleepyCat}
