@@ -21,7 +21,7 @@ function HomePage() {
       <AboutUs />
       <Benefit />
       <Blog />
-      <WorkShopProduct />
+      {/* <WorkShopProduct /> */}
       <Contact />
       <AllRating />
       <Footer ref={footerRef} />

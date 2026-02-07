@@ -33,14 +33,14 @@ function Blog() {
       description: t("blog.post3.desc"),
       image: image3,
       link: "/blog3",
-    },
-    {
-      id: 4,
-      title: t("blog.post4.title"),
-      description: t("blog.post4.desc"),
-      image: image4,
-      link: "/blog4",
-    },
+    }
+    // {
+    //   id: 4,
+    //   title: t("blog.post4.title"),
+    //   description: t("blog.post4.desc"),
+    //   image: image4,
+    //   link: "/blog4",
+    // },
   ];
 
   const handleReadMore = (link) => {

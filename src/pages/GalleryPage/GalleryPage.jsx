@@ -18,12 +18,7 @@ const GalleryPage = () => {
       title: t("gallery.adult"),
       img: adultImg,
       path: "/adult-collection",
-    },
-    {
-      title: t("gallery.kids"),
-      img: kidsImg,
-      path: "/kids-collection",
-    },
+    }
   ];
 
   return (
