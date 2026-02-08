@@ -20,7 +20,7 @@ export default function SakuraFall() {
   return (
     <Snowfall
       images={images}
-      snowflakeCount={90}          // tăng số lượng cho rõ
+      snowflakeCount={50}          // tăng số lượng cho rõ
       radius={[18, 40]}            // tăng kích thước hoa (QUAN TRỌNG)
       speed={[1.2, 3.2]}           // rơi rõ hơn
       wind={[-0.4, 1.6]}           // gió bay nhẹ
