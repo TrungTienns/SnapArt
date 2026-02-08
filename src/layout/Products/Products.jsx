@@ -15,7 +15,7 @@ const data = [
     sub: "",
     img: img2,
     workshopLink: "/product1",
-    facebookLink: "https://www.facebook.com/",
+    facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     sub: "",
     img: img1,
     workshopLink: "/product2",
-    facebookLink: "https://www.facebook.com/",
+    facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     sub: "",
     img: img3,
     workshopLink: "/product3",
-    facebookLink: "https://www.facebook.com/",
+    facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
   },
 ];
 

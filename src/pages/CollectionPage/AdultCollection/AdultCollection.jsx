@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import Header from "../../../layout/Header/Header";
@@ -35,11 +35,25 @@ import img26 from "../../../assets/images/adults/adult26.jpg";
 import img27 from "../../../assets/images/adults/adult27.jpg";
 import img28 from "../../../assets/images/adults/adult28.jpg";
 import img29 from "../../../assets/images/adults/adult29.jpg";
+import img30 from "../../../assets/images/adults/adult30.jpg";
+import img31 from "../../../assets/images/adults/adult31.jpg";
+import img32 from "../../../assets/images/adults/adult32.jpg";
+import img33 from "../../../assets/images/adults/adult33.jpg";
+import img34 from "../../../assets/images/adults/adult34.jpg";
 
-const adultImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29];
+const adultImages = [
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
+  img21, img22, img23, img24, img25, img26, img27, img28, img29, img30,
+  img31, img32, img33, img34
+];
 
 const AdultCollection = () => {
-  const { t } = useTranslation(); // ✅ i18n
+  const { t } = useTranslation();
+
+  // ✅ modal state
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const cards = document.querySelectorAll(".collection-card");
@@ -57,18 +71,53 @@ const AdultCollection = () => {
     );
 
     cards.forEach((card) => observer.observe(card));
-
     return () => observer.disconnect();
   }, []);
+
+  // ✅ mở modal
+  const openModal = (idx) => {
+    setActiveIndex(idx);
+    setIsOpen(true);
+    document.body.style.overflow = "hidden"; // khóa scroll
+  };
+
+  // ✅ đóng modal
+  const closeModal = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "auto";
+  };
+
+  // ✅ next/prev (loop)
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % adultImages.length);
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) =>
+      prev === 0 ? adultImages.length - 1 : prev - 1
+    );
+  };
+
+  // ✅ keyboard support
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   return (
     <>
       <Header />
 
       <section className="collection-page">
-        <h2 className="collection-title">
-          {t("gallery.adult")}
-        </h2>
+        <h2 className="collection-title">{t("gallery.adult")}</h2>
 
         <div className="collection-grid">
           {adultImages.map((img, idx) => (
@@ -77,10 +126,44 @@ const AdultCollection = () => {
                 src={img}
                 alt={`${t("gallery.adult")} ${idx + 1}`}
               />
+
+              {/* overlay hover */}
+              <div className="card-overlay">
+                <button
+                  className="view-btn"
+                  onClick={() => openModal(idx)}
+                >
+                  Xem ảnh
+                </button>
+              </div>
             </div>
           ))}
         </div>
       </section>
+
+      {/* ✅ MODAL */}
+      {isOpen && (
+        <div className="image-modal" onClick={closeModal}>
+          <div
+            className="image-modal-content"
+            onClick={(e) => e.stopPropagation()} // click ảnh không đóng
+          >
+            <button className="nav-btn prev" onClick={goPrev}>
+              ‹
+            </button>
+
+            <img
+              className="modal-img"
+              src={adultImages[activeIndex]}
+              alt={`Full ${activeIndex + 1}`}
+            />
+
+            <button className="nav-btn next" onClick={goNext}>
+              ›
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>
