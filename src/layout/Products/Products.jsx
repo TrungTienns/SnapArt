@@ -7,19 +7,15 @@ import "./Products.scss";
 import img1 from "../../assets/images/products/product_image9.jpeg";
 import img2 from "../../assets/images/sand_pictures.jpg";
 import img3 from "../../assets/images/aboutus_image1.jpg";
-import img4 from "../../assets/images/aboutus_image1.jpg";
-import img5 from "../../assets/images/aboutus_image1.jpg";
-import img6 from "../../assets/images/aboutus_image1.jpg";
-import img7 from "../../assets/images/aboutus_image1.jpg";
-import img8 from "../../assets/images/aboutus_image1.jpg";
 
 const data = [
   {
     id: 1,
-    title: "Vẽ Tranh Cát ",
+    title: "Vẽ Tranh Cát",
     sub: "",
     img: img2,
     workshopLink: "/product1",
+    facebookLink: "https://www.facebook.com/",
   },
   {
     id: 2,
@@ -27,6 +23,7 @@ const data = [
     sub: "",
     img: img1,
     workshopLink: "/product2",
+    facebookLink: "https://www.facebook.com/",
   },
   {
     id: 3,
@@ -34,6 +31,7 @@ const data = [
     sub: "",
     img: img3,
     workshopLink: "/product3",
+    facebookLink: "https://www.facebook.com/",
   },
 ];
 
@@ -46,27 +44,40 @@ export default function Products() {
 
       <div className="products-grid">
         {data.map((item) => (
-          <div className="product-card" key={item.id}>
+          <div
+            className="product-card"
+            key={item.id}
+            onClick={() => navigate(item.workshopLink)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") navigate(item.workshopLink);
+            }}
+          >
             <h3 className="product-name">{item.title}</h3>
 
+            {/* Ảnh + overlay */}
             <div className="product-image">
               <img src={item.img} alt={item.title} />
+
+              <div className="product-image-overlay">
+                <div className="overlay-pill">
+                  <span className="overlay-icon">🔍</span>
+                  <span className="overlay-text">
+                    Nhấn vào để xem thêm chi tiết
+                  </span>
+                </div>
+              </div>
             </div>
 
-            <p className="product-sub">{item.sub}</p>
-
-            <h5
-              className="product-learn-more"
-              onClick={() => navigate(item.workshopLink)}
-            >
-              Tìm hiểu thêm
-            </h5>
+            {item.sub && <p className="product-sub">{item.sub}</p>}
 
             <button
               className="product-btn"
-              onClick={() =>
-                window.open("https://www.facebook.com/", "_blank")
-              }
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(item.facebookLink, "_blank");
+              }}
             >
               Đặt lịch
             </button>
