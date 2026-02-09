@@ -77,7 +77,7 @@ const Footer = forwardRef((props, ref) => {
         <div className="footer-column">
           <h3>{t("footer.address")}</h3>
           <p>
-            02 Đ. 33, khu đô thị Phú An, phường An Phú, Thành phố Hồ Chí Minh, Vietnam
+            2 Số 33, Khu đô thị An Phú An Khánh, Thủ Đức, Thành phố Hồ Chí Minh
           </p>
 
           <iframe

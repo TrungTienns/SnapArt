@@ -2,7 +2,6 @@ export const path = {
   homepage: "/",
   about: "/about",
   contact: "/contact",
-  gallery: "/gallery",
   works: "/works",
 
   // Blog pages
@@ -32,5 +31,4 @@ export const path = {
 
   //collection pages
   adultCollection: "/adult-collection",
-  kidsCollection: "/kids-collection",
 };

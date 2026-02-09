@@ -1,92 +1,272 @@
-@use 'sass:color';
+@use "sass:color";
 
-$primary: #ff9994;
+$primary: #ff6b81;
+$primary-soft: #fff0f3;
 $text-dark: #1a1a1a;
-$bg-card: #fff;
+$text-gray: #5b5b5b;
+$bg: #fff7f8;
 
-.workshop-intro {
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff6f6;
+.workshop-page {
+  background: $bg;
+  padding: 70px 20px;
   font-family: "Poppins", sans-serif;
+}
 
-  .intro-card {
-    max-width: 700px;
-    width: 100%;
-    background: $bg-card;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
+.workshop-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    .intro-title {
-      font-size: 28px;
-      font-weight: 600;
-      color: $text-dark;
-      margin-bottom: 20px;
+/* HERO */
+.workshop-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff, $primary-soft);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 
-      @media screen and (max-width: 480px) {
-        font-size: 22px;
-      }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 107, 129, 0.12);
+  color: color.scale($primary, $lightness: -10%);
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: $text-dark;
+  margin-bottom: 12px;
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+  }
+}
+
+.hero-desc {
+  color: $text-gray;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.hero-highlights {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+
+  .highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      margin: 0;
+      color: #333;
+      font-weight: 500;
+      font-size: 15px;
     }
 
-    .intro-image {
-      width: 100%;
-      max-height: 350px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-
-      @media screen and (max-width: 768px) {
-        max-height: 250px;
-      }
-
-      @media screen and (max-width: 480px) {
-        max-height: 200px;
-      }
-    }
-
-    .intro-text {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 16px;
-
-      @media screen and (max-width: 480px) {
-        font-size: 14px;
-      }
-    }
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    @media screen and (max-width: 768px) {
-      padding: 25px;
-    }
-
-    @media screen and (max-width: 480px) {
-      padding: 15px;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: $primary;
+      box-shadow: 0 0 0 6px rgba(255, 107, 129, 0.15);
     }
   }
 }
 
-/* Animation fade in */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: $primary;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease;
+  box-shadow: 0 12px 24px rgba(255, 107, 129, 0.25);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(255, 107, 129, 0.35);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.btn-secondary {
+  background: white;
+  color: $text-dark;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 107, 129, 0.35);
+  }
+}
+
+.hero-right {
+  img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+
+    @media (max-width: 900px) {
+      height: 260px;
+    }
+  }
+}
+
+/* CONTENT */
+.workshop-content {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 800;
+    color: $text-dark;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    color: $text-gray;
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+
+    li {
+      color: $text-gray;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* PRICING */
+.pricing-card {
+  margin-top: 18px;
+  background: white;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: 480px) {
+    padding: 16px;
+  }
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 18px;
+
+  h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 900;
+    color: $text-dark;
+  }
+
+  p {
+    margin: 8px 0 0 0;
+    color: $text-gray;
+  }
+}
+
+.included,
+.group-sale {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: 14px;
+
+  h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 900;
+    color: $text-dark;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 7px;
+
+    li {
+      color: $text-gray;
+      line-height: 1.6;
+    }
+  }
+}
+
+.booking {
+  margin-top: 16px;
+  text-align: center;
+
+  .note {
+    margin-top: 10px;
+    color: #777;
+    font-size: 13px;
   }
 }

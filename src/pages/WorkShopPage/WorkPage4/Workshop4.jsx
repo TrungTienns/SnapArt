@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
 import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
@@ -8,27 +10,120 @@ import "./Workshop4.scss";
 import imgResin from "../../../assets/images/aboutus_image1.jpg";
 
 const Workshop4 = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Header />
       <BannerWorkshop />
 
-      <section className="workshop-intro">
-        <div className="intro-card">
-          <h2 className="intro-title">Khóa Sketch cơ bản</h2>
-          <img src={imgResin} alt="Khóa Sketch cơ bản" className="intro-image" />
-          <p className="intro-text">
-            Khóa Sketch cơ bản được thiết kế dành cho cả những người mới bắt đầu lẫn những ai đã có kinh nghiệm cơ bản trong việc tạo sản phẩm từ nhựa epoxy. 
-            Trong khóa học này, bạn sẽ được học cách lựa chọn vật liệu, pha trộn nhựa và màu sắc, cũng như kỹ thuật đổ khuôn để tạo ra các sản phẩm như khay, móc khóa, trang sức hay đồ trang trí độc đáo. 
-          </p>
-          <p className="intro-text">
-            Giảng viên sẽ hướng dẫn chi tiết từng bước, từ lý thuyết cơ bản về nhựa epoxy, các nguyên tắc an toàn khi làm việc với vật liệu, đến các kỹ thuật nâng cao để tạo hiệu ứng màu sắc, lớp phủ bóng và các chi tiết tinh xảo. 
-            Bạn sẽ được thực hành trực tiếp trên dự án cá nhân, nhận feedback từ giảng viên và cải thiện kỹ năng từng bước.
-          </p>
-          <p className="intro-text">
-            Sau khóa học, học viên sẽ tự tin tạo ra những sản phẩm hoàn chỉnh, hiểu rõ về kỹ thuật pha chế màu và cách kết hợp các vật liệu khác nhau để đạt hiệu quả thẩm mỹ tối ưu. 
-            Đồng thời, khóa học cũng cung cấp các mẹo và hướng dẫn bảo quản sản phẩm, giúp bạn có thể tiếp tục sáng tạo tại nhà hoặc phát triển ý tưởng kinh doanh từ các sản phẩm Acrylic của mình.
-          </p>
+      <section className="workshop-page">
+        <div className="workshop-container">
+          {/* HERO */}
+          <div className="workshop-hero">
+            <div className="hero-left">
+              <span className="hero-badge">{t("workshop4.badge")}</span>
+
+              <h2 className="hero-title">{t("workshop4.title")}</h2>
+
+              <p className="hero-desc">{t("workshop4.desc")}</p>
+
+              <div className="hero-highlights">
+                <div className="highlight-item">
+                  <span className="dot" />
+                  <p>{t("workshop4.highlights.h1")}</p>
+                </div>
+
+                <div className="highlight-item">
+                  <span className="dot" />
+                  <p>{t("workshop4.highlights.h2")}</p>
+                </div>
+
+                <div className="highlight-item">
+                  <span className="dot" />
+                  <p>{t("workshop4.highlights.h3")}</p>
+                </div>
+              </div>
+
+              <div className="hero-actions">
+                <a className="btn-primary" href="#booking">
+                  {t("workshop4.actions.book")}
+                </a>
+
+                <a className="btn-secondary" href="#pricing">
+                  {t("workshop4.actions.price")}
+                </a>
+              </div>
+            </div>
+
+            <div className="hero-right">
+              <img src={imgResin} alt={t("workshop4.title")} />
+            </div>
+          </div>
+
+          {/* CONTENT */}
+          <div className="workshop-content">
+            <div className="content-card">
+              <h3>{t("workshop4.learn.title")}</h3>
+              <ul>
+                <li>{t("workshop4.learn.l1")}</li>
+                <li>{t("workshop4.learn.l2")}</li>
+                <li>{t("workshop4.learn.l3")}</li>
+                <li>{t("workshop4.learn.l4")}</li>
+              </ul>
+            </div>
+
+            <div className="content-card">
+              <h3>{t("workshop4.forWho.title")}</h3>
+              <p>{t("workshop4.forWho.desc")}</p>
+            </div>
+          </div>
+
+          {/* PRICING */}
+          <div className="pricing-card" id="pricing">
+            <div className="pricing-header">
+              <h3>{t("workshop4.pricing.title")}</h3>
+              <p>{t("workshop4.pricing.desc")}</p>
+            </div>
+
+            <div className="price-box">
+              <div className="price-main">
+                <span className="price-label">
+                  {t("workshop4.pricing.priceLabel")}
+                </span>
+                <span className="price-value">
+                  {t("workshop4.pricing.priceValue")}
+                </span>
+              </div>
+
+              <div className="included">
+                <h4>{t("workshop4.included.title")}</h4>
+                <ul>
+                  <li>{t("workshop4.included.i1")}</li>
+                  <li>{t("workshop4.included.i2")}</li>
+                  <li>{t("workshop4.included.i3")}</li>
+                  <li>{t("workshop4.included.i4")}</li>
+                </ul>
+              </div>
+
+              <div className="group-sale">
+                <h4>{t("workshop4.groupSale.title")}</h4>
+                <ul>
+                  <li>{t("workshop4.groupSale.g1")}</li>
+                  <li>{t("workshop4.groupSale.g2")}</li>
+                  <li>{t("workshop4.groupSale.g3")}</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="booking" id="booking">
+              <a className="btn-primary full" href="#">
+                {t("workshop4.actions.book")}
+              </a>
+
+              <p className="note">{t("workshop4.note")}</p>
+            </div>
+          </div>
         </div>
       </section>
 

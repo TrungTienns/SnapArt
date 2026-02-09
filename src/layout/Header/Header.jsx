@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/logo.png";
 import Lottie from "lottie-react";
 import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
-import bgMusic from "../../assets/music/lunarnewyear.mp3";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
@@ -16,20 +15,10 @@ function Header() {
   const [hideHeader, setHideHeader] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
 
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
-
-  const toggleMusic = () => {
-    if (!audioRef.current) return;
-    if (isPlaying) audioRef.current.pause();
-    else audioRef.current.play();
-    setIsPlaying(!isPlaying);
-  };
-
   const links = [
     { to: "/", label: t("menu.home") },
     { to: "/about", label: t("menu.about") },
-    { to: "/gallery", label: t("menu.artwork") },
+    { to: "/adult-collection", label: t("menu.artwork") },
     { to: "/works", label: t("menu.course") },
     { to: "/blog", label: t("menu.blog") },
     { to: "/contact", label: t("menu.contact") },
@@ -53,14 +42,20 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
+  // đổi ngôn ngữ
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem("language", lng);
+  };
+
+  const currentLang = i18n.language || "vi";
+
   return (
     <header
       className={`site-header ${scrolled ? "scrolled" : ""} ${
         hideHeader ? "hide" : ""
       }`}
     >
-      <audio ref={audioRef} src={bgMusic} loop />
-
       <div className="header-inner">
         {/* LEFT */}
         <div className="header-left">
@@ -68,13 +63,25 @@ function Header() {
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
           </Link>
 
-          <div
-            className={`music-toggle ${isPlaying ? "playing" : ""}`}
-            onClick={toggleMusic}
-          >
-            <div className={`toggle-btn ${isPlaying ? "on" : ""}`}>
-              <div className="circle"></div>
-            </div>
+          {/* LANGUAGE SWITCH */}
+          <div className="lang-switch">
+            <button
+              className={`flag-btn ${currentLang === "vi" ? "active" : ""}`}
+              onClick={() => changeLanguage("vi")}
+              title="Tiếng Việt"
+              aria-label="Switch to Vietnamese"
+            >
+              🇻🇳
+            </button>
+
+            <button
+              className={`flag-btn ${currentLang === "en" ? "active" : ""}`}
+              onClick={() => changeLanguage("en")}
+              title="English"
+              aria-label="Switch to English"
+            >
+              🇺🇸
+            </button>
           </div>
         </div>
 
@@ -82,7 +89,7 @@ function Header() {
         <nav className={`main-nav ${open ? "open" : ""}`}>
           {links.map((link) => (
             <Link
-              key={link.label}
+              key={link.to}
               to={link.to}
               className="nav-link"
               onClick={() => setOpen(false)}
@@ -97,10 +104,7 @@ function Header() {
           <button
             className="cta"
             onClick={() =>
-              window.open(
-                "https://www.instagram.com/snapart_hcm/?hl=en",
-                "_blank"
-              )
+              window.open("https://www.instagram.com/snapart_hcm/?hl=en", "_blank")
             }
           >
             {t("menu.cta")}
@@ -122,12 +126,7 @@ function Header() {
         </div>
       </div>
 
-      {open && (
-        <div
-          className="mobile-backdrop"
-          onClick={() => setOpen(false)}
-        />
-      )}
+      {open && <div className="mobile-backdrop" onClick={() => setOpen(false)} />}
     </header>
   );
 }

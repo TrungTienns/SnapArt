@@ -9,7 +9,7 @@
   padding: 6px 0;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  transition: background 0.3s ease, padding 0.3s ease;
+  transition: background 0.3s ease, padding 0.3s ease, transform 0.3s ease;
 }
 
 .site-header.scrolled {
@@ -19,11 +19,12 @@
 
 .site-header.hide {
   transform: translateY(-100%);
-  transition: transform 0.3s ease;
 }
 
 /* ====== Padding để tránh header che nội dung ====== */
-body, main, .about-page {
+body,
+main,
+.about-page {
   padding-top: 88px;
 }
 
@@ -34,12 +35,12 @@ body, main, .about-page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 40px;
+  padding: 12px 120px 12px 40px; /* ✅ chừa chỗ bên phải cho con mèo */
   gap: 36px;
   position: relative;
 }
 
-/* ⭐⭐⭐ FIX: Logo + nút nhạc nằm cùng 1 hàng */
+/* ⭐⭐⭐ FIX: Logo + nút ngôn ngữ nằm cùng 1 hàng */
 .header-left {
   display: flex !important;
   align-items: center;
@@ -54,8 +55,8 @@ body, main, .about-page {
 }
 
 .brand-logo {
-  height: 100px;       /* ✅ Khống chế theo chiều cao */
-  width: 100px;        /* ✅ Tự giữ đúng tỉ lệ ảnh gốc */
+  height: 100px;
+  width: 100px;
   object-fit: contain;
   transition: transform 0.3s ease;
   display: block;
@@ -63,6 +64,53 @@ body, main, .about-page {
 
 .brand-logo:hover {
   transform: rotate(-5deg) scale(1.08);
+}
+
+/* ====== LANGUAGE SWITCH (FLAG) ====== */
+.lang-switch {
+  margin-left: 30px; /* ✅ đẩy sang phải (xa logo hơn) */
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease;
+}
+
+.lang-switch:hover {
+  transform: scale(1.03);
+}
+
+.flag-btn {
+  width: 38px;
+  height: 34px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease,
+    opacity 0.2s ease;
+  opacity: 0.55;
+}
+
+.flag-btn:hover {
+  transform: translateY(-1px) scale(1.06);
+  opacity: 1;
+}
+
+.flag-btn.active {
+  opacity: 1;
+  background: rgba(255, 153, 148, 0.22);
+  box-shadow: 0 0 0 2px rgba(255, 153, 148, 0.35);
 }
 
 /* ====== Menu ====== */
@@ -122,6 +170,8 @@ body, main, .about-page {
   letter-spacing: 0.6px;
   box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .cta:hover {
@@ -165,24 +215,16 @@ body, main, .about-page {
   z-index: 40;
 }
 
-/* ====== Animation Cute Cat ====== */
+/* ====== Animation Cute Cat (DESKTOP) ====== */
 .header-animation {
   position: absolute;
-  left: 62%;
+  right: 20px; /* ✅ sát mép phải */
   top: 50%;
-  transform: translate(250%, -50%);
+  transform: translateY(-50%);
   width: 80px;
   height: 80px;
-  z-index: 0;
-}
-
-@keyframes floatCat {
-  0%, 100% {
-    transform: translateY(-50%) translateX(0);
-  }
-  50% {
-    transform: translateY(-50%) translateX(-5px);
-  }
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* ====== Responsive ====== */
@@ -214,13 +256,9 @@ body, main, .about-page {
     display: none;
   }
 
+  /* ✅ FIX: Mobile ẩn mèo luôn để không đè nút */
   .header-animation {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
+    display: none;
   }
 
   .header-right {
@@ -246,75 +284,21 @@ body, main, .about-page {
     gap: 16px;
   }
 
-  .header-animation {
-    width: 64px;
-    height: 64px;
-  }
-
-  body, main, .about-page {
+  body,
+  main,
+  .about-page {
     padding-top: 72px;
   }
-}
 
-/* ====== MUSIC TOGGLE ====== */
-.music-toggle {
-  margin-left: 70px;
-  left: 45%;
-  right: 45%;
-  cursor: pointer;
-  transition: transform 0.25s ease;
-  display: flex;
-  align-items: center;
-}
+  .lang-switch {
+    margin-left: 10px;
+    padding: 4px;
+    border-radius: 12px;
+  }
 
-.music-toggle:hover {
-  transform: scale(1.07);
-}
-
-.toggle-btn {
-  width: 48px;
-  height: 22px;
-  background: #cfcfcf;
-  border-radius: 20px;
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
-}
-
-.toggle-btn .circle {
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  border-radius: 50%;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-.toggle-btn.on {
-  background: #ff9994;
-  box-shadow: 0 0 12px rgba(255, 153, 148, 0.7);
-}
-
-.toggle-btn.on .circle {
-  transform: translateX(26px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-}
-
-.music-toggle.playing {
-  animation: musicVibration 1.4s infinite ease-in-out;
-}
-
-@keyframes musicVibration {
-  0%, 100% { transform: translateX(0); }
-  30% { transform: translateX(1px); }
-  60% { transform: translateX(-1px); }
-}
-
-@media (max-width: 480px) {
-  .music-toggle {
-    transform: scale(0.85);
-    margin-left: 8px;
+  .flag-btn {
+    width: 34px;
+    height: 30px;
+    font-size: 18px;
   }
 }

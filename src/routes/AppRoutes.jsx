@@ -10,7 +10,6 @@ import LanguageSelector from "../pages/LanguageSelector/LanguageSelector";
 import NotFound from "../pages/NotFound/NotFound";
 import WorkPage from "../pages/WorkPage/WorkPage";
 import BlogPage from "../pages/BlogPage/BlogPage";
-import GalleryPage from "../pages/GalleryPage/GalleryPage";
 // Blog pages
 import Blog1 from "../pages/BlogsPage/Blog1/Blog1";
 import Blog2 from "../pages/BlogsPage/Blog2/Blog2";
@@ -35,7 +34,6 @@ import Workshop5 from "../pages/WorkShopPage/WorkPage5/Workshop5";
 import Workshop6 from "../pages/WorkShopPage/WorkPage6/Workshop6";
 //Collection page
 import AdultCollection from "../pages/CollectionPage/AdultCollection/AdultCollection";
-import KidsCollection from "../pages/CollectionPage/KidsCollection/KidsCollection";
 
 // Layout
 import Header from "../layout/Header/Header";
@@ -63,7 +61,6 @@ const AppRoutes = () => {
         <Route path={path.contact} element={<ContactPage />} />
         <Route path={path.works} element={<WorkPage />} />
         <Route path={path.blog} element={<BlogPage />} />
-        <Route path={path.gallery} element={<GalleryPage />} />
 
         {/* Blog pages */}
         <Route path={path.blog1} element={<Blog1 />} />
@@ -89,7 +86,6 @@ const AppRoutes = () => {
 
         {/* Collection pages */}
         <Route path={path.adultCollection} element={<AdultCollection />} />
-        <Route path={path.kidsCollection} element={<KidsCollection />} />
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>

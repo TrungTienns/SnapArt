@@ -1,13 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
 import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
 import "./Workshop3.scss";
 
-// hình demo (đổi ảnh túi tote thật của bạn)
-import imgTote from "../../../assets/images/aboutus_image1.jpg";
+import imgTote from "../../../assets/images/totepaiting.jpg";
 
 const Workshop3 = () => {
+  const { t } = useTranslation();
+
+  const facebookLink = "https://www.facebook.com/profile.php?id=61583373132344";
+
   return (
     <>
       <Header />
@@ -18,107 +23,110 @@ const Workshop3 = () => {
           {/* HERO */}
           <div className="workshop-hero">
             <div className="hero-left">
-              <span className="hero-badge">Workshop • Handmade</span>
+              <span className="hero-badge">{t("workshopTote.badge")}</span>
 
-              <h2 className="hero-title">Vẽ Túi Tote</h2>
+              <h2 className="hero-title">{t("workshopTote.title")}</h2>
 
-              <p className="hero-desc">
-                Workshop Vẽ Túi Tote là trải nghiệm sáng tạo nhẹ nhàng, phù hợp
-                cho người mới bắt đầu. Bạn sẽ được hướng dẫn cách lên bố cục, phối
-                màu và hoàn thiện một chiếc túi tote mang phong cách cá nhân.
-              </p>
+              <p className="hero-desc">{t("workshopTote.desc")}</p>
 
               <div className="hero-highlights">
                 <div className="highlight-item">
                   <span className="dot" />
-                  <p>Không cần kinh nghiệm</p>
+                  <p>{t("workshopTote.highlight1")}</p>
                 </div>
                 <div className="highlight-item">
                   <span className="dot" />
-                  <p>Hướng dẫn từng bước</p>
+                  <p>{t("workshopTote.highlight2")}</p>
                 </div>
                 <div className="highlight-item">
                   <span className="dot" />
-                  <p>Nhận sản phẩm mang về</p>
+                  <p>{t("workshopTote.highlight3")}</p>
                 </div>
               </div>
 
               <div className="hero-actions">
-                <a className="btn-primary" href="#booking">
-                  📩 Đặt lịch ngay
+                <a
+                  className="btn-primary"
+                  href={facebookLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("workshopTote.bookNow")}
                 </a>
+
                 <a className="btn-secondary" href="#pricing">
-                  Xem giá
+                  {t("workshopTote.viewPrice")}
                 </a>
               </div>
             </div>
 
             <div className="hero-right">
-              <img src={imgTote} alt="Workshop Vẽ Túi Tote" />
+              <img src={imgTote} alt={t("workshopTote.title")} />
             </div>
           </div>
 
           {/* CONTENT */}
           <div className="workshop-content">
             <div className="content-card">
-              <h3>🎨 Bạn sẽ học được gì?</h3>
+              <h3>{t("workshopTote.learnTitle")}</h3>
               <ul>
-                <li>Cách lên ý tưởng và chọn concept phù hợp</li>
-                <li>Cách phối màu hài hòa trên nền vải tote</li>
-                <li>Kỹ thuật vẽ cơ bản để hình vẽ rõ, đẹp và bền màu</li>
-                <li>Cách bảo quản túi sau khi hoàn thiện</li>
+                <li>{t("workshopTote.learn1")}</li>
+                <li>{t("workshopTote.learn2")}</li>
+                <li>{t("workshopTote.learn3")}</li>
+                <li>{t("workshopTote.learn4")}</li>
               </ul>
             </div>
 
             <div className="content-card">
-              <h3>📌 Phù hợp với ai?</h3>
-              <p>
-                Workshop phù hợp cho học sinh, sinh viên, người đi làm muốn thư
-                giãn cuối tuần, đi cùng bạn bè hoặc tổ chức theo nhóm.
-              </p>
+              <h3>{t("workshopTote.fitTitle")}</h3>
+              <p>{t("workshopTote.fitDesc")}</p>
             </div>
           </div>
 
           {/* PRICING */}
           <div className="pricing-card" id="pricing">
             <div className="pricing-header">
-              <h3>👜 Giá Workshop Vẽ Túi Tote</h3>
-              <p>Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.</p>
+              <h3>{t("workshopTote.pricingTitle")}</h3>
+              <p>{t("workshopTote.pricingDesc")}</p>
             </div>
 
             <div className="price-box">
               <div className="price-main">
-                <span className="price-label">Giá Workshop</span>
-                <span className="price-value">280K</span>
+                <span className="price-label">{t("workshopTote.priceLabel")}</span>
+                <span className="price-value">{t("workshopTote.priceValue")}</span>
               </div>
 
               <div className="included">
-                <h4>✨ Giá đã bao gồm</h4>
+                <h4>{t("workshopTote.includedTitle")}</h4>
                 <ul>
-                  <li>✔ Màu + hoạ cụ dùng tại workshop</li>
-                  <li>✔ Nước suối và snacks</li>
-                  <li>✔ Tripod quay/chụp dùng chung</li>
-                  <li>✔ Nhân viên hỗ trợ lấy màu & hướng dẫn</li>
+                  <li>{t("workshopTote.inc1")}</li>
+                  <li>{t("workshopTote.inc2")}</li>
+                  <li>{t("workshopTote.inc3")}</li>
+                  <li>{t("workshopTote.inc4")}</li>
                 </ul>
               </div>
 
               <div className="group-sale">
-                <h4>🎁 Ưu đãi nhóm</h4>
+                <h4>{t("workshopTote.groupTitle")}</h4>
                 <ul>
-                  <li>• Nhóm 3 người 👉 giảm 10%</li>
-                  <li>• Nhóm 4 người 👉 giảm 15%</li>
-                  <li>• 2 người vẽ chung 1 tranh 👉 phụ thu +150K</li>
+                  <li>{t("workshopTote.group1")}</li>
+                  <li>{t("workshopTote.group2")}</li>
+                  <li>{t("workshopTote.group3")}</li>
                 </ul>
               </div>
             </div>
 
             <div className="booking" id="booking">
-              <a className="btn-primary full" href="#">
-                📩 Đặt lịch ngay
+              <a
+                className="btn-primary full"
+                href={facebookLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("workshopTote.bookNow")}
               </a>
-              <p className="note">
-                * Bạn có thể inbox để được tư vấn concept & lịch học phù hợp.
-              </p>
+
+              <p className="note">{t("workshopTote.note")}</p>
             </div>
           </div>
         </div>

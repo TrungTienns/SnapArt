@@ -123,9 +123,18 @@
     "send": "Send",
     "sending": "Sending..."
   },
-
   "allRating": {
-    "heading": "What Our Customers Are Saying"
+    "heading": "Student Reviews",
+    "subHeading": "Some real feedback from Google Reviews. Click to view all reviews on Google Maps.",
+    "viewOnGoogle": "View on Google Maps",
+    "clickHint": "Click to see more on Google"
+  },
+  "googleReview": {
+    "title": "Google Reviews",
+    "sub": "See real student reviews on Google Maps",
+    "write": "Write a review",
+    "viewAll": "View all reviews",
+    "note": "* You will be redirected to Google Maps."
   },
 
   "footer": {
@@ -161,7 +170,7 @@
   },
   "section4": {
     "title": "Creating Meaningful Stories",
-    "desc": "Every student who comes to SnapArt carries a unique story, and when they leave, they take home more than just a painting — they gain confidence, happiness, peace of mind, and unforgettable memories. These small stories are the greatest motivation that drives SnapArt forward."
+    "desc": "Every customer who comes to SnapArt carries a unique story, and when they leave, they take home more than just a painting — they gain confidence, happiness, peace of mind, and unforgettable memories. These small stories are the greatest motivation that drives SnapArt forward."
   },
 
   "endingTitle": "Your Journey Begins Here",
@@ -181,5 +190,192 @@
   "workshopBanner": {
     "title": "SnapArt Workshop",
     "subtitle": "Explore, create, and heal through art"
+},
+"workshopAcrylic": {
+  "badge": "Workshop • Acrylic",
+  "title": "🖌 Acrylic Painting Workshop",
+  "desc": "A relaxing – beginner-friendly – colorful workshop for anyone who wants to try acrylic painting. You will be guided step-by-step to finish a beautiful artwork and take it home right after the session.",
+  "duration": "⏳ 60–90 minutes",
+  "age": "🎨 Suitable for: 14+",
+  "takeHome": "🎁 Take your artwork home",
+  "bookNow": "📩 Book now",
+  "viewPrice": "View pricing",
+
+  "introTitle": "🌈 Introduction",
+  "introDesc1": "This Acrylic workshop is designed to be simple, easy to follow, and perfect for beginners. You will learn basic acrylic techniques, brush handling, and color mixing.",
+  "introDesc2": "Our staff will guide you throughout the session so you can complete a well-composed artwork with a clear focal point. It’s a great way to relax, reduce stress, and enjoy art in a gentle way.",
+
+  "fitTitle": "📌 Who is this for?",
+  "fit1": "Beginners who want to try acrylic painting",
+  "fit2": "Teens 14+ and adults who love art",
+  "fit3": "Friends, couples, or small weekend groups",
+  "fit4": "Anyone looking for a calm, no-pressure experience",
+
+  "pricingTitle": "💰 Acrylic Pricing",
+  "pricingDesc": "Prices include all materials and full guidance during the workshop.",
+
+  "boxTitle": "🖌 Acrylic Painting",
+  "hot": "Hot",
+  "size1": "20x30",
+  "size2": "30x30",
+  "size3": "30x40",
+
+  "includedTitle": "✨ Included",
+  "inc1": "✔️ Paint + tools during the workshop",
+  "inc2": "✔️ Water and snacks",
+  "inc3": "✔️ Shared tripod for filming/photos",
+  "inc4": "✔️ Staff support for colors & guidance",
+
+  "groupTitle": "🎁 Group discount",
+  "group1": "• Group of 3 👉 10% off",
+  "group2": "• Group of 4 👉 15% off",
+  "group3": "• 2 people share 1 painting 👉 +150K",
+
+  "note": "* Message the fanpage to choose your size, style, and schedule."
+},
+"workshopSand": {
+  "badge": "Workshop • Handmade",
+  "title": "🏖 Sand Art Workshop",
+  "desc": "A gentle and relaxing workshop for beginners — you will create a complete sand artwork with your own personal touch.",
+  "duration": "⏳ 60–90 minutes",
+  "level": "👩‍🎨 Beginner friendly",
+  "takeHome": "🎁 Take your artwork home",
+  "bookNow": "📩 Book now",
+  "viewPrice": "View pricing",
+
+  "introTitle": "🌸 Introduction",
+  "introDesc1": "Sand art is a creative form made from layers of colored sand, combining composition and color blending to create beautiful gradient effects. This workshop lets you experience the full process from A to Z: choosing a design, mixing colors, preparing the base, layering sand, and finishing the artwork.",
+  "introDesc2": "No prior drawing skills are required — instructors guide you step by step, while staff assist with colors, composition, and framing so you can bring home a beautiful finished piece.",
+
+  "fitTitle": "📌 Who is this for?",
+  "fit1": "Beginners who want to explore art",
+  "fit2": "Friends, couples, or small groups",
+  "fit3": "Anyone wanting a handmade gift",
+  "fit4": "People looking for a relaxing weekend activity",
+
+  "pricingTitle": "💰 Sand Art Workshop Pricing",
+  "pricingDesc": "Prices include all materials and full support during the workshop.",
+
+  "box1Title": "🏖 Raised Sand Art",
+  "box1Tag": "Popular",
+  "box2Title": "🐚 Shell Sand Art (Wood Frame)",
+  "box2Tag": "Premium",
+
+  "includedTitle": "✨ Included",
+  "inc1": "✔️ Colored sand & tools",
+  "inc2": "✔️ Water and snacks",
+  "inc3": "✔️ Shared tripod for filming/photos",
+  "inc4": "✔️ Staff support and guidance",
+
+  "groupTitle": "🎁 Group discount",
+  "group1": "• Group of 3 👉 10% off",
+  "group2": "• Group of 4 👉 15% off",
+  "group3": "• 2 people share 1 artwork 👉 +150K",
+
+  "note": "* Message our fanpage to choose frame, design, and schedule."
+},
+"workshopTote": {
+  "badge": "Workshop • Handmade",
+  "title": "👜 Tote Bag Painting Workshop",
+  "desc": "A relaxing creative workshop for beginners. You will be guided to plan your layout, mix colors, and finish a tote bag with your own personal style.",
+
+  "highlight1": "No experience needed",
+  "highlight2": "Step-by-step guidance",
+  "highlight3": "Take your tote home",
+
+  "bookNow": "📩 Book now",
+  "viewPrice": "View pricing",
+
+  "learnTitle": "🎨 What will you learn?",
+  "learn1": "How to create ideas and choose a suitable concept",
+  "learn2": "How to mix colors nicely on tote fabric",
+  "learn3": "Basic painting techniques for clear and long-lasting artwork",
+  "learn4": "How to take care of your tote after finishing",
+
+  "fitTitle": "📌 Who is this for?",
+  "fitDesc": "This workshop is perfect for students, office workers, and anyone who wants a relaxing weekend activity with friends or groups.",
+
+  "pricingTitle": "👜 Tote Bag Painting Pricing",
+  "pricingDesc": "The price includes all materials and full support during the workshop.",
+
+  "priceLabel": "Workshop price",
+  "priceValue": "280K",
+
+  "includedTitle": "✨ Included",
+  "inc1": "✔ Paints & tools",
+  "inc2": "✔ Water and snacks",
+  "inc3": "✔ Shared tripod for filming/photos",
+  "inc4": "✔ Staff support and guidance",
+
+  "groupTitle": "🎁 Group discount",
+  "group1": "• Group of 3 👉 10% off",
+  "group2": "• Group of 4 👉 15% off",
+  "group3": "• 2 people share 1 tote 👉 +150K",
+
+  "note": "* Message our fanpage for concept suggestions and available schedules."
+},
+  "products": {
+    "title": "List of Products",
+    "clickToView": "Click to view more details",
+    "bookButton": "Book now",
+    "items": {
+      "sandPainting": {
+        "title": "Sand Painting"
+      },
+      "acrylicPainting": {
+        "title": "Acrylic Painting"
+      },
+      "toteBagPainting": {
+        "title": "Tote Bag Painting"
+      },
+      "resinPainting": {
+        "title": "Resin Painting"
+      }
+    }
+  },
+"workshop4": {
+  "badge": "Workshop • Handmade",
+  "title": "Resin Art Workshop",
+  "desc": "A creative resin experience using epoxy. You'll learn from the basics to finishing a beautiful resin product with stunning color effects and a glossy surface.",
+  "highlights": {
+    "h1": "No experience needed",
+    "h2": "Step-by-step guidance",
+    "h3": "Take your artwork home"
+  },
+  "actions": {
+    "book": "📩 Book now",
+    "price": "View pricing"
+  },
+  "learn": {
+    "title": "🎨 What will you learn?",
+    "l1": "How to choose resin materials and tools",
+    "l2": "Color mixing + marble / galaxy effects",
+    "l3": "Molding & glossy finishing techniques",
+    "l4": "Tips to preserve resin products long-term"
+  },
+  "forWho": {
+    "title": "📌 Who is it for?",
+    "desc": "Perfect for beginners, handmade lovers, and anyone who wants a fun weekend experience with friends."
+  },
+  "pricing": {
+    "title": "🧪 Resin Workshop Pricing",
+    "desc": "Price includes all materials and full support during the session.",
+    "priceLabel": "Workshop price",
+    "priceValue": "320K"
+  },
+  "included": {
+    "title": "✨ Included",
+    "i1": "✔ Epoxy resin + pigments + tools",
+    "i2": "✔ Mold + decoration accessories",
+    "i3": "✔ Water and snacks",
+    "i4": "✔ Staff support & guidance"
+  },
+  "groupSale": {
+    "title": "🎁 Group discount",
+    "g1": "• 3 people 👉 10% off",
+    "g2": "• 4 people 👉 15% off",
+    "g3": "• 2 people / 1 product 👉 +150K extra"
+  },
+  "note": "* DM us for resin designs & suitable schedules."
 }
 }
