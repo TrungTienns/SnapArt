@@ -163,7 +163,7 @@
     },
     "section3": {
       "title": "Chúng Tôi Giúp Bạn Như Thế Nào",
-      "desc": "SnapArt không đơn thuần là nơi để học vẽ, mà là không gian chữa lành, nơi bạn có thể giải tỏa căng thẳng, cân bằng cảm xúc và tìm lại niềm vui từ những điều giản dị. Mỗi buổi workshop là một hành trình trải nghiệm, nơi bạn được lắng nghe bản thân và nuôi dưỡng tâm hồn thông qua nghệ thuật."
+      "desc": "SnapArt không đơn thuần là nơi để vẽ, mà là không gian chữa lành, nơi bạn có thể giải tỏa căng thẳng, cân bằng cảm xúc và tìm lại niềm vui từ những điều giản dị. Mỗi buổi workshop là một hành trình trải nghiệm, nơi bạn được lắng nghe bản thân và nuôi dưỡng tâm hồn thông qua nghệ thuật."
     },
     "section4": {
       "title": "Tạo Nên Câu Chuyện Thành Công",
@@ -227,7 +227,7 @@
     "inc3": "✔️ Tripod quay/chụp dùng chung",
     "inc4": "✔️ Nhân viên hỗ trợ lấy màu & hướng dẫn",
 
-    "groupTitle": "🎁 Ưu đãi nhóm",
+    "groupTitle": "📝 Lưu ý",
     "group1": "• Nhóm 3 người 👉 giảm 10%",
     "group2": "• Nhóm 4 người 👉 giảm 15%",
     "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
@@ -239,7 +239,7 @@
     "badge": "Workshop • Handmade",
     "title": "🏖 Workshop Tranh Cát",
     "desc": "Một buổi workshop nhẹ nhàng, thư giãn dành cho người mới bắt đầu — bạn sẽ tự tay tạo ra một bức tranh cát hoàn chỉnh mang dấu ấn riêng.",
-    "duration": "⏳ 60–90 phút",
+    "duration": "⏳ 4–5 tiếng",
     "level": "👩‍🎨 Phù hợp người mới",
     "takeHome": "🎁 Thành phẩm mang về",
     "bookNow": "📩 Đặt lịch ngay",
@@ -269,10 +269,11 @@
     "inc3": "✔️ Tripod quay/chụp dùng chung",
     "inc4": "✔️ Nhân viên hỗ trợ lấy màu & hướng dẫn",
 
-    "groupTitle": "🎁 Ưu đãi nhóm",
+    "groupTitle": "📝 Lưu ý",
     "group1": "• Nhóm 3 người 👉 giảm 10%",
     "group2": "• Nhóm 4 người 👉 giảm 15%",
     "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
+    "group4": "• Chưa hoàn thành trong ngày 👉 lần sau quay lại hoàn thiện phụ thu 50k.",
 
     "note": "* Nhắn fanpage để được tư vấn khung, mẫu và thời gian trống."
   },
@@ -310,10 +311,11 @@
     "inc3": "✔ Tripod quay/chụp dùng chung",
     "inc4": "✔ Nhân viên hỗ trợ lấy màu & hướng dẫn",
 
-    "groupTitle": "🎁 Ưu đãi nhóm",
+    "groupTitle": "📝 Lưu ý",
     "group1": "• Nhóm 3 người 👉 giảm 10%",
     "group2": "• Nhóm 4 người 👉 giảm 15%",
     "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
+    "group4": "• Chưa hoàn thành trong ngày 👉 lần sau quay lại hoàn thiện phụ thu 50k.",
 
     "note": "* Bạn có thể inbox để được tư vấn concept & lịch học phù hợp."
   },
@@ -369,7 +371,7 @@
     "included3": "✔ Nước suối và snacks",
     "included4": "✔ Nhân viên hỗ trợ & hướng dẫn",
 
-    "groupTitle": "🎁 Ưu đãi nhóm",
+    "groupTitle": "📝 Lưu ý",
     "group1": "• Nhóm 3 người 👉 giảm 10%",
     "group2": "• Nhóm 4 người 👉 giảm 15%",
     "group3": "• 2 người làm chung 1 sản phẩm 👉 phụ thu +150K",

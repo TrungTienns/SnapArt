@@ -102,6 +102,7 @@ const Workshop4 = () => {
                   <li>{t("workshop4.groupSale.g1")}</li>
                   <li>{t("workshop4.groupSale.g2")}</li>
                   <li>{t("workshop4.groupSale.g3")}</li>
+                  <li>{t("workshop4.groupSale.g4")}</li>
                 </ul>
               </div>
             </div>

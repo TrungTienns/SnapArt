@@ -129,6 +129,7 @@ const Workshop1 = () => {
                 <li>{t("workshopSand.group1")}</li>
                 <li>{t("workshopSand.group2")}</li>
                 <li>{t("workshopSand.group3")}</li>
+                <li>{t("workshopSand.group4")}</li>
               </ul>
             </div>
 

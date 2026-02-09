@@ -200,7 +200,7 @@
     "badge": "Workshop • Acrylic",
     "title": "🖌 Acrylic Painting Workshop",
     "desc": "A relaxing – beginner-friendly – colorful workshop for anyone who wants to try acrylic painting. You will be guided step-by-step to finish a beautiful artwork and take it home right after the session.",
-    "duration": "⏳ 60–90 minutes",
+    "duration": "⏳ 4-5 hours",
     "age": "🎨 Suitable for: 14+",
     "takeHome": "🎁 Take your artwork home",
     "bookNow": "📩 Book now",
@@ -231,10 +231,11 @@
     "inc3": "✔️ Shared tripod for filming/photos",
     "inc4": "✔️ Staff support for colors & guidance",
 
-    "groupTitle": "⚠️ Attention",
+    "groupTitle": "📝 Notes ",
     "group1": "• Group of 3 👉 10% off",
     "group2": "• Group of 4 👉 15% off",
     "group3": "• 2 people share 1 painting 👉 +150K",
+    "group4": "• If not finished in one day 👉 come back later to complete for an extra 50K.",
 
     "note": "* Message the fanpage to choose your size, style, and schedule."
   },
@@ -243,7 +244,7 @@
     "badge": "Workshop • Handmade",
     "title": "🏖 Sand Painting",
     "desc": "A gentle and relaxing workshop for beginners — you will create a complete sand artwork with your own personal touch.",
-    "duration": "⏳ 60–90 minutes",
+    "duration": "⏳ 4-5 hours",
     "level": "👩‍🎨 Beginner friendly",
     "takeHome": "🎁 Take your artwork home",
     "bookNow": "📩 Book now",
@@ -273,7 +274,7 @@
     "inc3": "✔️ Shared tripod for filming/photos",
     "inc4": "✔️ Staff support and guidance",
 
-    "groupTitle": "⚠️ Attention",
+    "groupTitle": "📝 Notes",
     "group1": "• Group of 3 👉 10% off",
     "group2": "• Group of 4 👉 15% off",
     "group3": "• 2 people share 1 artwork 👉 +150K",
@@ -314,10 +315,11 @@
     "inc3": "✔ Shared tripod for filming/photos",
     "inc4": "✔ Staff support and guidance",
 
-    "groupTitle": "⚠️ Attention",
+    "groupTitle": "📝 Notes",
     "group1": "• Group of 3 👉 10% off",
     "group2": "• Group of 4 👉 15% off",
     "group3": "• 2 people share 1 tote 👉 +150K",
+    "group4": "• If not finished in one day 👉 come back later to complete for an extra 50K.",
 
     "note": "* Message our fanpage for concept suggestions and available schedules."
   },
@@ -380,7 +382,7 @@
       "i4": "✔ Staff support & guidance"
     },
     "groupSale": {
-      "title": "⚠️ Attention",
+      "title": "📝 Notes",
       "g1": "• 3 people 👉 10% off",
       "g2": "• 4 people 👉 15% off",
       "g3": "• 2 people / 1 product 👉 +150K extra"
