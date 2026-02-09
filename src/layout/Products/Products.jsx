@@ -14,6 +14,27 @@ export default function Products() {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  // helper: format 260 -> 260k
+  const formatK = (value) => `${value}k`;
+
+  // helper: tạo text "260k - 360k"
+  const priceRangeText = (arr) => {
+    if (!arr || arr.length === 0) return "";
+    if (arr.length === 1) return formatK(arr[0]);
+
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+
+    if (min === max) return formatK(min);
+    return `${formatK(min)} - ${formatK(max)}`;
+  };
+
+  // ======= BẢNG GIÁ TỪ BẠN =======
+  const acrylicPrices = [260, 310, 360];
+  const sandShellPrices = [300, 360, 360];
+  const resinShellPrices = [320, 380, 380];
+  const toteBagPrice = [280];
+
   const data = [
     {
       id: 1,
@@ -22,6 +43,7 @@ export default function Products() {
       img: img4,
       workshopLink: "/product1",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
+      priceText: priceRangeText(sandShellPrices),
     },
     {
       id: 2,
@@ -30,6 +52,7 @@ export default function Products() {
       img: img2,
       workshopLink: "/product2",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
+      priceText: priceRangeText(acrylicPrices),
     },
     {
       id: 3,
@@ -38,6 +61,7 @@ export default function Products() {
       img: img1,
       workshopLink: "/product3",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
+      priceText: priceRangeText(toteBagPrice),
     },
     {
       id: 4,
@@ -46,6 +70,7 @@ export default function Products() {
       img: img3,
       workshopLink: "/product4",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
+      priceText: priceRangeText(resinShellPrices),
     },
   ];
 
@@ -65,6 +90,7 @@ export default function Products() {
               if (e.key === "Enter") navigate(item.workshopLink);
             }}
           >
+            {/* Title */}
             <h3 className="product-name">{item.title}</h3>
 
             {/* Ảnh + overlay */}
@@ -81,6 +107,13 @@ export default function Products() {
               </div>
             </div>
 
+            {/* Giá nằm dưới ảnh - góc phải */}
+            {item.priceText && (
+              <div className="product-price-wrap">
+                <span className="product-price">{item.priceText}</span>
+              </div>
+            )}
+
             {item.sub && <p className="product-sub">{item.sub}</p>}
 
             <button
@@ -95,6 +128,12 @@ export default function Products() {
           </div>
         ))}
       </div>
+
+      {/* Ghi chú nhỏ */}
+      <p className="products-note">
+        ✨ Giá đã bao gồm hoạ cụ, nước + snacks, tripod dùng chung và nhân viên hỗ
+        trợ.
+      </p>
     </section>
   );
 }

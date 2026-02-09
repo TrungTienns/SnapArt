@@ -1,51 +1,51 @@
 import React from "react";
-import Header from "../../../layout/Header/Header.jsx";
-import Banner from "../../../layout/Banner/Banner.jsx";
-import Footer from "../../../layout/Footer/Footer.jsx";
-import blogImage from "../../../assets/images/blog_image3.jpg"; 
+import { useTranslation } from "react-i18next";
 
-import "./Blog3.scss"; // tạo file scss riêng
+import Header from "../../../layout/Header/Header.jsx";
+import Footer from "../../../layout/Footer/Footer.jsx";
+import blogImage from "../../../assets/images/blog_image3.jpg";
+
+import "./Blog3.scss";
 
 function Blog3() {
+  const { t } = useTranslation();
+
   return (
     <div className="blog3-page">
-      {/* Header */}
       <Header />
-      {/* Nội dung blog */}
+
       <div className="blog3-container">
-        <h1 className="blog-title">Vẽ Cùng Những Người Bạn Mới</h1>
+        <h1 className="blog-title">{t("blog3.title")}</h1>
 
-        <p className="blog-intro">
-          Vẽ cùng bạn bè không chỉ giúp bạn giải tỏa căng thẳng mà còn tạo ra những tác phẩm thú vị và đầy sáng tạo. Qua hoạt động nhóm, mỗi người có thể học hỏi kỹ năng, phong cách và ý tưởng của nhau.
-        </p>
+        <p className="blog-intro">{t("blog3.intro")}</p>
 
-        <h2>1. Lợi ích khi vẽ cùng bạn bè</h2>
+        <h2>{t("blog3.section1.title")}</h2>
         <ul>
-          <li>Phát triển khả năng sáng tạo và tư duy nghệ thuật.</li>
-          <li>Tăng tính kết nối và giao tiếp xã hội.</li>
-          <li>Khám phá các kỹ thuật và màu sắc mới từ bạn bè.</li>
+          <li>{t("blog3.section1.items.item1")}</li>
+          <li>{t("blog3.section1.items.item2")}</li>
+          <li>{t("blog3.section1.items.item3")}</li>
         </ul>
 
-        <h2>2. Cách tổ chức buổi vẽ nhóm</h2>
+        <h2>{t("blog3.section2.title")}</h2>
         <ul>
-          <li>Chọn không gian thoáng, đủ ánh sáng để mọi người thoải mái vẽ.</li>
-          <li>Mỗi người mang dụng cụ riêng như cọ, màu, giấy hoặc canvas.</li>
-          <li>Thảo luận ý tưởng trước khi bắt đầu để có chủ đề chung.</li>
+          <li>{t("blog3.section2.items.item1")}</li>
+          <li>{t("blog3.section2.items.item2")}</li>
+          <li>{t("blog3.section2.items.item3")}</li>
         </ul>
 
-        <h2>3. Bảo quản tác phẩm sau khi vẽ</h2>
+        <h2>{t("blog3.section3.title")}</h2>
         <ul>
-          <li>Để tranh khô hoàn toàn trước khi cất giữ.</li>
-          <li>Dùng khung hoặc túi nhựa bảo vệ tranh khỏi bụi và ánh sáng trực tiếp.</li>
-          <li>Đặt tác phẩm nơi thoáng mát và tránh ẩm ướt để giữ màu lâu bền.</li>
+          <li>{t("blog3.section3.items.item1")}</li>
+          <li>{t("blog3.section3.items.item2")}</li>
+          <li>{t("blog3.section3.items.item3")}</li>
         </ul>
 
         <div className="blog-image">
-          <img src={blogImage} alt="Minh họa vẽ nhóm" />
+          <img src={blogImage} alt={t("blog3.imageAlt")} />
         </div>
       </div>
-        {/* Footer */}
-        <Footer />
+
+      <Footer />
     </div>
   );
 }

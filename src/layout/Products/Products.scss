@@ -198,3 +198,22 @@ $bg-card: #fdfdfd;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
   }
 }
+/* ===== PRICE dưới ảnh - góc phải (nằm trên button) ===== */
+/* ===== PRICE dưới ảnh - góc phải (không box) ===== */
+.product-price-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  color: $primary; /* giống màu button */
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+}

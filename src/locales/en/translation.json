@@ -33,7 +33,6 @@
     "desc1": "Welcome to SnapArt – Where we cherish every moment. We are here for",
     "values": "Relaxation – Self Expression – Positive Energy.",
     "more": "Learn More",
-
     "info": [
       {
         "number": "1.",
@@ -123,12 +122,14 @@
     "send": "Send",
     "sending": "Sending..."
   },
+
   "allRating": {
     "heading": "Student Reviews",
     "subHeading": "Some real feedback from Google Reviews. Click to view all reviews on Google Maps.",
     "viewOnGoogle": "View on Google Maps",
     "clickHint": "Click to see more on Google"
   },
+
   "googleReview": {
     "title": "Google Reviews",
     "sub": "See real student reviews on Google Maps",
@@ -152,168 +153,175 @@
     "openmaps": ""
   },
 
- "aboutPage": {
-  "heroTitle": "About Us",
-  "heroDesc": "SnapArt is not just an art workshop — it is an emotional journey where you can slow down in the rhythm of modern life, rediscover balance within yourself, and reconnect with your inner world through every stroke of color.",
+  "aboutPage": {
+    "heroTitle": "About Us",
+    "heroDesc": "SnapArt is not just an art workshop — it is an emotional journey where you can slow down in the rhythm of modern life, rediscover balance within yourself, and reconnect with your inner world through every stroke of color.",
 
-  "section1": {
-    "title": "Who We Are",
-    "desc": "We are a creative art studio born from a deep love for painting and a desire to spread positive values through art. At SnapArt, every artwork is not merely a creation, but a story, an emotion, and a personal imprint of the artist."
-  },
-  "section2": {
-    "title": "What We Do",
-    "desc": "SnapArt offers a wide variety of art classes, workshops, and creative events for all ages — from beginners to those with experience. We not only teach drawing techniques, but also inspire creativity and empower students to express their individuality and inner world with confidence."
-  },
-  "section3": {
-    "title": "How We Support You",
-    "desc": "SnapArt is more than a place to learn how to draw; it is a healing space where you can release stress, balance your emotions, and rediscover joy in simple moments. Each workshop is a personal journey of self-discovery and emotional renewal through art."
-  },
-  "section4": {
-    "title": "Creating Meaningful Stories",
-    "desc": "Every customer who comes to SnapArt carries a unique story, and when they leave, they take home more than just a painting — they gain confidence, happiness, peace of mind, and unforgettable memories. These small stories are the greatest motivation that drives SnapArt forward."
+    "section1": {
+      "title": "Who We Are",
+      "desc": "We are a creative art studio born from a deep love for painting and a desire to spread positive values through art. At SnapArt, every artwork is not merely a creation, but a story, an emotion, and a personal imprint of the artist."
+    },
+    "section2": {
+      "title": "What We Do",
+      "desc": "SnapArt offers a wide variety of art classes, workshops, and creative events for all ages — from beginners to those with experience. We not only teach drawing techniques, but also inspire creativity and empower students to express their individuality and inner world with confidence."
+    },
+    "section3": {
+      "title": "How We Support You",
+      "desc": "SnapArt is more than a place to learn how to draw; it is a healing space where you can release stress, balance your emotions, and rediscover joy in simple moments. Each workshop is a personal journey of self-discovery and emotional renewal through art."
+    },
+    "section4": {
+      "title": "Creating Meaningful Stories",
+      "desc": "Every customer who comes to SnapArt carries a unique story, and when they leave, they take home more than just a painting — they gain confidence, happiness, peace of mind, and unforgettable memories. These small stories are the greatest motivation that drives SnapArt forward."
+    },
+
+    "endingTitle": "Your Journey Begins Here",
+    "endingDesc": "If you are searching for a place to relax your mind, nurture your creativity, and connect with like-minded people, SnapArt is always ready to welcome you.",
+    "cta": "Explore Our Workshops"
   },
 
-  "endingTitle": "Your Journey Begins Here",
-  "endingDesc": "If you are searching for a place to relax your mind, nurture your creativity, and connect with like-minded people, SnapArt is always ready to welcome you.",
-  "cta": "Explore Our Workshops"
-},
   "bannerAbout": {
-  "title": "Discover the Artist Within You",
-  "desc": "Every class at SnapArt is a journey of emotions, colors, and endless creativity.",
-  "button": "Get Started"
+    "title": "Discover the Artist Within You",
+    "desc": "Every class at SnapArt is a journey of emotions, colors, and endless creativity.",
+    "button": "Get Started"
   },
+
   "gallery": {
-  "title": "Choose Collection",
-  "adult": "Adult Collection",
-  "kids": "Kids Collection"
-},
+    "title": "Choose Collection",
+    "adult": "Adult Collection",
+    "kids": "Kids Collection"
+  },
+
   "workshopBanner": {
     "title": "SnapArt Workshop",
     "subtitle": "Explore, create, and heal through art"
-},
-"workshopAcrylic": {
-  "badge": "Workshop • Acrylic",
-  "title": "🖌 Acrylic Painting Workshop",
-  "desc": "A relaxing – beginner-friendly – colorful workshop for anyone who wants to try acrylic painting. You will be guided step-by-step to finish a beautiful artwork and take it home right after the session.",
-  "duration": "⏳ 60–90 minutes",
-  "age": "🎨 Suitable for: 14+",
-  "takeHome": "🎁 Take your artwork home",
-  "bookNow": "📩 Book now",
-  "viewPrice": "View pricing",
+  },
 
-  "introTitle": "🌈 Introduction",
-  "introDesc1": "This Acrylic workshop is designed to be simple, easy to follow, and perfect for beginners. You will learn basic acrylic techniques, brush handling, and color mixing.",
-  "introDesc2": "Our staff will guide you throughout the session so you can complete a well-composed artwork with a clear focal point. It’s a great way to relax, reduce stress, and enjoy art in a gentle way.",
+  "workshopAcrylic": {
+    "badge": "Workshop • Acrylic",
+    "title": "🖌 Acrylic Painting Workshop",
+    "desc": "A relaxing – beginner-friendly – colorful workshop for anyone who wants to try acrylic painting. You will be guided step-by-step to finish a beautiful artwork and take it home right after the session.",
+    "duration": "⏳ 60–90 minutes",
+    "age": "🎨 Suitable for: 14+",
+    "takeHome": "🎁 Take your artwork home",
+    "bookNow": "📩 Book now",
+    "viewPrice": "View pricing",
 
-  "fitTitle": "📌 Who is this for?",
-  "fit1": "Beginners who want to try acrylic painting",
-  "fit2": "Teens 14+ and adults who love art",
-  "fit3": "Friends, couples, or small weekend groups",
-  "fit4": "Anyone looking for a calm, no-pressure experience",
+    "introTitle": "🌈 Introduction",
+    "introDesc1": "This Acrylic workshop is designed to be simple, easy to follow, and perfect for beginners. You will learn basic acrylic techniques, brush handling, and color mixing.",
+    "introDesc2": "Our staff will guide you throughout the session so you can complete a well-composed artwork with a clear focal point. It’s a great way to relax, reduce stress, and enjoy art in a gentle way.",
 
-  "pricingTitle": "💰 Acrylic Pricing",
-  "pricingDesc": "Prices include all materials and full guidance during the workshop.",
+    "fitTitle": "📌 Who is this for?",
+    "fit1": "Beginners who want to try acrylic painting",
+    "fit2": "Teens 14+ and adults who love art",
+    "fit3": "Friends, couples, or small weekend groups",
+    "fit4": "Anyone looking for a calm, no-pressure experience",
 
-  "boxTitle": "🖌 Acrylic Painting",
-  "hot": "Hot",
-  "size1": "20x30",
-  "size2": "30x30",
-  "size3": "30x40",
+    "pricingTitle": "💰 Acrylic Pricing",
+    "pricingDesc": "Prices include all materials and full guidance during the workshop.",
 
-  "includedTitle": "✨ Included",
-  "inc1": "✔️ Paint + tools during the workshop",
-  "inc2": "✔️ Water and snacks",
-  "inc3": "✔️ Shared tripod for filming/photos",
-  "inc4": "✔️ Staff support for colors & guidance",
+    "boxTitle": "🖌 Acrylic Painting",
+    "hot": "Hot",
+    "size1": "20x30",
+    "size2": "30x30",
+    "size3": "30x40",
 
-  "groupTitle": "🎁 Group discount",
-  "group1": "• Group of 3 👉 10% off",
-  "group2": "• Group of 4 👉 15% off",
-  "group3": "• 2 people share 1 painting 👉 +150K",
+    "includedTitle": "✨ Included",
+    "inc1": "✔️ Paint + tools during the workshop",
+    "inc2": "✔️ Water and snacks",
+    "inc3": "✔️ Shared tripod for filming/photos",
+    "inc4": "✔️ Staff support for colors & guidance",
 
-  "note": "* Message the fanpage to choose your size, style, and schedule."
-},
-"workshopSand": {
-  "badge": "Workshop • Handmade",
-  "title": "🏖 Sand Art Workshop",
-  "desc": "A gentle and relaxing workshop for beginners — you will create a complete sand artwork with your own personal touch.",
-  "duration": "⏳ 60–90 minutes",
-  "level": "👩‍🎨 Beginner friendly",
-  "takeHome": "🎁 Take your artwork home",
-  "bookNow": "📩 Book now",
-  "viewPrice": "View pricing",
+    "groupTitle": "🎁 Group discount",
+    "group1": "• Group of 3 👉 10% off",
+    "group2": "• Group of 4 👉 15% off",
+    "group3": "• 2 people share 1 painting 👉 +150K",
 
-  "introTitle": "🌸 Introduction",
-  "introDesc1": "Sand art is a creative form made from layers of colored sand, combining composition and color blending to create beautiful gradient effects. This workshop lets you experience the full process from A to Z: choosing a design, mixing colors, preparing the base, layering sand, and finishing the artwork.",
-  "introDesc2": "No prior drawing skills are required — instructors guide you step by step, while staff assist with colors, composition, and framing so you can bring home a beautiful finished piece.",
+    "note": "* Message the fanpage to choose your size, style, and schedule."
+  },
 
-  "fitTitle": "📌 Who is this for?",
-  "fit1": "Beginners who want to explore art",
-  "fit2": "Friends, couples, or small groups",
-  "fit3": "Anyone wanting a handmade gift",
-  "fit4": "People looking for a relaxing weekend activity",
+  "workshopSand": {
+    "badge": "Workshop • Handmade",
+    "title": "🏖 Sand Art Workshop",
+    "desc": "A gentle and relaxing workshop for beginners — you will create a complete sand artwork with your own personal touch.",
+    "duration": "⏳ 60–90 minutes",
+    "level": "👩‍🎨 Beginner friendly",
+    "takeHome": "🎁 Take your artwork home",
+    "bookNow": "📩 Book now",
+    "viewPrice": "View pricing",
 
-  "pricingTitle": "💰 Sand Art Workshop Pricing",
-  "pricingDesc": "Prices include all materials and full support during the workshop.",
+    "introTitle": "🌸 Introduction",
+    "introDesc1": "Sand art is a creative form made from layers of colored sand, combining composition and color blending to create beautiful gradient effects. This workshop lets you experience the full process from A to Z: choosing a design, mixing colors, preparing the base, layering sand, and finishing the artwork.",
+    "introDesc2": "No prior drawing skills are required — instructors guide you step by step, while staff assist with colors, composition, and framing so you can bring home a beautiful finished piece.",
 
-  "box1Title": "🏖 Raised Sand Art",
-  "box1Tag": "Popular",
-  "box2Title": "🐚 Shell Sand Art (Wood Frame)",
-  "box2Tag": "Premium",
+    "fitTitle": "📌 Who is this for?",
+    "fit1": "Beginners who want to explore art",
+    "fit2": "Friends, couples, or small groups",
+    "fit3": "Anyone wanting a handmade gift",
+    "fit4": "People looking for a relaxing weekend activity",
 
-  "includedTitle": "✨ Included",
-  "inc1": "✔️ Colored sand & tools",
-  "inc2": "✔️ Water and snacks",
-  "inc3": "✔️ Shared tripod for filming/photos",
-  "inc4": "✔️ Staff support and guidance",
+    "pricingTitle": "💰 Sand Art Workshop Pricing",
+    "pricingDesc": "Prices include all materials and full support during the workshop.",
 
-  "groupTitle": "🎁 Group discount",
-  "group1": "• Group of 3 👉 10% off",
-  "group2": "• Group of 4 👉 15% off",
-  "group3": "• 2 people share 1 artwork 👉 +150K",
+    "box1Title": "🏖 Raised Sand Art",
+    "box1Tag": "Popular",
+    "box2Title": "🐚 Shell Sand Art (Wood Frame)",
+    "box2Tag": "Premium",
 
-  "note": "* Message our fanpage to choose frame, design, and schedule."
-},
-"workshopTote": {
-  "badge": "Workshop • Handmade",
-  "title": "👜 Tote Bag Painting Workshop",
-  "desc": "A relaxing creative workshop for beginners. You will be guided to plan your layout, mix colors, and finish a tote bag with your own personal style.",
+    "includedTitle": "✨ Included",
+    "inc1": "✔️ Colored sand & tools",
+    "inc2": "✔️ Water and snacks",
+    "inc3": "✔️ Shared tripod for filming/photos",
+    "inc4": "✔️ Staff support and guidance",
 
-  "highlight1": "No experience needed",
-  "highlight2": "Step-by-step guidance",
-  "highlight3": "Take your tote home",
+    "groupTitle": "🎁 Group discount",
+    "group1": "• Group of 3 👉 10% off",
+    "group2": "• Group of 4 👉 15% off",
+    "group3": "• 2 people share 1 artwork 👉 +150K",
 
-  "bookNow": "📩 Book now",
-  "viewPrice": "View pricing",
+    "note": "* Message our fanpage to choose frame, design, and schedule."
+  },
 
-  "learnTitle": "🎨 What will you learn?",
-  "learn1": "How to create ideas and choose a suitable concept",
-  "learn2": "How to mix colors nicely on tote fabric",
-  "learn3": "Basic painting techniques for clear and long-lasting artwork",
-  "learn4": "How to take care of your tote after finishing",
+  "workshopTote": {
+    "badge": "Workshop • Handmade",
+    "title": "👜 Tote Bag Painting Workshop",
+    "desc": "A relaxing creative workshop for beginners. You will be guided to plan your layout, mix colors, and finish a tote bag with your own personal style.",
 
-  "fitTitle": "📌 Who is this for?",
-  "fitDesc": "This workshop is perfect for students, office workers, and anyone who wants a relaxing weekend activity with friends or groups.",
+    "highlight1": "No experience needed",
+    "highlight2": "Step-by-step guidance",
+    "highlight3": "Take your tote home",
 
-  "pricingTitle": "👜 Tote Bag Painting Pricing",
-  "pricingDesc": "The price includes all materials and full support during the workshop.",
+    "bookNow": "📩 Book now",
+    "viewPrice": "View pricing",
 
-  "priceLabel": "Workshop price",
-  "priceValue": "280K",
+    "learnTitle": "🎨 What will you learn?",
+    "learn1": "How to create ideas and choose a suitable concept",
+    "learn2": "How to mix colors nicely on tote fabric",
+    "learn3": "Basic painting techniques for clear and long-lasting artwork",
+    "learn4": "How to take care of your tote after finishing",
 
-  "includedTitle": "✨ Included",
-  "inc1": "✔ Paints & tools",
-  "inc2": "✔ Water and snacks",
-  "inc3": "✔ Shared tripod for filming/photos",
-  "inc4": "✔ Staff support and guidance",
+    "fitTitle": "📌 Who is this for?",
+    "fitDesc": "This workshop is perfect for students, office workers, and anyone who wants a relaxing weekend activity with friends or groups.",
 
-  "groupTitle": "🎁 Group discount",
-  "group1": "• Group of 3 👉 10% off",
-  "group2": "• Group of 4 👉 15% off",
-  "group3": "• 2 people share 1 tote 👉 +150K",
+    "pricingTitle": "👜 Tote Bag Painting Pricing",
+    "pricingDesc": "The price includes all materials and full support during the workshop.",
 
-  "note": "* Message our fanpage for concept suggestions and available schedules."
-},
+    "priceLabel": "Workshop price",
+    "priceValue": "280K",
+
+    "includedTitle": "✨ Included",
+    "inc1": "✔ Paints & tools",
+    "inc2": "✔ Water and snacks",
+    "inc3": "✔ Shared tripod for filming/photos",
+    "inc4": "✔ Staff support and guidance",
+
+    "groupTitle": "🎁 Group discount",
+    "group1": "• Group of 3 👉 10% off",
+    "group2": "• Group of 4 👉 15% off",
+    "group3": "• 2 people share 1 tote 👉 +150K",
+
+    "note": "* Message our fanpage for concept suggestions and available schedules."
+  },
+
   "products": {
     "title": "List of Products",
     "clickToView": "Click to view more details",
@@ -333,49 +341,160 @@
       }
     }
   },
-"workshop4": {
-  "badge": "Workshop • Handmade",
-  "title": "Resin Art Workshop",
-  "desc": "A creative resin experience using epoxy. You'll learn from the basics to finishing a beautiful resin product with stunning color effects and a glossy surface.",
-  "highlights": {
-    "h1": "No experience needed",
-    "h2": "Step-by-step guidance",
-    "h3": "Take your artwork home"
+
+  "workshop4": {
+    "badge": "Workshop • Handmade",
+    "title": "Resin Art Workshop",
+    "desc": "A creative resin experience using epoxy. You'll learn from the basics to finishing a beautiful resin product with stunning color effects and a glossy surface.",
+    "highlights": {
+      "h1": "No experience needed",
+      "h2": "Step-by-step guidance",
+      "h3": "Take your artwork home"
+    },
+    "actions": {
+      "book": "📩 Book now",
+      "price": "View pricing"
+    },
+    "learn": {
+      "title": "🎨 What will you learn?",
+      "l1": "How to choose resin materials and tools",
+      "l2": "Color mixing + marble / galaxy effects",
+      "l3": "Molding & glossy finishing techniques",
+      "l4": "Tips to preserve resin products long-term"
+    },
+    "forWho": {
+      "title": "📌 Who is it for?",
+      "desc": "Perfect for beginners, handmade lovers, and anyone who wants a fun weekend experience with friends."
+    },
+    "pricing": {
+      "title": "🧪 Resin Workshop Pricing",
+      "desc": "Price includes all materials and full support during the session.",
+      "priceLabel": "Workshop price",
+      "priceValue": "320K"
+    },
+    "included": {
+      "title": "✨ Included",
+      "i1": "✔ Epoxy resin + pigments + tools",
+      "i2": "✔ Mold + decoration accessories",
+      "i3": "✔ Water and snacks",
+      "i4": "✔ Staff support & guidance"
+    },
+    "groupSale": {
+      "title": "🎁 Group discount",
+      "g1": "• 3 people 👉 10% off",
+      "g2": "• 4 people 👉 15% off",
+      "g3": "• 2 people / 1 product 👉 +150K extra"
+    },
+    "note": "* DM us for resin designs & suitable schedules."
   },
-  "actions": {
-    "book": "📩 Book now",
-    "price": "View pricing"
+
+  "blog1": {
+    "title": "How to Use Paint Brushes Safely and Take Care of Them",
+    "intro": "Paint brushes are essential tools for bringing creative ideas to life, from oil and acrylic painting to watercolor. However, improper use and storage can reduce the lifespan of your brushes and affect the quality of your artwork. Below are some helpful tips to use and maintain brushes effectively and safely.",
+
+    "section1": {
+      "title": "1. Choose the right brush for the paint type",
+      "items": {
+        "item1": {
+          "bold": "Natural hair brushes:",
+          "text": "Best for oil and acrylic paints, soft and excellent at holding paint."
+        },
+        "item2": {
+          "bold": "Synthetic brushes:",
+          "text": "Suitable for watercolor and acrylic, easier to clean and generally more durable."
+        },
+        "item3": {
+          "text1": "Choose the",
+          "bold": "size and shape of the brush",
+          "text2": "based on your technique: round, flat, wide wash brushes, etc."
+        }
+      }
+    },
+
+    "section2": {
+      "title": "2. Use brushes properly",
+      "items": {
+        "item1": "Do not dip the brush too deeply into paint to avoid paint getting into the metal ferrule and handle.",
+        "item2": "Hold the brush gently while painting. Avoid pressing too hard so the bristles don’t deform.",
+        "item3": "Clean the brush immediately after painting to prevent paint from drying and damaging the bristles."
+      }
+    },
+
+    "section3": {
+      "title": "3. Store brushes correctly",
+      "items": {
+        "item1": "Store brushes upright with bristles facing up or hang them horizontally to prevent bending.",
+        "item2": "Avoid direct sunlight and humid environments.",
+        "item3": "Use a dedicated brush cleaner for deep cleaning when needed."
+      }
+    },
+
+    "imageAlt": "Paint brush illustration"
   },
-  "learn": {
-    "title": "🎨 What will you learn?",
-    "l1": "How to choose resin materials and tools",
-    "l2": "Color mixing + marble / galaxy effects",
-    "l3": "Molding & glossy finishing techniques",
-    "l4": "Tips to preserve resin products long-term"
+  "blog2": {
+  "title": "Acrylic Paint: What It Is, How to Use and Store It",
+  "intro": "Acrylic paint is a fast-drying, durable, and flexible water-based synthetic paint widely used in modern art. Thanks to its easy mixing, low toxicity, and ability to work on many surfaces, acrylic has become a popular choice for both beginners and professional artists.",
+
+  "section1": {
+    "title": "1. What is acrylic paint?",
+    "items": {
+      "item1": "Acrylic paint is a water-based synthetic paint that dries quickly and can be diluted with water to create transparent effects.",
+      "item2": "It can be used on paper, canvas, wood, fabric, and many other materials.",
+      "item3": "It is colorfast and won’t fade over time if stored and used properly."
+    }
   },
-  "forWho": {
-    "title": "📌 Who is it for?",
-    "desc": "Perfect for beginners, handmade lovers, and anyone who wants a fun weekend experience with friends."
+
+  "section2": {
+    "title": "2. How to use acrylic paint",
+    "items": {
+      "item1": "Use brushes, paint pens, or a palette knife to create different effects.",
+      "item2": "To adjust drying time and thickness, dilute with water or use a medium.",
+      "item3": "Mix colors on a palette to create the tones you want."
+    }
   },
-  "pricing": {
-    "title": "🧪 Resin Workshop Pricing",
-    "desc": "Price includes all materials and full support during the session.",
-    "priceLabel": "Workshop price",
-    "priceValue": "320K"
+
+  "section3": {
+    "title": "3. How to store acrylic paint",
+    "items": {
+      "item1": "Close the lid tightly after use to prevent the paint from drying out.",
+      "item2": "Store in a cool, dry place and avoid direct sunlight.",
+      "item3": "Wash brushes immediately after use to keep them in good condition."
+    }
   },
-  "included": {
-    "title": "✨ Included",
-    "i1": "✔ Epoxy resin + pigments + tools",
-    "i2": "✔ Mold + decoration accessories",
-    "i3": "✔ Water and snacks",
-    "i4": "✔ Staff support & guidance"
+
+  "imageAlt": "Acrylic paint illustration"
+},
+"blog3": {
+  "title": "Painting With New Friends – Why Not?",
+  "intro": "Painting with friends not only helps you relieve stress, but also creates fun and inspiring artworks. Through group activities, everyone can learn skills, styles, and ideas from each other.",
+
+  "section1": {
+    "title": "1. Benefits of painting with friends",
+    "items": {
+      "item1": "Boost creativity and artistic thinking.",
+      "item2": "Increase connection and social communication.",
+      "item3": "Discover new techniques and color ideas from friends."
+    }
   },
-  "groupSale": {
-    "title": "🎁 Group discount",
-    "g1": "• 3 people 👉 10% off",
-    "g2": "• 4 people 👉 15% off",
-    "g3": "• 2 people / 1 product 👉 +150K extra"
+
+  "section2": {
+    "title": "2. How to organize a group painting session",
+    "items": {
+      "item1": "Choose an open, well-lit space so everyone can paint comfortably.",
+      "item2": "Each person brings their own supplies such as brushes, paints, paper, or canvas.",
+      "item3": "Discuss ideas before starting to agree on a shared theme."
+    }
   },
-  "note": "* DM us for resin designs & suitable schedules."
+
+  "section3": {
+    "title": "3. How to preserve your artwork after painting",
+    "items": {
+      "item1": "Let the painting dry completely before storing it.",
+      "item2": "Use a frame or plastic cover to protect it from dust and direct sunlight.",
+      "item3": "Keep it in a cool, dry place to preserve colors for a long time."
+    }
+  },
+
+  "imageAlt": "Group painting illustration"
 }
 }

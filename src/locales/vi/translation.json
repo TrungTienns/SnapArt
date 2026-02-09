@@ -5,7 +5,7 @@
   "menu.course": "Sản phẩm",
   "menu.blog": "Blog",
   "menu.contact": "Liên hệ",
-  "menu.cta": "Đi với tôi nào!",
+  "menu.cta": "Đi nào!",
 
   "hero.title": "SnapArt Workshop vẽ trên ly",
   "hero.desc": "Khơi nguồn sáng tạo, cùng nhau vẽ trên ly tạo ra những tác phẩm dễ thương!",
@@ -20,12 +20,7 @@
     "descBefore": "Khơi nguồn sáng tạo và cùng nhau",
     "descAfter": "tạo ra những tác phẩm dễ thương!",
     "button": "Tham gia Workshop",
-    "loop": [
-      "Vẽ acrylic",
-      "Vẽ trên ly",
-      "Vẽ túi tote",
-      "Làm tranh resin"
-    ]
+    "loop": ["Vẽ acrylic", "Vẽ trên ly", "Vẽ túi tote", "Làm tranh resin"]
   },
 
   "aboutHome": {
@@ -123,12 +118,14 @@
     "send": "Gửi",
     "sending": "Đang gửi..."
   },
+
   "allRating": {
     "heading": "Đánh giá từ học viên",
     "subHeading": "Một vài phản hồi thực tế từ Google Reviews. Nhấn vào để xem đầy đủ đánh giá trên Google Maps.",
     "viewOnGoogle": "Xem đánh giá trên Google Maps",
     "clickHint": "Nhấn để xem thêm trên Google"
   },
+
   "googleReview": {
     "title": "Google Reviews",
     "sub": "Xem đánh giá thật từ học viên trên Google Maps",
@@ -151,31 +148,32 @@
     "copyright": "© 2025 SnapArt  Workshop. Bản quyền được bảo lưu.",
     "openMap": ""
   },
-"aboutPage": {
-  "heroTitle": "Về Chúng Tôi",
-  "heroDesc": "SnapArt không chỉ là một workshop nghệ thuật — mà là một hành trình cảm xúc, nơi mỗi người có thể chậm lại giữa nhịp sống hiện đại, tìm thấy sự cân bằng trong tâm hồn và kết nối lại với chính mình thông qua từng nét vẽ.",
 
-  "section1": {
-    "title": "Chúng Tôi Là Ai",
-    "desc": "SnapArt tổ chức workshop vẽ dành cho khách hàng từ 14 tuổi trở lên, từ người mới bắt đầu đến những người đã có nền tảng."
-  },
-  "section2": {
-    "title": "Chúng Tôi Làm Gì",
-    "desc": "Chúng tôi cung cấp tất cả hoạ cụ cần thiết và có người hướng dẫn để bạn hoàn thiện tranh vẽ một cách ưng ý nhất."
-  },
-  "section3": {
-    "title": "Chúng Tôi Giúp Bạn Như Thế Nào",
-    "desc": "SnapArt không đơn thuần là nơi để học vẽ, mà là không gian chữa lành, nơi bạn có thể giải tỏa căng thẳng, cân bằng cảm xúc và tìm lại niềm vui từ những điều giản dị. Mỗi buổi workshop là một hành trình trải nghiệm, nơi bạn được lắng nghe bản thân và nuôi dưỡng tâm hồn thông qua nghệ thuật."
-  },
-  "section4": {
-    "title": "Tạo Nên Câu Chuyện Thành Công",
-    "desc": "Mỗi khách hàng đến với SnapArt đều mang theo một câu chuyện riêng, và khi rời đi, họ mang về nhiều hơn một bức tranh — đó là sự tự tin, niềm vui, sự bình yên và một kỷ niệm đáng nhớ. Những câu chuyện nhỏ ấy chính là nguồn động lực lớn nhất để SnapArt không ngừng phát triển."
-  },
+  "aboutPage": {
+    "heroTitle": "Về Chúng Tôi",
+    "heroDesc": "SnapArt không chỉ là một workshop nghệ thuật — mà là một hành trình cảm xúc, nơi mỗi người có thể chậm lại giữa nhịp sống hiện đại, tìm thấy sự cân bằng trong tâm hồn và kết nối lại với chính mình thông qua từng nét vẽ.",
 
-  "endingTitle": "Hành Trình Của Bạn Bắt Đầu Từ Đây",
-  "endingDesc": "Nếu bạn đang tìm kiếm một nơi để thả lỏng tâm trí, nuôi dưỡng sáng tạo và kết nối với những con người cùng chung đam mê, SnapArt luôn sẵn sàng chào đón bạn.",
-  "cta": "Khám Phá Workshop"
-},
+    "section1": {
+      "title": "Chúng Tôi Là Ai",
+      "desc": "SnapArt tổ chức workshop vẽ dành cho khách hàng từ 14 tuổi trở lên, từ người mới bắt đầu đến những người đã có nền tảng."
+    },
+    "section2": {
+      "title": "Chúng Tôi Làm Gì",
+      "desc": "Chúng tôi cung cấp tất cả hoạ cụ cần thiết và có người hướng dẫn để bạn hoàn thiện tranh vẽ một cách ưng ý nhất."
+    },
+    "section3": {
+      "title": "Chúng Tôi Giúp Bạn Như Thế Nào",
+      "desc": "SnapArt không đơn thuần là nơi để học vẽ, mà là không gian chữa lành, nơi bạn có thể giải tỏa căng thẳng, cân bằng cảm xúc và tìm lại niềm vui từ những điều giản dị. Mỗi buổi workshop là một hành trình trải nghiệm, nơi bạn được lắng nghe bản thân và nuôi dưỡng tâm hồn thông qua nghệ thuật."
+    },
+    "section4": {
+      "title": "Tạo Nên Câu Chuyện Thành Công",
+      "desc": "Mỗi khách hàng đến với SnapArt đều mang theo một câu chuyện riêng, và khi rời đi, họ mang về nhiều hơn một bức tranh — đó là sự tự tin, niềm vui, sự bình yên và một kỷ niệm đáng nhớ. Những câu chuyện nhỏ ấy chính là nguồn động lực lớn nhất để SnapArt không ngừng phát triển."
+    },
+
+    "endingTitle": "Hành Trình Của Bạn Bắt Đầu Từ Đây",
+    "endingDesc": "Nếu bạn đang tìm kiếm một nơi để thả lỏng tâm trí, nuôi dưỡng sáng tạo và kết nối với những con người cùng chung đam mê, SnapArt luôn sẵn sàng chào đón bạn.",
+    "cta": "Khám Phá Workshop"
+  },
 
   "bannerAbout": {
     "title": "Khám Phá Nghệ Thuật Trong Chính Bạn",
@@ -193,129 +191,133 @@
     "title": "Workshop SnapArt",
     "subtitle": "Khám phá, sáng tạo và chữa lành cùng nghệ thuật"
   },
+
   "workshopAcrylic": {
-  "badge": "Workshop • Acrylic",
-  "title": "🖌 Workshop Tranh Acrylic",
-  "desc": "Một buổi workshop thư giãn – dễ học – nhiều màu sắc dành cho những bạn muốn trải nghiệm vẽ tranh acrylic. Bạn sẽ được hướng dẫn từng bước để hoàn thiện một bức tranh xinh xắn và mang về ngay sau buổi học.",
-  "duration": "⏳ 60–90 phút",
-  "age": "🎨 Phù hợp: 14+",
-  "takeHome": "🎁 Thành phẩm mang về",
-  "bookNow": "📩 Đặt lịch ngay",
-  "viewPrice": "Xem giá",
+    "badge": "Workshop • Acrylic",
+    "title": "🖌 Workshop Tranh Acrylic",
+    "desc": "Một buổi workshop thư giãn – dễ học – nhiều màu sắc dành cho những bạn muốn trải nghiệm vẽ tranh acrylic. Bạn sẽ được hướng dẫn từng bước để hoàn thiện một bức tranh xinh xắn và mang về ngay sau buổi học.",
+    "duration": "⏳ 60–90 phút",
+    "age": "🎨 Phù hợp: 14+",
+    "takeHome": "🎁 Thành phẩm mang về",
+    "bookNow": "📩 Đặt lịch ngay",
+    "viewPrice": "Xem giá",
 
-  "introTitle": "🌈 Giới thiệu",
-  "introDesc1": "Workshop Acrylic được thiết kế đơn giản, dễ học và phù hợp cho người mới bắt đầu. Bạn sẽ được làm quen với màu acrylic, cọ vẽ, cách phối màu cơ bản và các bước vẽ từ nền đến chi tiết.",
-  "introDesc2": "Nhân viên sẽ hướng dẫn từng bước, hỗ trợ trong suốt buổi học để bạn hoàn thiện tranh đẹp, rõ bố cục và có điểm nhấn. Đây là một hoạt động rất phù hợp để thư giãn, giải tỏa stress và trải nghiệm nghệ thuật theo cách nhẹ nhàng.",
+    "introTitle": "🌈 Giới thiệu",
+    "introDesc1": "Workshop Acrylic được thiết kế đơn giản, dễ học và phù hợp cho người mới bắt đầu. Bạn sẽ được làm quen với màu acrylic, cọ vẽ, cách phối màu cơ bản và các bước vẽ từ nền đến chi tiết.",
+    "introDesc2": "Nhân viên sẽ hướng dẫn từng bước, hỗ trợ trong suốt buổi học để bạn hoàn thiện tranh đẹp, rõ bố cục và có điểm nhấn. Đây là một hoạt động rất phù hợp để thư giãn, giải tỏa stress và trải nghiệm nghệ thuật theo cách nhẹ nhàng.",
 
-  "fitTitle": "📌 Phù hợp với ai?",
-  "fit1": "Người mới bắt đầu muốn thử vẽ tranh acrylic",
-  "fit2": "Teen 14+ và người lớn yêu thích nghệ thuật",
-  "fit3": "Đi cùng bạn bè, couple hoặc nhóm nhỏ cuối tuần",
-  "fit4": "Muốn có trải nghiệm thư giãn, không áp lực",
+    "fitTitle": "📌 Phù hợp với ai?",
+    "fit1": "Người mới bắt đầu muốn thử vẽ tranh acrylic",
+    "fit2": "Teen 14+ và người lớn yêu thích nghệ thuật",
+    "fit3": "Đi cùng bạn bè, couple hoặc nhóm nhỏ cuối tuần",
+    "fit4": "Muốn có trải nghiệm thư giãn, không áp lực",
 
-  "pricingTitle": "💰 Bảng giá Tranh Acrylic",
-  "pricingDesc": "Giá đã bao gồm vật liệu và hỗ trợ trong buổi workshop.",
+    "pricingTitle": "💰 Bảng giá Tranh Acrylic",
+    "pricingDesc": "Giá đã bao gồm vật liệu và hỗ trợ trong buổi workshop.",
 
-  "boxTitle": "🖌 Tranh Acrylic",
-  "hot": "Hot",
-  "size1": "20x30",
-  "size2": "30x30",
-  "size3": "30x40",
+    "boxTitle": "🖌 Tranh Acrylic",
+    "hot": "Hot",
+    "size1": "20x30",
+    "size2": "30x30",
+    "size3": "30x40",
 
-  "includedTitle": "✨ Giá đã bao gồm",
-  "inc1": "✔️ Màu + hoạ cụ dùng tại workshop",
-  "inc2": "✔️ Nước suối và snacks",
-  "inc3": "✔️ Tripod quay/chụp dùng chung",
-  "inc4": "✔️ Nhân viên hỗ trợ lấy màu & hướng dẫn",
+    "includedTitle": "✨ Giá đã bao gồm",
+    "inc1": "✔️ Màu + hoạ cụ dùng tại workshop",
+    "inc2": "✔️ Nước suối và snacks",
+    "inc3": "✔️ Tripod quay/chụp dùng chung",
+    "inc4": "✔️ Nhân viên hỗ trợ lấy màu & hướng dẫn",
 
-  "groupTitle": "🎁 Ưu đãi nhóm",
-  "group1": "• Nhóm 3 người 👉 giảm 10%",
-  "group2": "• Nhóm 4 người 👉 giảm 15%",
-  "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
+    "groupTitle": "🎁 Ưu đãi nhóm",
+    "group1": "• Nhóm 3 người 👉 giảm 10%",
+    "group2": "• Nhóm 4 người 👉 giảm 15%",
+    "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
 
-  "note": "* Nhắn fanpage để chọn khung, mẫu và thời gian phù hợp."
-},
-"workshopSand": {
-  "badge": "Workshop • Handmade",
-  "title": "🏖 Workshop Tranh Cát",
-  "desc": "Một buổi workshop nhẹ nhàng, thư giãn dành cho người mới bắt đầu — bạn sẽ tự tay tạo ra một bức tranh cát hoàn chỉnh mang dấu ấn riêng.",
-  "duration": "⏳ 60–90 phút",
-  "level": "👩‍🎨 Phù hợp người mới",
-  "takeHome": "🎁 Thành phẩm mang về",
-  "bookNow": "📩 Đặt lịch ngay",
-  "viewPrice": "Xem giá",
+    "note": "* Nhắn fanpage để chọn khung, mẫu và thời gian phù hợp."
+  },
 
-  "introTitle": "🌸 Giới thiệu",
-  "introDesc1": "Tranh cát là một hình thức nghệ thuật sáng tạo từ các lớp cát màu, kết hợp bố cục và phối màu để tạo nên hiệu ứng chuyển sắc độc đáo. Workshop được thiết kế để bạn trải nghiệm trọn vẹn từ A–Z: chọn mẫu, phối màu, xử lý nền, đổ cát và hoàn thiện tác phẩm.",
-  "introDesc2": "Bạn không cần biết vẽ trước — giảng viên sẽ hướng dẫn từng bước, nhân viên hỗ trợ lấy màu, chỉnh bố cục và hoàn thiện khung để bạn có sản phẩm đẹp mang về ngay.",
+  "workshopSand": {
+    "badge": "Workshop • Handmade",
+    "title": "🏖 Workshop Tranh Cát",
+    "desc": "Một buổi workshop nhẹ nhàng, thư giãn dành cho người mới bắt đầu — bạn sẽ tự tay tạo ra một bức tranh cát hoàn chỉnh mang dấu ấn riêng.",
+    "duration": "⏳ 60–90 phút",
+    "level": "👩‍🎨 Phù hợp người mới",
+    "takeHome": "🎁 Thành phẩm mang về",
+    "bookNow": "📩 Đặt lịch ngay",
+    "viewPrice": "Xem giá",
 
-  "fitTitle": "📌 Phù hợp với ai?",
-  "fit1": "Người mới bắt đầu muốn trải nghiệm nghệ thuật",
-  "fit2": "Đi cùng bạn bè, người yêu hoặc nhóm nhỏ",
-  "fit3": "Muốn có một món quà handmade tự làm",
-  "fit4": "Muốn thư giãn cuối tuần nhẹ nhàng",
+    "introTitle": "🌸 Giới thiệu",
+    "introDesc1": "Tranh cát là một hình thức nghệ thuật sáng tạo từ các lớp cát màu, kết hợp bố cục và phối màu để tạo nên hiệu ứng chuyển sắc độc đáo. Workshop được thiết kế để bạn trải nghiệm trọn vẹn từ A–Z: chọn mẫu, phối màu, xử lý nền, đổ cát và hoàn thiện tác phẩm.",
+    "introDesc2": "Bạn không cần biết vẽ trước — giảng viên sẽ hướng dẫn từng bước, nhân viên hỗ trợ lấy màu, chỉnh bố cục và hoàn thiện khung để bạn có sản phẩm đẹp mang về ngay.",
 
-  "pricingTitle": "💰 Bảng giá Workshop Tranh Cát",
-  "pricingDesc": "Giá đã bao gồm vật liệu và hỗ trợ trong suốt buổi workshop.",
+    "fitTitle": "📌 Phù hợp với ai?",
+    "fit1": "Người mới bắt đầu muốn trải nghiệm nghệ thuật",
+    "fit2": "Đi cùng bạn bè, người yêu hoặc nhóm nhỏ",
+    "fit3": "Muốn có một món quà handmade tự làm",
+    "fit4": "Muốn thư giãn cuối tuần nhẹ nhàng",
 
-  "box1Title": "🏖 Tranh Đắp Nổi",
-  "box1Tag": "Phổ biến",
-  "box2Title": "🐚 Tranh cát Vỏ Sò (khung gỗ)",
-  "box2Tag": "Premium",
+    "pricingTitle": "💰 Bảng giá Workshop Tranh Cát",
+    "pricingDesc": "Giá đã bao gồm vật liệu và hỗ trợ trong suốt buổi workshop.",
 
-  "includedTitle": "✨ Giá đã bao gồm",
-  "inc1": "✔️ Cát màu + hoạ cụ dùng tại workshop",
-  "inc2": "✔️ Nước suối và snacks",
-  "inc3": "✔️ Tripod quay/chụp dùng chung",
-  "inc4": "✔️ Nhân viên hỗ trợ lấy màu & hướng dẫn",
+    "box1Title": "🏖 Tranh Đắp Nổi",
+    "box1Tag": "Phổ biến",
+    "box2Title": "🐚 Tranh cát Vỏ Sò (khung gỗ)",
+    "box2Tag": "Premium",
 
-  "groupTitle": "🎁 Ưu đãi nhóm",
-  "group1": "• Nhóm 3 người 👉 giảm 10%",
-  "group2": "• Nhóm 4 người 👉 giảm 15%",
-  "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
+    "includedTitle": "✨ Giá đã bao gồm",
+    "inc1": "✔️ Cát màu + hoạ cụ dùng tại workshop",
+    "inc2": "✔️ Nước suối và snacks",
+    "inc3": "✔️ Tripod quay/chụp dùng chung",
+    "inc4": "✔️ Nhân viên hỗ trợ lấy màu & hướng dẫn",
 
-  "note": "* Nhắn fanpage để được tư vấn khung, mẫu và thời gian trống."
-},
-"workshopTote": {
-  "badge": "Workshop • Handmade",
-  "title": "👜 Workshop Vẽ Túi Tote",
-  "desc": "Workshop Vẽ Túi Tote là trải nghiệm sáng tạo nhẹ nhàng, phù hợp cho người mới bắt đầu. Bạn sẽ được hướng dẫn cách lên bố cục, phối màu và hoàn thiện một chiếc túi tote mang phong cách cá nhân.",
+    "groupTitle": "🎁 Ưu đãi nhóm",
+    "group1": "• Nhóm 3 người 👉 giảm 10%",
+    "group2": "• Nhóm 4 người 👉 giảm 15%",
+    "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
 
-  "highlight1": "Không cần kinh nghiệm",
-  "highlight2": "Hướng dẫn từng bước",
-  "highlight3": "Nhận sản phẩm mang về",
+    "note": "* Nhắn fanpage để được tư vấn khung, mẫu và thời gian trống."
+  },
 
-  "bookNow": "📩 Đặt lịch ngay",
-  "viewPrice": "Xem giá",
+  "workshopTote": {
+    "badge": "Workshop • Handmade",
+    "title": "👜 Workshop Vẽ Túi Tote",
+    "desc": "Workshop Vẽ Túi Tote là trải nghiệm sáng tạo nhẹ nhàng, phù hợp cho người mới bắt đầu. Bạn sẽ được hướng dẫn cách lên bố cục, phối màu và hoàn thiện một chiếc túi tote mang phong cách cá nhân.",
 
-  "learnTitle": "🎨 Bạn sẽ học được gì?",
-  "learn1": "Cách lên ý tưởng và chọn concept phù hợp",
-  "learn2": "Cách phối màu hài hòa trên nền vải tote",
-  "learn3": "Kỹ thuật vẽ cơ bản để hình vẽ rõ, đẹp và bền màu",
-  "learn4": "Cách bảo quản túi sau khi hoàn thiện",
+    "highlight1": "Không cần kinh nghiệm",
+    "highlight2": "Hướng dẫn từng bước",
+    "highlight3": "Nhận sản phẩm mang về",
 
-  "fitTitle": "📌 Phù hợp với ai?",
-  "fitDesc": "Workshop phù hợp cho học sinh, sinh viên, người đi làm muốn thư giãn cuối tuần, đi cùng bạn bè hoặc tổ chức theo nhóm.",
+    "bookNow": "📩 Đặt lịch ngay",
+    "viewPrice": "Xem giá",
 
-  "pricingTitle": "👜 Giá Workshop Vẽ Túi Tote",
-  "pricingDesc": "Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.",
+    "learnTitle": "🎨 Bạn sẽ học được gì?",
+    "learn1": "Cách lên ý tưởng và chọn concept phù hợp",
+    "learn2": "Cách phối màu hài hòa trên nền vải tote",
+    "learn3": "Kỹ thuật vẽ cơ bản để hình vẽ rõ, đẹp và bền màu",
+    "learn4": "Cách bảo quản túi sau khi hoàn thiện",
 
-  "priceLabel": "Giá Workshop",
-  "priceValue": "280K",
+    "fitTitle": "📌 Phù hợp với ai?",
+    "fitDesc": "Workshop phù hợp cho học sinh, sinh viên, người đi làm muốn thư giãn cuối tuần, đi cùng bạn bè hoặc tổ chức theo nhóm.",
 
-  "includedTitle": "✨ Giá đã bao gồm",
-  "inc1": "✔ Màu + hoạ cụ dùng tại workshop",
-  "inc2": "✔ Nước suối và snacks",
-  "inc3": "✔ Tripod quay/chụp dùng chung",
-  "inc4": "✔ Nhân viên hỗ trợ lấy màu & hướng dẫn",
+    "pricingTitle": "👜 Giá Workshop Vẽ Túi Tote",
+    "pricingDesc": "Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.",
 
-  "groupTitle": "🎁 Ưu đãi nhóm",
-  "group1": "• Nhóm 3 người 👉 giảm 10%",
-  "group2": "• Nhóm 4 người 👉 giảm 15%",
-  "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
+    "priceLabel": "Giá Workshop",
+    "priceValue": "280K",
 
-  "note": "* Bạn có thể inbox để được tư vấn concept & lịch học phù hợp."
-},
+    "includedTitle": "✨ Giá đã bao gồm",
+    "inc1": "✔ Màu + hoạ cụ dùng tại workshop",
+    "inc2": "✔ Nước suối và snacks",
+    "inc3": "✔ Tripod quay/chụp dùng chung",
+    "inc4": "✔ Nhân viên hỗ trợ lấy màu & hướng dẫn",
+
+    "groupTitle": "🎁 Ưu đãi nhóm",
+    "group1": "• Nhóm 3 người 👉 giảm 10%",
+    "group2": "• Nhóm 4 người 👉 giảm 15%",
+    "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
+
+    "note": "* Bạn có thể inbox để được tư vấn concept & lịch học phù hợp."
+  },
+
   "products": {
     "title": "Danh sách các loại sản phẩm",
     "clickToView": "Nhấn vào để xem thêm chi tiết",
@@ -335,56 +337,153 @@
       }
     }
   },
-  "workshop4": {
-  "title": "Workshop Vẽ Tranh Resin",
-  "p1": "Workshop Vẽ Tranh Resin phù hợp cho cả người mới bắt đầu và những bạn muốn trải nghiệm một chất liệu nghệ thuật độc đáo. Trong buổi học, bạn sẽ được hướng dẫn cách chuẩn bị resin, pha màu, kết hợp phụ kiện (vỏ sò, cát, đá, hoa khô...) để tạo nên một bức tranh có chiều sâu và hiệu ứng bóng đẹp mắt.",
-  "p2": "Giảng viên sẽ hướng dẫn từng bước từ cơ bản đến nâng cao: cách cân đo resin đúng tỉ lệ, kỹ thuật đổ lớp, tạo hiệu ứng loang màu, hiệu ứng biển, hiệu ứng đá, cũng như cách xử lý bọt khí để bề mặt tranh mịn và trong hơn.",
-  "p3": "Sau workshop, bạn sẽ hoàn thành một sản phẩm Resin hoàn chỉnh mang phong cách riêng, đồng thời nắm được kiến thức nền tảng để có thể tiếp tục sáng tạo tại nhà hoặc phát triển thành ý tưởng kinh doanh sản phẩm handmade.",
-  "note": "* Bạn có thể inbox để được tư vấn concept & lịch học phù hợp."
-},
-"workshop4": {
-  "badge": "Workshop • Handmade",
-  "title": "Vẽ Tranh Resin",
-  "desc": "Workshop Resin là trải nghiệm sáng tạo độc đáo với nhựa epoxy. Bạn sẽ được hướng dẫn từ cơ bản đến hoàn thiện một sản phẩm resin có hiệu ứng màu sắc đẹp mắt và bền.",
-  "highlights": {
-    "h1": "Không cần kinh nghiệm",
-    "h2": "Hướng dẫn từng bước",
-    "h3": "Nhận sản phẩm mang về"
-  },
-  "actions": {
-    "book": "📩 Đặt lịch ngay",
-    "price": "Xem giá"
-  },
-  "learn": {
-    "title": "🎨 Bạn sẽ học được gì?",
-    "l1": "Cách chọn vật liệu và dụng cụ làm resin",
-    "l2": "Kỹ thuật pha màu, tạo hiệu ứng marble / galaxy",
-    "l3": "Cách đổ khuôn, tạo lớp phủ bóng đẹp",
-    "l4": "Mẹo bảo quản sản phẩm resin lâu bền"
-  },
-  "forWho": {
-    "title": "📌 Phù hợp với ai?",
-    "desc": "Workshop phù hợp cho người mới, người thích handmade, muốn thử chất liệu mới hoặc đi theo nhóm bạn để trải nghiệm cuối tuần."
-  },
-  "pricing": {
-    "title": "🧪 Giá Workshop Resin",
-    "desc": "Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.",
+
+  "workshopResin": {
+    "badge": "Workshop • Resin",
+    "title": "🧪 Workshop Vẽ Tranh Resin",
+    "desc": "Workshop Vẽ Tranh Resin phù hợp cho cả người mới bắt đầu và những bạn muốn trải nghiệm một chất liệu nghệ thuật độc đáo.",
+    "bookNow": "📩 Đặt lịch ngay",
+    "viewPrice": "Xem giá",
+
+    "p1": "Trong buổi học, bạn sẽ được hướng dẫn cách chuẩn bị resin, pha màu, kết hợp phụ kiện (vỏ sò, cát, đá, hoa khô...) để tạo nên một bức tranh có chiều sâu và hiệu ứng bóng đẹp mắt.",
+    "p2": "Giảng viên sẽ hướng dẫn từng bước từ cơ bản đến nâng cao: cách cân đo resin đúng tỉ lệ, kỹ thuật đổ lớp, tạo hiệu ứng loang màu, hiệu ứng biển, hiệu ứng đá, cũng như cách xử lý bọt khí để bề mặt tranh mịn và trong hơn.",
+    "p3": "Sau workshop, bạn sẽ hoàn thành một sản phẩm Resin hoàn chỉnh mang phong cách riêng, đồng thời nắm được kiến thức nền tảng để có thể tiếp tục sáng tạo tại nhà hoặc phát triển thành ý tưởng kinh doanh sản phẩm handmade.",
+
+    "learnTitle": "🎨 Bạn sẽ học được gì?",
+    "learn1": "Cách chọn vật liệu và dụng cụ làm resin",
+    "learn2": "Kỹ thuật pha màu, tạo hiệu ứng marble / galaxy",
+    "learn3": "Cách đổ khuôn, tạo lớp phủ bóng đẹp",
+    "learn4": "Mẹo bảo quản sản phẩm resin lâu bền",
+
+    "forWhoTitle": "📌 Phù hợp với ai?",
+    "forWhoDesc": "Workshop phù hợp cho người mới, người thích handmade, muốn thử chất liệu mới hoặc đi theo nhóm bạn để trải nghiệm cuối tuần.",
+
+    "pricingTitle": "🧪 Giá Workshop Resin",
+    "pricingDesc": "Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.",
     "priceLabel": "Giá Workshop",
-    "priceValue": "320K"
+    "priceValue": "320K",
+
+    "includedTitle": "✨ Giá đã bao gồm",
+    "included1": "✔ Nhựa epoxy + màu + dụng cụ dùng tại workshop",
+    "included2": "✔ Khuôn + phụ kiện trang trí",
+    "included3": "✔ Nước suối và snacks",
+    "included4": "✔ Nhân viên hỗ trợ & hướng dẫn",
+
+    "groupTitle": "🎁 Ưu đãi nhóm",
+    "group1": "• Nhóm 3 người 👉 giảm 10%",
+    "group2": "• Nhóm 4 người 👉 giảm 15%",
+    "group3": "• 2 người làm chung 1 sản phẩm 👉 phụ thu +150K",
+
+    "note": "* Bạn có thể inbox để được tư vấn mẫu resin & lịch học phù hợp."
   },
-  "included": {
-    "title": "✨ Giá đã bao gồm",
-    "i1": "✔ Nhựa epoxy + màu + dụng cụ dùng tại workshop",
-    "i2": "✔ Khuôn + phụ kiện trang trí",
-    "i3": "✔ Nước suối và snacks",
-    "i4": "✔ Nhân viên hỗ trợ & hướng dẫn"
+
+  "blog1": {
+    "title": "Cách Sử Dụng Cọ Vẽ An Toàn và Giữ Gìn Chúng",
+    "intro": "Cọ vẽ là công cụ quan trọng để hiện thực hóa ý tưởng sáng tạo, từ tranh sơn dầu, acrylic đến màu nước. Tuy nhiên, việc sử dụng và bảo quản cọ không đúng cách có thể làm giảm tuổi thọ của cọ và ảnh hưởng đến chất lượng tác phẩm. Dưới đây là một số hướng dẫn giúp bạn sử dụng cọ hiệu quả và an toàn.",
+
+    "section1": {
+      "title": "1. Chọn cọ phù hợp với loại sơn",
+      "items": {
+        "item1": {
+          "bold": "Cọ lông tự nhiên:",
+          "text": "Phù hợp với sơn dầu và acrylic, mềm mại, giữ sơn tốt."
+        },
+        "item2": {
+          "bold": "Cọ tổng hợp:",
+          "text": "Thích hợp với màu nước và acrylic, dễ vệ sinh và bền hơn."
+        },
+        "item3": {
+          "text1": "Chọn",
+          "bold": "kích thước và hình dạng cọ",
+          "text2": "dựa trên kỹ thuật bạn muốn thực hiện: cọ tròn, cọ dẹt, cọ quét rộng…"
+        }
+      }
+    },
+
+    "section2": {
+      "title": "2. Sử dụng cọ đúng cách",
+      "items": {
+        "item1": "Không nhúng cọ quá sâu vào sơn, tránh sơn dính vào phần kim loại và tay cầm.",
+        "item2": "Khi vẽ, giữ cọ nhẹ nhàng, không ép mạnh để lông cọ không bị biến dạng.",
+        "item3": "Sau khi vẽ, rửa cọ ngay để tránh sơn khô cứng làm hỏng lông cọ."
+      }
+    },
+
+    "section3": {
+      "title": "3. Bảo quản cọ",
+      "items": {
+        "item1": "Đặt cọ theo chiều thẳng đứng với lông hướng lên hoặc treo ngang để lông cọ không bị cong.",
+        "item2": "Tránh ánh nắng trực tiếp và nơi ẩm ướt.",
+        "item3": "Sử dụng dung dịch vệ sinh cọ chuyên dụng để làm sạch sâu khi cần."
+      }
+    },
+
+    "imageAlt": "Minh họa cọ vẽ"
   },
-  "groupSale": {
-    "title": "🎁 Ưu đãi nhóm",
-    "g1": "• Nhóm 3 người 👉 giảm 10%",
-    "g2": "• Nhóm 4 người 👉 giảm 15%",
-    "g3": "• 2 người làm chung 1 sản phẩm 👉 phụ thu +150K"
+  "blog2": {
+  "title": "Màu Acrylic: Nó là gì, cách sử dụng và bảo quản",
+  "intro": "Màu acrylic là một loại sơn nước tổng hợp, nhanh khô, bền màu và linh hoạt, được sử dụng rộng rãi trong hội họa hiện đại. Với đặc tính dễ pha trộn, không độc hại và có thể sử dụng trên nhiều bề mặt, acrylic trở thành lựa chọn phổ biến cho cả người mới bắt đầu và các họa sĩ chuyên nghiệp.",
+
+  "section1": {
+    "title": "1. Màu acrylic là gì?",
+    "items": {
+      "item1": "Màu acrylic là sơn tổng hợp gốc nước, nhanh khô, có thể pha loãng với nước để tạo hiệu ứng trong suốt.",
+      "item2": "Có thể sử dụng trên giấy, canvas, gỗ, vải và nhiều chất liệu khác.",
+      "item3": "Bền màu, không bị phai theo thời gian nếu được bảo quản đúng cách."
+    }
   },
-  "note": "* Bạn có thể inbox để được tư vấn mẫu resin & lịch học phù hợp."
+
+  "section2": {
+    "title": "2. Cách sử dụng màu acrylic",
+    "items": {
+      "item1": "Sử dụng cọ, bút vẽ hoặc palette knife để tạo các hiệu ứng khác nhau.",
+      "item2": "Để màu khô nhanh, có thể pha loãng bằng nước hoặc dùng medium để điều chỉnh độ dày.",
+      "item3": "Trộn các màu với nhau trên palette để tạo sắc độ mong muốn."
+    }
+  },
+
+  "section3": {
+    "title": "3. Bảo quản màu acrylic",
+    "items": {
+      "item1": "Đậy kín nắp sau khi sử dụng để tránh màu bị khô.",
+      "item2": "Lưu trữ ở nơi thoáng mát, tránh ánh nắng trực tiếp.",
+      "item3": "Rửa cọ ngay sau khi sử dụng để cọ không bị hỏng."
+    }
+  },
+
+  "imageAlt": "Minh họa màu acrylic"
+},
+"blog3": {
+  "title": "Vẽ Cùng Những Người Bạn Mới",
+  "intro": "Vẽ cùng bạn bè không chỉ giúp bạn giải tỏa căng thẳng mà còn tạo ra những tác phẩm thú vị và đầy sáng tạo. Qua hoạt động nhóm, mỗi người có thể học hỏi kỹ năng, phong cách và ý tưởng của nhau.",
+
+  "section1": {
+    "title": "1. Lợi ích khi vẽ cùng bạn bè",
+    "items": {
+      "item1": "Phát triển khả năng sáng tạo và tư duy nghệ thuật.",
+      "item2": "Tăng tính kết nối và giao tiếp xã hội.",
+      "item3": "Khám phá các kỹ thuật và màu sắc mới từ bạn bè."
+    }
+  },
+
+  "section2": {
+    "title": "2. Cách tổ chức buổi vẽ nhóm",
+    "items": {
+      "item1": "Chọn không gian thoáng, đủ ánh sáng để mọi người thoải mái vẽ.",
+      "item2": "Mỗi người mang dụng cụ riêng như cọ, màu, giấy hoặc canvas.",
+      "item3": "Thảo luận ý tưởng trước khi bắt đầu để có chủ đề chung."
+    }
+  },
+
+  "section3": {
+    "title": "3. Bảo quản tác phẩm sau khi vẽ",
+    "items": {
+      "item1": "Để tranh khô hoàn toàn trước khi cất giữ.",
+      "item2": "Dùng khung hoặc túi nhựa bảo vệ tranh khỏi bụi và ánh sáng trực tiếp.",
+      "item3": "Đặt tác phẩm nơi thoáng mát và tránh ẩm ướt để giữ màu lâu bền."
+    }
+  },
+
+  "imageAlt": "Minh họa vẽ nhóm"
 }
 }
