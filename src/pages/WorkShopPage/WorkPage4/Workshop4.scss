@@ -270,3 +270,10 @@ $bg: #fff7f8;
     font-size: 13px;
   }
 }
+.workshop-content {
+  grid-template-columns: 1fr; // chỉ còn 1 cột
+}
+
+.content-card.full {
+  width: 100%;
+}

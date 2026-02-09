@@ -124,8 +124,8 @@
   },
 
   "allRating": {
-    "heading": "Student Reviews",
-    "subHeading": "Some real feedback from Google Reviews. Click to view all reviews on Google Maps.",
+    "heading": "Customer Reviews",
+    "subHeading": "Some  feedback from Google Reviews. Click to view all reviews on Google Maps.",
     "viewOnGoogle": "View on Google Maps",
     "clickHint": "Click to see more on Google"
   },
@@ -226,12 +226,12 @@
     "size3": "30x40",
 
     "includedTitle": "✨ Included",
-    "inc1": "✔️ Paint + tools during the workshop",
+    "inc1": "✔️ Paint + materials during the workshop",
     "inc2": "✔️ Water and snacks",
     "inc3": "✔️ Shared tripod for filming/photos",
     "inc4": "✔️ Staff support for colors & guidance",
 
-    "groupTitle": "🎁 Group discount",
+    "groupTitle": "⚠️ Attention",
     "group1": "• Group of 3 👉 10% off",
     "group2": "• Group of 4 👉 15% off",
     "group3": "• 2 people share 1 painting 👉 +150K",
@@ -268,12 +268,12 @@
     "box2Tag": "Premium",
 
     "includedTitle": "✨ Included",
-    "inc1": "✔️ Colored sand & tools",
+    "inc1": "✔️ Colored sand & materials",
     "inc2": "✔️ Water and snacks",
     "inc3": "✔️ Shared tripod for filming/photos",
     "inc4": "✔️ Staff support and guidance",
 
-    "groupTitle": "🎁 Group discount",
+    "groupTitle": "⚠️ Attention",
     "group1": "• Group of 3 👉 10% off",
     "group2": "• Group of 4 👉 15% off",
     "group3": "• 2 people share 1 artwork 👉 +150K",
@@ -309,12 +309,12 @@
     "priceValue": "280K",
 
     "includedTitle": "✨ Included",
-    "inc1": "✔ Paints & tools",
+    "inc1": "✔ Paints & materials",
     "inc2": "✔ Water and snacks",
     "inc3": "✔ Shared tripod for filming/photos",
     "inc4": "✔ Staff support and guidance",
 
-    "groupTitle": "🎁 Group discount",
+    "groupTitle": "⚠️ Attention",
     "group1": "• Group of 3 👉 10% off",
     "group2": "• Group of 4 👉 15% off",
     "group3": "• 2 people share 1 tote 👉 +150K",
@@ -357,7 +357,7 @@
     },
     "learn": {
       "title": "🎨 What will you learn?",
-      "l1": "How to choose resin materials and tools",
+      "l1": "How to choose resin materials ",
       "l2": "Color mixing + marble / galaxy effects",
       "l3": "Molding & glossy finishing techniques",
       "l4": "Tips to preserve resin products long-term"
@@ -374,13 +374,13 @@
     },
     "included": {
       "title": "✨ Included",
-      "i1": "✔ Epoxy resin + pigments + tools",
+      "i1": "✔ Epoxy resin + pigments + materials",
       "i2": "✔ Mold + decoration accessories",
       "i3": "✔ Water and snacks",
       "i4": "✔ Staff support & guidance"
     },
     "groupSale": {
-      "title": "🎁 Group discount",
+      "title": "⚠️ Attention",
       "g1": "• 3 people 👉 10% off",
       "g2": "• 4 people 👉 15% off",
       "g3": "• 2 people / 1 product 👉 +150K extra"
@@ -390,14 +390,14 @@
 
   "blog1": {
     "title": "How to Use Paint Brushes Safely and Take Care of Them",
-    "intro": "Paint brushes are essential tools for bringing creative ideas to life, from oil and acrylic painting to watercolor. However, improper use and storage can reduce the lifespan of your brushes and affect the quality of your artwork. Below are some helpful tips to use and maintain brushes effectively and safely.",
+    "intro": "Paint brushes are essential materials for bringing creative ideas to life, acrylic painting to watercolor. However, improper use and storage can reduce the lifespan of your brushes and affect the quality of your artwork. Below are some helpful tips to use and maintain brushes effectively and safely.",
 
     "section1": {
       "title": "1. Choose the right brush for the paint type",
       "items": {
         "item1": {
           "bold": "Natural hair brushes:",
-          "text": "Best for oil and acrylic paints, soft and excellent at holding paint."
+          "text": "Best for acrylic paints, soft and excellent at holding paint."
         },
         "item2": {
           "bold": "Synthetic brushes:",

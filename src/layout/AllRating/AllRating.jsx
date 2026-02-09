@@ -6,6 +6,7 @@ import PeopleImg1 from "../../assets/images/people/people1.png";
 import PeopleImg2 from "../../assets/images/people/people2.png";
 import PeopleImg3 from "../../assets/images/people/people3.png";
 import PeopleImg4 from "../../assets/images/people/people4.png";
+import PeopleImg5 from "../../assets/images/people/people5.png";
 // Link Google Maps review
 const GOOGLE_REVIEW_LINK = "https://maps.app.goo.gl/RGACh51aduqJ2SnS7?g_st=ic";
 
@@ -45,6 +46,14 @@ const ratingsData = [
     time: "2 weeks ago",
     message:
       "Chị chủ dễ thương, không gian thơ mộng, trải nghiệm tuyệt vời"
+  },
+  {
+    id: 5,
+    name: "Ninh Anh Vũ",
+    avatar: PeopleImg5,
+    rating: 5,
+    time: "1 weeks ago",
+    message: "Nice paintings and really good experience. The instructions were clear and thorough, newbie-friendly. Impression was that they used Mont Marte water colors, all, which is nice"
   }
 ];
 

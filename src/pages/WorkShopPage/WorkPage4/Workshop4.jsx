@@ -62,22 +62,12 @@ const Workshop4 = () => {
           </div>
 
           {/* CONTENT */}
-          <div className="workshop-content">
-            <div className="content-card">
-              <h3>{t("workshop4.learn.title")}</h3>
-              <ul>
-                <li>{t("workshop4.learn.l1")}</li>
-                <li>{t("workshop4.learn.l2")}</li>
-                <li>{t("workshop4.learn.l3")}</li>
-                <li>{t("workshop4.learn.l4")}</li>
-              </ul>
-            </div>
-
-            <div className="content-card">
-              <h3>{t("workshop4.forWho.title")}</h3>
-              <p>{t("workshop4.forWho.desc")}</p>
-            </div>
-          </div>
+        <div className="workshop-content">
+  <div className="content-card full">
+    <h3>{t("workshop4.forWho.title")}</h3>
+    <p>{t("workshop4.forWho.desc")}</p>
+  </div>
+</div>
 
           {/* PRICING */}
           <div className="pricing-card" id="pricing">

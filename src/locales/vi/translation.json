@@ -121,7 +121,7 @@
 
   "allRating": {
     "heading": "Đánh giá từ học viên",
-    "subHeading": "Một vài phản hồi thực tế từ Google Reviews. Nhấn vào để xem đầy đủ đánh giá trên Google Maps.",
+    "subHeading": "Một vài phản hồi từ Google Reviews. Nhấn vào để xem đầy đủ đánh giá trên Google Maps.",
     "viewOnGoogle": "Xem đánh giá trên Google Maps",
     "clickHint": "Nhấn để xem thêm trên Google"
   },
@@ -379,14 +379,14 @@
 
   "blog1": {
     "title": "Cách Sử Dụng Cọ Vẽ An Toàn và Giữ Gìn Chúng",
-    "intro": "Cọ vẽ là công cụ quan trọng để hiện thực hóa ý tưởng sáng tạo, từ tranh sơn dầu, acrylic đến màu nước. Tuy nhiên, việc sử dụng và bảo quản cọ không đúng cách có thể làm giảm tuổi thọ của cọ và ảnh hưởng đến chất lượng tác phẩm. Dưới đây là một số hướng dẫn giúp bạn sử dụng cọ hiệu quả và an toàn.",
+    "intro": "Cọ vẽ là công cụ quan trọng để hiện thực hóa ý tưởng sáng tạo từ acrylic đến màu nước. Tuy nhiên, việc sử dụng và bảo quản cọ không đúng cách có thể làm giảm tuổi thọ của cọ và ảnh hưởng đến chất lượng tác phẩm. Dưới đây là một số hướng dẫn giúp bạn sử dụng cọ hiệu quả và an toàn.",
 
     "section1": {
       "title": "1. Chọn cọ phù hợp với loại sơn",
       "items": {
         "item1": {
           "bold": "Cọ lông tự nhiên:",
-          "text": "Phù hợp với sơn dầu và acrylic, mềm mại, giữ sơn tốt."
+          "text": "Phù hợp với sơn acrylic, mềm mại, giữ sơn tốt."
         },
         "item2": {
           "bold": "Cọ tổng hợp:",
