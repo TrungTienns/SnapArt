@@ -389,7 +389,9 @@
       "title": "📝 Notes",
       "g1": "• 3 people 👉 10% off",
       "g2": "• 4 people 👉 15% off",
-      "g3": "• 2 people / 1 product 👉 +150K extra"
+      "g3": "• 2 people / 1 product 👉 +150K extra",
+      "g4": "• Not finished in one day? Come back later to complete for an extra 50K."
+      
     },
     "note": "* DM us for resin designs & suitable schedules."
   },
@@ -501,11 +503,6 @@
     }
   },
 
-  "imageAlt": "Group painting illustration",
-  
-    "contactBanner": {
-    "title": "We Are Here for You",
-    "description": "Send us a message and start your creative and healing journey with SnapArt. We are always ready to accompany you."
-  }
+  "imageAlt": "Group painting illustration"
 }
 }

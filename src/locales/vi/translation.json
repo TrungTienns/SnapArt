@@ -277,7 +277,7 @@
     "group1": "• Nhóm 3 người 👉 giảm 10%",
     "group2": "• Nhóm 4 người 👉 giảm 15%",
     "group3": "• 2 người vẽ chung 1 tranh 👉 phụ thu +150K",
-    "group4": "• Chưa hoàn thành trong ngày 👉 lần sau quay lại hoàn thiện phụ thu 50k.",
+    "g4": "• Chưa hoàn thành trong ngày 👉 lần sau quay lại hoàn thiện phụ thu 50k.",
 
     "note": "* Nhắn fanpage để được tư vấn khung, mẫu và thời gian trống."
   },
@@ -344,45 +344,52 @@
     }
   },
 
-  "workshopResin": {
-    "badge": "Workshop • Resin",
-    "title": "🧪 Workshop Vẽ Tranh Resin",
-    "desc": "Workshop Vẽ Tranh Resin phù hợp cho cả người mới bắt đầu và những bạn muốn trải nghiệm một chất liệu nghệ thuật độc đáo.",
-    "bookNow": "📩 Đặt lịch ngay",
-    "viewPrice": "Xem giá",
+  "workshop4": {
+  "badge": "Workshop • Resin",
+  "title": "🧪 Workshop Vẽ Tranh Resin",
+  "desc": "Workshop Vẽ Tranh Resin phù hợp cho cả người mới bắt đầu và những bạn muốn trải nghiệm một chất liệu nghệ thuật độc đáo.",
 
-    "p1": "Trong buổi học, bạn sẽ được hướng dẫn cách chuẩn bị resin, pha màu, kết hợp phụ kiện (vỏ sò, cát, đá, hoa khô...) để tạo nên một bức tranh có chiều sâu và hiệu ứng bóng đẹp mắt.",
-    "p2": "Giảng viên sẽ hướng dẫn từng bước từ cơ bản đến nâng cao: cách cân đo resin đúng tỉ lệ, kỹ thuật đổ lớp, tạo hiệu ứng loang màu, hiệu ứng biển, hiệu ứng đá, cũng như cách xử lý bọt khí để bề mặt tranh mịn và trong hơn.",
-    "p3": "Sau workshop, bạn sẽ hoàn thành một sản phẩm Resin hoàn chỉnh mang phong cách riêng, đồng thời nắm được kiến thức nền tảng để có thể tiếp tục sáng tạo tại nhà hoặc phát triển thành ý tưởng kinh doanh sản phẩm handmade.",
-
-    "learnTitle": "🎨 Bạn sẽ học được gì?",
-    "learn1": "Cách chọn vật liệu và dụng cụ làm resin",
-    "learn2": "Kỹ thuật pha màu, tạo hiệu ứng marble / galaxy",
-    "learn3": "Cách đổ khuôn, tạo lớp phủ bóng đẹp",
-    "learn4": "Mẹo bảo quản sản phẩm resin lâu bền",
-
-    "forWhoTitle": "📌 Phù hợp với ai?",
-    "forWhoDesc": "Workshop phù hợp cho người mới, người thích handmade, muốn thử chất liệu mới hoặc đi theo nhóm bạn để trải nghiệm cuối tuần.",
-
-    "pricingTitle": "🧪 Giá Workshop Resin",
-    "pricingDesc": "Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.",
-    "priceLabel": "Giá Workshop",
-    "priceValue": "320K",
-
-    "includedTitle": "✨ Giá đã bao gồm",
-    "included1": "✔ Nhựa epoxy + màu + dụng cụ dùng tại workshop",
-    "included2": "✔ Khuôn + phụ kiện trang trí",
-    "included3": "✔ Nước suối và snacks",
-    "included4": "✔ Nhân viên hỗ trợ & hướng dẫn",
-
-    "groupTitle": "📝 Lưu ý",
-    "group1": "• Nhóm 3 người 👉 giảm 10%",
-    "group2": "• Nhóm 4 người 👉 giảm 15%",
-    "group3": "• 2 người làm chung 1 sản phẩm 👉 phụ thu +150K",
-
-    "note": "* Bạn có thể inbox để được tư vấn mẫu resin & lịch học phù hợp."
+  "highlights": {
+    "h1": "Hướng dẫn pha resin đúng tỉ lệ",
+    "h2": "Tạo hiệu ứng marble / galaxy / biển",
+    "h3": "Hoàn thành 1 sản phẩm mang phong cách riêng"
   },
 
+  "actions": {
+    "book": "📩 Đặt lịch ngay",
+    "price": "Xem giá"
+  },
+
+  "forWho": {
+    "title": "📌 Phù hợp với ai?",
+    "desc": "Workshop phù hợp cho người mới, người thích handmade, muốn thử chất liệu mới hoặc đi theo nhóm bạn để trải nghiệm cuối tuần."
+  },
+
+  "pricing": {
+    "title": "🧪 Giá Workshop Resin",
+    "desc": "Giá đã bao gồm toàn bộ vật liệu và hỗ trợ trong buổi học.",
+    "priceLabel": "Giá Workshop",
+    "priceValue": "320K"
+  },
+
+  "included": {
+    "title": "✨ Giá đã bao gồm",
+    "i1": "✔ Nhựa epoxy + màu + dụng cụ dùng tại workshop",
+    "i2": "✔ Khuôn + phụ kiện trang trí",
+    "i3": "✔ Nước suối và snacks",
+    "i4": "✔ Nhân viên hỗ trợ & hướng dẫn"
+  },
+
+  "groupSale": {
+    "title": "📝 Lưu ý",
+    "g1": "• Nhóm 3 người 👉 giảm 10%",
+    "g2": "• Nhóm 4 người 👉 giảm 15%",
+    "g3": "• 2 người làm chung 1 sản phẩm 👉 phụ thu +150K",
+    "g4": "• Chưa hoàn thành trong ngày 👉 lần sau quay lại hoàn thiện phụ thu 50K."
+  },
+
+  "note": "* Bạn có thể inbox để được tư vấn mẫu resin & lịch học phù hợp."
+},
   "blog1": {
     "title": "Cách Sử Dụng Cọ Vẽ An Toàn và Giữ Gìn Chúng",
     "intro": "Cọ vẽ là công cụ quan trọng để hiện thực hóa ý tưởng sáng tạo từ acrylic đến màu nước. Tuy nhiên, việc sử dụng và bảo quản cọ không đúng cách có thể làm giảm tuổi thọ của cọ và ảnh hưởng đến chất lượng tác phẩm. Dưới đây là một số hướng dẫn giúp bạn sử dụng cọ hiệu quả và an toàn.",
