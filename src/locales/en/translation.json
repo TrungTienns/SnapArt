@@ -136,6 +136,11 @@
     "viewAll": "View all reviews",
     "note": "* You will be redirected to Google Maps."
   },
+  
+  "contactBanner": {
+    "title": "We Are Here for You",
+    "description": "Send us a message and start your creative and healing journey with SnapArt. We are always ready to accompany you."
+  },
 
   "footer": {
     "slogan": "Every stroke is a story - Every artwork is a journey - Enjoy and create - For you",
@@ -496,6 +501,11 @@
     }
   },
 
-  "imageAlt": "Group painting illustration"
+  "imageAlt": "Group painting illustration",
+  
+    "contactBanner": {
+    "title": "We Are Here for You",
+    "description": "Send us a message and start your creative and healing journey with SnapArt. We are always ready to accompany you."
+  }
 }
 }

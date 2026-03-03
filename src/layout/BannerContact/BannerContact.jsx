@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './BannerContact.scss';
 
-import bannerImage from '../../assets/images/contact_banner.jpg'; // ảnh nền
+import bannerImage from '../../assets/images/contact_banner.jpg';
 
 const BannerContact = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="banner-contact"
@@ -11,10 +14,8 @@ const BannerContact = () => {
     >
       <div className="banner-overlay"></div>
       <div className="banner-content">
-        <h1>Chúng tôi ở đây là vì bạn</h1>
-        <p>
-          Gửi lời nhắn và bắt đầu hành trình sáng tạo, chữa lành cùng SnapArt. Chúng tôi luôn sẵn sàng đồng hành cùng bạn.
-        </p>
+        <h1>{t('contactBanner.title')}</h1>
+        <p>{t('contactBanner.description')}</p>
       </div>
     </section>
   );

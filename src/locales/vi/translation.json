@@ -103,6 +103,10 @@
     "item7": "Workshop Tranh Trừu Tượng",
     "item8": "Lớp Học Vẽ Nâng Cao"
   },
+  "contactBanner": {
+    "title": "Chúng tôi ở đây là vì bạn",
+    "description": "Gửi lời nhắn và bắt đầu hành trình sáng tạo, chữa lành cùng SnapArt. Chúng tôi luôn sẵn sàng đồng hành cùng bạn."
+  },
 
   "rating": {
     "heading": "GỬI PHẢN HỒI CHO CHÚNG TÔI",
@@ -120,7 +124,7 @@
   },
 
   "allRating": {
-    "heading": "Đánh giá từ học viên",
+    "heading": "Đánh giá từ khách hàng",
     "subHeading": "Một vài phản hồi từ Google Reviews. Nhấn vào để xem đầy đủ đánh giá trên Google Maps.",
     "viewOnGoogle": "Xem đánh giá trên Google Maps",
     "clickHint": "Nhấn để xem thêm trên Google"
@@ -487,5 +491,8 @@
   },
 
   "imageAlt": "Minh họa vẽ nhóm"
+  
+  
 }
+
 }
