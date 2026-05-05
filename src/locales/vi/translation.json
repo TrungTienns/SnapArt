@@ -323,26 +323,20 @@
 
     "note": "* Bạn có thể inbox để được tư vấn concept & lịch học phù hợp."
   },
-
-  "products": {
-    "title": "Danh sách các loại sản phẩm",
-    "clickToView": "Nhấn vào để xem thêm chi tiết",
-    "bookButton": "Đặt lịch",
-    "items": {
-      "sandPainting": {
-        "title": "Vẽ Tranh Cát"
-      },
-      "acrylicPainting": {
-        "title": "Vẽ Tranh Acrylic"
-      },
-      "toteBagPainting": {
-        "title": "Vẽ Túi Tote"
-      },
-      "resinPainting": {
-        "title": "Vẽ Tranh Resin"
-      }
-    }
-  },
+"products": {
+  "title": "Danh sách các loại sản phẩm",
+  "clickToView": "Nhấn vào để xem thêm chi tiết",
+  "bookButton": "Đặt lịch",
+  "customPaintingTitle": "Bán Tranh Theo Yêu Cầu",
+  "orderButton": "Đặt mua",
+  "items": {
+    "sandPainting": { "title": "Vẽ Tranh Cát" },
+    "acrylicPainting": { "title": "Vẽ Tranh Acrylic" },
+    "toteBagPainting": { "title": "Vẽ Túi Tote" },
+    "resinPainting": { "title": "Vẽ Tranh Resin" },
+    "customPainting": { "title": "Tranh Theo Yêu Cầu" }
+  }
+},
 
   "workshop4": {
   "badge": "Workshop • Resin",
@@ -487,6 +481,7 @@
       "item3": "Thảo luận ý tưởng trước khi bắt đầu để có chủ đề chung."
     }
   },
+  
 
   "section3": {
     "title": "3. Bảo quản tác phẩm sau khi vẽ",
@@ -501,5 +496,6 @@
   
   
 }
+
 
 }

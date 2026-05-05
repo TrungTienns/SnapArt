@@ -328,25 +328,20 @@
     "note": "* Message our fanpage for concept suggestions and available schedules."
   },
 
-  "products": {
-    "title": "List of Products",
-    "clickToView": "Click to view more details",
-    "bookButton": "Book now",
-    "items": {
-      "sandPainting": {
-        "title": "Sand Painting"
-      },
-      "acrylicPainting": {
-        "title": "Acrylic Painting"
-      },
-      "toteBagPainting": {
-        "title": "Tote Bag Painting"
-      },
-      "resinPainting": {
-        "title": "Resin Painting"
-      }
-    }
-  },
+"products": {
+  "title": "List of Products",
+  "clickToView": "Click to view more details",
+  "bookButton": "Book now",
+  "customPaintingTitle": "Custom Paintings for Sale",
+  "orderButton": "Order Now",
+  "items": {
+    "sandPainting": { "title": "Sand Painting" },
+    "acrylicPainting": { "title": "Acrylic Painting" },
+    "toteBagPainting": { "title": "Tote Bag Painting" },
+    "resinPainting": { "title": "Resin Painting" },
+    "customPainting": { "title": "Custom Painting" }
+  }
+},
 
   "workshop4": {
     "badge": "Workshop • Handmade",

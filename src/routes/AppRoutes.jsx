@@ -35,6 +35,9 @@ import Workshop6 from "../pages/WorkShopPage/WorkPage6/Workshop6";
 //Collection page
 import AdultCollection from "../pages/CollectionPage/AdultCollection/AdultCollection";
 
+// Custom Paintings Page
+import CustomPaintingsPage from "../pages/CustomPaintingsPage/CustomPaintingsPage";
+
 // Layout
 import Header from "../layout/Header/Header";
 
@@ -86,6 +89,8 @@ const AppRoutes = () => {
 
         {/* Collection pages */}
         <Route path={path.adultCollection} element={<AdultCollection />} />
+        {/* Custom Paintings */}
+        <Route path={path.customPaintings} element={<CustomPaintingsPage />} />
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -72,6 +72,15 @@ export default function Products() {
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
       priceText: priceRangeText(resinShellPrices),
     },
+    {
+      id: 5,
+      title: t("products.items.customPainting.title"),
+      sub: "",
+      img: img3,
+      workshopLink: "/custom-paintings",
+      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
+      priceText: "",
+    }
   ];
 
   return (

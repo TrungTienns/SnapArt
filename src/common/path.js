@@ -31,4 +31,7 @@ export const path = {
 
   //collection pages
   adultCollection: "/adult-collection",
+
+  // custom paintings
+  customPaintings: "/custom-paintings",
 };
