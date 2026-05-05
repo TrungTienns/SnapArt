@@ -4,6 +4,7 @@ import "./Header.scss";
 import logo from "../../assets/logo.png";
 import Lottie from "lottie-react";
 import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
+import sunFlowerAnimation from "../../assets/animation/sunFlowerAnimation.json";
 import { useTranslation } from "react-i18next";
 
 function Header() {
@@ -42,7 +43,6 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
-  // đổi ngôn ngữ
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem("language", lng);
@@ -63,7 +63,6 @@ function Header() {
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
           </Link>
 
-          {/* LANGUAGE SWITCH */}
           <div className="lang-switch">
             <button
               className={`flag-btn ${currentLang === "vi" ? "active" : ""}`}
@@ -73,7 +72,6 @@ function Header() {
             >
               🇻🇳
             </button>
-
             <button
               className={`flag-btn ${currentLang === "en" ? "active" : ""}`}
               onClick={() => changeLanguage("en")}
@@ -120,10 +118,19 @@ function Header() {
           </button>
         </div>
 
-        {/* ANIMATION */}
+        {/* ANIMATION CAT */}
         <div className="header-animation">
           <Lottie animationData={cuteCatWork} loop />
         </div>
+      </div>
+
+      {/* SUNFLOWER ROW */}
+      <div className="sunflower-row">
+        {[...Array(40)].map((_, i) => (
+          <div key={i} className={`sunflower-item sunflower-item--${i + 1}`}>
+            <Lottie animationData={sunFlowerAnimation} loop />
+          </div>
+        ))}
       </div>
 
       {open && <div className="mobile-backdrop" onClick={() => setOpen(false)} />}

@@ -14,16 +14,17 @@
   box-sizing: border-box;
   overflow: hidden;
   font-family: 'Baloo 2', cursive;
-  transition: opacity 0.5s ease; /* fade khi scroll */
+  transition: opacity 0.5s ease;
+  position: relative;
 }
 
-/* Left content */
+/* ===== Left content ===== */
 .hero-artworkshop-left {
   flex: 1;
   padding-left: 5vw;
 }
 
-/* Brand name */
+/* ===== Brand name ===== */
 .hero-snapart-name {
   font-size: 4vw;
   font-weight: 900;
@@ -32,7 +33,7 @@
   line-height: 1.2;
 }
 
-/* Hero title */
+/* ===== Hero title ===== */
 .hero-artworkshop-title {
   font-size: 6vw;
   font-weight: 900;
@@ -60,7 +61,7 @@
   transform: translateY(0);
 }
 
-/* Description */
+/* ===== Description ===== */
 .hero-artworkshop-desc {
   font-size: 1.6vw;
   margin-bottom: 3vh;
@@ -69,8 +70,9 @@
   max-width: 600px;
 }
 
-/* Button */
+/* ===== Button ===== */
 .hero-artworkshop-btn {
+  display: inline-block;
   font-size: 1.3vw;
   padding: 1vh 3vw;
   border-radius: 2vw;
@@ -78,15 +80,18 @@
   background: linear-gradient(90deg, #ffb347 0%, #ff6a88 100%);
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 0.5vh 2vh rgba(255,186,186,0.25);
+  box-shadow: 0 0.5vh 2vh rgba(255, 186, 186, 0.25);
   transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.5vh) scale(1.05);
+    color: #fff;
+  }
 }
 
-.hero-artworkshop-btn:hover {
-  transform: translateY(-0.5vh) scale(1.05);
-}
-
-/* Right logo + icons */
+/* ===== Right logo + icons ===== */
 .hero-artworkshop-right {
   flex: 1;
   display: flex;
@@ -96,7 +101,7 @@
   position: relative;
 }
 
-/* Logo lớn */
+/* ===== Logo lớn ===== */
 .hero-logo {
   width: 40vw;
   max-width: 450px;
@@ -115,9 +120,9 @@
 }
 
 @keyframes bounceLogo {
-  0% { transform: scale(0.8) translateY(30px); }
-  50% { transform: scale(1.15) translateY(25px); }
-  70% { transform: scale(0.95) translateY(35px); }
+  0%   { transform: scale(0.8) translateY(30px); }
+  50%  { transform: scale(1.15) translateY(25px); }
+  70%  { transform: scale(0.95) translateY(35px); }
   100% { transform: scale(1.05) translateY(30px); }
 }
 
@@ -127,7 +132,7 @@
   cursor: pointer;
 }
 
-/* Icon nhỏ bay */
+/* ===== Icon nhỏ bay ===== */
 .icon-small {
   position: absolute;
   width: 4vw;
@@ -138,66 +143,72 @@
 }
 
 .icon1 { top: 10%; left: 10%; animation: float1 8s infinite ease-in-out; }
-.icon2 { top: 5%; left: 40%; animation: float2 10s infinite ease-in-out; }
-.icon3 { top: 8%; left: 70%; animation: float3 12s infinite ease-in-out; }
+.icon2 { top: 5%;  left: 40%; animation: float2 10s infinite ease-in-out; }
+.icon3 { top: 8%;  left: 70%; animation: float3 12s infinite ease-in-out; }
 
 @keyframes float1 {
-  0% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-20px) rotate(15deg); }
-  50% { transform: translateY(0) rotate(0deg); }
-  75% { transform: translateY(15px) rotate(-15deg); }
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-20px) rotate(15deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(15px) rotate(-15deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
 
 @keyframes float2 {
-  0% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-25px) rotate(-20deg); }
-  50% { transform: translateY(0) rotate(0deg); }
-  75% { transform: translateY(20px) rotate(20deg); }
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-25px) rotate(-20deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(20px) rotate(20deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
 
 @keyframes float3 {
-  0% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-15px) rotate(10deg); }
-  50% { transform: translateY(0) rotate(0deg); }
-  75% { transform: translateY(10px) rotate(-10deg); }
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-15px) rotate(10deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(10px) rotate(-10deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .hero-artworkshop.fullscreen {
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    padding: 10vw 0 0 0;
-  }
+/* ===== Sunflower Desktop ===== */
+.sunflower-banner {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.95;
 
-  .hero-artworkshop-left,
-  .hero-artworkshop-right {
-    flex: none;
-    width: 100%;
-    text-align: center;
-    padding: 0;
+  @media (max-width: 900px) {
+    display: none;
   }
-
-  .hero-artworkshop-title { font-size: 8vw; justify-content: center; }
-  .hero-artworkshop-desc { font-size: 4vw; }
-  .hero-artworkshop-btn { font-size: 4vw; padding: 2vw 5vw; }
-  .hero-logo { width: 70vw; max-width: none; transform: scale(1) translateY(20px); }
-  .hero-logo.show-logo { transform: scale(1) translateY(20px); }
-  .hero-logo:hover { transform: scale(1.05) translateY(20px); }
-  .icon-small { width: 8vw; max-width: 50px; }
-  .icon1 { top: 15%; } .icon2 { top: 12%; } .icon3 { top: 18%; }
-}
-/* ===== Snowman Animation ===== */
-.hero-artworkshop {
-  position: relative; // bắt buộc để absolute con hoạt động đúng
 }
 
+/* ===== Sunflower Mobile ===== */
+.sunflower-banner-responsive {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 12px;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.95;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    width: 70px;
+    top: 30px;
+    right: 8px;
+  }
+}
+
+/* ===== Flower wrapper animation ===== */
 .flower-wrapper {
-  width: 500px;
   position: absolute;
   bottom: 2vh;
   left: 2vw;
@@ -205,8 +216,6 @@
   z-index: 2;
   pointer-events: none;
   opacity: 0.95;
-
-  // animation nhẹ cho Snowman
   animation: snowmanFloat 6s ease-in-out infinite;
 }
 
@@ -216,11 +225,102 @@
   100% { transform: translateY(0); }
 }
 
-/* ===== Responsive Snowman ===== */
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
-  .snowman-wrapper {
-    width: 110px;
-    bottom: 1.5vh;
-    left: 3vw;
+  .hero-artworkshop.fullscreen {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 12vw 0 0 0;
+    overflow: hidden;
+    gap: 0;
+  }
+
+  .hero-artworkshop-left {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 0 6vw;
+    z-index: 2;
+  }
+
+  .hero-artworkshop-right {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    position: relative; /* ✅ bỏ absolute */
+    overflow: hidden;
+  }
+
+  .hero-artworkshop-title {
+    font-size: 9vw;
+    justify-content: center;
+  }
+
+  .hero-snapart-name {
+    font-size: 8vw;
+  }
+
+  .hero-artworkshop-desc {
+    font-size: 4.5vw;
+    max-width: 100%;
+    margin-bottom: 2vw;
+  }
+
+  .hero-artworkshop-btn {
+    font-size: 4.5vw;
+    padding: 2vw 6vw;
+    border-radius: 3vw;
+  }
+
+  .hero-logo {
+    width: 75vw;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    transform: scale(1) translateY(0) !important;
+    margin: 0 auto;
+  }
+
+  .hero-logo.show-logo {
+    transform: scale(1) translateY(0) !important;
+    animation: none;
+  }
+
+  .icon-small {
+    width: 9vw;
+    max-width: 50px;
+  }
+
+  .icon1 { top: 5%; left: 5%; }
+  .icon2 { top: 3%; left: 40%; }
+  .icon3 { top: 5%; left: 75%; }
+}
+
+@media (max-width: 480px) {
+  .hero-artworkshop.fullscreen {
+    padding: 16vw 0 0 0;
+  }
+
+  .hero-artworkshop-title {
+    font-size: 10vw;
+  }
+
+  .hero-artworkshop-desc {
+    font-size: 5vw;
+  }
+
+  .hero-artworkshop-btn {
+    font-size: 5vw;
+    padding: 2.5vw 7vw;
+  }
+
+  .hero-logo {
+    width: 85vw;
   }
 }

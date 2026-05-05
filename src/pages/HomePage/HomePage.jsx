@@ -10,7 +10,7 @@ import Contact from "../../layout/Rating/Rating.jsx";
 import Blog from "../../layout/Blog/Blog.jsx";
 import AllRating from "../../layout/AllRating/AllRating.jsx";
 
-import SakuraFall from "../../components/SakuraFall/SakuraFall.jsx";
+//import SakuraFall from "../../components/SakuraFall/SakuraFall.jsx";
 
 function HomePage() {
   const footerRef = useRef(null);
@@ -18,7 +18,7 @@ function HomePage() {
   return (
     <div className="homepage">
       {/* 🌸 hiệu ứng hoa rơi */}
-      <SakuraFall />
+      {/* <SakuraFall /> */}
 
       <Header footerRef={footerRef} />
       <Banner />

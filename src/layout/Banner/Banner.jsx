@@ -1,6 +1,7 @@
 // src/components/Banner/Banner.jsx
 import React, { useEffect, useState } from "react";
 import "./Banner.scss";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/banner.png";
 import flower from "../../assets/icons/flower.png";
@@ -8,14 +9,11 @@ import sun from "../../assets/icons/sun.png";
 import brush from "../../assets/icons/paint-brush.png";
 
 import { useTranslation } from "react-i18next";
-
-import flowerAnimation from "../../assets/animation/FlowerBanner.json";
+import SunFlower from "../../assets/animation/Sunflower.json";
 import Lottie from "lottie-react";
 
 function Banner() {
   const { t } = useTranslation();
-
-  // Loop words lấy từ file dịch
   const loopWords = t("banner.loop", { returnObjects: true });
 
   const [loopIdx, setLoopIdx] = useState(0);
@@ -24,38 +22,30 @@ function Banner() {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
-    // đổi chữ loop
     const interval = setInterval(() => {
       setShow(false);
-
       setTimeout(() => {
         setLoopIdx((prev) => (prev + 1) % loopWords.length);
         setShow(true);
       }, 350);
     }, 2150);
 
-    // hiện logo animation
     const logoTimer = setTimeout(() => {
       setLogoVisible(true);
     }, 500);
 
-    // scroll fade-out
     const handleScroll = () => {
       const aboutSection = document.querySelector("#about-us-section");
       if (!aboutSection) return;
-
       const scrollY = window.scrollY;
       const aboutOffsetTop = aboutSection.offsetTop;
       const fadeStart = aboutOffsetTop - window.innerHeight / 1.5;
-
       let newOpacity = 1 - (scrollY - fadeStart) / 200;
       newOpacity = Math.max(Math.min(newOpacity, 1), 0);
-
       setOpacity(newOpacity);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       clearInterval(interval);
       clearTimeout(logoTimer);
@@ -65,9 +55,15 @@ function Banner() {
 
   return (
     <section className="hero-artworkshop fullscreen" style={{ opacity }}>
-      {/* Lottie flower */}
-      <div className="flower-wrapper">
-        <Lottie animationData={flowerAnimation} loop autoplay />
+
+      {/* Sunflower Desktop */}
+      <div className="sunflower-banner">
+        <Lottie animationData={SunFlower} loop autoplay />
+      </div>
+
+      {/* Sunflower Mobile */}
+      <div className="sunflower-banner-responsive">
+        <Lottie animationData={SunFlower} loop autoplay />
       </div>
 
       {/* LEFT */}
@@ -93,15 +89,12 @@ function Banner() {
           {t("banner.descAfter")}
         </p>
 
-        {/* ✅ Nút tham gia ngay - mở Instagram chuẩn */}
-        <a
-          href="https://www.instagram.com/snapart_hcm/"
+        <Link
+          to="/works"
           className="hero-artworkshop-btn"
-          target="_blank"
-          rel="noreferrer"
         >
           {t("banner.button")}
-        </a>
+        </Link>
       </div>
 
       {/* RIGHT */}
@@ -111,11 +104,11 @@ function Banner() {
           alt="Logo SnapArt"
           className={`hero-logo${logoVisible ? " show-logo" : ""}`}
         />
-
         <img src={flower} alt="flower" className="icon-small icon1" />
         <img src={sun} alt="sun" className="icon-small icon2" />
         <img src={brush} alt="brush" className="icon-small icon3" />
       </div>
+
     </section>
   );
 }

@@ -1,4 +1,4 @@
-/* ====== HEADER NHỎ & CÂN ĐỐI ====== */
+/* ====== HEADER ====== */
 .site-header {
   position: fixed;
   width: 100%;
@@ -6,14 +6,14 @@
   background: rgba(255, 255, 255, 0.85);
   color: #333;
   z-index: 50;
-  padding: 6px 0;
+  padding: 6px 0 0;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   transition: background 0.3s ease, padding 0.3s ease, transform 0.3s ease;
 }
 
 .site-header.scrolled {
-  padding: 4px 0;
+  padding: 4px 0 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,7 +25,7 @@
 body,
 main,
 .about-page {
-  padding-top: 88px;
+  padding-top: 108px;
 }
 
 /* ====== Bố cục ====== */
@@ -35,12 +35,11 @@ main,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 120px 12px 40px; /* ✅ chừa chỗ bên phải cho con mèo */
+  padding: 12px 120px 12px 40px;
   gap: 36px;
   position: relative;
 }
 
-/* ⭐⭐⭐ FIX: Logo + nút ngôn ngữ nằm cùng 1 hàng */
 .header-left {
   display: flex !important;
   align-items: center;
@@ -66,10 +65,9 @@ main,
   transform: rotate(-5deg) scale(1.08);
 }
 
-/* ====== LANGUAGE SWITCH (FLAG) ====== */
+/* ====== LANGUAGE SWITCH ====== */
 .lang-switch {
-  margin-left: 30px; /* ✅ đẩy sang phải (xa logo hơn) */
-
+  margin-left: 30px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -218,13 +216,64 @@ main,
 /* ====== Animation Cute Cat (DESKTOP) ====== */
 .header-animation {
   position: absolute;
-  right: 20px; /* ✅ sát mép phải */
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   width: 80px;
   height: 80px;
   z-index: 2;
   pointer-events: none;
+}
+/* ====== SUNFLOWER ROW ====== */
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  z-index: 50;
+  padding: 6px 0 0; /* ✅ bỏ padding bottom */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+}
+
+/* ====== SUNFLOWER ROW ====== */
+.sunflower-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  height: 28px;      /* ✅ giảm height xuống */
+  margin-top: -8px;  /* ✅ kéo sát lên header-inner */
+  padding: 0;
+  gap: 14px;
+}
+
+.sunflower-item {
+  width: 30px;       /* ✅ nhỏ lại */
+  height: 30px;
+  flex-shrink: 0;
+  animation: sway 2s ease-in-out infinite;
+
+  @for $i from 1 through 40 {
+    &--#{$i} {
+      animation-delay: #{($i - 1) * 0.12}s;
+    }
+  }
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+    transform-origin: bottom center;
+  }
+  50% {
+    transform: rotate(5deg);
+    transform-origin: bottom center;
+  }
 }
 
 /* ====== Responsive ====== */
@@ -256,13 +305,21 @@ main,
     display: none;
   }
 
-  /* ✅ FIX: Mobile ẩn mèo luôn để không đè nút */
   .header-animation {
     display: none;
   }
 
   .header-right {
     justify-content: flex-end;
+  }
+
+  .sunflower-row {
+    height: 40px;
+  }
+
+  .sunflower-item {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -287,7 +344,7 @@ main,
   body,
   main,
   .about-page {
-    padding-top: 72px;
+    padding-top: 82px;
   }
 
   .lang-switch {
@@ -300,5 +357,14 @@ main,
     width: 34px;
     height: 30px;
     font-size: 18px;
+  }
+
+  .sunflower-row {
+    height: 34px;
+  }
+
+  .sunflower-item {
+    width: 34px;
+    height: 34px;
   }
 }
