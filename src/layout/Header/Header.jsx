@@ -4,7 +4,7 @@ import "./Header.scss";
 import logo from "../../assets/logo.png";
 import Lottie from "lottie-react";
 import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
-import sunFlowerAnimation from "../../assets/animation/sunFlowerAnimation.json";
+import sunFlowerAnimation from "../../assets/animation/sunflowerAnimation.json";
 import { useTranslation } from "react-i18next";
 
 function Header() {
