@@ -3,98 +3,113 @@ import { useTranslation } from "react-i18next";
 import Footer from "../../layout/Footer/Footer";
 import "./CustomPaintingsPage.scss";
 
-import img1 from "../../assets/images/customPaiting/custom1.jpg";
-import img2 from "../../assets/images/customPaiting/custom2.jpg";
-import img3 from "../../assets/images/customPaiting/custom3.jpg";
-import img4 from "../../assets/images/customPaiting/custom4.jpg";
-import img5 from "../../assets/images/customPaiting/custom5.jpg";
-import img6 from "../../assets/images/customPaiting/custom6.jpg";
-import img7 from "../../assets/images/customPaiting/custom7.jpg";
-import img8 from "../../assets/images/customPaiting/custom8.jpg";
-import img9 from "../../assets/images/customPaiting/custom9.jpg";
-import img10 from "../../assets/images/customPaiting/custom10.jpg";
-import img11 from "../../assets/images/customPaiting/custom11.jpg";
+import heroBg from "../../assets/images/customPainting/custom1.jpg";
+import step1Icon from "../../assets/images/customPainting/custom2.jpg";
+import step2Icon from "../../assets/images/customPainting/custom3.jpg";
+import step3Icon from "../../assets/images/customPainting/custom4.jpg";
+import step4Icon from "../../assets/images/customPainting/custom5.jpg";
+
+import img1 from "../../assets/images/customPainting/custom6.jpg";
+import img2 from "../../assets/images/customPainting/custom7.jpg";
+import img3 from "../../assets/images/customPainting/custom8.jpg";
+import img4 from "../../assets/images/customPainting/custom9.jpg";
+import img5 from "../../assets/images/customPainting/custom10.jpg";
+import img6 from "../../assets/images/customPainting/custom11.jpg";
+
 
 export default function CustomPaintingsPage() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const facebookLink = "https://www.facebook.com/profile.php?id=61583373132344";
+  const facebookLink = "https://www.facebook.com/messages/t/808296592375259";
 
-  const data = [
-    { id: 1,  title: "001", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 50 cm",      price: "700.000đ",   img: img1,  facebookLink },
-    { id: 2,  title: "002", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 50 cm",      price: "700.000đ",   img: img2,  facebookLink },
-    { id: 3,  title: "003", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 50 cm",      price: "600.000đ",   img: img3,  facebookLink },
-    { id: 4,  title: "004", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40cm",            price: "600.000đ",   img: img4,  facebookLink },
-    { id: 5,  title: "005", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "20 x 25 cm",      price: "250.000đ",   img: img5,  facebookLink },
-    { id: 6,  title: "006", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40cm",            price: "600.000đ",   img: img6,  facebookLink },
-    { id: 7,  title: "007", type: { vi: "Tranh Cát Đắp Nổi", en: "Sand Painting"    }, size: "40 x 50 cm",      price: "800.000đ",   img: img8,  facebookLink },
-    { id: 8,  title: "008", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "30 x 40 cm",      price: "600.000đ",   img: img9,  facebookLink },
-    { id: 9,  title: "009", type: { vi: "Tranh Cát Đắp Nổi", en: "Sand Painting"    }, size: "(30 x 40 cm) x 3", price: "1.500.000đ", img: img10, facebookLink },
-    { id: 10, title: "010", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 60 cm",      price: "1.000.000đ", img: img11, facebookLink },
+  const galleryImages = [img1, img2, img3, img4, img5, img6, ];
+
+  const processSteps = [
+    {
+      img: step1Icon,
+      title: t("customPaintingPage.step1Title") || "1. Gửi Yêu Cầu & Hình Ảnh",
+      desc: t("customPaintingPage.step1Desc") || "Chia sẻ ý tưởng, hình ảnh tham khảo và kích thước bạn mong muốn với chúng tôi."
+    },
+    {
+      img: step2Icon,
+      title: t("customPaintingPage.step2Title") || "2. Tư Vấn & Báo Giá",
+      desc: t("customPaintingPage.step2Desc") || "SnapArt sẽ tư vấn chất liệu, phong cách và báo giá chi tiết cùng thời gian hoàn thành."
+    },
+    {
+      img: step3Icon,
+      title: t("customPaintingPage.step3Title") || "3. Phác Thảo & Thực Hiện",
+      desc: t("customPaintingPage.step3Desc") || "Họa sĩ tiến hành lên phác thảo, duyệt bố cục và bắt tay vào thực hiện tác phẩm."
+    },
+    {
+      img: step4Icon,
+      title: t("customPaintingPage.step4Title") || "4. Hoàn Thiện & Giao Tranh",
+      desc: t("customPaintingPage.step4Desc") || "Bức tranh được hoàn thiện tỉ mỉ, đóng gói cẩn thận và giao tận tay bạn."
+    }
   ];
 
   return (
     <div className="custom-paintings-page">
-      <div style={{ paddingTop: "100px", minHeight: "80vh" }}>
-        <section className="products-section">
-          <h2 className="products-title">
-            {t("products.customPaintingTitle") || "Bán Tranh Theo Yêu Cầu"}
-          </h2>
+      {/* Hero Section */}
+      <section className="cp-hero" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="cp-hero-overlay"></div>
+        <div className="cp-hero-content">
+          <h1>{t("customPaintingPage.heroTitle") || "Vẽ Tranh Theo Yêu Cầu"}</h1>
+          <p>{t("customPaintingPage.heroDesc") || "Biến ý tưởng, kỷ niệm và câu chuyện của bạn thành những tác phẩm nghệ thuật độc bản mang đậm dấu ấn cá nhân."}</p>
+          <button className="cp-btn-primary" onClick={() => window.open(facebookLink, "_blank")}>
+            {t("customPaintingPage.heroButton") || "Nhận Tư Vấn Ngay"}
+          </button>
+        </div>
+      </section>
 
-          <div className="products-grid">
-            {data.map((item) => (
-              <div
-                className="product-card"
-                key={`custom-${item.id}`}
-                onClick={() => window.open(item.facebookLink, "_blank")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") window.open(item.facebookLink, "_blank");
-                }}
-              >
-                <div className="product-image">
-                  <img src={item.img} alt={item.title} />
-                  <div className="product-image-overlay">
-                    <div className="overlay-pill">
-                      <span className="overlay-icon">🛒</span>
-                      <span className="overlay-text">
-                        {t("products.orderButton") || "Đặt mua"}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="product-name">#{item.title}</h3>
-
-                {item.type && (item.type[i18n.language] || item.type.vi) && (
-                  <span className="product-type">
-                    {item.type[i18n.language] || item.type.vi}
-                  </span>
-                )}
-
-                <p className="product-size">{item.size}</p>
-
-                <p className="product-price">{item.price}</p>
-
-                <button
-                  className="product-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(item.facebookLink, "_blank");
-                  }}
-                >
-                  {t("products.orderButton") || "Đặt mua"}
-                </button>
+      {/* Process Section */}
+      <section className="cp-process">
+        <h2>{t("customPaintingPage.processTitle") || "Quy Trình Đặt Tranh"}</h2>
+        <div className="process-grid">
+          {processSteps.map((step, index) => (
+            <div className="process-card" key={index}>
+              <div className="process-img-wrapper">
+                <img src={step.img} alt={step.title} />
               </div>
-            ))}
-          </div>
-        </section>
-      </div>
+              <div className="process-info">
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="cp-gallery">
+        <div className="gallery-header">
+          <h2>{t("customPaintingPage.galleryTitle") || "Tác Phẩm Tiêu Biểu"}</h2>
+          <p>{t("customPaintingPage.galleryDesc") || "Cùng chiêm ngưỡng những tác phẩm vẽ theo yêu cầu đã được SnapArt thực hiện cho khách hàng."}</p>
+        </div>
+        <div className="gallery-masonry">
+          {galleryImages.map((imgSrc, idx) => (
+            <div className="gallery-item" key={idx}>
+              <img src={imgSrc} alt={`Artwork ${idx + 1}`} />
+              <div className="gallery-overlay">
+                <span>✨ SnapArt Custom Piece</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cp-cta">
+        <h2>{t("customPaintingPage.ctaTitle") || "Sẵn Sàng Tạo Nên Bức Tranh Của Riêng Bạn?"}</h2>
+        <p>{t("customPaintingPage.ctaDesc") || "Hãy để SnapArt đồng hành cùng bạn trong việc lưu giữ những khoảnh khắc tuyệt vời nhất qua ngôn ngữ hội họa."}</p>
+        <button className="cp-btn-secondary" onClick={() => window.open(facebookLink, "_blank")}>
+          {t("customPaintingPage.ctaButton") || "Liên Hệ Đặt Tranh"}
+        </button>
+      </section>
+
       <Footer />
     </div>
   );

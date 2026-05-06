@@ -33,5 +33,8 @@ export const path = {
   adultCollection: "/adult-collection",
 
   // custom paintings
-  customPaintings: "/custom-paintings",
+  customPaintings: "/custom-painting",
+
+  // available paintings
+  availablePaintings: "/available-paintings",
 };

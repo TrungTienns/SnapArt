@@ -142,6 +142,15 @@
     "description": "Send us a message and start your creative and healing journey with SnapArt. We are always ready to accompany you."
   },
 
+  "contactPage": {
+    "socialTitle": "Connect With Us",
+    "socialDesc": "Follow and message SnapArt on social media to get the latest updates and receive quick support.",
+    "fbDesc": "Follow our fanpage and message us directly for detailed advice and support.",
+    "igDesc": "Explore our art space and inspiring paintings from our students.",
+    "ttDesc": "Watch short videos about our painting process and fun moments at the studio.",
+    "connectBtn": "Connect now"
+  },
+
   "footer": {
     "slogan": "Every stroke is a story - Every artwork is a journey - Enjoy and create - For you",
     "siteMap": "Site Map",
@@ -332,14 +341,15 @@
   "title": "List of Products",
   "clickToView": "Click to view more details",
   "bookButton": "Book now",
-  "customPaintingTitle": "Custom Paintings for Sale",
+  "availablePaintingTitle": "Paintings Available For Sales",
   "orderButton": "Order Now",
   "items": {
     "sandPainting": { "title": "Sand Painting" },
     "acrylicPainting": { "title": "Acrylic Painting" },
     "toteBagPainting": { "title": "Tote Bag Painting" },
     "resinPainting": { "title": "Resin Painting" },
-    "customPainting": { "title": "Custom Painting" }
+    "customPainting": { "title": "Custom Painting" },
+    "availablePainting": { "title": "Available Painting" }
   }
 },
 
@@ -499,5 +509,28 @@
   },
 
   "imageAlt": "Group painting illustration"
+},
+"customPaintingPage": {
+  "heroTitle": "Custom Paintings",
+  "badge": "Service ",
+  "titlePart1": "Custom",
+  "titlePart2": "Paintings",
+  "homepageCta": "Learn More",
+  "heroDesc": "Turn your ideas, memories, and stories into unique personalized artworks.",
+  "heroButton": "Get Consultation Now",
+  "processTitle": "How It Works",
+  "step1Title": "1. Send Request & Images",
+  "step1Desc": "Share your ideas, reference images, and desired sizes with us.",
+  "step2Title": "2. Consultation & Quote",
+  "step2Desc": "SnapArt will advise on materials, style, and provide a detailed quote and timeline.",
+  "step3Title": "3. Sketch & Execution",
+  "step3Desc": "Our artists will sketch, finalize the composition, and begin working on the piece.",
+  "step4Title": "4. Finalization & Delivery",
+  "step4Desc": "The painting is meticulously finished, carefully packaged, and delivered to you.",
+  "galleryTitle": "Featured Artworks",
+  "galleryDesc": "Admire some of the custom paintings SnapArt has created for our clients.",
+  "ctaTitle": "Ready to create your own painting?",
+  "ctaDesc": "Let SnapArt accompany you in preserving your most wonderful moments through the language of art.",
+  "ctaButton": "Contact to Order"
 }
 }

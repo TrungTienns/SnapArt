@@ -9,6 +9,7 @@ import Benefit from "../../layout/Benefit/Benefit";
 import Contact from "../../layout/Rating/Rating.jsx";
 import Blog from "../../layout/Blog/Blog.jsx";
 import AllRating from "../../layout/AllRating/AllRating.jsx";
+import Custom from "../../layout/Custom/CustomPainting.jsx";
 
 //import SakuraFall from "../../components/SakuraFall/SakuraFall.jsx";
 
@@ -25,6 +26,7 @@ function HomePage() {
       <AboutUs />
       <Benefit />
       <Blog />
+      <Custom />
       <Contact />
       <AllRating />
       <Footer ref={footerRef} />

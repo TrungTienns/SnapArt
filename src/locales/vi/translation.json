@@ -108,6 +108,15 @@
     "description": "Gửi lời nhắn và bắt đầu hành trình sáng tạo, chữa lành cùng SnapArt. Chúng tôi luôn sẵn sàng đồng hành cùng bạn."
   },
 
+  "contactPage": {
+    "socialTitle": "Kết Nối Với Chúng Tôi",
+    "socialDesc": "Hãy theo dõi và nhắn tin cho SnapArt qua các nền tảng mạng xã hội để cập nhật những thông tin mới nhất và nhận tư vấn nhanh chóng.",
+    "fbDesc": "Theo dõi fanpage và nhắn tin trực tiếp để được chúng tôi hỗ trợ và tư vấn chi tiết.",
+    "igDesc": "Khám phá không gian nghệ thuật và những bức tranh đầy cảm hứng từ học viên.",
+    "ttDesc": "Xem các video ngắn về quá trình vẽ tranh và những khoảnh khắc thú vị tại xưởng.",
+    "connectBtn": "Kết nối ngay"
+  },
+
   "rating": {
     "heading": "GỬI PHẢN HỒI CHO CHÚNG TÔI",
     "thankTitle": "Cảm ơn bạn!",
@@ -327,14 +336,16 @@
   "title": "Danh sách các loại sản phẩm",
   "clickToView": "Nhấn vào để xem thêm chi tiết",
   "bookButton": "Đặt lịch",
-  "customPaintingTitle": "Bán Tranh Theo Yêu Cầu",
+  "availablePaintingTitle": "Bán Tranh Có Sẵn",
   "orderButton": "Đặt mua",
   "items": {
     "sandPainting": { "title": "Vẽ Tranh Cát" },
     "acrylicPainting": { "title": "Vẽ Tranh Acrylic" },
     "toteBagPainting": { "title": "Vẽ Túi Tote" },
     "resinPainting": { "title": "Vẽ Tranh Resin" },
-    "customPainting": { "title": "Tranh Theo Yêu Cầu" }
+    "availablePainting": { "title": "Tranh Có Sẵn" },
+    "customPainting": {"title": "Tranh Vẽ Theo Yêu Cầu"}
+
   }
 },
 
@@ -495,7 +506,28 @@
   "imageAlt": "Minh họa vẽ nhóm"
   
   
-}
-
-
+},
+  "customPaintingPage": {
+    "heroTitle": "Vẽ Tranh Theo Yêu Cầu",
+    "badge": "Dịch Vụ ",
+    "titlePart1": "Vẽ Tranh",
+    "titlePart2": "Theo Yêu Cầu",
+    "homepageCta": "Tìm Hiểu Thêm",
+    "heroDesc": "Biến ý tưởng, kỷ niệm và câu chuyện của bạn thành những tác phẩm nghệ thuật độc bản mang đậm dấu ấn cá nhân.",
+    "heroButton": "Nhận Tư Vấn Ngay",
+    "processTitle": "Quy Trình Đặt Tranh",
+    "step1Title": "1. Gửi Yêu Cầu & Hình Ảnh",
+    "step1Desc": "Chia sẻ ý tưởng, hình ảnh tham khảo và kích thước bạn mong muốn với chúng tôi.",
+    "step2Title": "2. Tư Vấn & Báo Giá",
+    "step2Desc": "SnapArt sẽ tư vấn chất liệu, phong cách và báo giá chi tiết cùng thời gian hoàn thành.",
+    "step3Title": "3. Phác Thảo & Thực Hiện",
+    "step3Desc": "Họa sĩ tiến hành lên phác thảo, duyệt bố cục và bắt tay vào thực hiện tác phẩm.",
+    "step4Title": "4. Hoàn Thiện & Giao Tranh",
+    "step4Desc": "Bức tranh được hoàn thiện tỉ mỉ, đóng gói cẩn thận và giao tận tay bạn.",
+    "galleryTitle": "Tác Phẩm Tiêu Biểu",
+    "galleryDesc": "Cùng chiêm ngưỡng những tác phẩm vẽ theo yêu cầu đã được SnapArt thực hiện cho khách hàng.",
+    "ctaTitle": "Sẵn Sàng Tạo Nên Bức Tranh Của Riêng Bạn?",
+    "ctaDesc": "Hãy để SnapArt đồng hành cùng bạn trong việc lưu giữ những khoảnh khắc tuyệt vời nhất qua ngôn ngữ hội họa.",
+    "ctaButton": "Liên Hệ Đặt Tranh"
+  }
 }

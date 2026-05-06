@@ -1,51 +1,66 @@
 // src/routes/AppRoutes.jsx
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Pages
-import HomePage from "../pages/HomePage/HomePage";
-import AboutPage from "../pages/AboutPage/AboutPage";
-import ContactPage from "../pages/ContactPage/ContactPage";
-import LanguageSelector from "../pages/LanguageSelector/LanguageSelector";
-import NotFound from "../pages/NotFound/NotFound";
-import WorkPage from "../pages/WorkPage/WorkPage";
-import BlogPage from "../pages/BlogPage/BlogPage";
-// Blog pages
-import Blog1 from "../pages/BlogsPage/Blog1/Blog1";
-import Blog2 from "../pages/BlogsPage/Blog2/Blog2";
-import Blog3 from "../pages/BlogsPage/Blog3/Blog3";
-import Blog4 from "../pages/BlogsPage/Blog4/Blog4";
-//Product pages
-import Product1 from "../pages/WorkPages/WorkPage1/WorkPage1";
-import Product2 from "../pages/WorkPages/WorkPage2/WorkPage2";
-import Product3 from "../pages/WorkPages/WorkPage3/WorkPage3";
-import Product4 from "../pages/WorkPages/WorkPage4/WorkPage4";
-import Product5 from "../pages/WorkPages/WorkPage5/WorkPage5";
-import Product6 from "../pages/WorkPages/WorkPage6/WorkPage6";
-import Product7 from "../pages/WorkPages/WorkPage7/WorkPage7";
-import Product8 from "../pages/WorkPages/WorkPage8/WorkPage8";
+// Layout & Context components (these should be loaded immediately)
+import Header from "../layout/Header/Header";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import { path } from "../common/path";
 
-//Work Pages
-import Workshop1 from "../pages/WorkShopPage/WorkPage1/Workshop1";
-import Workshop2 from "../pages/WorkShopPage/WorkPage2/Workshop2";
-import Workshop3 from "../pages/WorkShopPage/WorkPage3/Workshop3";
-import Workshop4 from "../pages/WorkShopPage/WorkPage4/Workshop4";
-import Workshop5 from "../pages/WorkShopPage/WorkPage5/Workshop5";
-import Workshop6 from "../pages/WorkShopPage/WorkPage6/Workshop6";
-//Collection page
-import AdultCollection from "../pages/CollectionPage/AdultCollection/AdultCollection";
+// Lazy Loaded Pages
+const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
+const AboutPage = lazy(() => import("../pages/AboutPage/AboutPage"));
+const ContactPage = lazy(() => import("../pages/ContactPage/ContactPage"));
+const LanguageSelector = lazy(() => import("../pages/LanguageSelector/LanguageSelector"));
+const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
+const WorkPage = lazy(() => import("../pages/WorkPage/WorkPage"));
+const BlogPage = lazy(() => import("../pages/BlogPage/BlogPage"));
+
+// Blog pages
+const Blog1 = lazy(() => import("../pages/BlogsPage/Blog1/Blog1"));
+const Blog2 = lazy(() => import("../pages/BlogsPage/Blog2/Blog2"));
+const Blog3 = lazy(() => import("../pages/BlogsPage/Blog3/Blog3"));
+const Blog4 = lazy(() => import("../pages/BlogsPage/Blog4/Blog4"));
+
+// Product pages
+const Product1 = lazy(() => import("../pages/WorkPages/WorkPage1/WorkPage1"));
+const Product2 = lazy(() => import("../pages/WorkPages/WorkPage2/WorkPage2"));
+const Product3 = lazy(() => import("../pages/WorkPages/WorkPage3/WorkPage3"));
+const Product4 = lazy(() => import("../pages/WorkPages/WorkPage4/WorkPage4"));
+const Product5 = lazy(() => import("../pages/WorkPages/WorkPage5/WorkPage5"));
+const Product6 = lazy(() => import("../pages/WorkPages/WorkPage6/WorkPage6"));
+const Product7 = lazy(() => import("../pages/WorkPages/WorkPage7/WorkPage7"));
+const Product8 = lazy(() => import("../pages/WorkPages/WorkPage8/WorkPage8"));
+
+// Workshop Pages
+const Workshop1 = lazy(() => import("../pages/WorkShopPage/WorkPage1/Workshop1"));
+const Workshop2 = lazy(() => import("../pages/WorkShopPage/WorkPage2/Workshop2"));
+const Workshop3 = lazy(() => import("../pages/WorkShopPage/WorkPage3/Workshop3"));
+const Workshop4 = lazy(() => import("../pages/WorkShopPage/WorkPage4/Workshop4"));
+const Workshop5 = lazy(() => import("../pages/WorkShopPage/WorkPage5/Workshop5"));
+const Workshop6 = lazy(() => import("../pages/WorkShopPage/WorkPage6/Workshop6"));
+
+// Collection page
+const AdultCollection = lazy(() => import("../pages/CollectionPage/AdultCollection/AdultCollection"));
 
 // Custom Paintings Page
-import CustomPaintingsPage from "../pages/CustomPaintingsPage/CustomPaintingsPage";
+const CustomPaintingsPage = lazy(() => import("../pages/CustomPaintingsPage/CustomPaintingsPage"));
 
-// Layout
-import Header from "../layout/Header/Header";
+// Available Paintings Page
+const AvailablePaintingsPage = lazy(() => import("../pages/AvailablePaintingsPage/AvailablePaintingsPage"));
 
-// ScrollToTop
-import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-
-// Path constants
-import { path } from "../common/path";
+// Simple loading spinner for Suspense fallback
+const PageLoader = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#faf9f6' }}>
+    <div style={{
+      width: '40px', height: '40px', borderRadius: '50%', border: '4px solid #fce4e4',
+      borderTopColor: '#ff9994', animation: 'spin 1s linear infinite'
+    }}></div>
+    <style>
+      {`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}
+    </style>
+  </div>
+);
 
 const AppRoutes = () => {
   return (
@@ -57,43 +72,52 @@ const AppRoutes = () => {
       <ScrollToTop />
 
       {/* Nội dung chính */}
-      <Routes>
-        <Route path={path.homepage} element={<HomePage />} />
-        <Route path="/language" element={<LanguageSelector />} />
-        <Route path={path.about} element={<AboutPage />} />
-        <Route path={path.contact} element={<ContactPage />} />
-        <Route path={path.works} element={<WorkPage />} />
-        <Route path={path.blog} element={<BlogPage />} />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path={path.homepage} element={<HomePage />} />
+          <Route path="/language" element={<LanguageSelector />} />
+          <Route path={path.about} element={<AboutPage />} />
+          <Route path={path.contact} element={<ContactPage />} />
+          <Route path={path.works} element={<WorkPage />} />
+          <Route path={path.blog} element={<BlogPage />} />
 
-        {/* Blog pages */}
-        <Route path={path.blog1} element={<Blog1 />} />
-        <Route path={path.blog2} element={<Blog2 />} />
-        <Route path={path.blog3} element={<Blog3 />} />
-        <Route path={path.blog4} element={<Blog4 />} />
-        {/* Product pages */}
-        <Route path={path.product1} element={<Product1 />} />
-        <Route path={path.product2} element={<Product2 />} />
-        <Route path={path.product3} element={<Product3 />} />
-        <Route path={path.product4} element={<Product4 />} />
-        <Route path={path.product5} element={<Product5 />} />
-        <Route path={path.product6} element={<Product6 />} />
-        <Route path={path.product7} element={<Product7 />} />
-        <Route path={path.product8} element={<Product8 />} />
-        {/* Workshop pages */}
-        <Route path={path.workshop1} element={<Workshop1 />} />
-        <Route path={path.workshop2} element={<Workshop2 />} />
-        <Route path={path.workshop3} element={<Workshop3 />} />
-        <Route path={path.workshop4} element={<Workshop4 />} />
-        <Route path={path.workshop5} element={<Workshop5 />} />
-        <Route path={path.workshop6} element={<Workshop6 />} />
+          {/* Blog pages */}
+          <Route path={path.blog1} element={<Blog1 />} />
+          <Route path={path.blog2} element={<Blog2 />} />
+          <Route path={path.blog3} element={<Blog3 />} />
+          <Route path={path.blog4} element={<Blog4 />} />
+          
+          {/* Product pages */}
+          <Route path={path.product1} element={<Product1 />} />
+          <Route path={path.product2} element={<Product2 />} />
+          <Route path={path.product3} element={<Product3 />} />
+          <Route path={path.product4} element={<Product4 />} />
+          <Route path={path.product5} element={<Product5 />} />
+          <Route path={path.product6} element={<Product6 />} />
+          <Route path={path.product7} element={<Product7 />} />
+          <Route path={path.product8} element={<Product8 />} />
+          
+          {/* Workshop pages */}
+          <Route path={path.workshop1} element={<Workshop1 />} />
+          <Route path={path.workshop2} element={<Workshop2 />} />
+          <Route path={path.workshop3} element={<Workshop3 />} />
+          <Route path={path.workshop4} element={<Workshop4 />} />
+          <Route path={path.workshop5} element={<Workshop5 />} />
+          <Route path={path.workshop6} element={<Workshop6 />} />
 
-        {/* Collection pages */}
-        <Route path={path.adultCollection} element={<AdultCollection />} />
-        {/* Custom Paintings */}
-        <Route path={path.customPaintings} element={<CustomPaintingsPage />} />
-        {/* 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          {/* Collection pages */}
+          <Route path={path.adultCollection} element={<AdultCollection />} />
+          
+          {/* Available Paintings */}
+          <Route path={path.availablePaintings} element={<AvailablePaintingsPage />} />
+          
+          {/* Custom Paintings */}
+          <Route path={path.customPaintings} element={<CustomPaintingsPage />} />
+          
+          {/* 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };
