@@ -1,5 +1,5 @@
 @use "sass:color"; // luôn đứng đầu file
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
 $primary: #ff9994;
 $text-light: #fdfdfd;
@@ -15,7 +15,7 @@ $text-light: #fdfdfd;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   overflow: hidden;
 
   .banner-overlay {
