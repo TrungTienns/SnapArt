@@ -10,6 +10,7 @@ import img2 from "../../assets/images/product2.jpg";
 import img3 from "../../assets/images/aboutus_image1.jpg";
 import img4 from "../../assets/images/sand_pictures.jpg";
 import img5 from "../../assets/images/customforsaleImg.jpg";
+import img6 from "../../assets/images/customPainting/custom2.jpg";
 export default function Products() {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -76,10 +77,10 @@ export default function Products() {
       id: 5,
       title: t("products.items.availablePainting.title"),
       sub: "",
-      img: img3,
+      img: img6,
       workshopLink: "/available-paintings",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: "",
+      priceText: t("products.items.priceAvailable"),
     },
     {
       id: 6,
@@ -88,7 +89,7 @@ export default function Products() {
       img: img5,
       workshopLink: "/custom-painting",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: "",
+      priceText: t("products.items.priceCustom"),
     }
   ];
 
