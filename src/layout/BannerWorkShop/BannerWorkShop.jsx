@@ -7,6 +7,10 @@ import banner1 from "../../assets/images/bannerworkshop.jpg";
 import banner2 from "../../assets/images/aboutus_image1.jpg";
 import banner3 from "../../assets/images/blog_image2.jpg";
 
+// Icon điều hướng
+import buttonLeftIcon from "../../assets/icons/buttonLeft.png";
+import buttonRightIcon from "../../assets/icons/buttonRight.png";
+
 const bannerImages = [banner1, banner2, banner3];
 
 const BannerWorkshop = () => {
@@ -38,20 +42,23 @@ const BannerWorkshop = () => {
             style={{ backgroundImage: `url(${img})` }}
           >
             <div className="banner-overlay"></div>
-            <div className="banner-content">
-              <h1>{t("workshopBanner.title")}</h1>
-              <p>{t("workshopBanner.subtitle")}</p>
-            </div>
           </div>
         ))}
       </div>
 
+      {/* Text nằm cố định đằng trước, không chuyển động theo ảnh */}
+      <div className="banner-content">
+        <h1>{t("workshopBanner.title")}</h1>
+        <p>{t("workshopBanner.subtitle")}</p>
+      </div>
+
+
       {/* ✅ Buttons điều hướng */}
-      <button className="banner-btn prev" onClick={prevSlide}>
-        &lt;
+      <button className="banner-btn prev" onClick={prevSlide} aria-label="Previous Slide">
+        <img src={buttonLeftIcon} alt="Previous" className="btn-icon" />
       </button>
-      <button className="banner-btn next" onClick={nextSlide}>
-        &gt;
+      <button className="banner-btn next" onClick={nextSlide} aria-label="Next Slide">
+        <img src={buttonRightIcon} alt="Next" className="btn-icon" />
       </button>
     </section>
   );

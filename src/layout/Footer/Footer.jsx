@@ -34,9 +34,6 @@ const Footer = forwardRef((props, ref) => {
           <p className="slogan">{t("footer.slogan")}</p>
 
           <div className="social-links">
-            <a href="#" aria-label="Zalo">
-              <img src={xIcon} alt="Zalo" className="social-icon" />
-            </a>
             <a
               href="https://www.tiktok.com/@snapart_hcm?lang=vi-VN"
               target="_blank"
