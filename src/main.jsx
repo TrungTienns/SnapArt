@@ -8,6 +8,7 @@ import LanguageGate from './components/LanguageGate/LanguageGate';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import "./index.scss";   // ← file phải tồn tại
+import { Analytics } from "@vercel/analytics/react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <AppRoutes />
         </LanguageGate>
       </I18nextProvider>
+      <Analytics />
     </BrowserRouter>
   </React.StrictMode>
 );
