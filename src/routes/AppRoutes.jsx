@@ -110,6 +110,7 @@ const AppRoutes = () => {
           
           {/* Available Paintings */}
           <Route path={path.availablePaintings} element={<AvailablePaintingsPage />} />
+          <Route path="/available-painting" element={<AvailablePaintingsPage />} />
           
           {/* Custom Paintings */}
           <Route path={path.customPaintings} element={<CustomPaintingsPage />} />
