@@ -15,6 +15,7 @@ import img3 from "../../assets/images/customPainting/custom8.jpg";
 import img4 from "../../assets/images/customPainting/custom9.jpg";
 import img5 from "../../assets/images/customPainting/custom10.jpg";
 import img6 from "../../assets/images/customPainting/custom11.jpg";
+import img7 from "../../assets/images/customPainting/custom12.jpg";
 
 
 export default function CustomPaintingsPage() {

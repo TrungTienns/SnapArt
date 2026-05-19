@@ -14,6 +14,7 @@ import img8 from "../../assets/images/customPainting/custom8.jpg";
 import img9 from "../../assets/images/customPainting/custom9.jpg";
 import img10 from "../../assets/images/customPainting/custom10.jpg";
 import img11 from "../../assets/images/customPainting/custom11.jpg";
+import img12 from "../../assets/images/customPainting/custom12.jpg";
 
 export default function AvailablePaintingsPage() {
   const { t, i18n } = useTranslation();
@@ -35,6 +36,7 @@ export default function AvailablePaintingsPage() {
     { id: 8,  title: "008", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "30 x 40 cm",      price: "600.000đ",   img: img9,  facebookLink },
     { id: 9,  title: "009", type: { vi: "Tranh Cát Đắp Nổi", en: "Sand Painting"    }, size: "(30 x 40 cm) x 3", price: "1.500.000đ", img: img10, facebookLink },
     { id: 10, title: "010", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 60 cm",      price: "1.000.000đ", img: img11, facebookLink },
+    { id: 11, title: "011", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 50 cm",      price: "800.000đ", img: img12, facebookLink },
   ];
 
   return (
