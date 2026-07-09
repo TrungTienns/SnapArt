@@ -530,6 +530,17 @@
     "galleryDesc": "Cùng chiêm ngưỡng những tác phẩm vẽ theo yêu cầu đã được SnapArt thực hiện cho khách hàng.",
     "ctaTitle": "Sẵn Sàng Tạo Nên Bức Tranh Của Riêng Bạn?",
     "ctaDesc": "Hãy để SnapArt đồng hành cùng bạn trong việc lưu giữ những khoảnh khắc tuyệt vời nhất qua ngôn ngữ hội họa.",
+    "pricingTitle": "Bảng Giá Tham Khảo",
+    "pricingSubtitle": "Đầu tư cho một tác phẩm nghệ thuật mang đậm dấu ấn của riêng bạn.",
+    "petPricingTitle": "Dịch vụ vẽ thú cưng",
+    "petPricingDesc": "Lưu giữ khoảnh khắc đáng yêu của những người bạn nhỏ bằng những nét cọ sinh động.",
+    "petBadge": "Vẽ Pet",
+    "landscapePricingTitle": "Tranh phong cảnh",
+    "landscapePricingDesc": "Mang cả thiên nhiên hùng vĩ và bình yên vào không gian sống của bạn.",
+    "landscapeBadge": "Phong Cảnh",
+    "size": "Size",
+    "specialNotePetPrefix": "Từ 3 pet trở lên phụ thu",
+    "specialNotePetSuffix": "/pet",
     "ctaButton": "Liên Hệ Đặt Tranh"
   }
 }

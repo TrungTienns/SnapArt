@@ -533,6 +533,17 @@
   "galleryDesc": "Admire some of the custom paintings SnapArt has created for our clients.",
   "ctaTitle": "Ready to create your own painting?",
   "ctaDesc": "Let SnapArt accompany you in preserving your most wonderful moments through the language of art.",
+  "pricingTitle": "Reference Price List",
+  "pricingSubtitle": "Invest in a unique artwork with your own personal touch.",
+  "petPricingTitle": "Pet Painting Service",
+  "petPricingDesc": "Preserve the adorable moments of your little friends with vivid brushstrokes.",
+  "petBadge": "Pet Painting",
+  "landscapePricingTitle": "Landscape Painting",
+  "landscapePricingDesc": "Bring majestic nature and peace into your living space.",
+  "landscapeBadge": "Landscape",
+  "size": "Size",
+  "specialNotePetPrefix": "From 3 pets onwards, surcharge",
+  "specialNotePetSuffix": "/pet",
   "ctaButton": "Contact to Order"
 }
 }

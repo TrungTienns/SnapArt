@@ -16,7 +16,7 @@ import img4 from "../../assets/images/customPainting/custom9.jpg";
 import img5 from "../../assets/images/customPainting/custom10.jpg";
 import img6 from "../../assets/images/customPainting/custom11.jpg";
 import img7 from "../../assets/images/customPainting/custom12.jpg";
-
+import img8 from "../../assets/images/customPainting/custom13.jpg";
 
 export default function CustomPaintingsPage() {
   const { t } = useTranslation();
@@ -81,6 +81,91 @@ export default function CustomPaintingsPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Pricing Section - Editorial Design */}
+      <section className="cp-pricing-editorial">
+        <div className="pricing-header">
+          <h2>{t("customPaintingPage.pricingTitle") || "Bảng Giá Tham Khảo"}</h2>
+          <p className="pricing-subtitle">{t("customPaintingPage.pricingSubtitle") || "Đầu tư cho một tác phẩm nghệ thuật mang đậm dấu ấn của riêng bạn."}</p>
+        </div>
+        
+        <div className="pricing-container">
+          {/* Item 1: Vẽ Pet */}
+          <div className="pricing-row">
+            <div className="pricing-image">
+              <div className="image-wrapper">
+                <img src={img8} alt={t("customPaintingPage.petBadge") || "Vẽ Pet"} />
+                <div className="floating-badge">{t("customPaintingPage.petBadge") || "Vẽ Pet"}</div>
+              </div>
+            </div>
+            <div className="pricing-details">
+              <h3>{t("customPaintingPage.petPricingTitle") || "Dịch vụ vẽ thú cưng"}</h3>
+              <p className="desc">{t("customPaintingPage.petPricingDesc") || "Lưu giữ khoảnh khắc đáng yêu của những người bạn nhỏ bằng những nét cọ sinh động."}</p>
+              <ul className="elegant-price-list">
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 30x30 cm</span>
+                  <span className="line"></span>
+                  <span className="price">750.000đ</span>
+                </li>
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 30x40 cm</span>
+                  <span className="line"></span>
+                  <span className="price">1.000.000đ</span>
+                </li>
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 40x50 cm</span>
+                  <span className="line"></span>
+                  <span className="price">1.300.000đ</span>
+                </li>
+              </ul>
+              <div className="special-note">
+                <span className="icon">🎁</span> {t("customPaintingPage.specialNotePetPrefix") || "Từ 3 pet trở lên phụ thu"} <strong>100.000đ{t("customPaintingPage.specialNotePetSuffix") || "/pet"}</strong>
+              </div>
+            </div>
+          </div>
+
+          {/* Item 2: Tranh Phong Cảnh */}
+          <div className="pricing-row reverse">
+            <div className="pricing-image">
+              <div className="image-wrapper">
+                <img src={img2} alt={t("customPaintingPage.landscapeBadge") || "Tranh Phong Cảnh"} />
+                <div className="floating-badge landscape">{t("customPaintingPage.landscapeBadge") || "Phong Cảnh"}</div>
+              </div>
+            </div>
+            <div className="pricing-details">
+              <h3>{t("customPaintingPage.landscapePricingTitle") || "Tranh phong cảnh"}</h3>
+              <p className="desc">{t("customPaintingPage.landscapePricingDesc") || "Mang cả thiên nhiên hùng vĩ và bình yên vào không gian sống của bạn."}</p>
+              <ul className="elegant-price-list">
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 30x30 cm</span>
+                  <span className="line"></span>
+                  <span className="price">1.000.000đ</span>
+                </li>
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 30x40 cm</span>
+                  <span className="line"></span>
+                  <span className="price">1.200.000đ</span>
+                </li>
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 40x50 cm</span>
+                  <span className="line"></span>
+                  <span className="price">1.600.000đ</span>
+                </li>
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 40x60 cm</span>
+                  <span className="line"></span>
+                  <span className="price">1.800.000đ</span>
+                </li>
+                <li>
+                  <span className="size">{t("customPaintingPage.size") || "Size"} 50x70 cm</span>
+                  <span className="line"></span>
+                  <span className="price">2.300.000đ</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
