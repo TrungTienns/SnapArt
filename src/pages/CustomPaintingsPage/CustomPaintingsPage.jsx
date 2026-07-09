@@ -130,7 +130,7 @@ export default function CustomPaintingsPage() {
           <div className="pricing-row reverse">
             <div className="pricing-image">
               <div className="image-wrapper">
-                <img src={img2} alt={t("customPaintingPage.landscapeBadge") || "Tranh Phong Cảnh"} />
+                <img src={img6} alt={t("customPaintingPage.landscapeBadge") || "Tranh Phong Cảnh"} />
                 <div className="floating-badge landscape">{t("customPaintingPage.landscapeBadge") || "Phong Cảnh"}</div>
               </div>
             </div>
