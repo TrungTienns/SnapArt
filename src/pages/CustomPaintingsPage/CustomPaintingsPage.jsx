@@ -3,20 +3,20 @@ import { useTranslation } from "react-i18next";
 import Footer from "../../layout/Footer/Footer";
 import "./CustomPaintingsPage.scss";
 
-import heroBg from "../../assets/images/customPainting/custom1.jpg";
-import step1Icon from "../../assets/images/customPainting/custom2.jpg";
-import step2Icon from "../../assets/images/customPainting/custom3.jpg";
-import step3Icon from "../../assets/images/customPainting/custom4.jpg";
-import step4Icon from "../../assets/images/customPainting/custom5.jpg";
+import heroBg from "../../assets/images/customPainting/custom1.webp";
+import step1Icon from "../../assets/images/customPainting/custom2.webp";
+import step2Icon from "../../assets/images/customPainting/custom3.webp";
+import step3Icon from "../../assets/images/customPainting/custom4.webp";
+import step4Icon from "../../assets/images/customPainting/custom5.webp";
 
-import img1 from "../../assets/images/customPainting/custom6.jpg";
-import img2 from "../../assets/images/customPainting/custom7.jpg";
-import img3 from "../../assets/images/customPainting/custom8.jpg";
-import img4 from "../../assets/images/customPainting/custom9.jpg";
-import img5 from "../../assets/images/customPainting/custom10.jpg";
-import img6 from "../../assets/images/customPainting/custom11.jpg";
-import img7 from "../../assets/images/customPainting/custom12.jpg";
-import img8 from "../../assets/images/customPainting/custom13.jpg";
+import img1 from "../../assets/images/customPainting/custom6.webp";
+import img2 from "../../assets/images/customPainting/custom7.webp";
+import img3 from "../../assets/images/customPainting/custom8.webp";
+import img4 from "../../assets/images/customPainting/custom9.webp";
+import img5 from "../../assets/images/customPainting/custom10.webp";
+import img6 from "../../assets/images/customPainting/custom11.webp";
+import img7 from "../../assets/images/customPainting/custom12.webp";
+import img8 from "../../assets/images/customPainting/custom13.webp";
 
 export default function CustomPaintingsPage() {
   const { t } = useTranslation();

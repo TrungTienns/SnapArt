@@ -4,10 +4,10 @@ import 'aos/dist/aos.css';
 import './AboutUs.scss';
 import { Link } from 'react-router-dom';
 
-import img1 from '../../assets/images/aboutus_image1.jpg';
-import img2 from '../../assets/images/customer.jpg';
-import img3 from '../../assets/images/boss.jpg';
-import img4 from '../../assets/images/product.jpg';
+import img1 from '../../assets/images/aboutus_image1.webp';
+import img2 from '../../assets/images/customer.webp';
+import img3 from '../../assets/images/boss.webp';
+import img4 from '../../assets/images/product.webp';
 
 import { useTranslation } from 'react-i18next';
 

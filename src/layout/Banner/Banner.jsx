@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Banner.scss";
 import { Link } from "react-router-dom";
 
-import logo from "../../assets/images/banner.png";
+import logo from "../../assets/images/banner.webp";
 import flower from "../../assets/icons/flower.png";
 import sun from "../../assets/icons/sun.png";
 import brush from "../../assets/icons/paint-brush.png";

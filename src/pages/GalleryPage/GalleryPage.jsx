@@ -6,8 +6,8 @@ import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
 import "./GalleryPage.scss";
 
-import adultImg from "../../assets/images/aboutus_image1.jpg";
-import kidsImg from "../../assets/images/aboutus_image2.jpg";
+import adultImg from "../../assets/images/aboutus_image1.webp";
+import kidsImg from "../../assets/images/aboutus_image2.webp";
 
 const GalleryPage = () => {
   const navigate = useNavigate();

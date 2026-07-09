@@ -6,7 +6,7 @@ import Footer from "../../../layout/Footer/Footer";
 import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
 import "./Workshop2.scss";
 
-import imgAcrylic from "../../../assets/images/product2.jpg";
+import imgAcrylic from "../../../assets/images/product2.webp";
 
 const Workshop2 = () => {
   const { t } = useTranslation();

@@ -7,7 +7,7 @@
   import "./Workshop4.scss";
 
   // hình demo
-  import imgResin from "../../../assets/images/aboutus_image1.jpg";
+  import imgResin from "../../../assets/images/aboutus_image1.webp";
 
   const Workshop4 = () => {
     const { t } = useTranslation();

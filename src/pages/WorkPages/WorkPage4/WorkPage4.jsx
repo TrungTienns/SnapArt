@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "./WorkPage4.scss";
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
-import paintingImage from "../../../assets/images/products/product_image4.jpg";
+import paintingImage from "../../../assets/images/products/product_image4.webp";
 
 const WorkPage4 = () => {
   useEffect(() => {

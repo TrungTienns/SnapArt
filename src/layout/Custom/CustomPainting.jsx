@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import heroBg from "../../assets/images/customPainting/custom1.jpg";
+import heroBg from "../../assets/images/customPainting/custom1.webp";
 import starIcon from "../../assets/icons/star.png";
 import paintBrushIcon from "../../assets/icons/paint-brush.png";
 import "./CustomPainting.scss";

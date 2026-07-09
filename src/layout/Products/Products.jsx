@@ -5,12 +5,12 @@ import { useTranslation } from "react-i18next";
 import "./Products.scss";
 
 // hình demo – lấy trong assets của bạn
-import img1 from "../../assets/images/totepaiting.jpg";
-import img2 from "../../assets/images/product2.jpg";
-import img3 from "../../assets/images/aboutus_image1.jpg";
-import img4 from "../../assets/images/sand_pictures.jpg";
-import img5 from "../../assets/images/customforsaleImg.jpg";
-import img6 from "../../assets/images/customPainting/custom2.jpg";
+import img1 from "../../assets/images/totepaiting.webp";
+import img2 from "../../assets/images/product2.webp";
+import img3 from "../../assets/images/aboutus_image1.webp";
+import img4 from "../../assets/images/sand_pictures.webp";
+import img5 from "../../assets/images/customforsaleImg.webp";
+import img6 from "../../assets/images/customPainting/custom2.webp";
 export default function Products() {
   const navigate = useNavigate();
   const { t } = useTranslation();

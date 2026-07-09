@@ -6,7 +6,7 @@ import Footer from "../../../layout/Footer/Footer";
 import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
 import "./Workshop3.scss";
 
-import imgTote from "../../../assets/images/totepaiting.jpg";
+import imgTote from "../../../assets/images/totepaiting.webp";
 
 const Workshop3 = () => {
   const { t } = useTranslation();

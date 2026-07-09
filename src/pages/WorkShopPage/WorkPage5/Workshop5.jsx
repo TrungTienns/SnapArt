@@ -5,7 +5,7 @@ import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
 import "./Workshop5.scss";
 
 // hình demo
-import imgResin from "../../../assets/images/aboutus_image1.jpg";
+import imgResin from "../../../assets/images/aboutus_image1.webp";
 
 const Workshop5 = () => {
   return (

@@ -6,7 +6,7 @@ import Footer from "../../../layout/Footer/Footer";
 import BannerWorkshop from "../../../layout/BannerWorkShop/BannerWorkShop";
 import "./Workshop1.scss";
 
-import imgSand from "../../../assets/images/sand_pictures.jpg";
+import imgSand from "../../../assets/images/sand_pictures.webp";
 
 const Workshop1 = () => {
   const { t } = useTranslation();

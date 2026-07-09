@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './BannerContact.scss';
 
-import bannerImage from '../../assets/images/contact_banner.jpg';
+import bannerImage from '../../assets/images/contact_banner.webp';
 
 const BannerContact = () => {
   const { t } = useTranslation();

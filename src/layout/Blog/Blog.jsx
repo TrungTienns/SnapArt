@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Blog.scss';
 
-import image1 from '../../assets/images/blog_image1.jpg';
-import image2 from '../../assets/images/blog_image2.jpg';
-import image3 from '../../assets/images/blog_image3.jpg';
-import image4 from '../../assets/images/blog_image4.jpg';
+import image1 from '../../assets/images/blog_image1.webp';
+import image2 from '../../assets/images/blog_image2.webp';
+import image3 from '../../assets/images/blog_image3.webp';
+import image4 from '../../assets/images/blog_image4.webp';
 
 function Blog() {
   const navigate = useNavigate();

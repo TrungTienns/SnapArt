@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "./WorkPage8.scss";
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
-import advancedClassImage from "../../../assets/images/products/product_image8.jpg"; // ảnh lớp nâng cao
+import advancedClassImage from "../../../assets/images/products/product_image8.webp"; // ảnh lớp nâng cao
 
 const WorkPage8 = () => {
   useEffect(() => {

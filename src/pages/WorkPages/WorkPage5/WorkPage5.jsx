@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "./WorkPage5.scss";
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
-import toolsImage from "../../../assets/images/products/product_image5.jpg"; // đổi hình ảnh tương ứng
+import toolsImage from "../../../assets/images/products/product_image5.webp"; // đổi hình ảnh tương ứng
 
 const WorkPage5 = () => {
   useEffect(() => {

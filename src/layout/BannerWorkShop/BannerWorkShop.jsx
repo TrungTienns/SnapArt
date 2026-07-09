@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import "./BannerWorkShop.scss";
 
 // Dữ liệu ảnh banner
-import banner1 from "../../assets/images/bannerworkshop.jpg";
-import banner2 from "../../assets/images/aboutus_image1.jpg";
-import banner3 from "../../assets/images/blog_image2.jpg";
+import banner1 from "../../assets/images/bannerworkshop.webp";
+import banner2 from "../../assets/images/aboutus_image1.webp";
+import banner3 from "../../assets/images/blog_image2.webp";
 
 // Icon điều hướng
 import buttonLeftIcon from "../../assets/icons/buttonLeft.png";

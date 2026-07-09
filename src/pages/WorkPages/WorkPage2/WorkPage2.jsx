@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
-import productImage from "../../../assets/images/products/product_image2.jpg"; // đổi ảnh phù hợp
+import productImage from "../../../assets/images/products/product_image2.webp"; // đổi ảnh phù hợp
 import "./WorkPage2.scss";
 
 const WorkPage2 = () => {

@@ -8,10 +8,10 @@ import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
 import "./AboutPage.scss";
 
-import img1 from "../../assets/images/aboutus_image1.jpg";
-import img2 from "../../assets/images/customer.jpg";
-import img3 from "../../assets/images/boss.jpg";
-import img4 from "../../assets/images/product.jpg";
+import img1 from "../../assets/images/aboutus_image1.webp";
+import img2 from "../../assets/images/customer.webp";
+import img3 from "../../assets/images/boss.webp";
+import img4 from "../../assets/images/product.webp";
 import BannerAboutUs from "../../layout/BannerAboutUs/BannerAboutUs";
 
 const images = [img1, img2, img3, img4];

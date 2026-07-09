@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "./WorkPage6.scss";
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
-import kidsWorkshopImage from "../../../assets/images/products/product_image6.jpg"; // đổi hình ảnh
+import kidsWorkshopImage from "../../../assets/images/products/product_image6.webp"; // đổi hình ảnh
 
 const WorkPage6 = () => {
   useEffect(() => {

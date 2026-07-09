@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Header from "../../../layout/Header/Header";
 import Footer from "../../../layout/Footer/Footer";
 import "./WorkPage3.scss";
-import textureImage from "../../../assets/images/products/product_image3.jpg"; // đổi đường dẫn đúng với ảnh của bạn
+import textureImage from "../../../assets/images/products/product_image3.webp"; // đổi đường dẫn đúng với ảnh của bạn
 
 const WorkPage3 = () => {
   useEffect(() => {

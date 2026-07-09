@@ -2,11 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./AllRating.scss";
 
-import PeopleImg1 from "../../assets/images/people/people1.png";
-import PeopleImg2 from "../../assets/images/people/people2.png";
-import PeopleImg3 from "../../assets/images/people/people3.png";
-import PeopleImg4 from "../../assets/images/people/people4.png";
-import PeopleImg5 from "../../assets/images/people/people5.png";
+import PeopleImg1 from "../../assets/images/people/people1.webp";
+import PeopleImg2 from "../../assets/images/people/people2.webp";
+import PeopleImg3 from "../../assets/images/people/people3.webp";
+import PeopleImg4 from "../../assets/images/people/people4.webp";
+import PeopleImg5 from "../../assets/images/people/people5.webp";
 // Link Google Maps review
 const GOOGLE_REVIEW_LINK = "https://maps.app.goo.gl/RGACh51aduqJ2SnS7?g_st=ic";
 

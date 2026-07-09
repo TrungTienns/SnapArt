@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import Header from "../../../layout/Header/Header.jsx";
 import Footer from "../../../layout/Footer/Footer.jsx";
-import blogImage from "../../../assets/images/blog_image2.jpg";
+import blogImage from "../../../assets/images/blog_image2.webp";
 
 import "./Blog2.scss";
 

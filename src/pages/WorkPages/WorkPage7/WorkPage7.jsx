@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 import "./WorkPage7.scss";
 import Header from "../../../layout/Header/Header"
 import Footer from "../../../layout/Footer/Footer";
-import kidsWorkshopImage from "../../../assets/images/products/product_image6.jpg";
-import abstractPaintingImage from "../../../assets/images/products/product_image7.jpg"; // ảnh tranh trừu tượng
+import kidsWorkshopImage from "../../../assets/images/products/product_image6.webp";
+import abstractPaintingImage from "../../../assets/images/products/product_image7.webp"; // ảnh tranh trừu tượng
 
 const WorkPage6 = () => {
   useEffect(() => {

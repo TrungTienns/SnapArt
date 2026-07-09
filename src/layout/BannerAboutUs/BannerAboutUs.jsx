@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './BannerAboutUs.scss';
 
-import bannerImage from '../../assets/images/bannerabout_us1.jpg';
+import bannerImage from '../../assets/images/bannerabout_us1.webp';
 import { useTranslation } from 'react-i18next';
 
 function BannerAboutUs() {

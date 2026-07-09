@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./WorkShopProduct.scss";
 
-import product1 from "../../assets/images/products/product_image7.jpg";
-import product2 from "../../assets/images/products/product_image2.jpg";
-import product3 from "../../assets/images/products/product_image6.jpg";
-import product4 from "../../assets/images/products/product_image3.jpg";
-import product5 from "../../assets/images/products/product_image5.jpg";
-import product6 from "../../assets/images/products/product_image10.jpg";
-import product7 from "../../assets/images/products/product_image1.jpg";
-import product8 from "../../assets/images/products/product_image8.jpg";
+import product1 from "../../assets/images/products/product_image7.webp";
+import product2 from "../../assets/images/products/product_image2.webp";
+import product3 from "../../assets/images/products/product_image6.webp";
+import product4 from "../../assets/images/products/product_image3.webp";
+import product5 from "../../assets/images/products/product_image5.webp";
+import product6 from "../../assets/images/products/product_image10.webp";
+import product7 from "../../assets/images/products/product_image1.webp";
+import product8 from "../../assets/images/products/product_image8.webp";
 
 const workshops = [
   { id: 1, titleKey: "workshop.item1", date: "19 Dec 2023", image: product1, path: "/workshop1" },

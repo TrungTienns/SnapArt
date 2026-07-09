@@ -4,10 +4,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Benefit.scss';
 
-import aboutus1 from '../../assets/images/aboutus_image1.jpg';
-import aboutus2 from '../../assets/images/boss.jpg';
-import aboutus3 from '../../assets/images/customer.jpg';
-import aboutus4 from '../../assets/images/color.jpg';
+import aboutus1 from '../../assets/images/aboutus_image1.webp';
+import aboutus2 from '../../assets/images/boss.webp';
+import aboutus3 from '../../assets/images/customer.webp';
+import aboutus4 from '../../assets/images/color.webp';
 
 import { useTranslation } from 'react-i18next';
 
