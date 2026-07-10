@@ -37,4 +37,7 @@ export const path = {
 
   // available paintings
   availablePaintings: "/available-paintings",
+
+  // available tote bag
+  availableToteBag: "/available-tote-bag",
 };

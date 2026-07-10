@@ -90,6 +90,15 @@ export default function Products() {
       workshopLink: "/custom-painting",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
       priceText: t("products.items.priceCustom"),
+    },
+    {
+      id: 7,
+      title: t("products.items.availableToteBag.title"),
+      sub: "",
+      img: img6,
+      workshopLink: "/available-tote-bags",
+      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
+      priceText: t("products.items.priceAvailable"),
     }
   ];
 

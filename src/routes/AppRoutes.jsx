@@ -49,6 +49,8 @@ const CustomPaintingsPage = lazy(() => import("../pages/CustomPaintingsPage/Cust
 // Available Paintings Page
 const AvailablePaintingsPage = lazy(() => import("../pages/AvailablePaintingsPage/AvailablePaintingsPage"));
 
+const AvailableToteBagPage = lazy(() => import("../pages/AvailableToteBagPage/AvailableToteBagPage"));
+
 // Simple loading spinner for Suspense fallback
 const PageLoader = () => (
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#faf9f6' }}>
@@ -114,6 +116,7 @@ const AppRoutes = () => {
           
           {/* Custom Paintings */}
           <Route path={path.customPaintings} element={<CustomPaintingsPage />} />
+          <Route path={path.availableToteBag} element={<AvailableToteBagPage />} />
           
           {/* 404 */}
           <Route path="*" element={<NotFound />} />

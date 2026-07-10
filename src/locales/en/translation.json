@@ -350,6 +350,7 @@
     "resinPainting": { "title": "Resin Painting" },
     "customPainting": { "title": "Custom Painting" },
     "availablePainting": { "title": "Available Painting" },
+    "availableToteBag": { "title": "Available Tote Bags" },
     "priceCustom": "Contact Us",
     "priceAvailable": "Contact Us" 
   }
