@@ -39,5 +39,5 @@ export const path = {
   availablePaintings: "/available-paintings",
 
   // available tote bag
-  availableToteBag: "/available-tote-bag",
+  availableToteBag: "/available-tote-bags",
 };

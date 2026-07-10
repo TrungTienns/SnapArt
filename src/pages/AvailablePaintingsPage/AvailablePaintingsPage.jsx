@@ -15,6 +15,7 @@ import img9 from "../../assets/images/customPainting/custom9.webp";
 import img10 from "../../assets/images/customPainting/custom10.webp";
 import img11 from "../../assets/images/customPainting/custom11.webp";
 import img12 from "../../assets/images/customPainting/custom12.webp";
+import img14 from "../../assets/images/customPainting/custom14.jpg";
 
 export default function AvailablePaintingsPage() {
   const { t, i18n } = useTranslation();
@@ -34,9 +35,10 @@ export default function AvailablePaintingsPage() {
     { id: 6,  title: "006", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40cm",            price: "600.000đ",   img: img6,  facebookLink },
     { id: 7,  title: "007", type: { vi: "Tranh Cát Đắp Nổi", en: "Sand Painting"    }, size: "40 x 50 cm",      price: "800.000đ",   img: img8,  facebookLink },
     { id: 8,  title: "008", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "30 x 40 cm",      price: "600.000đ",   img: img9,  facebookLink },
-    { id: 9,  title: "009", type: { vi: "Tranh Cát Đắp Nổi", en: "Sand Painting"    }, size: "(30 x 40 cm) x 3", price: "1.500.000đ", img: img10, facebookLink },
+    { id: 9,  title: "009", type: { vi: "Tranh Cát Đắp Nổi", en: "Sand Painting"    }, size: "(30 x 40 cm) x 3", price: "1.500.000đ", img: img10, facebookLink, sold: true },
     { id: 10, title: "010", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 60 cm",      price: "1.000.000đ", img: img11, facebookLink },
     { id: 11, title: "011", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "40 x 50 cm",      price: "800.000đ", img: img12, facebookLink },
+    { id: 12, title: "012", type: { vi: "Tranh Acrylic",      en: "Acrylic Painting" }, size: "30 x 40 cm",      price: "1.000.000đ", img: img14, facebookLink, sold: true },
   ];
 
   return (
@@ -52,15 +54,23 @@ export default function AvailablePaintingsPage() {
               <div
                 className="product-card"
                 key={`custom-${item.id}`}
-                onClick={() => window.open(item.facebookLink, "_blank")}
+                onClick={() => {
+                  if (!item.sold) window.open(item.facebookLink, "_blank");
+                }}
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter") window.open(item.facebookLink, "_blank");
+                  if (e.key === "Enter" && !item.sold) window.open(item.facebookLink, "_blank");
                 }}
+                style={item.sold ? { opacity: 0.85, cursor: "not-allowed" } : {}}
               >
                 <div className="product-image">
                   <img src={item.img} alt={item.title} />
+                  {item.sold && (
+                    <div style={{ position: "absolute", top: 12, left: 12, background: "rgba(0,0,0,0.6)", color: "white", padding: "4px 10px", borderRadius: "4px", fontSize: "12px", fontWeight: "bold", zIndex: 2 }}>
+                      SOLD
+                    </div>
+                  )}
                   <div className="product-image-overlay">
                     <div className="overlay-pill">
                       <span className="overlay-icon">🛒</span>
@@ -87,10 +97,14 @@ export default function AvailablePaintingsPage() {
                   className="product-btn"
                   onClick={(e) => {
                     e.stopPropagation();
-                    window.open(item.facebookLink, "_blank");
+                    if (!item.sold) {
+                      window.open(item.facebookLink, "_blank");
+                    }
                   }}
+                  style={item.sold ? { background: "#ccc", cursor: "not-allowed", boxShadow: "none", color: "#666" } : {}}
+                  disabled={item.sold}
                 >
-                  {t("products.orderButton") || "Đặt mua"}
+                  {item.sold ? "Đã bán" : (t("products.orderButton") || "Đặt mua")}
                 </button>
               </div>
             ))}

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Footer from "../../layout/Footer/Footer";
+import { path } from "../../common/path";
 import "./CustomPaintingsPage.scss";
 
 import heroBg from "../../assets/images/customPainting/custom1.webp";
@@ -20,6 +22,7 @@ import img8 from "../../assets/images/customPainting/custom13.webp";
 
 export default function CustomPaintingsPage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -184,6 +187,11 @@ export default function CustomPaintingsPage() {
               </div>
             </div>
           ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <button className="cp-btn-secondary" onClick={() => navigate(path.availablePaintings)}>
+            Xem thêm tranh đã bán
+          </button>
         </div>
       </section>
 

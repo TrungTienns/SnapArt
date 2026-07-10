@@ -96,7 +96,7 @@ export default function Products() {
       title: t("products.items.availableToteBag.title"),
       sub: "",
       img: img6,
-      workshopLink: "/available-tote-bag",
+      workshopLink: "/available-tote-bags",
       facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
       priceText: t("products.items.priceAvailable"),
     }
