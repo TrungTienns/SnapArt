@@ -1,47 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Blog.scss';
-
-import image1 from '../../assets/images/blog_image1.webp';
-import image2 from '../../assets/images/blog_image2.webp';
-import image3 from '../../assets/images/blog_image3.webp';
-import image4 from '../../assets/images/blog_image4.webp';
+import blogService from '../../services/blogService';
 
 function Blog() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: t("blog.post1.title"),
-      description: t("blog.post1.desc"),
-      image: image1,
-      link: "/blog1",
-    },
-    {
-      id: 2,
-      title: t("blog.post2.title"),
-      description: t("blog.post2.desc"),
-      image: image2,
-      link: "/blog2",
-    },
-    {
-      id: 3,
-      title: t("blog.post3.title"),
-      description: t("blog.post3.desc"),
-      image: image3,
-      link: "/blog3",
-    }
-    // {
-    //   id: 4,
-    //   title: t("blog.post4.title"),
-    //   description: t("blog.post4.desc"),
-    //   image: image4,
-    //   link: "/blog4",
-    // },
-  ];
+  // Helper to strip HTML tags for preview
+  const stripHtml = (html) => {
+    if (!html) return '';
+    return html.replace(/<[^>]+>/g, '');
+  };
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const data = await blogService.getAll();
+        setBlogPosts(data);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
 
   const handleReadMore = (link) => {
     navigate(link);
@@ -49,28 +36,39 @@ function Blog() {
 
   return (
     <section className="blog-workshop">
-      <h2 className="blog-heading">{t("blog.heading")}</h2>
+      <h2 className="blog-heading">{t("blog.heading") || "Latest Blogs"}</h2>
 
-      <div className="blog-container">
-        {blogPosts.map((post) => (
-          <div key={post.id} className="blog-card">
-            <div className="card-image">
-              <img src={post.image} alt={post.title} />
-            </div>
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '20px' }}>Loading blogs...</div>
+      ) : (
+        <div className="blog-container">
+          {blogPosts.map((post) => (
+            <div key={post.blog_id} className="blog-card">
+              <div className="card-image">
+                <img 
+                  src={post.image_url || 'https://source.unsplash.com/random/400x300/?art,blog'} 
+                  alt={post.title} 
+                />
+              </div>
 
-            <div className="card-content">
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-              <button
-                className="read-more"
-                onClick={() => handleReadMore(post.link)}
-              >
-                {t("blog.readMore")}
-              </button>
+              <div className="card-content">
+                <h3>{i18n.language === 'en' && post.title_en ? post.title_en : post.title}</h3>
+                <p>
+                  {i18n.language === 'en' && post.content_en 
+                    ? stripHtml(post.content_en).substring(0, 100) + '...' 
+                    : (post.content ? stripHtml(post.content).substring(0, 100) + '...' : '')}
+                </p>
+                <button
+                  className="read-more"
+                  onClick={() => handleReadMore(`/blog/${post.slug}`)}
+                >
+                  {t("blog.readMore") || "Read More"}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

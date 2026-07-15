@@ -5,6 +5,7 @@ import Banner from "../../layout/Banner/Banner";
 import "./HomePage.scss";
 
 import AboutUs from "../../layout/AboutUs/AboutUs";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
 import Benefit from "../../layout/Benefit/Benefit";
 import Contact from "../../layout/Rating/Rating.jsx";
 import Blog from "../../layout/Blog/Blog.jsx";
@@ -24,6 +25,7 @@ function HomePage() {
       <Header footerRef={footerRef} />
       <Banner />
       <AboutUs />
+      <ProductGrid />
       <Benefit />
       <Blog />
       <Custom />

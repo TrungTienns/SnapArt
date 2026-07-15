@@ -1,6 +1,6 @@
 // src/routes/AppRoutes.jsx
 import React, { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // Layout & Context components (these should be loaded immediately)
 import Header from "../layout/Header/Header";
@@ -15,12 +15,10 @@ const LanguageSelector = lazy(() => import("../pages/LanguageSelector/LanguageSe
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 const WorkPage = lazy(() => import("../pages/WorkPage/WorkPage"));
 const BlogPage = lazy(() => import("../pages/BlogPage/BlogPage"));
+const BlogDetail = lazy(() => import("../pages/BlogDetail/BlogDetail"));
+const AdminPage = lazy(() => import("../pages/AdminPage/AdminPage"));
 
-// Blog pages
-const Blog1 = lazy(() => import("../pages/BlogsPage/Blog1/Blog1"));
-const Blog2 = lazy(() => import("../pages/BlogsPage/Blog2/Blog2"));
-const Blog3 = lazy(() => import("../pages/BlogsPage/Blog3/Blog3"));
-const Blog4 = lazy(() => import("../pages/BlogsPage/Blog4/Blog4"));
+// Blog pages removed (now dynamic)
 
 // Product pages
 const Product1 = lazy(() => import("../pages/WorkPages/WorkPage1/WorkPage1"));
@@ -65,10 +63,13 @@ const PageLoader = () => (
 );
 
 const AppRoutes = () => {
+  const location = useLocation();
+  const isAdminPage = location.pathname.startsWith('/admin');
+
   return (
     <>
-      {/* Header luôn hiển thị */}
-      <Header />
+      {/* Header luôn hiển thị ngoại trừ trang Admin */}
+      {!isAdminPage && <Header />}
 
       {/* Scroll tự động lên đầu mỗi khi chuyển route */}
       <ScrollToTop />
@@ -82,13 +83,10 @@ const AppRoutes = () => {
           <Route path={path.contact} element={<ContactPage />} />
           <Route path={path.works} element={<WorkPage />} />
           <Route path={path.blog} element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/admin" element={<AdminPage />} />
 
-          {/* Blog pages */}
-          <Route path={path.blog1} element={<Blog1 />} />
-          <Route path={path.blog2} element={<Blog2 />} />
-          <Route path={path.blog3} element={<Blog3 />} />
-          <Route path={path.blog4} element={<Blog4 />} />
-          
+          {/* Blog dynamic detail route will go here eventually */}
           {/* Product pages */}
           <Route path={path.product1} element={<Product1 />} />
           <Route path={path.product2} element={<Product2 />} />
