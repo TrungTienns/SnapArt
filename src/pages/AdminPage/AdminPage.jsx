@@ -10,11 +10,21 @@ import BlogForm from './components/BlogForm';
 import BlogList from './components/BlogList';
 import CategoryList from './components/CategoryList';
 import CategoryForm from './components/CategoryForm';
+import UserList from './components/UserList';
+import { AuthContext } from '../../context/AuthContext';
 import './AdminPage.scss';
 
 const AdminPage = () => {
   const navigate = useNavigate();
-  const [activeMenu, setActiveMenu] = useState('add-product');
+  const { user } = React.useContext(AuthContext);
+
+  React.useEffect(() => {
+    if (!user || user.role !== 'admin') {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+
+  const [activeMenu, setActiveMenu] = useState('dashboard');
   
   // Shared state between ProductList and ProductForm
   const [editingProductId, setEditingProductId] = useState(null);
@@ -73,6 +83,14 @@ const AdminPage = () => {
 
   const handleEditProductClick = (product) => {
     setEditingProductId(product.product_id);
+    
+    let parsedMetadata = {};
+    if (typeof product.metadata === 'string') {
+      try { parsedMetadata = JSON.parse(product.metadata); } catch(e) {}
+    } else if (product.metadata) {
+      parsedMetadata = product.metadata;
+    }
+
     setProductDataToEdit({
       category_id: product.category_id || 1,
       name: product.name || '',
@@ -86,9 +104,12 @@ const AdminPage = () => {
       sale_price: product.sale_price || '',
       stock_quantity: product.stock_quantity || 10,
       product_type: product.product_type || 'physical',
-      duration: product.metadata?.duration || '',
-      target_audience: product.metadata?.target_audience || '',
-      takeaway: product.metadata?.takeaway || ''
+      duration: parsedMetadata.duration || '',
+      target_audience: parsedMetadata.target_audience || '',
+      target_audience_en: parsedMetadata.target_audience_en || '',
+      takeaway: parsedMetadata.takeaway || '',
+      takeaway_en: parsedMetadata.takeaway_en || '',
+      image_url: product.image_url || ''
     });
     setActiveMenu('add-product');
   };
@@ -124,23 +145,54 @@ const AdminPage = () => {
 
       {/* MAIN CONTENT */}
       <main className="admin-main">
-        <header className="admin-header">
-          <button className="back-btn" onClick={() => navigate('/')}>
-            <FontAwesomeIcon icon={faArrowLeft} /> Back to homepage
-          </button>
-        </header>
+        <div className="admin-topbar">
+          <div className="topbar-right">
+            <div className="user-info">
+              <span className="user-name">{user?.full_name || 'Admin'}</span>
+              <span className="user-role">Administrator</span>
+            </div>
+            <div className="user-avatar">
+              <i className="fa-solid fa-user-tie"></i>
+            </div>
+          </div>
+        </div>
 
         <div className="admin-content">
-          <div className="content-header">
-            {activeMenu === 'dashboard' && <h1>Dashboard Overview</h1>}
-            {activeMenu === 'manage-products' && <h1>Manage Products</h1>}
-            {activeMenu === 'add-product' && <h1>{editingProductId ? 'Edit Product' : 'Add New Product'}</h1>}
-            {activeMenu === 'manage-blogs' && <h1>Manage Blogs</h1>}
-            {activeMenu === 'add-blog' && <h1>{editingBlogId ? 'Edit Blog' : 'Add New Blog'}</h1>}
-            {activeMenu === 'manage-categories' && <h1>Manage Categories</h1>}
-            {activeMenu === 'add-category' && <h1>{editingCategoryId ? 'Edit Category' : 'Add New Category'}</h1>}
-            <p>Fill in the necessary information below to manage your catalog.</p>
-          </div>
+          {['add-product', 'add-blog', 'add-category'].includes(activeMenu) ? (
+            <div className="form-header-beautiful">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+                <div>
+                  {activeMenu === 'add-product' && <h1>{editingProductId ? 'Chỉnh sửa Sản phẩm' : 'Thêm Sản phẩm Mới'}</h1>}
+                  {activeMenu === 'add-blog' && <h1>{editingBlogId ? 'Chỉnh sửa Bài viết' : 'Thêm Bài viết Mới'}</h1>}
+                  {activeMenu === 'add-category' && <h1>{editingCategoryId ? 'Chỉnh sửa Danh mục' : 'Thêm Danh mục Mới'}</h1>}
+                  <p>Vui lòng điền đầy đủ các thông tin cần thiết vào biểu mẫu bên dưới.</p>
+                </div>
+                <button className="back-btn" onClick={() => {
+                  if (activeMenu === 'add-product') {
+                    handleClearProductEdit();
+                    handleMenuChange('manage-products');
+                  } else if (activeMenu === 'add-blog') {
+                    handleClearBlogEdit();
+                    handleMenuChange('manage-blogs');
+                  } else if (activeMenu === 'add-category') {
+                    handleClearCategoryEdit();
+                    handleMenuChange('manage-categories');
+                  }
+                }}>
+                  <FontAwesomeIcon icon={faArrowLeft} /> Quay lại
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="content-header">
+              {activeMenu === 'dashboard' && <h1>Dashboard Overview</h1>}
+              {activeMenu === 'manage-products' && <h1>Quản lý Sản phẩm</h1>}
+              {activeMenu === 'manage-blogs' && <h1>Quản lý Bài viết (Blogs)</h1>}
+              {activeMenu === 'manage-categories' && <h1>Quản lý Danh mục</h1>}
+              {activeMenu === 'manage-users' && <h1>Quản lý Người dùng</h1>}
+              <p>Tổng quan hệ thống và quản lý nội dung của bạn.</p>
+            </div>
+          )}
 
           <div className="admin-card">
             {message.text && (
@@ -175,6 +227,7 @@ const AdminPage = () => {
                 initialBlogData={blogDataToEdit}
                 setMessage={setMessage}
                 onClearEdit={handleClearBlogEdit}
+                onSuccess={() => handleMenuChange('manage-blogs')}
               />
             )}
             
@@ -202,7 +255,12 @@ const AdminPage = () => {
                 initialCategoryData={categoryDataToEdit}
                 setMessage={setMessage}
                 onClearEdit={handleClearCategoryEdit}
+                onSuccess={() => handleMenuChange('manage-categories')}
               />
+            )}
+
+            {activeMenu === 'manage-users' && (
+              <UserList setMessage={setMessage} />
             )}
             
           </div>

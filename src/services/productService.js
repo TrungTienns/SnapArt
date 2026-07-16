@@ -6,6 +6,11 @@ const productService = {
     return http.get(url);
   },
   
+  getById: (id) => {
+    const url = `/products/${id}`;
+    return http.get(url);
+  },
+  
   create: (data) => {
     const url = '/products';
     return http.post(url, data, {

@@ -13,7 +13,9 @@ function Blog() {
   // Helper to strip HTML tags for preview
   const stripHtml = (html) => {
     if (!html) return '';
-    return html.replace(/<[^>]+>/g, '');
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
   };
 
   useEffect(() => {
@@ -52,11 +54,14 @@ function Blog() {
               </div>
 
               <div className="card-content">
+                <div className="card-meta">
+                  <span className="blog-date">{new Date(post.created_at).toLocaleDateString(i18n.language === 'en' ? 'en-US' : 'vi-VN')}</span>
+                </div>
                 <h3>{i18n.language === 'en' && post.title_en ? post.title_en : post.title}</h3>
                 <p>
                   {i18n.language === 'en' && post.content_en 
-                    ? stripHtml(post.content_en).substring(0, 100) + '...' 
-                    : (post.content ? stripHtml(post.content).substring(0, 100) + '...' : '')}
+                    ? stripHtml(post.content_en)
+                    : stripHtml(post.content)}
                 </p>
                 <button
                   className="read-more"

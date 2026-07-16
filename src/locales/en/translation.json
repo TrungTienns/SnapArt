@@ -341,6 +341,7 @@
   "title": "List of Products",
   "clickToView": "Click to view more details",
   "bookButton": "Book now",
+  "price_label": "Price from",
   "availablePaintingTitle": "Paintings Available For Sales",
   "orderButton": "Order Now",
   "items": {

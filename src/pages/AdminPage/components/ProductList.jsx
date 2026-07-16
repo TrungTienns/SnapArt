@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash, faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 import productService from '../../../services/productService';
 
 const ProductList = ({ handleEditProductClick, handleAddNew, setMessage, fetchKey }) => {
@@ -20,13 +21,35 @@ const ProductList = ({ handleEditProductClick, handleAddNew, setMessage, fetchKe
   };
 
   const handleDeleteProduct = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this product?")) return;
-    try {
-      await productService.delete(id);
-      setMessage({ type: 'success', text: 'Product deleted successfully!' });
-      fetchProducts();
-    } catch (error) {
-      setMessage({ type: 'error', text: 'Failed to delete product' });
+    const result = await Swal.fire({
+      title: 'Bạn có chắc chắn muốn xóa?',
+      text: 'Hành động này không thể hoàn tác!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#ef4444',
+      cancelButtonColor: '#9ca3af',
+      confirmButtonText: 'Xóa',
+      cancelButtonText: 'Hủy'
+    });
+
+    if (result.isConfirmed) {
+      try {
+        await productService.delete(id);
+        await Swal.fire({
+          title: 'Đã xóa!',
+          text: 'Sản phẩm đã được xóa.',
+          icon: 'success',
+          confirmButtonColor: '#4f46e5'
+        });
+        fetchProducts();
+      } catch (error) {
+        Swal.fire({
+          title: 'Lỗi!',
+          text: 'Không thể xóa sản phẩm.',
+          icon: 'error',
+          confirmButtonColor: '#4f46e5'
+        });
+      }
     }
   };
 

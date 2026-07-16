@@ -21,20 +21,9 @@ function App() {
     <>
       {loading && (
         <div className="loading-cat-container">
-          {/* Bạn có thể chèn animation Lottie ở đây */}
           <h1>🐱 Loading...</h1>
         </div>
       )}
-
-      {/* Banner */}
-      <section className="banner" data-aos="fade">
-        <h1>Welcome to Besnik Consultancy</h1>
-      </section>
-
-      {/* About Us */}
-      <AboutUsSection />
-
-      {/* App Routes */}
       <AppRoutes />
     </>
   );

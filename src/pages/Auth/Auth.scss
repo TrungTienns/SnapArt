@@ -1,0 +1,119 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+
+  .auth-container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    text-align: center;
+
+    .brand-logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    p.subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        label {
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: #444;
+        }
+
+        input {
+          padding: 14px 16px;
+          border: 1.5px solid #eee;
+          border-radius: 12px;
+          font-size: 1rem;
+          outline: none;
+          transition: all 0.3s ease;
+
+          &:focus {
+            border-color: #ff9994;
+            box-shadow: 0 0 0 4px rgba(255, 153, 148, 0.1);
+          }
+        }
+      }
+
+      .error-msg {
+        color: #e74c3c;
+        font-size: 0.9rem;
+        background: #fdecea;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .submit-btn {
+        background: #ff9994;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s;
+        margin-top: 10px;
+
+        &:hover:not(:disabled) {
+          background: #ff7a75;
+          transform: translateY(-2px);
+        }
+        
+        &:disabled {
+          background: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .auth-footer {
+      margin-top: 30px;
+      color: #666;
+      font-size: 0.95rem;
+
+      a {
+        color: #ff9994;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

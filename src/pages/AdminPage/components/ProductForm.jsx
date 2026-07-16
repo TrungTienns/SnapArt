@@ -40,7 +40,10 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
         const data = await categoryService.getAll();
         setCategoriesList(data);
         if (data.length > 0) {
-          setProductData(prev => ({...prev, category_id: data[0].category_id}));
+          setProductData(prev => {
+            if (!prev.category_id || prev.category_id === 1) return {...prev, category_id: data[0].category_id};
+            return prev;
+          });
         }
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -71,7 +74,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
     setProductImage(null);
     setProductImagePreview(null);
     if (editingProductId) {
-      setProductData({ ...productData, image_url: '' });
+      setProductData(prev => ({ ...prev, image_url: '' }));
     }
   };
 
@@ -84,7 +87,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
 
   const handlePriceChange = (e) => {
     const rawValue = e.target.value.replace(/\D/g, '');
-    setProductData({...productData, price: rawValue});
+    setProductData(prev => ({...prev, price: rawValue}));
   };
 
   const handleProductSubmit = async (e) => {
@@ -96,7 +99,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
       const formData = new FormData();
       Object.keys(productData).forEach(key => {
         // Skip metadata fields here, we'll bundle them
-        if (!['duration', 'target_audience', 'takeaway'].includes(key)) {
+        if (!['duration', 'target_audience', 'target_audience_en', 'takeaway', 'takeaway_en'].includes(key)) {
           formData.append(key, productData[key]);
         }
       });
@@ -105,7 +108,9 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
         const metadataObj = {
           duration: productData.duration,
           target_audience: productData.target_audience,
-          takeaway: productData.takeaway
+          target_audience_en: productData.target_audience_en,
+          takeaway: productData.takeaway,
+          takeaway_en: productData.takeaway_en
         };
         formData.append('metadata', JSON.stringify(metadataObj));
       }
@@ -133,7 +138,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
         category_id: categoriesList.length > 0 ? categoriesList[0].category_id : 1, 
         name: '', name_en: '', description: '', description_en: '', 
         size: '', material: '', material_en: '', price: '', stock_quantity: 10,
-        product_type: 'physical', duration: '', target_audience: '', takeaway: '', image_url: ''
+        product_type: 'physical', duration: '', target_audience: '', target_audience_en: '', takeaway: '', takeaway_en: '', image_url: ''
       });
       setProductImage(null);
       setProductImagePreview(null);
@@ -160,7 +165,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
           <label>Product Type *</label>
           <select 
             value={productData.product_type} 
-            onChange={e => setProductData({...productData, product_type: e.target.value})}
+            onChange={e => setProductData(prev => ({...prev, product_type: e.target.value}))}
             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #d1d5db' }}
           >
             <option value="physical">Physical Product (Tranh)</option>
@@ -171,7 +176,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
           <label>Category *</label>
           <select 
             value={productData.category_id} 
-            onChange={e => setProductData({...productData, category_id: e.target.value})}
+            onChange={e => setProductData(prev => ({...prev, category_id: e.target.value}))}
             style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #d1d5db' }}
           >
             {categoriesList.map(cat => (
@@ -188,32 +193,32 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
       <div className="form-row">
         <div className="form-group">
           <label>Name (VI) *</label>
-          <input type="text" value={productData.name} onChange={e => setProductData({...productData, name: e.target.value})} required />
+          <input type="text" value={productData.name} onChange={e => setProductData(prev => ({...prev, name: e.target.value}))} required />
         </div>
         <div className="form-group">
           <label>Name (EN)</label>
-          <input type="text" value={productData.name_en} onChange={e => setProductData({...productData, name_en: e.target.value})} />
+          <input type="text" value={productData.name_en} onChange={e => setProductData(prev => ({...prev, name_en: e.target.value}))} />
         </div>
       </div>
       <div className="form-row">
         <div className="form-group">
           <label>Description (VI)</label>
-          <textarea value={productData.description} onChange={e => setProductData({...productData, description: e.target.value})} />
+          <textarea value={productData.description} onChange={e => setProductData(prev => ({...prev, description: e.target.value}))} />
         </div>
         <div className="form-group">
           <label>Description (EN)</label>
-          <textarea value={productData.description_en} onChange={e => setProductData({...productData, description_en: e.target.value})} />
+          <textarea value={productData.description_en} onChange={e => setProductData(prev => ({...prev, description_en: e.target.value}))} />
         </div>
       </div>
       {productData.product_type === 'physical' && (
         <div className="form-row">
           <div className="form-group">
             <label>Material (VI)</label>
-            <input type="text" value={productData.material} onChange={e => setProductData({...productData, material: e.target.value})} />
+            <input type="text" value={productData.material} onChange={e => setProductData(prev => ({...prev, material: e.target.value}))} />
           </div>
           <div className="form-group">
             <label>Material (EN)</label>
-            <input type="text" value={productData.material_en} onChange={e => setProductData({...productData, material_en: e.target.value})} />
+            <input type="text" value={productData.material_en} onChange={e => setProductData(prev => ({...prev, material_en: e.target.value}))} />
           </div>
         </div>
       )}
@@ -223,17 +228,27 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
           <div className="form-row">
             <div className="form-group">
               <label>Duration (Thời lượng) *</label>
-              <input type="text" placeholder="VD: 4-5 tiếng" value={productData.duration} onChange={e => setProductData({...productData, duration: e.target.value})} required={productData.product_type === 'workshop'} />
-            </div>
-            <div className="form-group">
-              <label>Target Audience (Phù hợp với ai) *</label>
-              <input type="text" placeholder="VD: Người mới bắt đầu" value={productData.target_audience} onChange={e => setProductData({...productData, target_audience: e.target.value})} required={productData.product_type === 'workshop'} />
+              <input type="text" placeholder="VD: 4-5 tiếng" value={productData.duration} onChange={e => setProductData(prev => ({...prev, duration: e.target.value}))} required={productData.product_type === 'workshop'} />
             </div>
           </div>
           <div className="form-row">
             <div className="form-group">
-              <label>Takeaway (Thành phẩm) *</label>
-              <input type="text" placeholder="VD: Tranh mang về" value={productData.takeaway} onChange={e => setProductData({...productData, takeaway: e.target.value})} required={productData.product_type === 'workshop'} />
+              <label>Target Audience (Phù hợp với ai - VI) *</label>
+              <input type="text" placeholder="VD: Người mới bắt đầu" value={productData.target_audience} onChange={e => setProductData(prev => ({...prev, target_audience: e.target.value}))} required={productData.product_type === 'workshop'} />
+            </div>
+            <div className="form-group">
+              <label>Target Audience (EN)</label>
+              <input type="text" placeholder="VD: Beginners" value={productData.target_audience_en} onChange={e => setProductData(prev => ({...prev, target_audience_en: e.target.value}))} />
+            </div>
+          </div>
+          <div className="form-row">
+            <div className="form-group">
+              <label>Takeaway (Thành phẩm - VI) *</label>
+              <input type="text" placeholder="VD: Tranh mang về" value={productData.takeaway} onChange={e => setProductData(prev => ({...prev, takeaway: e.target.value}))} required={productData.product_type === 'workshop'} />
+            </div>
+            <div className="form-group">
+              <label>Takeaway (EN)</label>
+              <input type="text" placeholder="VD: Painting to take home" value={productData.takeaway_en} onChange={e => setProductData(prev => ({...prev, takeaway_en: e.target.value}))} />
             </div>
           </div>
         </>
@@ -252,7 +267,7 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
         {productData.product_type === 'physical' && (
           <div className="form-group">
             <label>Size</label>
-            <input type="text" value={productData.size} onChange={e => setProductData({...productData, size: e.target.value})} placeholder="e.g. 60x90cm" />
+            <input type="text" value={productData.size} onChange={e => setProductData(prev => ({...prev, size: e.target.value}))} placeholder="e.g. 60x90cm" />
           </div>
         )}
       </div>

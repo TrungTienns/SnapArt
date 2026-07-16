@@ -3,9 +3,10 @@ import ReactQuill from 'react-quill-new';
 import 'react-quill-new/dist/quill.snow.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 import blogService from '../../../services/blogService';
 
-const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, refreshBlogs }) => {
+const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, refreshBlogs, onSuccess }) => {
   const [blogData, setBlogData] = useState({ title: '', title_en: '', content: '', content_en: '', image_url: '' });
   const [blogImage, setBlogImage] = useState(null);
   const [blogImagePreview, setBlogImagePreview] = useState(null);
@@ -37,10 +38,20 @@ const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, ref
 
       if (editingBlogId) {
         await blogService.update(editingBlogId, formData);
-        setMessage({ type: 'success', text: 'Blog updated successfully!' });
+        await Swal.fire({
+          title: 'Thành công!',
+          text: 'Cập nhật bài viết thành công!',
+          icon: 'success',
+          confirmButtonColor: '#ff9a9e'
+        });
       } else {
         await blogService.create(formData);
-        setMessage({ type: 'success', text: 'Blog created successfully!' });
+        await Swal.fire({
+          title: 'Thành công!',
+          text: 'Thêm bài viết mới thành công!',
+          icon: 'success',
+          confirmButtonColor: '#ff9a9e'
+        });
       }
       
       setBlogData({ title: '', title_en: '', content: '', content_en: '', image_url: '' });
@@ -48,8 +59,14 @@ const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, ref
       setBlogImagePreview(null);
       onClearEdit();
       if (refreshBlogs) refreshBlogs();
+      if (onSuccess) onSuccess();
     } catch (error) {
-      setMessage({ type: 'error', text: error.response?.data?.message || 'Failed to process blog' });
+      Swal.fire({
+        title: 'Lỗi!',
+        text: error.response?.data?.message || 'Có lỗi xảy ra, vui lòng thử lại.',
+        icon: 'error',
+        confirmButtonColor: '#ff9a9e'
+      });
     } finally {
       setLoading(false);
     }
@@ -77,7 +94,7 @@ const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, ref
     setBlogImage(null);
     setBlogImagePreview(null);
     if (editingBlogId) {
-      setBlogData({ ...blogData, image_url: '' });
+      setBlogData(prev => ({ ...prev, image_url: '' }));
     }
   };
 
@@ -86,11 +103,11 @@ const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, ref
       <div className="form-row">
         <div className="form-group">
           <label>Title (VI) *</label>
-          <input type="text" value={blogData.title} onChange={e => setBlogData({...blogData, title: e.target.value})} required />
+          <input type="text" value={blogData.title} onChange={e => setBlogData(prev => ({...prev, title: e.target.value}))} required />
         </div>
         <div className="form-group">
           <label>Title (EN)</label>
-          <input type="text" value={blogData.title_en} onChange={e => setBlogData({...blogData, title_en: e.target.value})} />
+          <input type="text" value={blogData.title_en} onChange={e => setBlogData(prev => ({...prev, title_en: e.target.value}))} />
         </div>
       </div>
       <div className="form-row">
@@ -99,7 +116,7 @@ const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, ref
           <ReactQuill 
             theme="snow" 
             value={blogData.content} 
-            onChange={content => setBlogData({...blogData, content})} 
+            onChange={content => setBlogData(prev => ({...prev, content}))} 
             placeholder="Viết nội dung bài blog tiếng Việt ở đây..."
           />
         </div>
@@ -110,7 +127,7 @@ const BlogForm = ({ editingBlogId, initialBlogData, setMessage, onClearEdit, ref
           <ReactQuill 
             theme="snow" 
             value={blogData.content_en} 
-            onChange={content => setBlogData({...blogData, content_en: content})} 
+            onChange={content => setBlogData(prev => ({...prev, content_en: content}))} 
             placeholder="Write English blog content here..."
           />
         </div>

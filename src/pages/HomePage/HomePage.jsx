@@ -5,10 +5,10 @@ import Banner from "../../layout/Banner/Banner";
 import "./HomePage.scss";
 
 import AboutUs from "../../layout/AboutUs/AboutUs";
-import ProductGrid from "../../components/ProductGrid/ProductGrid";
 import Benefit from "../../layout/Benefit/Benefit";
 import Contact from "../../layout/Rating/Rating.jsx";
 import Blog from "../../layout/Blog/Blog.jsx";
+import Products from "../../layout/Products/Products.jsx"
 import AllRating from "../../layout/AllRating/AllRating.jsx";
 import Custom from "../../layout/Custom/CustomPainting.jsx";
 
@@ -19,14 +19,11 @@ function HomePage() {
 
   return (
     <div className="homepage">
-      {/* 🌸 hiệu ứng hoa rơi */}
-      {/* <SakuraFall /> */}
-
       <Header footerRef={footerRef} />
       <Banner />
       <AboutUs />
-      <ProductGrid />
       <Benefit />
+      <Products />
       <Blog />
       <Custom />
       <Contact />

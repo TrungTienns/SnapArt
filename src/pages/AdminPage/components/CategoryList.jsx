@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash, faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 import categoryService from '../../../services/categoryService';
 
 const CategoryList = ({ handleEditCategoryClick, handleAddNew, setMessage, fetchKey }) => {
@@ -20,13 +21,35 @@ const CategoryList = ({ handleEditCategoryClick, handleAddNew, setMessage, fetch
   };
 
   const handleDeleteCategory = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this category?")) return;
-    try {
-      await categoryService.delete(id);
-      setMessage({ type: 'success', text: 'Category deleted successfully!' });
-      fetchCategories();
-    } catch (error) {
-      setMessage({ type: 'error', text: 'Failed to delete category' });
+    const result = await Swal.fire({
+      title: 'Bạn có chắc chắn muốn xóa?',
+      text: 'Danh mục này sẽ bị xóa!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#ef4444',
+      cancelButtonColor: '#9ca3af',
+      confirmButtonText: 'Xóa',
+      cancelButtonText: 'Hủy'
+    });
+
+    if (result.isConfirmed) {
+      try {
+        await categoryService.delete(id);
+        await Swal.fire({
+          title: 'Đã xóa!',
+          text: 'Danh mục đã được xóa.',
+          icon: 'success',
+          confirmButtonColor: '#4f46e5'
+        });
+        fetchCategories();
+      } catch (error) {
+        Swal.fire({
+          title: 'Lỗi!',
+          text: 'Không thể xóa danh mục này.',
+          icon: 'error',
+          confirmButtonColor: '#4f46e5'
+        });
+      }
     }
   };
 

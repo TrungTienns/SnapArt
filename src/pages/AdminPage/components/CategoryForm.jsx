@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2';
 import categoryService from '../../../services/categoryService';
 
-const CategoryForm = ({ editingCategoryId, initialCategoryData, setMessage, onClearEdit, refreshCategories }) => {
+const CategoryForm = ({ editingCategoryId, initialCategoryData, setMessage, onClearEdit, refreshCategories, onSuccess }) => {
   const [categoryData, setCategoryData] = useState({ name: '', name_en: '', parent_id: '' });
   const [categoriesList, setCategoriesList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -45,16 +46,27 @@ const CategoryForm = ({ editingCategoryId, initialCategoryData, setMessage, onCl
 
       if (editingCategoryId) {
         await categoryService.update(editingCategoryId, dataToSend);
-        setMessage({ type: 'success', text: 'Category updated successfully!' });
+        await Swal.fire({
+          title: 'Thành công!',
+          text: 'Cập nhật danh mục thành công!',
+          icon: 'success',
+          confirmButtonColor: '#4f46e5'
+        });
       } else {
         await categoryService.create(dataToSend);
-        setMessage({ type: 'success', text: 'Category created successfully!' });
+        await Swal.fire({
+          title: 'Thành công!',
+          text: 'Thêm danh mục thành công!',
+          icon: 'success',
+          confirmButtonColor: '#4f46e5'
+        });
       }
       
       setCategoryData({ name: '', name_en: '', parent_id: '' });
       onClearEdit();
       if (refreshCategories) refreshCategories();
       fetchCategories(); // Refresh dropdown
+      if (onSuccess) onSuccess();
     } catch (error) {
       setMessage({ type: 'error', text: error.response?.data?.message || 'Failed to process category' });
     } finally {

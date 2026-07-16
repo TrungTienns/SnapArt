@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import blogService from '../../services/blogService';
+import Footer from '../../layout/Footer/Footer';
 import './BlogDetail.scss';
 
 const BlogDetail = () => {
@@ -12,6 +13,13 @@ const BlogDetail = () => {
   const [recommendedBlogs, setRecommendedBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const stripHtml = (html) => {
+    if (!html) return '';
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  };
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -50,9 +58,9 @@ const BlogDetail = () => {
   const content = i18n.language === 'en' && blog.content_en ? blog.content_en : blog.content;
 
   return (
-    <div className="blog-detail-layout">
-      {/* Cột trái: Bài đọc chính */}
-      <div className="blog-main-content">
+    <>
+      <div className="blog-detail-layout">
+        <div className="blog-main-content">
         {blog.image_url ? (
           <img src={blog.image_url} alt={title} className="blog-hero-image" />
         ) : (
@@ -73,8 +81,6 @@ const BlogDetail = () => {
           dangerouslySetInnerHTML={{ __html: content }} 
         />
       </div>
-
-      {/* Cột phải: Có thể bạn sẽ thích */}
       <div className="blog-sidebar">
         <h2>{i18n.language === 'en' ? 'You might also like' : 'Có thể bạn sẽ thích'}</h2>
         
@@ -98,7 +104,7 @@ const BlogDetail = () => {
                 />
                 <div className="recommended-info">
                   <h4>{itemTitle}</h4>
-                  <p>{itemContent ? itemContent.substring(0, 50) + '...' : ''}</p>
+                  <p>{itemContent ? stripHtml(itemContent).substring(0, 50) + '...' : ''}</p>
                   <span className="date">{new Date(item.created_at).toLocaleDateString(i18n.language === 'en' ? 'en-US' : 'vi-VN')}</span>
                 </div>
               </div>
@@ -111,6 +117,8 @@ const BlogDetail = () => {
         </div>
       </div>
     </div>
+    <Footer />
+  </>
   );
 };
 

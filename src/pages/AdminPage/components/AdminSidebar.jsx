@@ -10,13 +10,12 @@ const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
 
   return (
     <aside className="admin-sidebar">
-      <div className="sidebar-brand">
-        <div className="brand-icon">SA</div>
-        SnapArt Analytics Hub
+      <div className="sidebar-brand" onClick={() => navigate('/')} style={{cursor: 'pointer'}}>
+        <div className="brand-text">SnapArt</div>
       </div>
 
       <div className="sidebar-section">
-        <div className="section-title">BOARDS</div>
+        <div className="section-title">MENU</div>
         <ul>
           <li>
             <button 
@@ -50,37 +49,25 @@ const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
               <FontAwesomeIcon icon={faList} /> Manage Blogs
             </button>
           </li>
-
+          <li>
+            <button 
+              className={activeMenu === 'manage-users' ? 'active' : ''} 
+              onClick={() => handleMenuChange('manage-users')}
+            >
+              <i className="fa-solid fa-users" style={{ marginRight: '8px' }}></i> Manage Users
+            </button>
+          </li>
         </ul>
       </div>
 
-      <div className="sidebar-section">
-        <div className="section-title">OTHER</div>
+      <div className="sidebar-section logout-section">
         <ul>
           <li>
-            <button onClick={() => navigate('/')}>
-              <FontAwesomeIcon icon={faArrowLeft} /> Back to Website
-            </button>
-          </li>
-          <li>
-            <button>
-              <FontAwesomeIcon icon={faCog} /> Settings
-            </button>
-          </li>
-          <li>
-            <button>
-              <FontAwesomeIcon icon={faHeadset} /> Support
+            <button className="logout-btn" onClick={() => navigate('/')}>
+              <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
             </button>
           </li>
         </ul>
-      </div>
-
-      <div className="sidebar-footer">
-        <img src="https://ui-avatars.com/api/?name=Admin+User&background=2c3e50&color=fff" alt="Admin" />
-        <div className="user-info">
-          <span>Admin User</span>
-          <small>Administrator</small>
-        </div>
       </div>
     </aside>
   );

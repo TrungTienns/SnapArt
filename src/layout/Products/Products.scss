@@ -54,9 +54,9 @@ $bg-card: #fdfdfd;
     border-color 0.3s ease;
 
   &:hover {
-    transform: translateY(-10px);
-    border-color: $primary;
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+    transform: translateY(-8px);
+    border-color: rgba(255, 153, 148, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
   }
 
   @media screen and (max-width: 768px) {
@@ -69,10 +69,12 @@ $bg-card: #fdfdfd;
 }
 
 .product-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: $text-dark;
+  text-align: left;
+  line-height: 1.3;
 }
 
 /* IMAGE WRAPPER */
@@ -178,44 +180,84 @@ $bg-card: #fdfdfd;
   color: #555;
 }
 
-/* Button */
-.product-btn {
-  margin-top: 16px;
-  background: $primary;
-  color: white;
-  padding: 12px 26px;
-  border: none;
-  border-radius: 12px;
-  font-weight: 700;
-  cursor: pointer;
-
-  transition: transform 0.2s ease, background 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    background: color.scale($primary, $lightness: -10%);
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
-  }
+/* ===== BOTTOM INFO (PRICE + BUTTON) ===== */
+.product-info-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(0,0,0,0.06);
 }
-/* ===== PRICE dưới ảnh - góc phải (nằm trên button) ===== */
-/* ===== PRICE dưới ảnh - góc phải (không box) ===== */
+
 .product-price-wrap {
   display: flex;
-  justify-content: center;
-  margin-top: 14px;
-  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.price-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .product-price {
-  color: $primary; /* giống màu button */
-  font-size: 16px;
+  color: $primary;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.2px;
 
   @media screen and (max-width: 768px) {
-    font-size: 15px;
+    font-size: 16px;
   }
+}
+
+/* Button */
+.product-btn {
+  background: $primary;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 153, 148, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: color.scale($primary, $lightness: -10%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 153, 148, 0.4);
+  }
+}
+
+/* Badge (Workshop vs Physical) */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.badge-workshop {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.badge-physical {
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
 }
 .products-note {
   text-align: center;

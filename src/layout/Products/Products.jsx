@@ -1,166 +1,111 @@
 // src/layout/Products/Products.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import productService from "../../services/productService";
 import "./Products.scss";
 
-// hình demo – lấy trong assets của bạn
-import img1 from "../../assets/images/totepaiting.webp";
-import img2 from "../../assets/images/product2.webp";
-import img3 from "../../assets/images/aboutus_image1.webp";
-import img4 from "../../assets/images/sand_pictures.webp";
-import img5 from "../../assets/images/customforsaleImg.webp";
-import img6 from "../../assets/images/customPainting/custom2.webp";
 export default function Products() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // helper: format 260 -> 260k
-  const formatK = (value) => `${value}k`;
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const data = await productService.getAll();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
-  // helper: tạo text "260k - 360k"
-  const priceRangeText = (arr) => {
-    if (!arr || arr.length === 0) return "";
-    if (arr.length === 1) return formatK(arr[0]);
-
-    const min = Math.min(...arr);
-    const max = Math.max(...arr);
-
-    if (min === max) return formatK(min);
-    return `${formatK(min)} - ${formatK(max)}`;
+  const getPriceText = (product) => {
+    const price = product.sale_price || product.price;
+    if (!price) return "";
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
   };
 
-  // ======= BẢNG GIÁ TỪ BẠN =======
-  const acrylicPrices = [260, 310, 360];
-  const sandShellPrices = [300, 360, 360];
-  const resinShellPrices = [320, 380, 380];
-  const toteBagPrice = [280];
-
-  const data = [
-    {
-      id: 1,
-      title: t("products.items.sandPainting.title"),
-      sub: "",
-      img: img4,
-      workshopLink: "/product1",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: priceRangeText(sandShellPrices),
-    },
-    {
-      id: 2,
-      title: t("products.items.acrylicPainting.title"),
-      sub: "",
-      img: img2,
-      workshopLink: "/product2",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: priceRangeText(acrylicPrices),
-    },
-    {
-      id: 3,
-      title: t("products.items.toteBagPainting.title"),
-      sub: "",
-      img: img1,
-      workshopLink: "/product3",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: priceRangeText(toteBagPrice),
-    },
-    {
-      id: 4,
-      title: t("products.items.resinPainting.title"),
-      sub: "",
-      img: img3,
-      workshopLink: "/product4",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: priceRangeText(resinShellPrices),
-    },
-    {
-      id: 5,
-      title: t("products.items.availablePainting.title"),
-      sub: "",
-      img: img6,
-      workshopLink: "/available-paintings",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: t("products.items.priceAvailable"),
-    },
-    {
-      id: 6,
-      title: t("products.items.customPainting.title"),
-      sub: "",
-      img: img5,
-      workshopLink: "/custom-painting",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: t("products.items.priceCustom"),
-    },
-    {
-      id: 7,
-      title: t("products.items.availableToteBag.title"),
-      sub: "",
-      img: img6,
-      workshopLink: "/available-tote-bags",
-      facebookLink: "https://www.facebook.com/profile.php?id=61583373132344",
-      priceText: t("products.items.priceAvailable"),
+  const getProductName = (product) => {
+    if (i18n.language === 'en' && product.name_en) {
+      return product.name_en;
     }
-  ];
+    return product.name;
+  };
 
   return (
     <section className="products-section">
       <h2 className="products-title">{t("products.title")}</h2>
 
-      <div className="products-grid">
-        {data.map((item) => (
-          <div
-            className="product-card"
-            key={item.id}
-            onClick={() => navigate(item.workshopLink)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") navigate(item.workshopLink);
-            }}
-          >
-            {/* Title */}
-            <h3 className="product-name">{item.title}</h3>
-
-            {/* Ảnh + overlay */}
-            <div className="product-image">
-              <img src={item.img} alt={item.title} loading="lazy" />
-
-              <div className="product-image-overlay">
-                <div className="overlay-pill">
-                  <span className="overlay-icon">🔍</span>
-                  <span className="overlay-text">
-                    {t("products.clickToView")}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Giá nằm dưới ảnh - góc phải */}
-            {item.priceText && (
-              <div className="product-price-wrap">
-                <span className="product-price">{item.priceText}</span>
-              </div>
-            )}
-
-            {item.sub && <p className="product-sub">{item.sub}</p>}
-
-            <button
-              className="product-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(item.facebookLink, "_blank");
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '40px' }}>Loading products...</div>
+      ) : products.length > 0 ? (
+        <div className="products-grid">
+          {products.map((item) => (
+            <div
+              className="product-card"
+              key={item.product_id}
+              onClick={() => navigate(`/product/${item.product_id}`)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") navigate(`/product/${item.product_id}`);
               }}
             >
-              {t("products.bookButton")}
-            </button>
-          </div>
-        ))}
-      </div>
+              {/* Title */}
+              <h3 className="product-name">{getProductName(item)}</h3>
+
+              {/* Ảnh + overlay */}
+              <div className="product-image">
+                <div className={`product-badge ${item.product_type === 'workshop' ? 'badge-workshop' : 'badge-physical'}`}>
+                  {item.product_type === 'workshop' ? 'Workshop' : 'Art Item'}
+                </div>
+                
+                <img src={item.image_url || `https://picsum.photos/seed/${item.product_id}/400/400`} alt={getProductName(item)} loading="lazy" />
+
+                <div className="product-image-overlay">
+                  <div className="overlay-pill">
+                    <span className="overlay-icon">✨</span>
+                    <span className="overlay-text">
+                      {t("products.clickToView")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="product-info-bottom">
+                <div className="product-price-wrap">
+                  <span className="price-label">Giá từ:</span>
+                  <span className="product-price">{getPriceText(item)}</span>
+                </div>
+
+                <button
+                  className="product-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open("https://www.facebook.com/profile.php?id=61583373132344", "_blank");
+                  }}
+                >
+                  {t("products.bookButton")}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div style={{ textAlign: 'center', padding: '40px', color: '#6b7280' }}>
+          Chưa có sản phẩm nào được tải lên.
+        </div>
+      )}
 
       {/* Ghi chú nhỏ */}
       <p className="products-note">
-        ✨ Giá đã bao gồm hoạ cụ, nước + snacks, tripod dùng chung và nhân viên hỗ
-        trợ.
+        ✨ Giá đã bao gồm hoạ cụ, nước + snacks, tripod dùng chung và nhân viên hỗ trợ.
       </p>
     </section>
   );
