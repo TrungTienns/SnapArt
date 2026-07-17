@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import Swal from 'sweetalert2';
 import userService from '../../../services/userService';
 import { AuthContext } from '../../../context/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -34,21 +35,49 @@ const UserList = ({ setMessage }) => {
 
   const handleToggleRole = async (userId, currentRole) => {
     if (currentUser?.user_id === userId && currentRole === 'admin') {
-      alert("Bạn không thể tự hạ quyền của chính mình!");
+      Swal.fire({
+        title: 'Cảnh báo!',
+        text: 'Bạn không thể tự hạ quyền của chính mình!',
+        icon: 'warning',
+        confirmButtonColor: '#4f46e5'
+      });
       return;
     }
 
     const newRole = currentRole === 'admin' ? 'user' : 'admin';
-    if (!window.confirm(`Bạn có chắc chắn muốn thay đổi quyền người dùng này thành ${newRole.toUpperCase()}?`)) {
+    const result = await Swal.fire({
+      title: 'Xác nhận thay đổi?',
+      text: `Bạn có chắc chắn muốn thay đổi quyền người dùng này thành ${newRole.toUpperCase()}?`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#4f46e5',
+      cancelButtonColor: '#9ca3af',
+      confirmButtonText: 'Đồng ý',
+      cancelButtonText: 'Hủy'
+    });
+
+    if (!result.isConfirmed) {
       return;
     }
 
     try {
       await userService.updateUserRole(userId, newRole);
+      await Swal.fire({
+        title: 'Thành công!',
+        text: `Đã thay đổi quyền thành ${newRole.toUpperCase()} thành công!`,
+        icon: 'success',
+        confirmButtonColor: '#4f46e5'
+      });
       setMessage({ type: 'success', text: `Đã thay đổi quyền thành ${newRole.toUpperCase()} thành công!` });
       fetchUsers();
     } catch (error) {
       console.error('Lỗi khi cập nhật quyền:', error);
+      Swal.fire({
+        title: 'Lỗi!',
+        text: error.response?.data?.message || 'Không thể cập nhật quyền người dùng.',
+        icon: 'error',
+        confirmButtonColor: '#4f46e5'
+      });
       setMessage({ type: 'error', text: error.response?.data?.message || 'Không thể cập nhật quyền người dùng.' });
     }
   };

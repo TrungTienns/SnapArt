@@ -57,6 +57,13 @@ const CategoryList = ({ handleEditCategoryClick, handleAddNew, setMessage, fetch
     const rows = [];
     rows.push(
       <tr key={cat.category_id}>
+        <td>
+          {cat.image_url ? (
+            <img src={cat.image_url} alt={cat.name} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '4px' }} />
+          ) : (
+            <div style={{ width: '50px', height: '50px', background: '#f3f4f6', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px', color: '#9ca3af', fontSize: '12px' }}>N/A</div>
+          )}
+        </td>
         <td style={{ paddingLeft: `${level * 20 + 16}px` }}>
           {level > 0 && <span style={{ color: '#9ca3af', marginRight: '8px' }}>↳</span>}
           {cat.name}
@@ -102,6 +109,7 @@ const CategoryList = ({ handleEditCategoryClick, handleAddNew, setMessage, fetch
         <table>
           <thead>
             <tr>
+              <th style={{ width: '80px' }}>ẢNH</th>
               <th>TÊN DANH MỤC</th>
               <th>TÊN (EN)</th>
               <th>ĐƯỜNG DẪN (SLUG)</th>
@@ -112,7 +120,7 @@ const CategoryList = ({ handleEditCategoryClick, handleAddNew, setMessage, fetch
             {categoriesList.map(cat => renderCategoryRow(cat))}
             {categoriesList.length === 0 && (
               <tr>
-                <td colSpan="4" style={{ textAlign: 'center', padding: '20px' }}>No categories found.</td>
+                <td colSpan="5" style={{ textAlign: 'center', padding: '20px' }}>No categories found.</td>
               </tr>
             )}
           </tbody>

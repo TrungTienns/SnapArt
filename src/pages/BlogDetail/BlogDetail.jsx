@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import DOMPurify from 'dompurify';
 import blogService from '../../services/blogService';
 import Footer from '../../layout/Footer/Footer';
 import './BlogDetail.scss';
@@ -78,7 +79,7 @@ const BlogDetail = () => {
 
         <div 
           className="blog-body" 
-          dangerouslySetInnerHTML={{ __html: content }} 
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }} 
         />
       </div>
       <div className="blog-sidebar">

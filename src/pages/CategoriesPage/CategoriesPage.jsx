@@ -1,17 +1,14 @@
 import React from 'react';
-import Header from '../../layout/Header/Header';
 import Footer from '../../layout/Footer/Footer';
-import WorkshopProduct from '../../layout/WorkShopProduct/WorkShopProduct'
-import BannerWorkshop from '../../layout/BannerWorkShop/BannerWorkShop';
 import Products from '../../layout/Products/Products';
-const WorkPage = () => {
+
+const CategoriesPage = () => {
     return (
         <div style={{ paddingTop: '80px' }}>
-            <Header />
             <Products typeFilter="physical" />
             <Footer />
         </div>
     );
 };
 
-export default WorkPage;
+export default CategoriesPage;

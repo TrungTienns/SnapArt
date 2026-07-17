@@ -90,7 +90,7 @@ function Banner() {
         </p>
 
         <Link
-          to="/works"
+          to="/workshop"
           className="hero-artworkshop-btn"
         >
           {t("banner.button")}

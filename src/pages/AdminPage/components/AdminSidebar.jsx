@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faChartPie, faPlus, faList, faArrowLeft, faCog, faHeadset
+  faChartPie, faPlus, faList, faArrowLeft, faCog, faHeadset, faUsers, faSignOutAlt, faBlog, faImages, faLayerGroup, faShoppingCart, faPenToSquare
 } from '@fortawesome/free-solid-svg-icons';
 
 const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
@@ -35,10 +35,26 @@ const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
           </li>
           <li>
             <button 
+              className={activeMenu === 'manage-workshops' ? 'active' : ''} 
+              onClick={() => handleMenuChange('manage-workshops')}
+            >
+              <FontAwesomeIcon icon={faList} /> Manage Workshops
+            </button>
+          </li>
+          <li>
+            <button 
               className={activeMenu === 'manage-categories' ? 'active' : ''} 
               onClick={() => handleMenuChange('manage-categories')}
             >
-              <FontAwesomeIcon icon={faList} /> Manage Categories
+              <FontAwesomeIcon icon={faPenToSquare} /> Manage Categories
+            </button>
+          </li>
+          <li>
+            <button 
+              className={activeMenu === 'manage-orders' ? 'active' : ''} 
+              onClick={() => handleMenuChange('manage-orders')}
+            >
+              <FontAwesomeIcon icon={faShoppingCart} /> Manage Orders
             </button>
           </li>
           <li>
@@ -46,7 +62,7 @@ const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
               className={activeMenu === 'manage-blogs' ? 'active' : ''} 
               onClick={() => handleMenuChange('manage-blogs')}
             >
-              <FontAwesomeIcon icon={faList} /> Manage Blogs
+              <FontAwesomeIcon icon={faBlog} /> Manage Blogs
             </button>
           </li>
           <li>
@@ -54,7 +70,15 @@ const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
               className={activeMenu === 'manage-users' ? 'active' : ''} 
               onClick={() => handleMenuChange('manage-users')}
             >
-              <i className="fa-solid fa-users" style={{ marginRight: '8px' }}></i> Manage Users
+              <FontAwesomeIcon icon={faUsers} /> Manage Users
+            </button>
+          </li>
+          <li>
+            <button 
+              className={activeMenu === 'manage-photos' ? 'active' : ''} 
+              onClick={() => handleMenuChange('manage-photos')}
+            >
+              <FontAwesomeIcon icon={faImages} /> Manage Photos
             </button>
           </li>
         </ul>
@@ -64,7 +88,7 @@ const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
         <ul>
           <li>
             <button className="logout-btn" onClick={() => navigate('/')}>
-              <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              <FontAwesomeIcon icon={faSignOutAlt} /> Logout
             </button>
           </li>
         </ul>

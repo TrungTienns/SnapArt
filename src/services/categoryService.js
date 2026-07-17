@@ -10,11 +10,19 @@ const categoryService = {
     },
 
     create: (categoryData) => {
-        return http.post('/categories', categoryData);
+        return http.post('/categories', categoryData, {
+            headers: {
+                'Content-Type': undefined
+            }
+        });
     },
 
     update: (id, categoryData) => {
-        return http.put(`/categories/${id}`, categoryData);
+        return http.put(`/categories/${id}`, categoryData, {
+            headers: {
+                'Content-Type': undefined
+            }
+        });
     },
 
     delete: (id) => {

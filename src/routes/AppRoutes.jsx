@@ -14,19 +14,26 @@ const ContactPage = lazy(() => import("../pages/ContactPage/ContactPage"));
 const LanguageSelector = lazy(() => import("../pages/LanguageSelector/LanguageSelector"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 const WorkPage = lazy(() => import("../pages/WorkPage/WorkPage"));
+const WorkshopPage = lazy(() => import("../pages/WorkshopPage/WorkshopPage"));
+const BookingPage = lazy(() => import("../pages/BookingPage/BookingPage"));
 const BlogPage = lazy(() => import("../pages/BlogPage/BlogPage"));
 const BlogDetail = lazy(() => import("../pages/BlogDetail/BlogDetail"));
 const AdminPage = lazy(() => import("../pages/AdminPage/AdminPage"));
 const Login = lazy(() => import("../pages/Auth/Login"));
 const Register = lazy(() => import("../pages/Auth/Register"));
+const CategoriesPage = lazy(() => import("../pages/CategoriesPage/CategoriesPage"));
 
 // Blog pages removed (now dynamic)
 
 // Product Dynamic Detail Page
 const ProductDetail = lazy(() => import("../pages/ProductDetail/ProductDetail"));
 
+// Cart & Checkout
+const CartPage = lazy(() => import("../pages/CartPage/CartPage"));
+const CheckoutPage = lazy(() => import("../pages/CheckoutPage/CheckoutPage"));
+
 // Collection page
-const AdultCollection = lazy(() => import("../pages/CollectionPage/AdultCollection/AdultCollection"));
+const CollectionPage = lazy(() => import("../pages/CollectionPage/CollectionPage"));
 
 // Custom Paintings Page
 const CustomPaintingsPage = lazy(() => import("../pages/CustomPaintingsPage/CustomPaintingsPage"));
@@ -71,15 +78,26 @@ const AppRoutes = () => {
           <Route path={path.about} element={<AboutPage />} />
           <Route path={path.contact} element={<ContactPage />} />
           <Route path={path.works} element={<WorkPage />} />
+          <Route path="/workshop" element={<WorkshopPage />} />
+          <Route path="/workshop/:slug" element={<WorkshopPage />} />
+          <Route path="/booking" element={<BookingPage />} />
           <Route path={path.blog} element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/admin" element={<AdminPage />} />
 
+          {/* Categories pages */}
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/categories/:slug" element={<CategoriesPage />} />
+
           {/* Product dynamic detail route */}
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+
+          {/* Cart & Checkout */}
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
 
           {/* Collection pages */}
-          <Route path={path.adultCollection} element={<AdultCollection />} />
+          <Route path="/collection" element={<CollectionPage />} />
           
           {/* Available Paintings */}
           <Route path={path.availablePaintings} element={<AvailablePaintingsPage />} />

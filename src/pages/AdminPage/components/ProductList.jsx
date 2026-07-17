@@ -4,7 +4,7 @@ import { faPen, faTrash, faSearch, faPlus } from '@fortawesome/free-solid-svg-ic
 import Swal from 'sweetalert2';
 import productService from '../../../services/productService';
 
-const ProductList = ({ handleEditProductClick, handleAddNew, setMessage, fetchKey }) => {
+const ProductList = ({ type = 'physical', handleEditProductClick, handleAddNew, setMessage, fetchKey }) => {
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
@@ -53,17 +53,19 @@ const ProductList = ({ handleEditProductClick, handleAddNew, setMessage, fetchKe
     }
   };
 
+  const filteredProducts = productsList.filter(product => product.product_type === type);
+
   return (
     <div className="manage-list-container">
       <div className="list-header">
-        <h2 className="list-title">Tất cả sản phẩm</h2>
+        <h2 className="list-title">{type === 'workshop' ? 'Tất cả Workshop' : 'Tất cả sản phẩm'}</h2>
         <div className="list-actions">
           <div className="search-bar">
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+            <input type="text" placeholder={`Tìm kiếm ${type === 'workshop' ? 'workshop' : 'sản phẩm'}...`} />
           </div>
-          <button className="btn-add-new" onClick={handleAddNew}>
-            <FontAwesomeIcon icon={faPlus} /> Thêm Sản Phẩm Mới
+          <button className="btn-add-new" onClick={() => handleAddNew(type)}>
+            <FontAwesomeIcon icon={faPlus} /> {type === 'workshop' ? 'Thêm Workshop Mới' : 'Thêm Sản Phẩm Mới'}
           </button>
         </div>
       </div>
@@ -80,7 +82,7 @@ const ProductList = ({ handleEditProductClick, handleAddNew, setMessage, fetchKe
             </tr>
           </thead>
           <tbody>
-            {productsList.map(product => (
+            {filteredProducts.map(product => (
               <tr key={product.product_id}>
                 <td>
                   <img src={product.image_url || `https://picsum.photos/seed/${product.product_id}/400/400`} alt={product.name} />
@@ -100,9 +102,9 @@ const ProductList = ({ handleEditProductClick, handleAddNew, setMessage, fetchKe
                 </td>
               </tr>
             ))}
-            {productsList.length === 0 && (
+            {filteredProducts.length === 0 && (
               <tr>
-                <td colSpan="5" style={{ textAlign: 'center', padding: '20px' }}>No products found.</td>
+                <td colSpan="5" style={{ textAlign: 'center', padding: '20px' }}>Không có {type === 'workshop' ? 'workshop' : 'sản phẩm'} nào.</td>
               </tr>
             )}
           </tbody>

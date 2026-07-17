@@ -8,7 +8,6 @@ import AboutUs from "../../layout/AboutUs/AboutUs";
 import Benefit from "../../layout/Benefit/Benefit";
 import Contact from "../../layout/Rating/Rating.jsx";
 import Blog from "../../layout/Blog/Blog.jsx";
-import Products from "../../layout/Products/Products.jsx"
 import AllRating from "../../layout/AllRating/AllRating.jsx";
 import Custom from "../../layout/Custom/CustomPainting.jsx";
 
@@ -23,7 +22,6 @@ function HomePage() {
       <Banner />
       <AboutUs />
       <Benefit />
-      <Products />
       <Blog />
       <Custom />
       <Contact />

@@ -11,6 +11,8 @@ import BlogList from './components/BlogList';
 import CategoryList from './components/CategoryList';
 import CategoryForm from './components/CategoryForm';
 import UserList from './components/UserList';
+import PhotoManager from './components/PhotoManager';
+import OrderManager from './components/OrderManager';
 import { AuthContext } from '../../context/AuthContext';
 import './AdminPage.scss';
 
@@ -47,7 +49,7 @@ const AdminPage = () => {
   const handleMenuChange = (menu) => {
     setActiveMenu(menu);
     setMessage({});
-    if (menu !== 'add-product' && menu !== 'manage-products') {
+    if (menu !== 'add-product' && menu !== 'manage-products' && menu !== 'manage-workshops' && menu !== 'add-workshop') {
       setEditingProductId(null);
       setProductDataToEdit(null);
     }
@@ -59,7 +61,7 @@ const AdminPage = () => {
       setEditingCategoryId(null);
       setCategoryDataToEdit(null);
     }
-    if (menu === 'manage-products' || menu === 'manage-blogs' || menu === 'manage-categories') {
+    if (menu === 'manage-products' || menu === 'manage-workshops' || menu === 'manage-blogs' || menu === 'manage-categories') {
       setFetchKey(prev => prev + 1);
     }
   };
@@ -158,11 +160,11 @@ const AdminPage = () => {
         </div>
 
         <div className="admin-content">
-          {['add-product', 'add-blog', 'add-category'].includes(activeMenu) ? (
+          {['add-product', 'add-workshop', 'add-blog', 'add-category'].includes(activeMenu) ? (
             <div className="form-header-beautiful">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
                 <div>
-                  {activeMenu === 'add-product' && <h1>{editingProductId ? 'Chỉnh sửa Sản phẩm' : 'Thêm Sản phẩm Mới'}</h1>}
+                  {(activeMenu === 'add-product' || activeMenu === 'add-workshop') && <h1>{editingProductId ? (activeMenu === 'add-workshop' ? 'Chỉnh sửa Workshop' : 'Chỉnh sửa Sản phẩm') : (activeMenu === 'add-workshop' ? 'Thêm Workshop Mới' : 'Thêm Sản phẩm Mới')}</h1>}
                   {activeMenu === 'add-blog' && <h1>{editingBlogId ? 'Chỉnh sửa Bài viết' : 'Thêm Bài viết Mới'}</h1>}
                   {activeMenu === 'add-category' && <h1>{editingCategoryId ? 'Chỉnh sửa Danh mục' : 'Thêm Danh mục Mới'}</h1>}
                   <p>Vui lòng điền đầy đủ các thông tin cần thiết vào biểu mẫu bên dưới.</p>
@@ -171,6 +173,9 @@ const AdminPage = () => {
                   if (activeMenu === 'add-product') {
                     handleClearProductEdit();
                     handleMenuChange('manage-products');
+                  } else if (activeMenu === 'add-workshop') {
+                    handleClearProductEdit();
+                    handleMenuChange('manage-workshops');
                   } else if (activeMenu === 'add-blog') {
                     handleClearBlogEdit();
                     handleMenuChange('manage-blogs');
@@ -187,9 +192,12 @@ const AdminPage = () => {
             <div className="content-header">
               {activeMenu === 'dashboard' && <h1>Dashboard Overview</h1>}
               {activeMenu === 'manage-products' && <h1>Quản lý Sản phẩm</h1>}
+              {activeMenu === 'manage-workshops' && <h1>Quản lý Workshop</h1>}
               {activeMenu === 'manage-blogs' && <h1>Quản lý Bài viết (Blogs)</h1>}
               {activeMenu === 'manage-categories' && <h1>Quản lý Danh mục</h1>}
+              {activeMenu === 'manage-orders' && <h1>Quản lý Đơn hàng</h1>}
               {activeMenu === 'manage-users' && <h1>Quản lý Người dùng</h1>}
+              {activeMenu === 'manage-photos' && <h1>Quản lý Ảnh Feedback</h1>}
               <p>Tổng quan hệ thống và quản lý nội dung của bạn.</p>
             </div>
           )}
@@ -204,20 +212,37 @@ const AdminPage = () => {
             
             {activeMenu === 'manage-products' && (
               <ProductList 
-                handleEditProductClick={handleEditProductClick}
+                type="physical"
+                handleEditProductClick={(product) => {
+                  handleEditProductClick(product);
+                  handleMenuChange('add-product');
+                }}
                 handleAddNew={() => handleMenuChange('add-product')} 
                 setMessage={setMessage} 
                 fetchKey={fetchKey}
               />
             )}
             
-            {activeMenu === 'add-product' && (
+            {activeMenu === 'manage-workshops' && (
+              <ProductList 
+                type="workshop"
+                handleEditProductClick={(product) => {
+                  handleEditProductClick(product);
+                  handleMenuChange('add-workshop');
+                }}
+                handleAddNew={() => handleMenuChange('add-workshop')} 
+                setMessage={setMessage} 
+                fetchKey={fetchKey}
+              />
+            )}
+            
+            {(activeMenu === 'add-product' || activeMenu === 'add-workshop') && (
               <ProductForm 
                 editingProductId={editingProductId}
-                initialProductData={productDataToEdit}
+                initialProductData={productDataToEdit || { product_type: activeMenu === 'add-workshop' ? 'workshop' : 'physical' }}
                 setMessage={setMessage}
                 onClearEdit={handleClearProductEdit}
-                onSuccess={() => handleMenuChange('manage-products')}
+                onSuccess={() => handleMenuChange(activeMenu === 'add-workshop' ? 'manage-workshops' : 'manage-products')}
               />
             )}
             
@@ -261,6 +286,14 @@ const AdminPage = () => {
 
             {activeMenu === 'manage-users' && (
               <UserList setMessage={setMessage} />
+            )}
+
+            {activeMenu === 'manage-orders' && (
+              <OrderManager />
+            )}
+
+            {activeMenu === 'manage-photos' && (
+              <PhotoManager setMessage={setMessage} />
             )}
             
           </div>

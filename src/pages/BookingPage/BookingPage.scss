@@ -1,0 +1,132 @@
+.booking-page {
+    padding-top: 80px; /* Offset for sticky header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf9f6; /* Matching the overall SnapArt vibe */
+}
+
+.booking-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.booking-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    padding: 50px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.booking-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.booking-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.booking-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    border-color: #ff9994;
+    box-shadow: 0 0 0 4px rgba(255, 153, 148, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #444;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    background-color: #fce4e4;
+    color: #c9302c;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.success-message {
+    padding: 30px;
+}
+
+.success-message h3 {
+    color: #27ae60;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.redirect-text {
+    margin-top: 30px;
+    font-size: 0.9rem !important;
+    color: #999 !important;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .booking-content {
+        padding: 30px 20px;
+    }
+}

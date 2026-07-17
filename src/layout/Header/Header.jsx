@@ -7,13 +7,16 @@ import cuteCatWork from "../../assets/animation/CuteCatWorks.json";
 import sunFlowerAnimation from "../../assets/animation/sunflowerAnimation.json";
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../../context/AuthContext";
+import { CartContext } from "../../context/CartContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const { user, logout } = useContext(AuthContext);
+  const { getCartCount } = useContext(CartContext);
+  const cartCount = getCartCount();
 
   const [open, setOpen] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -21,11 +24,14 @@ function Header() {
   const [hideHeader, setHideHeader] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
 
+  const currentLang = i18n.language || "vi";
+
   const links = [
     { to: "/", label: t("menu.home") },
     { to: "/about", label: t("menu.about") },
-    { to: "/adult-collection", label: t("menu.artwork") },
-    { to: "/works", label: t("menu.course") },
+    { to: "/collection", label: t("menu.artwork") },
+    { to: "/workshop", label: t("menu.workshop") },
+    { to: "/categories", label: t("menu.course") },
     { to: "/blog", label: t("menu.blog") },
     { to: "/contact", label: t("menu.contact") },
   ];
@@ -53,8 +59,6 @@ function Header() {
     localStorage.setItem("language", lng);
   };
 
-  const currentLang = i18n.language || "vi";
-
   return (
     <header
       className={`site-header ${scrolled ? "scrolled" : ""} ${
@@ -67,25 +71,6 @@ function Header() {
           <Link to="/" className="brand">
             <img src={logo} alt="SnapArt logo" className="brand-logo" />
           </Link>
-
-          <div className="lang-switch">
-            <button
-              className={`flag-btn ${currentLang === "vi" ? "active" : ""}`}
-              onClick={() => changeLanguage("vi")}
-              title="Tiếng Việt"
-              aria-label="Switch to Vietnamese"
-            >
-              🇻🇳
-            </button>
-            <button
-              className={`flag-btn ${currentLang === "en" ? "active" : ""}`}
-              onClick={() => changeLanguage("en")}
-              title="English"
-              aria-label="Switch to English"
-            >
-              🇺🇸
-            </button>
-          </div>
         </div>
 
         {/* NAV */}
@@ -104,7 +89,31 @@ function Header() {
 
         {/* RIGHT */}
         <div className="header-right">
+          <div className="lang-switch">
+            <button
+              className={`flag-btn ${currentLang === "vi" ? "active" : ""}`}
+              onClick={() => changeLanguage("vi")}
+              title="Tiếng Việt"
+              aria-label="Switch to Vietnamese"
+            >
+              🇻🇳
+            </button>
+            <button
+              className={`flag-btn ${currentLang === "en" ? "active" : ""}`}
+              onClick={() => changeLanguage("en")}
+              title="English"
+              aria-label="Switch to English"
+            >
+              🇺🇸
+            </button>
+          </div>
+
           <div className="user-action">
+            <Link to="/cart" className="cart-icon-btn" title="Giỏ Hàng">
+              <FontAwesomeIcon icon={faShoppingCart} />
+              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+            </Link>
+
             {user ? (
               <div className="user-dropdown-container">
                 <button 
@@ -136,16 +145,6 @@ function Header() {
               </Link>
             )}
           </div>
-
-          <button
-            className="cta"
-            onClick={() =>
-              window.open("https://www.instagram.com/snapart_hcm/?hl=en", "_blank")
-            }
-          >
-            {t("menu.cta")}
-          </button>
-
           <button
             className={`menu-toggle ${open ? "open" : ""}`}
             onClick={() => setOpen(!open)}
@@ -155,20 +154,6 @@ function Header() {
             <span></span>
           </button>
         </div>
-
-        {/* ANIMATION CAT */}
-        <div className="header-animation">
-          <Lottie animationData={cuteCatWork} loop />
-        </div>
-      </div>
-
-      {/* SUNFLOWER ROW */}
-      <div className="sunflower-row">
-        {[...Array(40)].map((_, i) => (
-          <div key={i} className={`sunflower-item sunflower-item--${i + 1}`}>
-            <Lottie animationData={sunFlowerAnimation} loop />
-          </div>
-        ))}
       </div>
 
       {open && <div className="mobile-backdrop" onClick={() => setOpen(false)} />}

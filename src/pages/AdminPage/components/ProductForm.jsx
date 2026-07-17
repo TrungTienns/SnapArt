@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
+import ReactQuill from 'react-quill-new';
+import 'react-quill-new/dist/quill.snow.css';
 import productService from '../../../services/productService';
 
 const ProductForm = ({ editingProductId, initialProductData, setMessage, onClearEdit, refreshProducts, onSuccess }) => {
@@ -165,8 +167,9 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
           <label>Product Type *</label>
           <select 
             value={productData.product_type} 
+            disabled
             onChange={e => setProductData(prev => ({...prev, product_type: e.target.value}))}
-            style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #d1d5db' }}
+            style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #d1d5db', backgroundColor: '#f3f4f6', cursor: 'not-allowed', color: '#6b7280' }}
           >
             <option value="physical">Physical Product (Tranh)</option>
             <option value="workshop">Workshop (Dịch vụ)</option>
@@ -201,13 +204,25 @@ const ProductForm = ({ editingProductId, initialProductData, setMessage, onClear
         </div>
       </div>
       <div className="form-row">
-        <div className="form-group">
+        <div className="form-group quill-container">
           <label>Description (VI)</label>
-          <textarea value={productData.description} onChange={e => setProductData(prev => ({...prev, description: e.target.value}))} />
+          <ReactQuill 
+            theme="snow" 
+            value={productData.description} 
+            onChange={content => setProductData(prev => ({...prev, description: content}))} 
+            placeholder="Mô tả sản phẩm (Tiếng Việt)..."
+          />
         </div>
-        <div className="form-group">
+      </div>
+      <div className="form-row">
+        <div className="form-group quill-container">
           <label>Description (EN)</label>
-          <textarea value={productData.description_en} onChange={e => setProductData(prev => ({...prev, description_en: e.target.value}))} />
+          <ReactQuill 
+            theme="snow" 
+            value={productData.description_en} 
+            onChange={content => setProductData(prev => ({...prev, description_en: content}))} 
+            placeholder="Product description (English)..."
+          />
         </div>
       </div>
       {productData.product_type === 'physical' && (
