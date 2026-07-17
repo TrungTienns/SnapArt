@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const baseURL = import.meta.env.DEV
-  ? import.meta.env.VITE_API_URL_DEV
-  : import.meta.env.VITE_API_URL_PROD;
+  ? (import.meta.env.VITE_API_URL_DEV || 'http://localhost:3000/api')
+  : (import.meta.env.VITE_API_URL_PROD || import.meta.env.VITE_API_URL || 'https://snapart-be.onrender.com/api');
 
 const http = axios.create({
-  baseURL: baseURL || 'http://localhost:3000/api',
+  baseURL: baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
