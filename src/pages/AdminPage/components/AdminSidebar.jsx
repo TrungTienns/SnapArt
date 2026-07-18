@@ -5,13 +5,16 @@ import {
   faChartPie, faPlus, faList, faArrowLeft, faCog, faHeadset, faUsers, faSignOutAlt, faBlog, faImages, faLayerGroup, faShoppingCart, faPenToSquare
 } from '@fortawesome/free-solid-svg-icons';
 
-const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId }) => {
+const AdminSidebar = ({ activeMenu, handleMenuChange, editingBlogId, isOpen, onClose }) => {
   const navigate = useNavigate();
 
   return (
-    <aside className="admin-sidebar">
-      <div className="sidebar-brand" onClick={() => navigate('/')} style={{cursor: 'pointer'}}>
-        <div className="brand-text">SnapArt</div>
+    <aside className={`admin-sidebar ${isOpen ? 'open' : ''}`}>
+      <div className="sidebar-brand">
+        <div className="brand-text" onClick={() => navigate('/')} style={{cursor: 'pointer'}}>SnapArt</div>
+        <button className="close-sidebar-btn" onClick={onClose}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
       </div>
 
       <div className="sidebar-section">

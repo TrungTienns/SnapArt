@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faBars, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import AdminSidebar from './components/AdminSidebar';
 import DashboardView from './components/DashboardView';
 import ProductForm from './components/ProductForm';
@@ -27,6 +27,7 @@ const AdminPage = () => {
   }, [user, navigate]);
 
   const [activeMenu, setActiveMenu] = useState('dashboard');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   // Shared state between ProductList and ProductForm
   const [editingProductId, setEditingProductId] = useState(null);
@@ -64,6 +65,7 @@ const AdminPage = () => {
     if (menu === 'manage-products' || menu === 'manage-workshops' || menu === 'manage-blogs' || menu === 'manage-categories') {
       setFetchKey(prev => prev + 1);
     }
+    setIsSidebarOpen(false); // Close sidebar on mobile after navigating
   };
 
   const handleEditBlogClick = (blog) => {
@@ -138,23 +140,33 @@ const AdminPage = () => {
 
   return (
     <div className="admin-layout">
+      {/* OVERLAY FOR MOBILE */}
+      {isSidebarOpen && (
+        <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)}></div>
+      )}
+
       {/* LEFT SIDEBAR */}
       <AdminSidebar 
         activeMenu={activeMenu} 
         handleMenuChange={handleMenuChange} 
         editingBlogId={editingBlogId} 
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
       />
 
       {/* MAIN CONTENT */}
       <main className="admin-main">
         <div className="admin-topbar">
+          <button className="mobile-menu-btn" onClick={() => setIsSidebarOpen(true)}>
+            <FontAwesomeIcon icon={faBars} />
+          </button>
           <div className="topbar-right">
             <div className="user-info">
               <span className="user-name">{user?.full_name || 'Admin'}</span>
               <span className="user-role">Administrator</span>
             </div>
             <div className="user-avatar">
-              <i className="fa-solid fa-user-tie"></i>
+              <FontAwesomeIcon icon={faUserTie} />
             </div>
           </div>
         </div>
@@ -162,7 +174,7 @@ const AdminPage = () => {
         <div className="admin-content">
           {['add-product', 'add-workshop', 'add-blog', 'add-category'].includes(activeMenu) ? (
             <div className="form-header-beautiful">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', flexWrap: 'wrap', gap: '10px' }}>
                 <div>
                   {(activeMenu === 'add-product' || activeMenu === 'add-workshop') && <h1>{editingProductId ? (activeMenu === 'add-workshop' ? 'Chỉnh sửa Workshop' : 'Chỉnh sửa Sản phẩm') : (activeMenu === 'add-workshop' ? 'Thêm Workshop Mới' : 'Thêm Sản phẩm Mới')}</h1>}
                   {activeMenu === 'add-blog' && <h1>{editingBlogId ? 'Chỉnh sửa Bài viết' : 'Thêm Bài viết Mới'}</h1>}

@@ -17,6 +17,22 @@
 
   /* ---- LEFT SIDEBAR ---- */
   .admin-sidebar {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+
+    @media (max-width: 1100px) {
+      position: fixed !important;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+      box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+
+      &.open {
+        transform: translateX(0) !important;
+      }
+    }
+
     width: 250px;
     background-color: #1e212d;
     display: flex;
@@ -720,5 +736,104 @@ body.swal2-shown {
       border-width: 4px;
       margin-bottom: 1.5rem;
     }
+  }
+}
+
+
+
+/* ---- MOBILE UTILITIES ---- */
+.mobile-menu-btn { display: none; }
+
+.sidebar-overlay {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+  }
+}
+
+.close-sidebar-btn {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .close-sidebar-btn {
+    display: block !important;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .close-sidebar-btn:hover { color: white; }
+}
+
+@media (max-width: 1100px) {
+  .admin-layout .admin-main .admin-topbar {
+    justify-content: flex-start !important;
+  }
+  .admin-layout .admin-main .admin-topbar .topbar-right {
+    margin-left: auto;
+  }
+  .admin-layout .admin-main .admin-content {
+    padding: 15px !important;
+  }
+  .admin-layout .admin-main .admin-content .admin-card {
+    padding: 15px !important;
+  }
+  .admin-layout .admin-main .admin-content .form-header-beautiful {
+    padding: 20px !important;
+  }
+  .admin-layout .admin-main .admin-content .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .admin-layout .admin-main .admin-content .manage-list {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .admin-layout .admin-main .admin-content .manage-list table {
+    min-width: 600px;
+  }
+  .admin-layout .admin-main .admin-content .manage-list-container .list-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+  .admin-layout .admin-main .admin-content .manage-list-container .list-header .list-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .admin-layout .admin-main .admin-content .manage-list-container .list-header .list-actions .search-bar {
+    width: 100%;
+  }
+  .admin-layout .admin-main .admin-content .manage-list-container .list-header .list-actions .search-bar input {
+    width: 100%;
+  }
+  
+  /* Mobile Menu Button - Black hamburger */
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #111827 !important;
+    border: none !important;
+    font-size: 20px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    padding: 10px 14px !important;
+    margin-right: 20px !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+  .mobile-menu-btn i, .mobile-menu-btn svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
   }
 }
